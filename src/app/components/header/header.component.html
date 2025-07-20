@@ -1,0 +1,8 @@
+<label class="toggle text-base-content">
+  <input #toggleInput type="checkbox" [(ngModel)]="themeToggleName" />
+  @if (themeToggleName()) {
+    <ng-icon name="bootstrapSun" />
+  } @else {
+    <ng-icon name="bootstrapMoon" />
+  }
+</label>

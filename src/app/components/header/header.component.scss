@@ -1,0 +1,6 @@
+.toggle:has(:checked) > :nth-child(2) {
+  opacity: 1;
+}
+.toggle ng-icon {
+  mix-blend-mode: exclusion;
+}
