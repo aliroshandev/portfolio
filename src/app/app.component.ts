@@ -1,12 +1,22 @@
-import {Component} from '@angular/core';
+import {Component, computed, HostListener, inject} from '@angular/core';
 import {RouterOutlet} from '@angular/router';
-import {HeaderComponent} from './components/header/header.component';
-import {NgIcon, provideIcons} from '@ng-icons/core';
-import {bootstrapLinkedin, bootstrapPhone, bootstrapCalendar, bootstrapGithub, bootstrapSun, bootstrapMoon} from '@ng-icons/bootstrap-icons';
+import {HeaderComponent} from '@components/header/header.component';
+import {provideIcons} from '@ng-icons/core';
+import {
+  bootstrapCalendar,
+  bootstrapFilePdf,
+  bootstrapGithub,
+  bootstrapLinkedin,
+  bootstrapMoon,
+  bootstrapPhone,
+  bootstrapSend,
+  bootstrapSun
+} from '@ng-icons/bootstrap-icons';
+import {LayoutService} from './services/layout.service';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, HeaderComponent, NgIcon],
+  imports: [RouterOutlet, HeaderComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
   viewProviders: [
@@ -16,10 +26,27 @@ import {bootstrapLinkedin, bootstrapPhone, bootstrapCalendar, bootstrapGithub, b
       bootstrapCalendar,
       bootstrapGithub,
       bootstrapSun,
-      bootstrapMoon
+      bootstrapMoon,
+      bootstrapFilePdf,
+      bootstrapSend,
     })
-  ]
+  ],
 })
 export class AppComponent {
-  title = 'Ali Roshanzamir Golafzani';
+
+  readonly #layoutService = inject(LayoutService);
+  scrollTop = computed(this.#layoutService.scrollY);
+
+  @HostListener('window:scroll', ['$event']) windowScroll() {
+    // header-top
+    // position-sticky
+    this.#layoutService.scrollY.set(window.scrollY);
+    if (this.#layoutService.isBrowser) {
+      console.log(this.scrollTop());
+      const headerElement = document.getElementsByTagName('header').item(0);
+      const conditionToToggleClass = this.scrollTop() > 100;
+      headerElement?.classList.toggle('position-sticky', conditionToToggleClass);
+      headerElement?.classList.toggle('top-0', conditionToToggleClass);
+    }
+  }
 }

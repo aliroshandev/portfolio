@@ -1,4 +1,48 @@
 /* You can add global styles to this file, and also import other style files */
-@import "tailwindcss";
-@custom-variant dark (&:where(.dark, .dark *));
+@use "tailwindcss";
+@use "style/mixins" as mixins;
 @plugin "daisyui";
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --header-height: calc(#{var(--spacing)} * 19);
+}
+
+* {
+  scroll-behavior: smooth;
+  scroll-margin: calc(#{var(--spacing)} * 24);
+}
+
+header {
+  margin-bottom: calc(#{var(--spacing)} * 5);
+  &.position-sticky {
+    box-shadow: var(--shadow-md);
+    @include mixins.dark-theme() {
+      background-color: var(--color-info-content);
+    }
+    @include mixins.light-theme() {
+      background-color: var(--color-base-300);
+    }
+  }
+}
+
+.header-top {
+  top: calc(#{var(--header-height)} + (#{var(--spacing)} * 5))
+}
+
+.position-sticky {
+  position: sticky;
+}
+
+main {
+  height: 2000px;
+}
+
+.skeleton {
+  user-select: none;
+  pointer-events: none;
+}
+
+section {
+  height: 400px;
+}
