@@ -14,6 +14,7 @@
 }
 
 header {
+  transition: all .3s ease-in-out;
   margin-bottom: calc(#{var(--spacing)} * 5);
   &.position-sticky {
     box-shadow: var(--shadow-md);
@@ -35,7 +36,7 @@ header {
 }
 
 main {
-  height: 2000px;
+  min-height: 2000px;
 }
 
 .skeleton {
@@ -44,5 +45,5 @@ main {
 }
 
 section {
-  height: 400px;
+  min-height: 400px;
 }

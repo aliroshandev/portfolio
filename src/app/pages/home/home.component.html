@@ -11,7 +11,7 @@
 </div>
 
 @for (heading of Headings; track heading.id) {
-  <section>
-    <h2 [id]="heading.id">{{heading.text}}</h2>
+  <section @fadeInOut>
+    <h2 [id]="heading.id" @scrollStickToRight>{{heading.text}}</h2>
   </section>
 }
