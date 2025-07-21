@@ -1,6 +1,15 @@
 .toggle:has(:checked) > :nth-child(2) {
   opacity: 1;
 }
-.toggle ng-icon {
-  mix-blend-mode: exclusion;
+
+.toggle {
+  > span {
+    display: flex;
+  }
+  &:before {
+    box-shadow: none;
+  }
+  & ng-icon {
+    mix-blend-mode: exclusion;
+  }
 }

@@ -1,6 +1,7 @@
-import {Component, signal} from '@angular/core';
+import {Component, computed, inject} from '@angular/core';
 import {NgIcon} from '@ng-icons/core';
 import {FormsModule} from '@angular/forms';
+import {ThemeService} from '../../services/theme.service';
 
 @Component({
   selector: 'header[app-header]',
@@ -12,5 +13,12 @@ import {FormsModule} from '@angular/forms';
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
-  themeToggleName = signal(false);
+
+  readonly #themeService = inject(ThemeService);
+
+  isLightTheme = computed(() => this.#themeService.activeTheme() === 'light');
+
+  toggleThemeDarkMode() {
+    this.#themeService.toggle();
+  }
 }
