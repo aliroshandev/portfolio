@@ -18,6 +18,7 @@
     </label>
     @for (heading of Headings; track heading.id) {
       <a class="btn btn-soft ms-2"
+         [class.selected]="heading.id === selectedBookmark()?.id"
          href="/#{{heading.id}}">{{heading.text}}</a>
     }
   </div>

@@ -9,7 +9,6 @@ export class LayoutService {
   readonly #platformId = inject(PLATFORM_ID);
 
   scrollY = signal<number>(0);
-  isScrolling = signal<boolean>(false)
 
   scrollTo(element: HTMLElement | null) {
     if (isPlatformBrowser(this.#platformId)) {

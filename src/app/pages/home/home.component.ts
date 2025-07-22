@@ -5,12 +5,14 @@ import {Headings} from '../../constants/const';
 import {fadeInOut, fadeInUp} from '../../animations/animations';
 import {NgOptimizedImage} from '@angular/common';
 import {ThemeService} from '../../services/theme.service';
+import {PickRelatedHeadingOnScrollViewDirective} from '../../directives/pick-related-heading-on-scroll-view.directive';
 
 @Component({
   selector: 'app-home',
   imports: [
     NgIcon,
-    NgOptimizedImage
+    NgOptimizedImage,
+    PickRelatedHeadingOnScrollViewDirective
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',

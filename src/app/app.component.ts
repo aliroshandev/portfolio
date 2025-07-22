@@ -38,8 +38,6 @@ export class AppComponent {
   scrollTop = computed(this.#layoutService.scrollY);
 
   @HostListener('window:scroll', ['$event']) windowScroll() {
-    // header-top
-    // position-sticky
     this.#layoutService.scrollY.set(window.scrollY);
     if (this.#layoutService.isBrowser) {
       const headerElement = document.getElementsByTagName('header').item(0);

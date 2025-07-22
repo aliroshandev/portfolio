@@ -46,7 +46,15 @@ main {
 }
 
 section {
-  min-height: 400px;
+  min-height: 200px;
+  //visibility: hidden;
+  //transform: translateX(-50%);
+  //transition: all 0.3s ease-in-out;
+  //animation-fill-mode: both;
+  //&.visible {
+  //  visibility: visible;
+  //  transform: translateX(0);
+  //}
 }
 
 .content {

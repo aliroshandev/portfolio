@@ -24,7 +24,7 @@ export class HeaderComponent implements OnInit {
   readonly #destroyRef = inject(DestroyRef);
   readonly #layoutService = inject(LayoutService);
 
-  selectedBookmark = signal<HeadingInterface | null>(null);
+  selectedBookmark = signal<HeadingInterface | undefined>(undefined);
 
   phoneNumber = '447351534063';
   isLightTheme = computed(() => this.#themeService.activeTheme() === 'light');
@@ -43,7 +43,8 @@ export class HeaderComponent implements OnInit {
         next: response => {
           if (response) {
             if (this.#layoutService.isBrowser) {
-              this.#layoutService.scrollTo(document.getElementById(response))
+              this.#layoutService.scrollTo(document.getElementById(response));
+              this.selectedBookmark.set(Headings.find(heading => heading.id === response))
             }
           }
         }
