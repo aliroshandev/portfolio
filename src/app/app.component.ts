@@ -42,7 +42,6 @@ export class AppComponent {
     // position-sticky
     this.#layoutService.scrollY.set(window.scrollY);
     if (this.#layoutService.isBrowser) {
-      console.log(this.scrollTop());
       const headerElement = document.getElementsByTagName('header').item(0);
       const conditionToToggleClass = this.scrollTop() > 100;
       headerElement?.classList.toggle('position-sticky', conditionToToggleClass);
