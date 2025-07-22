@@ -72,6 +72,13 @@ section {
   width: 200px;
   margin: 0 auto;
   height: var(--banner-height);
+  --image-shadow: black;
+  @include mixins.dark-theme() {
+    --image-shadow: #404040;
+  }
+  img {
+    filter: drop-shadow(2px 4px 6px var(--image-shadow));
+  }
 }
 
 @keyframes scroll-stick-right {
