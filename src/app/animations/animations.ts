@@ -1,4 +1,4 @@
-import {animate, style, transition, trigger} from '@angular/animations';
+import {animate, state, style, transition, trigger} from '@angular/animations';
 
 export const fadeInUp = trigger('fadeInUp', [
   transition('void => *', [
@@ -17,10 +17,3 @@ export const fadeInOut = trigger('fadeInOut', [
     animate('.25s ease-in', style({opacity: '1', transform: 'translateY(0)'}))
   ]),
 ]);
-
-export const scrollStickToRight = trigger('scrollStickToRight', [
-  transition('* => enabled', [
-    style({animationFillMode: 'forwards', position: 'fixed', transform: 'translateX(0)'}),
-    animate('.25s .25s ease-out', style({transform: 'translateX(50%)'}))
-  ]),
-])

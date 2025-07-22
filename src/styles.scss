@@ -6,6 +6,7 @@
 
 :root {
   --header-height: calc(#{var(--spacing)} * 19);
+  --banner-height: 200px;
 }
 
 * {
@@ -46,4 +47,38 @@ main {
 
 section {
   min-height: 400px;
+}
+
+.content {
+  margin-top: var(--banner-height);
+}
+
+.banner {
+  aspect-ratio: 1;
+  min-height: auto;
+  position: fixed;
+  z-index: -1;
+  width: 100%;
+  top: var(--header-height);
+
+  animation-name: scroll-stick-right;
+  animation-timeline: scroll(block nearest);
+  animation-range: 0 60vh;
+  animation-fill-mode: both;
+}
+
+.image-wrapper {
+  position: relative;
+  width: 200px;
+  margin: 0 auto;
+  height: var(--banner-height);
+}
+
+@keyframes scroll-stick-right {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(50%);
+  }
 }

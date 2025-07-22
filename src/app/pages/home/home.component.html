@@ -1,17 +1,24 @@
-<h1>{{title()}}</h1>
-<div class="grid grid-col-1">
-  <a class="btn btn-soft mt-2" href="https://github.com/aliroshandev" target="_blank">
-    <ng-icon name="bootstrapGithub" />
-    <span>View Github</span>
-  </a>
-  <a class="btn btn-soft mt-2" href="https://linkedin.com/in/ali-roshan" target="_blank">
-    <ng-icon name="bootstrapLinkedin" />
-    <span>Connect on Linkedin</span>
-  </a>
+<section class="banner" role="banner">
+  <div class="image-wrapper">
+    <img ngSrc="/assets/profile.jpeg" fill alt="Ali Roshanzamir Golafzani">
+  </div>
+</section>
+<div class="content">
+  <h1>{{title()}}</h1>
+  <div class="grid grid-col-1">
+    <a class="btn btn-soft mt-2" href="https://github.com/aliroshandev" target="_blank">
+      <ng-icon name="bootstrapGithub" />
+      <span>View Github</span>
+    </a>
+    <a class="btn btn-soft mt-2" href="https://linkedin.com/in/ali-roshan" target="_blank">
+      <ng-icon name="bootstrapLinkedin" />
+      <span>Connect on Linkedin</span>
+    </a>
+  </div>
+  @for (heading of Headings; track heading.id) {
+    <!--  <section @fadeInOut>-->
+    <section>
+      <h2 [id]="heading.id">{{heading.text}}</h2>
+    </section>
+  }
 </div>
-
-@for (heading of Headings; track heading.id) {
-  <section @fadeInOut>
-    <h2 [id]="heading.id" @scrollStickToRight>{{heading.text}}</h2>
-  </section>
-}

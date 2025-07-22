@@ -2,16 +2,18 @@ import {Component, computed, inject} from '@angular/core';
 import {NgIcon} from '@ng-icons/core';
 import {ActivatedRoute} from '@angular/router';
 import {Headings} from '../../constants/const';
-import {fadeInOut, fadeInUp, scrollStickToRight} from '../../animations/animations';
+import {fadeInOut, fadeInUp} from '../../animations/animations';
+import {NgOptimizedImage} from '@angular/common';
 
 @Component({
   selector: 'app-home',
   imports: [
-    NgIcon
+    NgIcon,
+    NgOptimizedImage
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
-  animations: [fadeInUp, fadeInOut, scrollStickToRight]
+  animations: [fadeInUp, fadeInOut]
 })
 export class HomeComponent {
   route = inject(ActivatedRoute)
