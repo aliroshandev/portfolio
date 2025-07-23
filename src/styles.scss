@@ -17,6 +17,7 @@
 header {
   transition: all .3s ease-in-out;
   margin-bottom: calc(#{var(--spacing)} * 5);
+  z-index: 1;
   &.position-sticky {
     box-shadow: var(--shadow-md);
     @include mixins.dark-theme() {

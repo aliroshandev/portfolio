@@ -40,9 +40,13 @@ export class PickRelatedHeadingOnScrollViewDirective
           next: screenSpaceFromTop => {
             const elementSpaceFromTop = this.#element.nativeElement.getBoundingClientRect().top;
             if (elementSpaceFromTop > 0) {
-              this.#element.nativeElement.style.opacity = Math.min(1 - Math.min((elementSpaceFromTop - screenSpaceFromTop) / elementSpaceFromTop, .8), 1);
+              this.#element.nativeElement.style.scale = Math.min(1 - Math.min((elementSpaceFromTop - screenSpaceFromTop) / elementSpaceFromTop, .8), 1);
+              if (elementSpaceFromTop > screenSpaceFromTop) {
+                this.#element.nativeElement.style.opacity = Math.min(1 - Math.min((elementSpaceFromTop - screenSpaceFromTop) / elementSpaceFromTop, .8), 1);
+              }
             } else {
-              this.#element.nativeElement.style.opacity = Math.max(0, Math.abs((elementSpaceFromTop + screenSpaceFromTop)/(screenSpaceFromTop ?? elementSpaceFromTop ?? 1)))
+              this.#element.nativeElement.style.opacity = Math.min(1 - Math.min((screenSpaceFromTop - elementSpaceFromTop) / elementSpaceFromTop, .8), 1);
+              this.#element.nativeElement.style.scale = Math.max(1 - Math.min(Math.abs(screenSpaceFromTop + elementSpaceFromTop) / screenSpaceFromTop, .8), 1);
             }
           }
         })
