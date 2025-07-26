@@ -1,46 +1,50 @@
-<div class="flex items-center px-3 py-2 h-19">
-  <div class="flex-6">
-    <label class="toggle text-base-content"
-           [class.text-warning]="isLightTheme()">
-      <input #toggleInput
-             type="checkbox"
-             [ngModel]="isLightTheme"
-             (ngModelChange)="toggleThemeDarkMode()"/>
-      @if (isLightTheme()) {
-        <span>
+@if (isDesktop()) {
+  <div class="flex items-center px-3 py-2 h-19">
+    <div class="flex-6">
+      <label class="toggle text-base-content"
+             [class.text-warning]="isLightTheme()">
+        <input #toggleInput
+               type="checkbox"
+               [ngModel]="isLightTheme"
+               (ngModelChange)="toggleThemeDarkMode()"/>
+        @if (isLightTheme()) {
+          <span>
           <ng-icon name="bootstrapSun" class="p-0" size="14"/>
         </span>
-      } @else {
-        <span>
+        } @else {
+          <span>
           <ng-icon name="bootstrapMoon" class="p-0" size="14"/>
         </span>
+        }
+      </label>
+      @for (heading of Headings; track heading.id) {
+        <a class="btn btn-soft ms-2"
+           [class.selected]="heading.id === selectedBookmark()?.id"
+           href="/#{{heading.id}}">{{heading.text}}</a>
       }
-    </label>
-    @for (heading of Headings; track heading.id) {
-      <a class="btn btn-soft ms-2"
-         [class.selected]="heading.id === selectedBookmark()?.id"
-         href="/#{{heading.id}}">{{heading.text}}</a>
-    }
+    </div>
+    <div class="flex-6 text-end">
+      <a class="btn btn-primary btn-soft"
+         href="tel:{{phoneNumber}}"
+         target="_blank">
+        <ng-icon name="bootstrapPhone" />
+        <span class="ms-1">Call me</span>
+      </a>
+      <a class="btn btn-primary btn-soft ms-2"
+         href="sms:{{phoneNumber}}?body=Hi%20Ali,%20i%20saw%20your%20Portfolio,%20Let%27s%20talk"
+         target="_blank">
+        <ng-icon name="bootstrapSend" />
+        <span class="ms-1">Text me</span>
+      </a>
+      <a href="/assets/ALI_ROSHAN_CV.pdf"
+         class="btn btn-primary ms-2"
+         target="_blank"
+         download>
+        <ng-icon name="bootstrapFilePdf" />
+        <span class="ms-1">Download CV</span>
+      </a>
+    </div>
   </div>
-  <div class="flex-6 text-end">
-    <a class="btn btn-primary btn-soft"
-       href="tel:{{phoneNumber}}"
-       target="_blank">
-      <ng-icon name="bootstrapPhone" />
-      <span class="ms-1">Call me</span>
-    </a>
-    <a class="btn btn-primary btn-soft ms-2"
-       href="sms:{{phoneNumber}}?body=Hi%20Ali,%20i%20saw%20your%20Portfolio,%20Let%27s%20talk"
-       target="_blank">
-      <ng-icon name="bootstrapSend" />
-      <span class="ms-1">Text me</span>
-    </a>
-    <a href="/assets/ALI_ROSHAN_CV.pdf"
-       class="btn btn-primary ms-2"
-       target="_blank"
-       download>
-      <ng-icon name="bootstrapFilePdf" />
-      <span class="ms-1">Download CV</span>
-    </a>
-  </div>
-</div>
+} @else {
+
+}

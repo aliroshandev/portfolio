@@ -1,5 +1,15 @@
-import {inject, Injectable, PLATFORM_ID, Signal, signal} from '@angular/core';
-import {isPlatformBrowser} from '@angular/common';
+import {
+  inject,
+  Injectable,
+  linkedSignal,
+  makeStateKey,
+  PLATFORM_ID,
+  Signal,
+  signal,
+  TransferState, WritableSignal
+} from '@angular/core';
+import {isPlatformBrowser, isPlatformServer} from '@angular/common';
+import {USER_AGENT} from '../app.config.server';
 
 @Injectable({
   providedIn: 'root'
@@ -7,9 +17,27 @@ import {isPlatformBrowser} from '@angular/common';
 export class LayoutService {
 
   readonly #platformId = inject(PLATFORM_ID);
+  readonly #transferState = inject(TransferState);
 
   scrollY = signal<number>(0);
   headerHeight: Signal<number> = signal<number>(76).asReadonly();
+  isDesktop: WritableSignal<boolean | undefined> = signal<boolean | undefined>(undefined);
+  isMobile = linkedSignal({
+    source: this.isDesktop,
+    computation: source => source != null ? !source : undefined
+  });
+  userAgent: string = '';
+  userAgentKey = makeStateKey<string>('user-agent');
+
+  constructor() {
+    if (this.isServer) {
+      this.userAgent = inject(USER_AGENT, {optional: true}) || 'Unknown User Agent';
+      this.#transferState.set(this.userAgentKey, this.userAgent);
+      this.isDesktop.set(this.isUserAgentFromDesktop(this.userAgent));
+    } else {
+      this.userAgent = this.#transferState.get(this.userAgentKey, '');
+    }
+  }
 
   scrollTo(element: HTMLElement | null) {
     if (isPlatformBrowser(this.#platformId)) {
@@ -25,7 +53,12 @@ export class LayoutService {
   }
 
   get isServer() {
-    return isPlatformBrowser(this.#platformId);
+    return isPlatformServer(this.#platformId);
+  }
+
+  private isUserAgentFromDesktop(ua: string) {
+    const regex = /Mobi|Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i;
+    return !regex.test(ua);
   }
 
 }

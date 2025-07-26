@@ -3,7 +3,7 @@ import {NgIcon} from '@ng-icons/core';
 import {FormsModule} from '@angular/forms';
 import {ThemeService} from '../../services/theme.service';
 import {Headings} from '../../constants/const';
-import {ActivatedRoute, Router} from '@angular/router';
+import {ActivatedRoute} from '@angular/router';
 import {HeadingInterface} from '../../constants/types';
 import {takeUntilDestroyed} from '@angular/core/rxjs-interop';
 import {LayoutService} from '../../services/layout.service';
@@ -25,9 +25,9 @@ export class HeaderComponent implements OnInit {
   readonly #layoutService = inject(LayoutService);
 
   selectedBookmark = signal<HeadingInterface | undefined>(undefined);
-
   phoneNumber = '447351534063';
   isLightTheme = computed(() => this.#themeService.activeTheme() === 'light');
+  isDesktop = computed(this.#layoutService.isDesktop);
 
   toggleThemeDarkMode() {
     this.#themeService.toggle();

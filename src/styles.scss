@@ -59,7 +59,7 @@ section {
 }
 
 .content {
-  margin-top: var(--banner-height);
+  margin-top: calc(2 * #{var(--banner-height)});
 }
 
 .banner {
