@@ -17,7 +17,7 @@
   </div>
   @for (heading of Headings; track heading.id) {
     <!--  <section @fadeInOut>-->
-    <section appPickRelatedHeadingOnScrollView>
+    <section [appPickRelatedHeadingOnScrollView]="headerHeight()">
       <h2 [id]="heading.id">{{heading.text}}</h2>
     </section>
   }

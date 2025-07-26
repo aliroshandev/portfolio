@@ -1,4 +1,4 @@
-import {Host, HostListener, inject, Injectable, PLATFORM_ID, signal, WritableSignal} from '@angular/core';
+import {inject, Injectable, PLATFORM_ID, signal, WritableSignal} from '@angular/core';
 import {isPlatformBrowser} from '@angular/common';
 
 @Injectable({

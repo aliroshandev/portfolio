@@ -1,6 +1,6 @@
 import {computed, DestroyRef, Directive, ElementRef, inject, input, OnInit} from '@angular/core';
 import {LayoutService} from '../services/layout.service';
-import {debounceTime, distinctUntilChanged, from, of} from 'rxjs';
+import {distinctUntilChanged} from 'rxjs';
 import {takeUntilDestroyed, toObservable} from '@angular/core/rxjs-interop';
 
 @Directive({
@@ -8,6 +8,11 @@ import {takeUntilDestroyed, toObservable} from '@angular/core/rxjs-interop';
 })
 export class PickRelatedHeadingOnScrollViewDirective
   implements OnInit {
+
+  /**
+   * bind as header height, if you don't pass any value it's binds 0 as default.
+   */
+  appPickRelatedHeadingOnScrollView = input<number>(0);
 
   readonly #element = inject(ElementRef<HTMLElement>);
   readonly #layoutService = inject(LayoutService);
@@ -39,14 +44,18 @@ export class PickRelatedHeadingOnScrollViewDirective
         .subscribe({
           next: screenSpaceFromTop => {
             const elementSpaceFromTop = this.#element.nativeElement.getBoundingClientRect().top;
-            if (elementSpaceFromTop > 0) {
+            if (elementSpaceFromTop > this.appPickRelatedHeadingOnScrollView()) {
               this.#element.nativeElement.style.scale = Math.min(1 - Math.min((elementSpaceFromTop - screenSpaceFromTop) / elementSpaceFromTop, .8), 1);
-              if (elementSpaceFromTop > screenSpaceFromTop) {
-                this.#element.nativeElement.style.opacity = Math.min(1 - Math.min((elementSpaceFromTop - screenSpaceFromTop) / elementSpaceFromTop, .8), 1);
-              }
+              this.#element.nativeElement.style.opacity = Math.min(1 - Math.min((elementSpaceFromTop - screenSpaceFromTop) / elementSpaceFromTop, .8), 1);
             } else {
-              this.#element.nativeElement.style.opacity = Math.min(1 - Math.min((screenSpaceFromTop - elementSpaceFromTop) / elementSpaceFromTop, .8), 1);
-              this.#element.nativeElement.style.scale = Math.max(1 - Math.min(Math.abs(screenSpaceFromTop + elementSpaceFromTop) / screenSpaceFromTop, .8), 1);
+              if (elementSpaceFromTop < 0) {
+                this.#element.nativeElement.style.opacity = Math.max( 1 - Math.abs(screenSpaceFromTop - (screenSpaceFromTop + elementSpaceFromTop)) / (screenSpaceFromTop + elementSpaceFromTop), 0);
+                this.#element.nativeElement.style.scale = Math.max( 1 - Math.abs(screenSpaceFromTop - (screenSpaceFromTop + elementSpaceFromTop)) / (screenSpaceFromTop + elementSpaceFromTop), 0);
+              } else {
+
+              }
+              // this.#element.nativeElement.style.opacity = Math.max(Math.abs(screenSpaceFromTop + elementSpaceFromTop) / screenSpaceFromTop, 0);
+              // this.#element.nativeElement.style.scale = Math.max(Math.abs(screenSpaceFromTop + elementSpaceFromTop) / screenSpaceFromTop, 0);
             }
           }
         })
