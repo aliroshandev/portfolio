@@ -22,6 +22,7 @@ export class LayoutService {
   readonly #transferState = inject(TransferState);
   readonly #breakpointObserver = inject(BreakpointObserver);
 
+  title = signal('Ali Roshanzamir Golafzani | Portfolio');
   scrollY = signal<number>(0);
   headerHeight: Signal<number> = signal<number>(76).asReadonly();
   isDesktop: WritableSignal<boolean | undefined> = signal<boolean | undefined>(undefined);

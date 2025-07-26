@@ -28,6 +28,7 @@ export class HeaderComponent implements OnInit {
   phoneNumber = '447351534063';
   isLightTheme = computed(() => this.#themeService.activeTheme() === 'light');
   isDesktop = computed(this.#layoutService.isDesktop);
+  title = computed(this.#layoutService.title);
 
   toggleThemeDarkMode() {
     this.#themeService.toggle();

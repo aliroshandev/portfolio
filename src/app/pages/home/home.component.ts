@@ -1,4 +1,4 @@
-import {Component, computed, inject} from '@angular/core';
+import {Component, computed, effect, inject} from '@angular/core';
 import {NgIcon} from '@ng-icons/core';
 import {ActivatedRoute} from '@angular/router';
 import {Headings} from '../../constants/const';
@@ -23,7 +23,7 @@ export class HomeComponent {
   readonly #route = inject(ActivatedRoute);
   readonly #themeService = inject(ThemeService);
   readonly #layoutService = inject(LayoutService);
-  title = computed(() => this.#route.snapshot.title ?? "Ali Roshanzamir Golafzani | portfolio");
+  title = computed(() => this.#route.snapshot.title ?? this.#layoutService.title());
   themeMode = computed(this.#themeService.activeTheme);
   headerHeight = computed(this.#layoutService.headerHeight);
   protected readonly Headings = Headings;
