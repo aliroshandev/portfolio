@@ -10,6 +10,8 @@ import {
 } from '@angular/core';
 import {isPlatformBrowser, isPlatformServer} from '@angular/common';
 import {USER_AGENT} from '../app.config.server';
+import {BreakpointObserver, Breakpoints} from '@angular/cdk/layout';
+import {toSignal} from '@angular/core/rxjs-interop';
 
 @Injectable({
   providedIn: 'root'
@@ -18,6 +20,7 @@ export class LayoutService {
 
   readonly #platformId = inject(PLATFORM_ID);
   readonly #transferState = inject(TransferState);
+  readonly #breakpointObserver = inject(BreakpointObserver);
 
   scrollY = signal<number>(0);
   headerHeight: Signal<number> = signal<number>(76).asReadonly();
@@ -36,6 +39,17 @@ export class LayoutService {
       this.isDesktop.set(this.isUserAgentFromDesktop(this.userAgent));
     } else {
       this.userAgent = this.#transferState.get(this.userAgentKey, '');
+      const isDesktopObserved = toSignal(this.#breakpointObserver.observe([
+        Breakpoints.Large,
+        Breakpoints.XLarge,
+        Breakpoints.Tablet,
+        Breakpoints.Web,
+        Breakpoints.WebPortrait,
+        Breakpoints.HandsetLandscape,
+        Breakpoints.TabletLandscape,
+        Breakpoints.WebLandscape,
+      ]))()?.matches;
+      this.isDesktop.set(!!isDesktopObserved)
     }
   }
 
