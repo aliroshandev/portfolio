@@ -43,11 +43,11 @@ export class LayoutService {
       const isDesktopObserved = toSignal(this.#breakpointObserver.observe([
         Breakpoints.Large,
         Breakpoints.XLarge,
-        Breakpoints.Tablet,
+        // Breakpoints.Tablet,
         Breakpoints.Web,
         Breakpoints.WebPortrait,
-        Breakpoints.HandsetLandscape,
-        Breakpoints.TabletLandscape,
+        // Breakpoints.HandsetLandscape,
+        // Breakpoints.TabletLandscape,
         Breakpoints.WebLandscape,
       ]))()?.matches;
       this.isDesktop.set(!!isDesktopObserved)

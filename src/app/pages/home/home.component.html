@@ -4,21 +4,60 @@
   </div>
 </section>
 <div class="content">
-  <h1>{{title()}}</h1>
-  <div class="grid grid-col-1">
-    <a class="btn btn-soft mt-2" href="https://github.com/aliroshandev" target="_blank">
-      <ng-icon name="bootstrapGithub" />
-      <span>View Github</span>
-    </a>
-    <a class="btn btn-soft mt-2" href="https://linkedin.com/in/ali-roshan" target="_blank">
-      <ng-icon name="bootstrapLinkedin" />
-      <span>Connect on Linkedin</span>
-    </a>
-  </div>
   @for (heading of Headings; track heading.id) {
     <!--  <section @fadeInOut>-->
-    <section [appPickRelatedHeadingOnScrollView]="headerHeight()" style="background: darkcyan">
-      <h2 [id]="heading.id">{{heading.text}}</h2>
+    <section [appPickRelatedHeadingOnScrollView]="headerHeight()" class="content-section">
+      <div class="section-content">
+        <h2 [id]="heading.id">{{heading.text}}</h2>
+        <div class="mt-3">
+          @if(HeadingContents.get(heading.id)?.content?.isString()) {
+            <h3>{{HeadingContents.get(heading.id)?.title}}</h3>
+            <p>{{HeadingContents.get(heading.id)?.content?.data}}</p>
+          }
+          @else if (HeadingContents.get(heading.id)?.content?.isArrayOfExperience()) {
+            @if (HeadingContents.get(heading.id)?.content?.data.length) {
+              @for (experience of $any(HeadingContents.get(heading.id)?.content?.data); track $index) {
+                <div class="card card-dash border-accent">
+                  <div class="card-body">
+                    <div class="flex items-center justify-content-between">
+                      <h3 class="flex-grow-1 fs-2">
+                        <a [href]="experience.experienceDetails.href"
+                           target="_blank"
+                           rel="nofollow noopener"
+                           class="d-inline-block align-middle">
+                          <span class="me-2">{{experience.companyName}}</span>
+                          <ng-icon class="d-inline-block" name="bootstrapLink45deg" size="18" />
+                        </a>
+                      </h3>
+                      <div>
+                        <span class="me-2">{{experience.workFromToDate[0]}}</span>
+                        <span>{{experience.workFromToDate[1]}}</span>
+                      </div>
+                    </div>
+                    @if (experience.experienceDetails.content.isString()) {
+                      {{experience.experienceDetails.content.data}}
+                    } @else if (experience.experienceDetails.content.isArrayOfBullets()) {
+                      <ul class="list-disc list-inside">
+                        @for (bullet of $any(experience.experienceDetails.content.data); track bullet) {
+                          <li>{{bullet}}</li>
+                        }
+                      </ul>
+                    } @else {
+                      Not Provided Experience HTML
+                    }
+                  </div>
+                </div>
+              }
+            }
+          }
+          @else if(HeadingContents.get(heading.id)?.content?.isSkills()) {
+            Not Provided Yet
+          }
+          @else {
+            Not Valid Heading Content
+          }
+        </div>
+      </div>
     </section>
   }
 </div>

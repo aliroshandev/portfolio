@@ -1,19 +1,19 @@
-import {Component, computed, effect, inject} from '@angular/core';
-import {NgIcon} from '@ng-icons/core';
+import {Component, computed, inject} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
-import {Headings} from '../../constants/const';
+import {HeadingContents, Headings} from '../../constants/const';
 import {fadeInOut, fadeInUp} from '../../animations/animations';
 import {NgOptimizedImage} from '@angular/common';
 import {ThemeService} from '../../services/theme.service';
 import {PickRelatedHeadingOnScrollViewDirective} from '../../directives/pick-related-heading-on-scroll-view.directive';
 import {LayoutService} from '../../services/layout.service';
+import {NgIcon} from '@ng-icons/core';
 
 @Component({
   selector: 'app-home',
   imports: [
-    NgIcon,
     NgOptimizedImage,
-    PickRelatedHeadingOnScrollViewDirective
+    PickRelatedHeadingOnScrollViewDirective,
+    NgIcon
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
@@ -27,4 +27,5 @@ export class HomeComponent {
   themeMode = computed(this.#themeService.activeTheme);
   headerHeight = computed(this.#layoutService.headerHeight);
   protected readonly Headings = Headings;
+  protected readonly HeadingContents = HeadingContents;
 }

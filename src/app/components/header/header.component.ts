@@ -2,7 +2,7 @@ import {Component, computed, DestroyRef, inject, OnInit, signal} from '@angular/
 import {NgIcon} from '@ng-icons/core';
 import {FormsModule} from '@angular/forms';
 import {ThemeService} from '../../services/theme.service';
-import {Headings} from '../../constants/const';
+import {contacts, Headings} from '../../constants/const';
 import {ActivatedRoute} from '@angular/router';
 import {HeadingInterface} from '../../constants/types';
 import {takeUntilDestroyed} from '@angular/core/rxjs-interop';
@@ -56,4 +56,10 @@ export class HeaderComponent implements OnInit {
     //   console.log(this.#route.snapshot.fragment);
     // }
   }
+
+  protected readonly contacts = contacts('447351534063')
+    .map((item, index) => ({
+      ...item,
+      className: (index > 0 && this.isDesktop()) ? `${item.className} ms-2` : item.className,
+    }));
 }

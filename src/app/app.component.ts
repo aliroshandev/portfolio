@@ -5,7 +5,7 @@ import {provideIcons} from '@ng-icons/core';
 import {
   bootstrapCalendar,
   bootstrapFilePdf,
-  bootstrapGithub,
+  bootstrapGithub, bootstrapLink45deg,
   bootstrapLinkedin,
   bootstrapMoon,
   bootstrapPhone,
@@ -31,6 +31,7 @@ import {LayoutService} from './services/layout.service';
       bootstrapFilePdf,
       bootstrapSend,
       bootstrapThreeDotsVertical,
+      bootstrapLink45deg,
     })
   ],
 })

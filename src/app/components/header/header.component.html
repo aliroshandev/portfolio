@@ -1,6 +1,6 @@
 @if (isDesktop()) {
   <div class="flex items-center px-3 py-2 h-19">
-    <div class="flex-6">
+    <div class="flex-4">
       <label class="toggle text-base-content"
              [class.text-warning]="isLightTheme()">
         <input #toggleInput
@@ -23,44 +23,45 @@
            href="/#{{heading.id}}">{{heading.text}}</a>
       }
     </div>
-    <div class="flex-6 text-end">
-      <a class="btn btn-primary btn-soft"
-         href="tel:{{phoneNumber}}"
-         target="_blank">
-        <ng-icon name="bootstrapPhone" />
-        <span class="ms-1">Call me</span>
-      </a>
-      <a class="btn btn-primary btn-soft ms-2"
-         href="sms:{{phoneNumber}}?body=Hi%20Ali,%20i%20saw%20your%20Portfolio,%20Let%27s%20talk"
-         target="_blank">
-        <ng-icon name="bootstrapSend" />
-        <span class="ms-1">Text me</span>
-      </a>
-      <a href="/assets/ALI_ROSHAN_CV.pdf"
-         class="btn btn-primary ms-2"
-         target="_blank"
-         download>
-        <ng-icon name="bootstrapFilePdf" />
-        <span class="ms-1">Download CV</span>
-      </a>
+    <div class="flex-8 text-end">
+      @for(contact of contacts; track $index) {
+        <a [class]="contact.className"
+           [href]="contact.href"
+           [target]="contact.target">
+          <ng-icon [name]="contact.iconName" />
+          <span class="ms-1">{{contact.text}}</span>
+        </a>
+      }
     </div>
   </div>
 } @else {
-  <div class="flex items-center justify-content-between">
-    <button class="btn btn-soft"
-            popovertarget="headerMenu"
-            style="anchor-name:--anchor-1">
-      <ng-icon name="bootstrapThreeDotsVertical" class="p-0" size="16" />
-    </button>
-    <ul class="dropdown menu w-52 rounded-box bg-base-100 shadow-sm w-full"
-        popover id="headerMenu" style="position-anchor:--anchor-1">
-      @for (heading of Headings; track heading.id) {
-        <li>
-          <a [class.text-primary]="heading.id === selectedBookmark()?.id"
-             href="/#{{heading.id}}">{{heading.text}}</a>
-        </li>
-      }
-    </ul>
+  <div class="flex items-center justify-between px-3 h-19">
+    <div>
+      <button class="btn btn-soft"
+              popovertarget="headerMenu"
+              style="anchor-name:--anchor-1">
+        <ng-icon name="bootstrapThreeDotsVertical" class="p-0" size="16" />
+      </button>
+      <ul class="dropdown menu w-52 rounded-box bg-base-100 shadow-sm w-full"
+          popover id="headerMenu" style="position-anchor:--anchor-1">
+        @for (heading of Headings; track heading.id) {
+          <li [class.mt-2]="$index > 0">
+            <a [class.text-primary]="heading.id === selectedBookmark()?.id"
+               href="/#{{heading.id}}">{{heading.text}}</a>
+          </li>
+        }
+        @for(contact of contacts; track $index) {
+          <li class="mt-2">
+            <a [class]="contact.className"
+               [href]="contact.href"
+               [target]="contact.target">
+              <ng-icon [name]="contact.iconName" />
+              <span class="ms-1">{{contact.text}}</span>
+            </a>
+          </li>
+        }
+      </ul>
+    </div>
     <h1 class="fs-4 mb-0 ms-2">
       {{title()}}
     </h1>

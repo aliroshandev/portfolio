@@ -60,6 +60,7 @@ section {
 
 .content {
   margin-top: calc(2 * #{var(--banner-height)});
+  padding-inline-end: var(--banner-height);
 }
 
 .banner {
@@ -97,4 +98,16 @@ section {
   to {
     transform: translateX(50%);
   }
+}
+
+.content-section {
+  padding: calc(6 * var(--spacing));
+  .section-content {
+    border-inline-start: 4px solid var(--color-primary);
+    border-radius: 2px;
+    padding: calc(3 * var(--spacing))
+  }
+}
+ng-icon {
+  vertical-align: middle !important;
 }
