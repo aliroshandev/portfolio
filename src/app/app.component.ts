@@ -10,7 +10,8 @@ import {
   bootstrapMoon,
   bootstrapPhone,
   bootstrapSend,
-  bootstrapSun
+  bootstrapSun,
+  bootstrapThreeDotsVertical,
 } from '@ng-icons/bootstrap-icons';
 import {LayoutService} from './services/layout.service';
 
@@ -29,6 +30,7 @@ import {LayoutService} from './services/layout.service';
       bootstrapMoon,
       bootstrapFilePdf,
       bootstrapSend,
+      bootstrapThreeDotsVertical,
     })
   ],
 })

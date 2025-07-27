@@ -19,7 +19,7 @@
       </label>
       @for (heading of Headings; track heading.id) {
         <a class="btn btn-soft ms-2"
-           [class.selected]="heading.id === selectedBookmark()?.id"
+           [class.btn-primary]="heading.id === selectedBookmark()?.id"
            href="/#{{heading.id}}">{{heading.text}}</a>
       }
     </div>
@@ -47,8 +47,21 @@
   </div>
 } @else {
   <div class="flex items-center justify-content-between">
-    <button></button>
-    <h1 class="fs-4 mb-0">
+    <button class="btn btn-soft"
+            popovertarget="headerMenu"
+            style="anchor-name:--anchor-1">
+      <ng-icon name="bootstrapThreeDotsVertical" class="p-0" size="16" />
+    </button>
+    <ul class="dropdown menu w-52 rounded-box bg-base-100 shadow-sm w-full"
+        popover id="headerMenu" style="position-anchor:--anchor-1">
+      @for (heading of Headings; track heading.id) {
+        <li>
+          <a [class.text-primary]="heading.id === selectedBookmark()?.id"
+             href="/#{{heading.id}}">{{heading.text}}</a>
+        </li>
+      }
+    </ul>
+    <h1 class="fs-4 mb-0 ms-2">
       {{title()}}
     </h1>
   </div>
