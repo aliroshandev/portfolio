@@ -60,7 +60,6 @@ section {
 
 .content {
   margin-top: calc(2 * #{var(--banner-height)});
-  padding-inline-end: var(--banner-height);
 }
 
 .banner {
@@ -96,16 +95,20 @@ section {
     transform: translateX(0);
   }
   to {
-    transform: translateX(50%);
+    transform: translateX(calc(50vw - calc(#{var(--banner-height)} / 2)));
   }
 }
 
 .content-section {
   padding: calc(6 * var(--spacing));
+  @include mixins.dark-theme() {
+    background: linear-gradient(var(--color-primary), var(--root-bg));
+  }
+  @include mixins.dark-theme() {
+    background: linear-gradient(var(--color-primary), var(--root-bg));
+  }
   .section-content {
     border-inline-start: 4px solid var(--color-primary);
-    border-radius: 2px;
-    padding: calc(3 * var(--spacing))
   }
 }
 ng-icon {

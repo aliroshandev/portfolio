@@ -26,6 +26,7 @@ export class HomeComponent {
   title = computed(() => this.#route.snapshot.title ?? this.#layoutService.title());
   themeMode = computed(this.#themeService.activeTheme);
   headerHeight = computed(this.#layoutService.headerHeight);
+  isDesktop = computed(this.#layoutService.isDesktop);
   protected readonly Headings = Headings;
   protected readonly HeadingContents = HeadingContents;
 }

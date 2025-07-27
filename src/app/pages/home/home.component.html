@@ -1,13 +1,15 @@
-<section class="banner" role="banner">
-  <div class="image-wrapper">
-    <img ngSrc="/assets/profile-{{themeMode()}}.png" fill alt="Ali Roshanzamir Golafzani" priority>
-  </div>
-</section>
-<div class="content">
+@if (isDesktop()) {
+  <section class="banner" role="banner">
+    <div class="image-wrapper">
+      <img ngSrc="/assets/profile-{{themeMode()}}.png" fill alt="Ali Roshanzamir Golafzani" priority>
+    </div>
+  </section>
+}
+<div class="content md:me-(--banner-height)">
   @for (heading of Headings; track heading.id) {
     <!--  <section @fadeInOut>-->
-    <section [appPickRelatedHeadingOnScrollView]="headerHeight()" class="content-section">
-      <div class="section-content">
+    <section [appPickRelatedHeadingOnScrollView]="headerHeight()" class="content-section md:pe-9">
+      <div class="section-content rounded-md p-1 md:p-3">
         <h2 [id]="heading.id">{{heading.text}}</h2>
         <div class="mt-3">
           @if(HeadingContents.get(heading.id)?.content?.isString()) {
