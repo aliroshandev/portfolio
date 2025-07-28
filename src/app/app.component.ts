@@ -1,4 +1,4 @@
-import {Component, computed, HostListener, inject} from '@angular/core';
+import {Component, computed, HostListener, inject, OnInit} from '@angular/core';
 import {RouterOutlet} from '@angular/router';
 import {HeaderComponent} from '@components/header/header.component';
 import {provideIcons} from '@ng-icons/core';
@@ -35,7 +35,7 @@ import {LayoutService} from './services/layout.service';
     })
   ],
 })
-export class AppComponent {
+export class AppComponent implements OnInit{
 
   readonly #layoutService = inject(LayoutService);
   scrollTop = computed(this.#layoutService.scrollY);
@@ -47,6 +47,16 @@ export class AppComponent {
       const conditionToToggleClass = this.scrollTop() > 100;
       headerElement?.classList.toggle('position-sticky', conditionToToggleClass);
       headerElement?.classList.toggle('top-0', conditionToToggleClass);
+    }
+  }
+
+  ngOnInit(): void {
+    // this.#layoutService.scrollTo();
+    if (this.#layoutService.isBrowser) {
+      document.getElementsByTagName('header')[0].scrollIntoView({
+        behavior: 'instant',
+        block: "start"
+      })
     }
   }
 }
