@@ -1,10 +1,8 @@
-@if (isDesktop()) {
-  <section class="banner" role="banner">
-    <div class="image-wrapper">
-      <img ngSrc="/assets/profile-{{themeMode()}}.png" fill alt="Ali Roshanzamir Golafzani" priority>
-    </div>
-  </section>
-}
+<section class="banner md:animate" role="banner">
+  <div class="image-wrapper">
+    <img ngSrc="/assets/profile-{{themeMode()}}.png" fill alt="Ali Roshanzamir Golafzani" priority>
+  </div>
+</section>
 <div class="content space-top-0 md:space-top md:me-(--banner-height)">
   @for (heading of Headings; track heading.id) {
     <!--  <section @fadeInOut>-->

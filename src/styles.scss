@@ -68,17 +68,19 @@ section {
 }
 
 .banner {
-  aspect-ratio: 1;
   min-height: auto;
-  position: fixed;
   z-index: -1;
   width: 100%;
   top: var(--header-height);
 
-  animation-name: scroll-stick-right;
-  animation-timeline: scroll(block nearest);
-  animation-range: 0 60vh;
-  animation-fill-mode: both;
+  &.animate {
+    position: fixed;
+    aspect-ratio: 1;
+    animation-name: scroll-stick-right;
+    animation-timeline: scroll(block nearest);
+    animation-range: 0 60vh;
+    animation-fill-mode: both;
+  }
 }
 
 .image-wrapper {
