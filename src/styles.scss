@@ -59,7 +59,12 @@ section {
 }
 
 .content {
-  margin-top: calc(2 * #{var(--banner-height)});
+  &.space-top {
+    margin-top: calc(2 * #{var(--banner-height)});
+  }
+  &.space-top-0 {
+    margin-top: 0;
+  }
 }
 
 .banner {

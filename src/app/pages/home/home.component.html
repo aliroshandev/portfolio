@@ -5,7 +5,7 @@
     </div>
   </section>
 }
-<div class="content md:me-(--banner-height)">
+<div class="content space-top-0 md:space-top md:me-(--banner-height)">
   @for (heading of Headings; track heading.id) {
     <!--  <section @fadeInOut>-->
     <section [appPickRelatedHeadingOnScrollView]="headerHeight()" class="content-section md:pe-9">
