@@ -1,22 +1,25 @@
+<ng-template #switchThemeMode>
+  <label class="toggle text-base-content"
+         [class.text-warning]="isLightTheme()">
+    <input #toggleInput
+           type="checkbox"
+           [ngModel]="isLightTheme"
+           (ngModelChange)="toggleThemeDarkMode()"/>
+    @if (isLightTheme()) {
+      <span>
+        <ng-icon name="bootstrapSun" class="p-0" size="14"/>
+      </span>
+    } @else {
+      <span>
+        <ng-icon name="bootstrapMoon" class="p-0" size="14"/>
+      </span>
+    }
+  </label>
+</ng-template>
 @if (isDesktop()) {
   <div class="flex items-center px-3 py-2 h-19">
     <div class="flex-4">
-      <label class="toggle text-base-content"
-             [class.text-warning]="isLightTheme()">
-        <input #toggleInput
-               type="checkbox"
-               [ngModel]="isLightTheme"
-               (ngModelChange)="toggleThemeDarkMode()"/>
-        @if (isLightTheme()) {
-          <span>
-          <ng-icon name="bootstrapSun" class="p-0" size="14"/>
-        </span>
-        } @else {
-          <span>
-          <ng-icon name="bootstrapMoon" class="p-0" size="14"/>
-        </span>
-        }
-      </label>
+      <ng-container *ngTemplateOutlet="switchThemeMode"></ng-container>
       @for (heading of Headings; track heading.id) {
         <a class="btn btn-soft ms-2"
            [class.btn-primary]="heading.id === selectedBookmark()?.id"
@@ -37,11 +40,12 @@
 } @else {
   <div class="flex items-center justify-between px-3 h-19">
     <div>
-      <button class="btn btn-soft"
+      <button class="btn btn-soft me-2 md:me-0"
               popovertarget="headerMenu"
               style="anchor-name:--anchor-1">
         <ng-icon name="bootstrapThreeDotsVertical" class="p-0" size="16" />
       </button>
+      <ng-container *ngTemplateOutlet="switchThemeMode"></ng-container>
       <ul class="dropdown menu w-52 rounded-box bg-base-100 shadow-sm w-full"
           popover id="headerMenu" style="position-anchor:--anchor-1">
         @for (heading of Headings; track heading.id) {

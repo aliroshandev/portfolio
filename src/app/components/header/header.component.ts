@@ -7,12 +7,14 @@ import {ActivatedRoute} from '@angular/router';
 import {HeadingInterface} from '../../constants/types';
 import {takeUntilDestroyed} from '@angular/core/rxjs-interop';
 import {LayoutService} from '../../services/layout.service';
+import {NgTemplateOutlet} from '@angular/common';
 
 @Component({
   selector: 'header[app-header]',
   imports: [
     NgIcon,
-    FormsModule
+    FormsModule,
+    NgTemplateOutlet
   ],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
@@ -46,6 +48,9 @@ export class HeaderComponent implements OnInit {
             if (this.#layoutService.isBrowser) {
               this.#layoutService.scrollTo(document.getElementById(response));
               this.selectedBookmark.set(Headings.find(heading => heading.id === response))
+              if (this.isDesktop()) {
+
+              }
             }
           }
         }

@@ -50,7 +50,10 @@ export class LayoutService {
         // Breakpoints.TabletLandscape,
         Breakpoints.WebLandscape,
       ]))()?.matches;
-      this.isDesktop.set(!!isDesktopObserved)
+      this.isDesktop.set(!!isDesktopObserved);
+      if (this.isMobile()) {
+        this.title.set('Ali Roshanzamir | Portfolio');
+      }
     }
   }
 
