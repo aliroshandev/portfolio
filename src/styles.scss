@@ -19,7 +19,7 @@ html {
   overflow-x: hidden;
 }
 main {
-  min-height: 1000px;
+  min-height: 2500px;
   overflow-x: hidden;
 }
 
@@ -76,11 +76,6 @@ section {
   top: var(--header-height);
 }
 
-@media (max-width: 48rem) {
-  main {
-    min-height: 2500px;
-  }
-}
 @media (min-width: 48rem) {
   .banner {
     position: fixed;
