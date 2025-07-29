@@ -21,6 +21,18 @@ export const experiences: Array<ExperienceInterface> = [
       ])
     }
   } as ExperienceInterface,
+  {
+    workFromToDate: ['08/2017', '11/2017'],
+    companyName: 'ITManHa (Global E-Commerce Platform)',
+    experienceDetails: {
+      title: 'Remote Senior Frontend Developer',
+      href: 'https://missha-ir.com',
+      content: new ExperienceContent([
+        'Engineered frontend solutions for cross-industry software/app projects driving client growth.',
+        'Core stack: WordPress, JavaScript, jQuery, HTML5, CSS3 with focus on responsive design.',
+      ])
+    }
+  } as ExperienceInterface,
 ];
 
 export const skills: SkillsInterface = {
