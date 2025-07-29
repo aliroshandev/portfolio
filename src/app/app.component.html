@@ -2,3 +2,16 @@
 <main>
   <router-outlet />
 </main>
+@if (isMobile()) {
+  <div class="mobile-menu">
+    <div class="contact-items flex items-center justify-between">
+      @for(contact of contacts; track $index) {
+        <a [class]="contact.className"
+           [href]="contact.href"
+           [target]="contact.target">
+          <ng-icon [name]="contact.iconName" />
+        </a>
+      }
+    </div>
+  </div>
+}

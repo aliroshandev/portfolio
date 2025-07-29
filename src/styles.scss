@@ -15,11 +15,12 @@
   scroll-behavior: smooth;
   scroll-margin: calc(#{var(--spacing)} * 25);
 }
-body {
+html {
   overflow-x: hidden;
 }
 main {
-  min-height: 700px;
+  min-height: 1000px;
+  overflow-x: hidden;
 }
 
 header {
@@ -75,6 +76,11 @@ section {
   top: var(--header-height);
 }
 
+@media (max-width: 48rem) {
+  main {
+    min-height: 2500px;
+  }
+}
 @media (min-width: 48rem) {
   .banner {
     position: fixed;
@@ -86,11 +92,6 @@ section {
   }
   .content.space-top {
     margin-top: calc(1.2 * #{var(--banner-height)})!important;
-  }
-  @media screen and (min-width: var(--breakpoint-md)) {
-    .md\:animate {
-      background: red!important;
-    }
   }
 }
 
@@ -132,4 +133,21 @@ section {
 }
 ng-icon {
   vertical-align: middle !important;
+}
+
+.mobile-menu {
+  padding-inline: 8px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  .contact-items {
+    border-radius: 8px 8px 0 0;
+    padding: 8px 12px;
+    @include mixins.light-theme() {
+      background-color: var(--color-base-300);
+    }
+    @include mixins.dark-theme() {
+      background-color: var(--color-info-content);
+    }
+  }
 }

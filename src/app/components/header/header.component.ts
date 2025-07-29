@@ -27,7 +27,7 @@ export class HeaderComponent implements OnInit {
   readonly #layoutService = inject(LayoutService);
 
   selectedBookmark = signal<HeadingInterface | undefined>(undefined);
-  phoneNumber = '447351534063';
+  phoneNumber = computed(this.#layoutService.phoneNumber);
   isLightTheme = computed(() => this.#themeService.activeTheme() === 'light');
   isDesktop = computed(this.#layoutService.isDesktop);
   title = computed(this.#layoutService.title);

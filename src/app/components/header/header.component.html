@@ -60,17 +60,17 @@
                href="/#{{heading.id}}">{{heading.text}}</a>
           </li>
         }
-        @for(contact of contacts; track $index) {
-          <li class="mt-2">
-            <a [class]="contact.className"
-               [href]="contact.href"
-               [target]="contact.target"
-               (click)="closePopup()">
-              <ng-icon [name]="contact.iconName" />
-              <span class="ms-1">{{contact.text}}</span>
-            </a>
-          </li>
-        }
+<!--        @for(contact of contacts; track $index) {-->
+<!--          <li class="mt-2">-->
+<!--            <a [class]="contact.className"-->
+<!--               [href]="contact.href"-->
+<!--               [target]="contact.target"-->
+<!--               (click)="closePopup()">-->
+<!--              <ng-icon [name]="contact.iconName" />-->
+<!--              <span class="ms-1">{{contact.text}}</span>-->
+<!--            </a>-->
+<!--          </li>-->
+<!--        }-->
       </ul>
     </div>
     <h1 class="fs-4 mb-0 ms-2">
