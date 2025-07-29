@@ -2,22 +2,30 @@
 @use "tailwindcss";
 @use "style/mixins" as mixins;
 @plugin "daisyui";
+@plugin "@tailwindcss/typography";
 @custom-variant dark (&:where(.dark, .dark *));
 
 :root {
   --header-height: calc(#{var(--spacing)} * 19);
   --banner-height: 200px;
+  //--root-bg: #d7d7d7;
 }
 
 * {
   scroll-behavior: smooth;
   scroll-margin: calc(#{var(--spacing)} * 25);
 }
+body {
+  overflow-x: hidden;
+}
+main {
+  min-height: 700px;
+}
 
 header {
   transition: all .3s ease-in-out;
   margin-bottom: calc(#{var(--spacing)} * 5);
-  z-index: 1;
+  z-index: 2;
   &.position-sticky {
     box-shadow: var(--shadow-md);
     @include mixins.dark-theme() {
@@ -37,17 +45,13 @@ header {
   position: sticky;
 }
 
-main {
-  min-height: 2000px;
-}
-
 .skeleton {
   user-select: none;
   pointer-events: none;
 }
 
 section {
-  min-height: 200px;
+  //min-height: 200px;
   //visibility: hidden;
   //transform: translateX(-50%);
   //transition: all 0.3s ease-in-out;
@@ -60,26 +64,33 @@ section {
 
 .content {
   &.space-top {
-    margin-top: calc(2 * #{var(--banner-height)});
-  }
-  &.space-top-0 {
     margin-top: 0;
   }
 }
 
 .banner {
   min-height: auto;
-  z-index: -1;
+  z-index: 1;
   width: 100%;
   top: var(--header-height);
+}
 
-  &.animate {
+@media (min-width: 48rem) {
+  .banner {
     position: fixed;
     aspect-ratio: 1;
     animation-name: scroll-stick-right;
     animation-timeline: scroll(block nearest);
     animation-range: 0 60vh;
     animation-fill-mode: both;
+  }
+  .content.space-top {
+    margin-top: calc(1.2 * #{var(--banner-height)})!important;
+  }
+  @media screen and (min-width: var(--breakpoint-md)) {
+    .md\:animate {
+      background: red!important;
+    }
   }
 }
 
@@ -108,14 +119,15 @@ section {
 
 .content-section {
   padding: calc(6 * var(--spacing));
-  @include mixins.dark-theme() {
-    background: linear-gradient(var(--color-primary), var(--root-bg));
-  }
-  @include mixins.dark-theme() {
-    background: linear-gradient(var(--color-primary), var(--root-bg));
-  }
+  transition: all ease-in-out .05s;
   .section-content {
     border-inline-start: 4px solid var(--color-primary);
+    @include mixins.light-theme() {
+      background-color: var(--color-base-300);
+    }
+    @include mixins.dark-theme() {
+      background-color: var(--color-base-300);
+    }
   }
 }
 ng-icon {

@@ -1,10 +1,23 @@
 @mixin light-theme() {
-  [data-theme="light"] & {
+  html[data-theme="light"] & {
     @content;
   }
 }
 @mixin dark-theme() {
-  [data-theme="dark"] & {
+  html[data-theme="dark"] & {
     @content;
   }
+}
+@mixin gradient($color1, $color2) {
+  background: linear-gradient(to left, $color1, $color2);
+  background: -moz-linear-gradient(to left, $color1, $color2);
+  background: -ms-linear-gradient(to left, $color1, $color2);
+  background: -o-linear-gradient(to left, $color1, $color2);
+  background: -webkit-linear-gradient(to left, $color1, $color2);
+}
+
+@mixin transform($property) {
+  -webkit-transform: $property;
+  -ms-transform: $property;
+  transform: $property;
 }

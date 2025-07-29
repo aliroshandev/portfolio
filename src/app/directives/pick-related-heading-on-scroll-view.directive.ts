@@ -1,6 +1,6 @@
 import {computed, DestroyRef, Directive, ElementRef, inject, input, OnInit} from '@angular/core';
 import {LayoutService} from '../services/layout.service';
-import {distinctUntilChanged} from 'rxjs';
+import {debounceTime, distinctUntilChanged} from 'rxjs';
 import {takeUntilDestroyed, toObservable} from '@angular/core/rxjs-interop';
 
 @Directive({
@@ -12,7 +12,7 @@ export class PickRelatedHeadingOnScrollViewDirective
   /**
    * bind as header height, if you don't pass any value it's binds 0 as default.
    */
-  appPickRelatedHeadingOnScrollView = input<number>(0);
+  appPickRelatedHeadingOnScrollView = input<number>(76);
 
   readonly #element = inject(ElementRef<HTMLElement>);
   readonly #layoutService = inject(LayoutService);
@@ -39,7 +39,7 @@ export class PickRelatedHeadingOnScrollViewDirective
       this.scrollTopChangeObservable
         .pipe(
           takeUntilDestroyed(this.#destroyRef),
-          distinctUntilChanged()
+          distinctUntilChanged(),
         )
         .subscribe({
           next: screenSpaceFromTop => {
@@ -47,10 +47,12 @@ export class PickRelatedHeadingOnScrollViewDirective
             if (elementSpaceFromTop > this.appPickRelatedHeadingOnScrollView()) {
               this.#element.nativeElement.style.scale = Math.min(1 - Math.min((elementSpaceFromTop - screenSpaceFromTop) / elementSpaceFromTop, .8), 1);
               this.#element.nativeElement.style.opacity = Math.min(1 - Math.min((elementSpaceFromTop - screenSpaceFromTop) / elementSpaceFromTop, .8), 1);
+              this.#element.nativeElement.style.translate = `${Math.min(Math.abs((screenSpaceFromTop - elementSpaceFromTop)), 0)}px`;
             } else {
               if (elementSpaceFromTop < 0) {
-                this.#element.nativeElement.style.opacity = Math.max( 1 - Math.abs(screenSpaceFromTop - (screenSpaceFromTop + elementSpaceFromTop)) / (screenSpaceFromTop + elementSpaceFromTop), 0);
-                this.#element.nativeElement.style.scale = Math.max( 1 - Math.abs(screenSpaceFromTop - (screenSpaceFromTop + elementSpaceFromTop)) / (screenSpaceFromTop + elementSpaceFromTop), 0);
+                this.#element.nativeElement.style.opacity = Math.max(Math.abs((screenSpaceFromTop + elementSpaceFromTop)) / screenSpaceFromTop, 0.2);
+                this.#element.nativeElement.style.translate = `${100 - Math.min((Math.abs(screenSpaceFromTop + elementSpaceFromTop) / screenSpaceFromTop) * 100, 100)}%`;
+                // this.#element.nativeElement.style.scale = Math.max( 1 - Math.abs(screenSpaceFromTop - (screenSpaceFromTop + elementSpaceFromTop)) / (screenSpaceFromTop + elementSpaceFromTop), 0);
               } else {
 
               }

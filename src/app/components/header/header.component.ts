@@ -1,4 +1,4 @@
-import {Component, computed, DestroyRef, inject, OnInit, signal} from '@angular/core';
+import {Component, computed, DestroyRef, ElementRef, inject, OnInit, signal, viewChild} from '@angular/core';
 import {NgIcon} from '@ng-icons/core';
 import {FormsModule} from '@angular/forms';
 import {ThemeService} from '../../services/theme.service';
@@ -31,6 +31,7 @@ export class HeaderComponent implements OnInit {
   isLightTheme = computed(() => this.#themeService.activeTheme() === 'light');
   isDesktop = computed(this.#layoutService.isDesktop);
   title = computed(this.#layoutService.title);
+  dropDownElement = viewChild<ElementRef>('dropDownElement');
 
   toggleThemeDarkMode() {
     this.#themeService.toggle();
@@ -67,4 +68,12 @@ export class HeaderComponent implements OnInit {
       ...item,
       className: (index > 0 && this.isDesktop()) ? `${item.className} ms-2` : item.className,
     }));
+
+  closePopup() {
+    this.dropDownElement()?.nativeElement.classList.remove('dropdown-open');
+    if (typeof this.dropDownElement()?.nativeElement.hidePopover === 'function') {
+      this.dropDownElement()?.nativeElement.hidePopover();
+    }
+    // dropDownElement.classList.remove('dropdown-open');
+  }
 }
