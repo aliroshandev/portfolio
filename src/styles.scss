@@ -7,7 +7,7 @@
 
 :root {
   --header-height: calc(#{var(--spacing)} * 19);
-  --banner-height: 200px;
+  --banner-height: 100px;
   //--root-bg: #d7d7d7;
 }
 
@@ -92,9 +92,10 @@ section {
 
 .image-wrapper {
   position: relative;
-  width: 200px;
   margin: 0 auto;
+  width: var(--banner-height);
   height: var(--banner-height);
+  aspect-ratio: 1;
   --image-shadow: black;
   @include mixins.dark-theme() {
     --image-shadow: #404040;
