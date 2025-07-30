@@ -61,8 +61,8 @@ export class LayoutService {
   scrollTo(element: HTMLElement | null) {
     if (isPlatformBrowser(this.#platformId)) {
       element?.scrollIntoView({
-        behavior: 'smooth',
-        block: "start"
+        behavior: 'instant',
+        block: "nearest",
       });
     }
   }
