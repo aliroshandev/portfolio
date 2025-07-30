@@ -43,21 +43,23 @@ export class PickRelatedHeadingOnScrollViewDirective
         )
         .subscribe({
           next: screenSpaceFromTop => {
-            const elementSpaceFromTop = this.#element.nativeElement.getBoundingClientRect().top;
-            if (elementSpaceFromTop > this.appPickRelatedHeadingOnScrollView()) {
-              this.#element.nativeElement.style.scale = Math.min(1 - Math.min((elementSpaceFromTop - screenSpaceFromTop) / elementSpaceFromTop, .8), 1);
-              this.#element.nativeElement.style.opacity = Math.min(1 - Math.min((elementSpaceFromTop - screenSpaceFromTop) / elementSpaceFromTop, .8), 1);
-              this.#element.nativeElement.style.translate = `${Math.min(Math.abs((screenSpaceFromTop - elementSpaceFromTop)), 0)}px`;
+            const elementTopSpaceFromTop = (this.#element.nativeElement.firstElementChild as HTMLElement).getBoundingClientRect().top;
+            const elementBottomSpaceFromTop = (this.#element.nativeElement.firstElementChild as HTMLElement).getBoundingClientRect().bottom;
+            if (elementTopSpaceFromTop > this.appPickRelatedHeadingOnScrollView()) {
+              // this.#element.nativeElement.style.scale = Math.min(1 - Math.min((elementTopSpaceFromTop - screenSpaceFromTop) / elementTopSpaceFromTop, .8), 1);
+              (this.#element.nativeElement.firstElementChild! as HTMLElement).style.opacity = Math.min(1 - Math.min((elementTopSpaceFromTop - screenSpaceFromTop) / elementTopSpaceFromTop, .8), 1).toString();
+              (this.#element.nativeElement.firstElementChild! as HTMLElement).style.translate = `${Math.min(Math.abs((screenSpaceFromTop - elementTopSpaceFromTop)), 0)}px`;
             } else {
-              if (elementSpaceFromTop < 0) {
-                this.#element.nativeElement.style.opacity = Math.max(Math.abs((screenSpaceFromTop + elementSpaceFromTop)) / screenSpaceFromTop, 0.2);
-                this.#element.nativeElement.style.translate = `${100 - Math.min((Math.abs(screenSpaceFromTop + elementSpaceFromTop) / screenSpaceFromTop) * 100, 100)}%`;
-                // this.#element.nativeElement.style.scale = Math.max( 1 - Math.abs(screenSpaceFromTop - (screenSpaceFromTop + elementSpaceFromTop)) / (screenSpaceFromTop + elementSpaceFromTop), 0);
+              if (elementBottomSpaceFromTop < (2 * this.appPickRelatedHeadingOnScrollView())) {
+                (this.#element.nativeElement.firstElementChild! as HTMLElement).style.translate = `${Math.min(((2 * this.appPickRelatedHeadingOnScrollView()) - elementBottomSpaceFromTop)/(2 * this.appPickRelatedHeadingOnScrollView()), 1) * 100}%`;
+                // if (elementBottomSpaceFromTop > 0) {
+                //   (this.#element.nativeElement.firstElementChild! as HTMLElement).style.translate = `${Math.max((this.appPickRelatedHeadingOnScrollView() - elementBottomSpaceFromTop) / this.appPickRelatedHeadingOnScrollView(), 0) * 100}%`;
+                // } else {
+                //   (this.#element.nativeElement.firstElementChild! as HTMLElement).style.translate = `${Math.max(1 - ((this.appPickRelatedHeadingOnScrollView() + elementBottomSpaceFromTop) / this.appPickRelatedHeadingOnScrollView()), 0) * 100}%`;
+                // }
               } else {
-
+                (this.#element.nativeElement.firstElementChild! as HTMLElement).style.translate = '0';
               }
-              // this.#element.nativeElement.style.opacity = Math.max(Math.abs(screenSpaceFromTop + elementSpaceFromTop) / screenSpaceFromTop, 0);
-              // this.#element.nativeElement.style.scale = Math.max(Math.abs(screenSpaceFromTop + elementSpaceFromTop) / screenSpaceFromTop, 0);
             }
           }
         })
