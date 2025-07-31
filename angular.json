@@ -32,11 +32,11 @@
               },
               {
                 "glob": "robot.txt",
-                "input": "public/robot.txt"
+                "input": "robot.txt"
               },
               {
                 "glob": "sitemap.xml",
-                "input": "public/sitemap.xml"
+                "input": "sitemap.xml"
               }
             ],
             "styles": [
