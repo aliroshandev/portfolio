@@ -22,7 +22,9 @@ main {
   min-height: 2500px;
   overflow-x: hidden;
 }
-
+.visibility-hidden {
+  visibility: hidden;
+}
 header {
   transition: all .3s ease-in-out;
   margin-bottom: calc(#{var(--spacing)} * 5);

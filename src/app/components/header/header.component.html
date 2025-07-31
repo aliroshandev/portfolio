@@ -1,8 +1,8 @@
 <ng-template #switchThemeMode>
   <label class="toggle text-base-content"
-         for="theme-mode"
-         [class.text-warning]="isLightTheme()">
+         for="theme-mode">
     <input #toggleInput
+           class="visibility-hidden"
            id="theme-mode"
            name="theme-mode"
            type="checkbox"
