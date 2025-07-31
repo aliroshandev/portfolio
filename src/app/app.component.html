@@ -8,7 +8,8 @@
       @for(contact of contacts; track $index) {
         <a [class]="contact.className"
            [href]="contact.href"
-           [target]="contact.target">
+           [target]="contact.target"
+           [id]="contact.href" [title]="contact.text">
           <ng-icon [name]="contact.iconName" />
         </a>
       }

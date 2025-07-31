@@ -78,6 +78,12 @@ section {
   top: var(--header-height);
 }
 
+@media (max-width: 48rem) {
+  :root {
+    --banner-height: 150px;
+  }
+}
+
 @media (min-width: 48rem) {
   .banner {
     position: fixed;
