@@ -26,17 +26,11 @@
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": [
+              "src/robot.txt",
+              "src/sitemap.xml",
               {
                 "glob": "**/*",
                 "input": "public"
-              },
-              {
-                "glob": "robot.txt",
-                "input": "robot.txt"
-              },
-              {
-                "glob": "sitemap.xml",
-                "input": "sitemap.xml"
               }
             ],
             "styles": [
