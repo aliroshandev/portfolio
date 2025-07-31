@@ -1,4 +1,4 @@
-import {ApplicationConfig, inject, provideZoneChangeDetection} from '@angular/core';
+import {ApplicationConfig, inject, provideZoneChangeDetection, isDevMode} from '@angular/core';
 import {provideRouter, withInMemoryScrolling, withRouterConfig} from '@angular/router';
 
 import { routes } from './app.routes';
@@ -7,6 +7,7 @@ import {provideNgIconLoader} from '@ng-icons/core';
 import {HttpClient, provideHttpClient, withFetch} from '@angular/common/http';
 import {provideAnimations} from '@angular/platform-browser/animations';
 import {of, shareReplay, tap} from 'rxjs';
+import { provideServiceWorker } from '@angular/service-worker';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -32,6 +33,9 @@ export const appConfig: ApplicationConfig = {
         .pipe(
           shareReplay(1) // Cache the result
         );
-    })
+    }), provideServiceWorker('ngsw-worker.js', {
+            enabled: !isDevMode(),
+            registrationStrategy: 'registerWhenStable:30000'
+          })
   ]
 };
