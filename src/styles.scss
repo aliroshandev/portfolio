@@ -1,8 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
 @use "tailwindcss";
 @use "style/mixins" as mixins;
-@plugin "daisyui";
 @plugin "@tailwindcss/typography";
+@plugin "daisyui";
 @custom-variant dark (&:where(.dark, .dark *));
 
 :root {

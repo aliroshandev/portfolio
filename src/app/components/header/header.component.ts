@@ -28,6 +28,7 @@ export class HeaderComponent implements OnInit {
 
   selectedBookmark = signal<HeadingInterface | undefined>(undefined);
   phoneNumber = computed(this.#layoutService.phoneNumber);
+  email = computed(this.#layoutService.email);
   isLightTheme = computed(() => this.#themeService.activeTheme() === 'light');
   isDesktop = computed(this.#layoutService.isDesktop);
   title = computed(this.#layoutService.title);
@@ -63,7 +64,7 @@ export class HeaderComponent implements OnInit {
     // }
   }
 
-  protected readonly contacts = contacts('447351534063')
+  protected readonly contacts = contacts(this.phoneNumber(), this.email())
     .map((item, index) => ({
       ...item,
       className: (index > 0 && this.isDesktop()) ? `${item.className} ms-2` : item.className,

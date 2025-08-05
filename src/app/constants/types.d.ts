@@ -40,7 +40,8 @@ export interface ExperienceContentInterface {
 }
 
 export interface SkillsInterface {
-  languages: Array<string>;
-  frameworks: Array<string>;
-  concepts: Array<string>;
+  languages: string;
+  frameworks: string;
+  tools: string;
+  concepts: string;
 }

@@ -12,6 +12,7 @@ import {
   bootstrapSend,
   bootstrapSun,
   bootstrapThreeDotsVertical,
+  bootstrapChatText,
 } from '@ng-icons/bootstrap-icons';
 import {LayoutService} from './services/layout.service';
 import {contacts} from './constants/const';
@@ -33,6 +34,7 @@ import {contacts} from './constants/const';
       bootstrapSend,
       bootstrapThreeDotsVertical,
       bootstrapLink45deg,
+      bootstrapChatText,
     })
   ],
 })
@@ -42,6 +44,7 @@ export class AppComponent implements OnInit{
   scrollTop = computed(this.#layoutService.scrollY);
   isMobile = computed(this.#layoutService.isMobile);
   phoneNumber = computed(this.#layoutService.phoneNumber);
+  email = computed(this.#layoutService.email);
 
   @HostListener('window:scroll', ['$event']) windowScroll() {
     this.#layoutService.scrollY.set(window.scrollY);
@@ -63,7 +66,7 @@ export class AppComponent implements OnInit{
     }
   }
 
-  protected readonly contacts = contacts(this.phoneNumber())
+  protected readonly contacts = contacts(this.phoneNumber(), this.email())
     .map((item, index) => ({
       ...item,
       className: item.className.replace(' btn-soft', '')

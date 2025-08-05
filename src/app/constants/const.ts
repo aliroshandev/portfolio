@@ -5,8 +5,15 @@ import {ExperienceContent} from '../models/experience-content';
 export const Headings: Array<HeadingInterface> = [
   {text: 'About', id: 'about'},
   {text: 'Jobs', id: 'jobs'},
-  {text: 'Skills', id: 'skills'},
+  {text: 'Technical Skills', id: 'skills'},
 ];
+
+export const SkillsKeyTranslation = new Map<keyof SkillsInterface, string>([
+  ['languages', 'Languages'],
+  ['frameworks', 'Frameworks & Libraries'],
+  ['tools', 'Tools & Platforms'],
+  ['concepts', 'Concepts & Techniques'],
+]);
 
 export const experiences: Array<ExperienceInterface> = [
   {
@@ -22,11 +29,36 @@ export const experiences: Array<ExperienceInterface> = [
     }
   } as ExperienceInterface,
   {
-    workFromToDate: ['08/2017', '11/2017'],
-    companyName: 'ITManHa (Global E-Commerce Platform)',
+    workFromToDate: ['09/2019', '01/2020'],
+    companyName: 'Azki (first insurance issuer application in Iran)',
     experienceDetails: {
-      title: 'Remote Senior Frontend Developer',
-      href: 'https://missha-ir.com',
+      title: 'Junior Frontend Developer',
+      href: 'https://shenoto.com',
+      content: new ExperienceContent([
+        'Improved responsive design for Laravel Blade pages, optimized mobile usability and SEO rankings.',
+        'Mentored Junior Frontend team members and guide them with best practices',
+      ])
+    }
+  } as ExperienceInterface,
+  {
+    workFromToDate: ['09/2018', '03/2020'],
+    companyName: 'Shenoto (Persian Podcast Platform)',
+    experienceDetails: {
+      title: 'Junior Frontend Developer',
+      href: 'https://shenoto.com',
+      content: new ExperienceContent([
+        'Upgraded the website from Angular 3 to 7, improving load times by 15% and boosting SEO scores to 92%.',
+        'Implemented PWA optimizations, resulting in 20% growth in returning users.',
+        'Implemented wavesurfer.js friendly podcast player.',
+      ])
+    }
+  } as ExperienceInterface,
+  {
+    workFromToDate: ['08/2017', '11/2017'],
+    companyName: 'ITManHa (Software Engineer Platform)',
+    experienceDetails: {
+      title: 'Junior Frontend Developer',
+      href: 'https://itmanha.com',
       content: new ExperienceContent([
         'Engineered frontend solutions for cross-industry software/app projects driving client growth.',
         'Core stack: WordPress, JavaScript, jQuery, HTML5, CSS3 with focus on responsive design.',
@@ -36,9 +68,10 @@ export const experiences: Array<ExperienceInterface> = [
 ];
 
 export const skills: SkillsInterface = {
-  languages: [],
-  frameworks: [],
-  concepts: []
+  languages: 'TypeScript, JavaScript (ES6+), HTML5, CSS3, Bash',
+  frameworks: 'Angular (v2–v20), React.js, RxJS, Ionic, Tailwind CSS, Bootstrap',
+  tools: 'Git, Docker, Nginx, Webpack, Vite, npm, Caddy, Nexus Repository Manager',
+  concepts: 'SSR (Server-Side Rendering), SSG (Static Site Generation), Lazy Loading, PWA, Responsive Design, Internationalization (i18n), SEO Optimization, Performance Tuning'
 };
 
 export const HeadingContents = new Map<string, HeadingContentInterface>([
@@ -52,20 +85,20 @@ export const HeadingContents = new Map<string, HeadingContentInterface>([
   [
     'jobs',
     {
-      title: 'Senior Frontend Developer',
+      title: 'Experiences',
       content: new HeadingContent(experiences)
     }
   ],
   [
     'skills',
     {
-      title: 'Senior Frontend Developer',
+      title: 'Technical Skills',
       content: new HeadingContent(skills)
     }
   ],
 ]);
 
-export const contacts: (phoneNumber: string) => Array<LinkInterface> = (phoneNumber: string) => ([
+export const contacts: (phoneNumber: string, email: string) => Array<LinkInterface> = (phoneNumber: string) => ([
   {
     href: `tel:${phoneNumber}`,
     iconName: 'bootstrapPhone',
@@ -75,8 +108,15 @@ export const contacts: (phoneNumber: string) => Array<LinkInterface> = (phoneNum
   },
   {
     href: `sms:${phoneNumber}?body=Hi%20Ali,%20i%20saw%20your%20Portfolio,%20Let%27s%20talk`,
-    iconName: 'bootstrapSend',
+    iconName: 'bootstrapChatText',
     text: 'Text me',
+    target: '_blank',
+    className: 'btn btn-primary btn-soft',
+  },
+  {
+    href: `mailto:${phoneNumber}?body=Hi%20Ali,%20i%20saw%20your%20Portfolio,%20Let%27s%20talk`,
+    iconName: 'bootstrapSend',
+    text: 'Email me',
     target: '_blank',
     className: 'btn btn-primary btn-soft',
   },

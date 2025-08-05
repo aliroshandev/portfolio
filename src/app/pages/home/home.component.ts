@@ -1,8 +1,8 @@
 import {Component, computed, inject} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
-import {HeadingContents, Headings} from '../../constants/const';
+import {HeadingContents, Headings, SkillsKeyTranslation} from '../../constants/const';
 import {fadeInOut, fadeInUp} from '../../animations/animations';
-import {NgOptimizedImage} from '@angular/common';
+import {KeyValuePipe, NgOptimizedImage} from '@angular/common';
 import {ThemeService} from '../../services/theme.service';
 import {PickRelatedHeadingOnScrollViewDirective} from '../../directives/pick-related-heading-on-scroll-view.directive';
 import {LayoutService} from '../../services/layout.service';
@@ -13,7 +13,8 @@ import {NgIcon} from '@ng-icons/core';
   imports: [
     NgOptimizedImage,
     PickRelatedHeadingOnScrollViewDirective,
-    NgIcon
+    NgIcon,
+    KeyValuePipe
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
@@ -29,4 +30,5 @@ export class HomeComponent {
   isDesktop = computed(this.#layoutService.isDesktop);
   protected readonly Headings = Headings;
   protected readonly HeadingContents = HeadingContents;
+  protected readonly SkillsKeyTranslation = SkillsKeyTranslation;
 }
