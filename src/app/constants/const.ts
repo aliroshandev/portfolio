@@ -5,7 +5,7 @@ import {ExperienceContent} from '../models/experience-content';
 export const Headings: Array<HeadingInterface> = [
   {text: 'About', id: 'about'},
   {text: 'Jobs', id: 'jobs'},
-  {text: 'Technical Skills', id: 'skills'},
+  {text: 'Technical Skills', id: 'technical-skills'},
 ];
 
 export const SkillsKeyTranslation = new Map<keyof SkillsInterface, string>([
@@ -119,7 +119,7 @@ export const experiences: Array<ExperienceInterface> = [
   } as ExperienceInterface,
 ];
 
-export const skills: SkillsInterface = {
+export const technicalSkills: SkillsInterface = {
   languages: 'TypeScript, JavaScript (ES6+), HTML5, CSS3, Bash',
   frameworks: 'Angular (v2–v20), Next, Vue, RxJS, Ionic, Tailwind CSS, Bootstrap, DevExtreme',
   tools: 'Git, Docker, Nginx, Webpack, Gulp, Vite, npm, Caddy, Nexus Repository Manager',
@@ -142,10 +142,10 @@ export const HeadingContents = new Map<string, HeadingContentInterface>([
     }
   ],
   [
-    'skills',
+    'technical-skills',
     {
       title: 'Technical Skills',
-      content: new HeadingContent(skills)
+      content: new HeadingContent(technicalSkills)
     }
   ],
 ]);
