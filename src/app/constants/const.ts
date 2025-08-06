@@ -23,6 +23,21 @@ export const experiences: Array<ExperienceInterface> = [
       title: 'Frontend Chapter Lead',
       href: 'https://tabintech.com',
       content: new ExperienceContent([
+        'Managed and delivered 6 outsourced projects, including platforms like pastil.ir, nam.ir, migline24.com, eanjoman.ir and Otanafoods.com, achieving a 25% increase in user engagement.',
+        'Developed high-converting landing pages and reporting panels for major clients, including Khanoumi.com and divar.ir, reducing page load times by 20%.',
+        'Create in-home Angular libraries deployed on Nexus-Sonatype3 such as (vft-core, vft-animation, vft-auth, …) to Reduce bundle sizes.',
+        'Accelerate the project build time by 50% & Increase development time by 30% by creating schemas and base classes to maximize efficiency and drive success.',
+        'Mentored and guided front-end developers, Defined and Implemented best practices for front-end development and architecture.'
+      ])
+    }
+  } as ExperienceInterface,
+  {
+    workFromToDate: ['08/2020', '05/2022'],
+    companyName: 'Agatizer (Financial Services - Social Trading Platform)',
+    experienceDetails: {
+      title: 'Senior Frontend Developer',
+      href: 'https://missha-ir.com',
+      content: new ExperienceContent([
         'Designed and launched the Persian version of Missha.com’s main store, increasing local traffic by 40%.',
         'Delivered multiple event-based single-pages, driving seasonal campaign success for various clients.',
       ])
@@ -41,18 +56,6 @@ export const experiences: Array<ExperienceInterface> = [
     }
   } as ExperienceInterface,
   {
-    workFromToDate: ['09/2019', '01/2020'],
-    companyName: 'eSafar (Online Travel Booking Platform)',
-    experienceDetails: {
-      title: 'Senior Frontend Developer',
-      href: 'https://esafar.com',
-      content: new ExperienceContent([
-        'Spearheaded the development of a scalable Angular 8 front, enhancing internationalization and user satisfaction by 30%',
-        'Implemented PWA optimizations, resulting in 35% growth in returning users.',
-      ])
-    }
-  } as ExperienceInterface,
-  {
     workFromToDate: ['09/2020', '01/2021'],
     companyName: 'Tushehbar (Shipping and Maritime Transportation Agency)',
     experienceDetails: {
@@ -67,7 +70,19 @@ export const experiences: Array<ExperienceInterface> = [
   } as ExperienceInterface,
   {
     workFromToDate: ['09/2019', '01/2020'],
-    companyName: 'Azki (first insurance issuer application in Iran)',
+    companyName: 'eSafar (Online Travel Booking Platform)',
+    experienceDetails: {
+      title: 'Senior Frontend Developer',
+      href: 'https://esafar.com',
+      content: new ExperienceContent([
+        'Spearheaded the development of a scalable Angular 8 front, enhancing internationalization and user satisfaction by 30%',
+        'Implemented PWA optimizations, resulting in 35% growth in returning users.',
+      ])
+    }
+  } as ExperienceInterface,
+  {
+    workFromToDate: ['09/2019', '01/2020'],
+    companyName: 'Azki (First Insurance issuer application in Iran)',
     experienceDetails: {
       title: 'Frontend Developer Consultant',
       href: 'https://azki.com',
