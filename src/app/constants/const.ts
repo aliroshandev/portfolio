@@ -30,10 +30,22 @@ export const experiences: Array<ExperienceInterface> = [
   } as ExperienceInterface,
   {
     workFromToDate: ['09/2019', '01/2020'],
+    companyName: 'eSafar (Online Travel Booking Platform)',
+    experienceDetails: {
+      title: 'Frontend Developer',
+      href: 'https://esafar.com',
+      content: new ExperienceContent([
+        'Spearheaded the development of a scalable Angular 8 front, enhancing internationalization and user satisfaction by 30%',
+        'Implemented PWA optimizations, resulting in 35% growth in returning users.',
+      ])
+    }
+  } as ExperienceInterface,
+  {
+    workFromToDate: ['09/2019', '01/2020'],
     companyName: 'Azki (first insurance issuer application in Iran)',
     experienceDetails: {
-      title: 'Junior Frontend Developer',
-      href: 'https://shenoto.com',
+      title: 'Frontend Developer Consultant',
+      href: 'https://azki.com',
       content: new ExperienceContent([
         'Improved responsive design for Laravel Blade pages, optimized mobile usability and SEO rankings.',
         'Mentored Junior Frontend team members and guide them with best practices',

@@ -8,6 +8,7 @@
 :root {
   --header-height: calc(#{var(--spacing)} * 19);
   --banner-height: 100px;
+  --mobile-menu-height: 64px;
   //--root-bg: #d7d7d7;
 }
 
@@ -19,7 +20,7 @@ html {
   overflow-x: hidden;
 }
 main {
-  min-height: 2500px;
+  min-height: 3500px;
   overflow-x: hidden;
 }
 .visibility-hidden {
@@ -69,6 +70,7 @@ section {
   &.space-top {
     margin-top: 0;
   }
+  padding-bottom: calc(12px + #{var(--mobile-menu-height)});
 }
 
 .banner {
@@ -76,26 +78,6 @@ section {
   z-index: 1;
   width: 100%;
   top: var(--header-height);
-}
-
-@media (max-width: 48rem) {
-  :root {
-    --banner-height: 150px;
-  }
-}
-
-@media (min-width: 48rem) {
-  .banner {
-    position: fixed;
-    aspect-ratio: 1;
-    animation-name: scroll-stick-right;
-    animation-timeline: scroll(block nearest);
-    animation-range: 0 60vh;
-    animation-fill-mode: both;
-  }
-  .content.space-top {
-    margin-top: calc(1.2 * #{var(--banner-height)})!important;
-  }
 }
 
 .image-wrapper {
@@ -144,14 +126,38 @@ ng-icon {
   position: fixed;
   bottom: 0;
   width: 100%;
+  min-height: var(--mobile-menu-height);
   .contact-items {
     border-radius: 8px 8px 0 0;
-    padding: 8px 12px;
+    padding: 8px 12px 16px;
     @include mixins.light-theme() {
       background-color: var(--color-base-300);
     }
     @include mixins.dark-theme() {
       background-color: var(--color-info-content);
     }
+  }
+}
+
+@media (max-width: 48rem) {
+  :root {
+    --banner-height: 150px;
+  }
+  .content-section {
+    padding: calc(2 * var(--spacing));
+  }
+}
+
+@media (min-width: 48rem) {
+  .banner {
+    position: fixed;
+    aspect-ratio: 1;
+    animation-name: scroll-stick-right;
+    animation-timeline: scroll(block nearest);
+    animation-range: 0 60vh;
+    animation-fill-mode: both;
+  }
+  .content.space-top {
+    margin-top: calc(1.2 * #{var(--banner-height)})!important;
   }
 }
