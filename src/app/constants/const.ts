@@ -17,10 +17,22 @@ export const SkillsKeyTranslation = new Map<keyof SkillsInterface, string>([
 
 export const experiences: Array<ExperienceInterface> = [
   {
+    workFromToDate: ['06/2022', 'Present'],
+    companyName: 'TabinTech (Technology Solutions Provider - Software Development Company)',
+    experienceDetails: {
+      title: 'Frontend Chapter Lead',
+      href: 'https://tabintech.com',
+      content: new ExperienceContent([
+        'Designed and launched the Persian version of Missha.com’s main store, increasing local traffic by 40%.',
+        'Delivered multiple event-based single-pages, driving seasonal campaign success for various clients.',
+      ])
+    }
+  } as ExperienceInterface,
+  {
     workFromToDate: ['08/2020', '05/2022'],
     companyName: 'Missha (Global E-Commerce Platform)',
     experienceDetails: {
-      title: 'Remote Senior Frontend Developer',
+      title: 'Senior Frontend Developer',
       href: 'https://missha-ir.com',
       content: new ExperienceContent([
         'Designed and launched the Persian version of Missha.com’s main store, increasing local traffic by 40%.',
@@ -32,11 +44,24 @@ export const experiences: Array<ExperienceInterface> = [
     workFromToDate: ['09/2019', '01/2020'],
     companyName: 'eSafar (Online Travel Booking Platform)',
     experienceDetails: {
-      title: 'Frontend Developer',
+      title: 'Senior Frontend Developer',
       href: 'https://esafar.com',
       content: new ExperienceContent([
         'Spearheaded the development of a scalable Angular 8 front, enhancing internationalization and user satisfaction by 30%',
         'Implemented PWA optimizations, resulting in 35% growth in returning users.',
+      ])
+    }
+  } as ExperienceInterface,
+  {
+    workFromToDate: ['09/2020', '01/2021'],
+    companyName: 'Tushehbar (Shipping and Maritime Transportation Agency)',
+    experienceDetails: {
+      title: 'Senior Frontend Developer',
+      href: 'https://tushehbar.com',
+      content: new ExperienceContent([
+        'Spearheaded the development of a scalable Angular 9 front, enhancing internationalization and user satisfaction by 30%',
+        'Integrated with devextreme with customized components',
+        'Automated ',
       ])
     }
   } as ExperienceInterface,
