@@ -60,8 +60,8 @@ export const experiences: Array<ExperienceInterface> = [
       href: 'https://tushehbar.com',
       content: new ExperienceContent([
         'Spearheaded the development of a scalable Angular 9 front, enhancing internationalization and user satisfaction by 30%',
-        'Integrated with devextreme with customized components',
-        'Automated ',
+        'Developed an integrated management assistant system to automate shipping documentation workflows (e.g., bills of lading, customs forms), reducing manual processing time by 40% and minimizing human errors.',
+        'Integrated with DevExtreme with customized SaaS application layouts and templates.',
       ])
     }
   } as ExperienceInterface,
@@ -106,8 +106,8 @@ export const experiences: Array<ExperienceInterface> = [
 
 export const skills: SkillsInterface = {
   languages: 'TypeScript, JavaScript (ES6+), HTML5, CSS3, Bash',
-  frameworks: 'Angular (v2–v20), React.js, RxJS, Ionic, Tailwind CSS, Bootstrap, DevExtreme',
-  tools: 'Git, Docker, Nginx, Webpack, Vite, npm, Caddy, Nexus Repository Manager',
+  frameworks: 'Angular (v2–v20), Next, Vue, RxJS, Ionic, Tailwind CSS, Bootstrap, DevExtreme',
+  tools: 'Git, Docker, Nginx, Webpack, Gulp, Vite, npm, Caddy, Nexus Repository Manager',
   concepts: 'SSR (Server-Side Rendering), SSG (Static Site Generation), Lazy Loading, PWA, Responsive Design, Internationalization (i18n), SEO Optimization, Performance Tuning'
 };
 
