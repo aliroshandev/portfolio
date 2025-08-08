@@ -37,6 +37,7 @@ export interface ExperienceContentInterface {
   title: string;
   href: string,
   content: ExperienceContent;
+  tags: Array<string>,
 }
 
 export interface SkillsInterface {

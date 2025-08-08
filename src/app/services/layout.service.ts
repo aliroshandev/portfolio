@@ -63,7 +63,7 @@ export class LayoutService {
     if (isPlatformBrowser(this.#platformId)) {
       element?.scrollIntoView({
         behavior: 'smooth',
-        block: 'nearest',
+        block: 'start',
       });
     }
   }

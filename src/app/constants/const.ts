@@ -4,7 +4,7 @@ import {ExperienceContent} from '../models/experience-content';
 
 export const Headings: Array<HeadingInterface> = [
   {text: 'About', id: 'about'},
-  {text: 'Experiences', id: 'jobs'},
+  {text: 'Experiences', id: 'experiences'},
   {text: 'Technical Skills', id: 'technical-skills'},
 ];
 
@@ -28,7 +28,8 @@ export const experiences: Array<ExperienceInterface> = [
         'Create in-home Angular libraries deployed on Nexus-Sonatype3 such as (vft-core, vft-animation, vft-auth, …) to Reduce bundle sizes.',
         'Accelerate the project build time by 50% & Increase development time by 30% by creating schemas and base classes to maximize efficiency and drive success.',
         'Mentored and guided front-end developers, Defined and Implemented best practices for front-end development and architecture.'
-      ])
+      ]),
+      tags: ['Angular', 'Angular Material', 'Bootstrap', 'HTML5', 'CSS3', 'JavaScript', 'TypeScript', 'Responsive Design', 'PWA', 'SEO', 'JSP', 'JSF', 'Spring boot', 'Nexus', 'Docker']
     }
   } as ExperienceInterface,
   {
@@ -40,7 +41,8 @@ export const experiences: Array<ExperienceInterface> = [
       content: new ExperienceContent([
         'Designed and launched the Persian version of Missha.com’s main store, increasing local traffic by 40%.',
         'Delivered multiple event-based single-pages, driving seasonal campaign success for various clients.',
-      ])
+      ]),
+      tags: ['React', 'Angular', 'Tailwind', 'HTML5', 'CSS3', 'JavaScript', 'TypeScript', 'Responsive Design', 'Docker', 'PWA', 'SEO']
     }
   } as ExperienceInterface,
   {
@@ -52,7 +54,8 @@ export const experiences: Array<ExperienceInterface> = [
       content: new ExperienceContent([
         'Designed and launched the Persian version of Missha.com’s main store, increasing local traffic by 40%.',
         'Delivered multiple event-based single-pages, driving seasonal campaign success for various clients.',
-      ])
+      ]),
+      tags: ['Angular', 'Angular Material', 'HTML5', 'CSS3', 'JavaScript', 'TypeScript', 'Responsive Design', 'Docker', 'PWA', 'SEO']
     }
   } as ExperienceInterface,
   {
@@ -65,7 +68,8 @@ export const experiences: Array<ExperienceInterface> = [
         'Spearheaded the development of a scalable Angular 9 front, enhancing internationalization and user satisfaction by 30%',
         'Developed an integrated management assistant system to automate shipping documentation workflows (e.g., bills of lading, customs forms), reducing manual processing time by 40% and minimizing human errors.',
         'Integrated with DevExtreme with customized SaaS application layouts and templates.',
-      ])
+      ]),
+      tags: ['React', 'Angular', 'Angular Material', 'Bootstrap', 'DevExtreme', 'HTML5', 'CSS3', 'JavaScript', 'TypeScript', 'Responsive Design', 'Docker', 'PWA', 'SEO']
     }
   } as ExperienceInterface,
   {
@@ -77,7 +81,8 @@ export const experiences: Array<ExperienceInterface> = [
       content: new ExperienceContent([
         'Spearheaded the development of a scalable Angular 8 front, enhancing internationalization and user satisfaction by 30%',
         'Implemented PWA optimizations, resulting in 35% growth in returning users.',
-      ])
+      ]),
+      tags: ['Angular', 'Angular Material', 'HTML5', 'CSS3', 'JavaScript', 'TypeScript', 'Responsive Design', 'Docker', 'PWA', 'SEO']
     }
   } as ExperienceInterface,
   {
@@ -89,7 +94,8 @@ export const experiences: Array<ExperienceInterface> = [
       content: new ExperienceContent([
         'Improved responsive design for Laravel Blade pages, optimized mobile usability and SEO rankings.',
         'Mentored Junior Frontend team members and guide them with best practices',
-      ])
+      ]),
+      tags: ['Laravel', 'Blade', 'HTML5', 'CSS3', 'JavaScript', 'jQuery', 'Responsive Design', 'SEO']
     }
   } as ExperienceInterface,
   {
@@ -102,7 +108,8 @@ export const experiences: Array<ExperienceInterface> = [
         'Upgraded the website from Angular 3 to 7, improving load times by 15% and boosting SEO scores to 92%.',
         'Implemented PWA optimizations, resulting in 20% growth in returning users.',
         'Implemented wavesurfer.js friendly podcast player.',
-      ])
+      ]),
+      tags: ['Angular', 'HTML5', 'CSS3', 'JavaScript', 'Responsive Design', 'Docker', 'PWA', 'SEO', 'Podcast Player', 'wavesurfer.js']
     }
   } as ExperienceInterface,
   {
@@ -113,14 +120,15 @@ export const experiences: Array<ExperienceInterface> = [
       href: 'https://itmanha.com',
       content: new ExperienceContent([
         'Engineered frontend solutions for cross-industry software/app projects driving client growth.',
-        'Core stack: WordPress, JavaScript, jQuery, HTML5, CSS3 with focus on responsive design.',
-      ])
+        'Core stack: React, WordPress, Headless CMS, JavaScript, jQuery, HTML5, CSS3 with focus on responsive design.',
+      ]),
+      tags: ['React', 'WordPress', 'Headless CMS','JavaScript', 'jQuery', 'HTML5', 'CSS3', 'Responsive Design']
     }
   } as ExperienceInterface,
 ];
 
 export const technicalSkills: SkillsInterface = {
-  languages: 'TypeScript, JavaScript (ES6+), HTML5, CSS3, Bash',
+  languages: 'TypeScript, JavaScript (ES6+), HTML5, CSS3, Bash, PHP, Laravel, TSX, JSX, JSON, XML, YAML, JSP, JSF',
   frameworks: 'Angular (v2–v20), Next, Vue, RxJS, Ionic, Tailwind CSS, Bootstrap, DevExtreme',
   tools: 'Git, Docker, Nginx, Webpack, Gulp, Vite, npm, Caddy, Nexus Repository Manager',
   concepts: 'SSR (Server-Side Rendering), SSG (Static Site Generation), Lazy Loading, PWA, Responsive Design, Internationalization (i18n), SEO Optimization, Performance Tuning'
@@ -135,7 +143,7 @@ export const HeadingContents = new Map<string, HeadingContentInterface>([
     }
   ],
   [
-    'jobs',
+    'experiences',
     {
       title: 'Experiences',
       content: new HeadingContent(experiences)

@@ -48,6 +48,13 @@
                           <li>{{bullet}}</li>
                         }
                       </ul>
+                      @if (experience.experienceDetails.tags?.length) {
+                        <div class="flex flex-wrap mt-3">
+                          @for (tag of experience.experienceDetails.tags; track $index) {
+                            <span class="badge badge-primary mx-1 mt-1">{{tag}}</span>
+                          }
+                        </div>
+                      }
                     } @else {
                       Not Provided Experience HTML
                     }
