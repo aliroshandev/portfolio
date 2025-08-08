@@ -139,7 +139,7 @@ export const HeadingContents = new Map<string, HeadingContentInterface>([
     'about',
     {
       title: 'Frontend Engineer',
-      content: new HeadingContent('Senior Frontend Architect specializing in AI-integrated web applications, with 7+ years leading high-impact projects for HR tech (Agatizer) and logistics automation (Toosheh Bar). Delivered 10+ enterprise solutions boosting user engagement by 30% and reducing latency by 20% through performance-optimized React/Angular architectures. Spearheaded reusable component systems accelerating development velocity by 30% and cutting bundle sizes by 40%. Established CI/CD pipelines (Docker, Nexus) and SSR/PWA strategies that increased returning users by 20%. Proven leader mentoring 8+ engineers in scalable app design, i18n, and cross-platform optimization.')
+      content: new HeadingContent('Senior Frontend Architect with 7+ years spearheading performance-critical web solutions for finance (Agatizer), logistics (Toosheh Bar), and e-commerce (Missha). Delivered 10+ enterprise applications boosting engagement by 30% and slashing latency by 20% through optimized React/Angular architectures. Pioneered reusable component systems accelerating development velocity by 30% and reducing bundle sizes by 40%. Established CI/CD pipelines (Docker, Nexus) and SSR/PWA strategies increasing returning users by 20%. Mentored 8+ engineers in scalable app design and i18n.')
     }
   ],
   [
