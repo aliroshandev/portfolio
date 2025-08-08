@@ -10,7 +10,7 @@
   @for (heading of Headings; track heading.id) {
     <!--  <section @fadeInOut>-->
     <section [appPickRelatedHeadingOnScrollView]="headerHeight()" class="content-section md:pe-9">
-      <div class="section-content rounded-md p-1 md:p-3 prose-lg">
+      <div class="section-content rounded-md p-1 md:p-3 prose-md">
         <h2 [id]="heading.id" class="mt-0 mb-0">
           <b>{{heading.text}}</b>
         </h2>
@@ -24,7 +24,7 @@
               @for (experience of $any(HeadingContents.get(heading.id)?.content?.data); track $index) {
                 <div class="card card-dash border-accent mb-3">
                   <div class="card-body">
-                    <div class="flex items-center justify-content-between">
+                    <div class="flex flex-wrap items-center justify-content-between">
                       <h3 class="flex-grow-1 mt-0 mb-0 fs-2">
                         <a [href]="experience.experienceDetails.href"
                            target="_blank"
@@ -39,6 +39,7 @@
                         <span>{{experience.workFromToDate[1]}}</span>
                       </div>
                     </div>
+                    <h4 class="text-primary"><b>{{experience.experienceDetails.title}}</b></h4>
                     @if (experience.experienceDetails.content.isString()) {
                       {{experience.experienceDetails.content.data}}
                     } @else if (experience.experienceDetails.content.isArrayOfBullets()) {

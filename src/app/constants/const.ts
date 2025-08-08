@@ -4,7 +4,7 @@ import {ExperienceContent} from '../models/experience-content';
 
 export const Headings: Array<HeadingInterface> = [
   {text: 'About', id: 'about'},
-  {text: 'Jobs', id: 'jobs'},
+  {text: 'Experiences', id: 'jobs'},
   {text: 'Technical Skills', id: 'technical-skills'},
 ];
 
