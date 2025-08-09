@@ -10,7 +10,8 @@
           "/favicon.ico",
           "/index.csr.html",
           "/index.html",
-          "/robot.txt",
+          "/robots.txt",
+          "/sitemap.xml",
           "/manifest.webmanifest",
           "/*.css",
           "/*.js"
