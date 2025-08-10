@@ -3,4 +3,4 @@ Allow: /manifest.webmanifest
 Allow: /favicon.ico
 Allow: /sitemap.xml
 Disallow: /cdn-cgi/
-Sitemap: https://www.aliroshanzamir.info/sitemap.xml
+Sitemap: https://aliroshanzamir.info/sitemap.xml
