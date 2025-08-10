@@ -29,7 +29,7 @@ export const experiences: Array<ExperienceInterface> = [
         'Accelerate the project build time by 50% & Increase development time by 30% by creating schemas and base classes to maximize efficiency and drive success.',
         'Mentored and guided front-end developers, Defined and Implemented best practices for front-end development and architecture.'
       ]),
-      tags: ['Angular', 'Angular Material', 'Bootstrap', 'HTML5', 'CSS3', 'JavaScript', 'TypeScript', 'Responsive Design', 'PWA', 'SEO', 'JSP', 'JSF', 'Spring boot', 'Nexus', 'Docker']
+      tags: ['Angular', 'Angular Material', 'Bootstrap', 'Jest', 'Karma', 'HTML5', 'CSS3', 'JavaScript', 'TypeScript', 'Responsive Design', 'PWA', 'SEO', 'JSP', 'JSF', 'Spring boot', 'Nexus', 'Docker', 'Git', 'Jira']
     }
   } as ExperienceInterface,
   {
@@ -42,7 +42,7 @@ export const experiences: Array<ExperienceInterface> = [
         'Designed and launched the Persian version of Missha.com’s main store, increasing local traffic by 40%.',
         'Delivered multiple event-based single-pages, driving seasonal campaign success for various clients.',
       ]),
-      tags: ['React', 'Angular', 'Tailwind', 'HTML5', 'CSS3', 'JavaScript', 'TypeScript', 'Responsive Design', 'Docker', 'PWA', 'SEO']
+      tags: ['React', 'Angular', 'Tailwind', 'HTML5', 'CSS3', 'JavaScript', 'TypeScript', 'Responsive Design', 'Docker', 'Caddy', 'PWA', 'SEO', 'Git', 'Jira']
     }
   } as ExperienceInterface,
   {
@@ -55,7 +55,7 @@ export const experiences: Array<ExperienceInterface> = [
         'Designed and launched the Persian version of Missha.com’s main store, increasing local traffic by 40%.',
         'Delivered multiple event-based single-pages, driving seasonal campaign success for various clients.',
       ]),
-      tags: ['Angular', 'Angular Material', 'HTML5', 'CSS3', 'JavaScript', 'TypeScript', 'Responsive Design', 'Docker', 'PWA', 'SEO']
+      tags: ['Angular', 'Angular Material', 'HTML5', 'CSS3', 'JavaScript', 'TypeScript', 'Responsive Design', 'Jest', 'Karma', 'Docker', 'Caddy', 'PWA', 'SEO', 'Git', 'Jira']
     }
   } as ExperienceInterface,
   {
@@ -69,7 +69,7 @@ export const experiences: Array<ExperienceInterface> = [
         'Developed an integrated management assistant system to automate shipping documentation workflows (e.g., bills of lading, customs forms), reducing manual processing time by 40% and minimizing human errors.',
         'Integrated with DevExtreme with customized SaaS application layouts and templates.',
       ]),
-      tags: ['React', 'Angular', 'Angular Material', 'Bootstrap', 'DevExtreme', 'HTML5', 'CSS3', 'JavaScript', 'TypeScript', 'Responsive Design', 'Docker', 'PWA', 'SEO']
+      tags: ['React', 'Angular', 'Angular Material', 'Bootstrap', 'DevExtreme', 'Jest', 'Karma', 'HTML5', 'CSS3', 'JavaScript', 'TypeScript', 'Responsive Design', 'Docker', 'Caddy', 'PWA', 'SEO', 'Git', 'Jira']
     }
   } as ExperienceInterface,
   {
@@ -82,7 +82,7 @@ export const experiences: Array<ExperienceInterface> = [
         'Spearheaded the development of a scalable Angular 8 front, enhancing internationalization and user satisfaction by 30%',
         'Implemented PWA optimizations, resulting in 35% growth in returning users.',
       ]),
-      tags: ['Angular', 'Angular Material', 'HTML5', 'CSS3', 'JavaScript', 'TypeScript', 'Responsive Design', 'Docker', 'PWA', 'SEO']
+      tags: ['Angular', 'Angular Material', 'Jest', 'Karma', 'HTML5', 'CSS3', 'JavaScript', 'TypeScript', 'Responsive Design', 'Docker', 'Nginx', 'PWA', 'SEO', 'Git', 'Jira']
     }
   } as ExperienceInterface,
   {
@@ -95,7 +95,7 @@ export const experiences: Array<ExperienceInterface> = [
         'Improved responsive design for Laravel Blade pages, optimized mobile usability and SEO rankings.',
         'Mentored Junior Frontend team members and guide them with best practices',
       ]),
-      tags: ['Laravel', 'Blade', 'HTML5', 'CSS3', 'JavaScript', 'jQuery', 'Responsive Design', 'SEO']
+      tags: ['Laravel', 'Blade', 'HTML5', 'CSS3', 'JavaScript', 'jQuery', 'Responsive Design', 'SEO', 'Git', 'Jira']
     }
   } as ExperienceInterface,
   {
@@ -109,7 +109,7 @@ export const experiences: Array<ExperienceInterface> = [
         'Implemented PWA optimizations, resulting in 20% growth in returning users.',
         'Implemented wavesurfer.js friendly podcast player.',
       ]),
-      tags: ['Angular', 'HTML5', 'CSS3', 'JavaScript', 'Responsive Design', 'Docker', 'PWA', 'SEO', 'Podcast Player', 'wavesurfer.js']
+      tags: ['Angular', 'HTML5', 'CSS3', 'JavaScript', 'Responsive Design', 'Docker', 'PWA', 'SEO', 'Podcast Player', 'wavesurfer.js', 'Git', 'Trello']
     }
   } as ExperienceInterface,
   {
