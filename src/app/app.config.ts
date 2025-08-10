@@ -1,17 +1,17 @@
-import {ApplicationConfig, inject, provideZoneChangeDetection, isDevMode} from '@angular/core';
+import {ApplicationConfig, inject, isDevMode, provideZoneChangeDetection} from '@angular/core';
 import {provideRouter, withInMemoryScrolling, withRouterConfig} from '@angular/router';
 
-import { routes } from './app.routes';
+import {routes} from './app.routes';
 import {provideClientHydration, withEventReplay, withHttpTransferCacheOptions} from '@angular/platform-browser';
 import {provideNgIconLoader} from '@ng-icons/core';
 import {HttpClient, provideHttpClient, withFetch} from '@angular/common/http';
 import {provideAnimations} from '@angular/platform-browser/animations';
-import {of, shareReplay, tap} from 'rxjs';
-import { provideServiceWorker } from '@angular/service-worker';
+import {shareReplay} from 'rxjs';
+import {provideServiceWorker} from '@angular/service-worker';
 
 export const appConfig: ApplicationConfig = {
   providers: [
-    provideZoneChangeDetection({ eventCoalescing: true }),
+    provideZoneChangeDetection({eventCoalescing: true}),
     provideRouter(
       routes,
       withInMemoryScrolling(),
@@ -33,9 +33,10 @@ export const appConfig: ApplicationConfig = {
         .pipe(
           shareReplay(1) // Cache the result
         );
-    }), provideServiceWorker('ngsw-worker.js', {
-            enabled: !isDevMode(),
-            registrationStrategy: 'registerWhenStable:30000'
-          })
+    }),
+    provideServiceWorker('ngsw-worker.js', {
+      enabled: false,
+      registrationStrategy: 'registerWhenStable:30000'
+    })
   ]
 };
