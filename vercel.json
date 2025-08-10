@@ -1,0 +1,15 @@
+{
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "aliroshanzamir.info"
+        }
+      ],
+      "destination": "https://www.aliroshanzamir.info/:1",
+      "permanent": true
+    }
+  ]
+}
