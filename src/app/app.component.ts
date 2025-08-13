@@ -4,18 +4,20 @@ import {HeaderComponent} from '@components/header/header.component';
 import {NgIcon, provideIcons} from '@ng-icons/core';
 import {
   bootstrapCalendar,
+  bootstrapChatText,
   bootstrapFilePdf,
-  bootstrapGithub, bootstrapLink45deg,
+  bootstrapGithub,
+  bootstrapLink45deg,
   bootstrapLinkedin,
   bootstrapMoon,
   bootstrapPhone,
   bootstrapSend,
   bootstrapSun,
   bootstrapThreeDotsVertical,
-  bootstrapChatText,
 } from '@ng-icons/bootstrap-icons';
 import {LayoutService} from './services/layout.service';
-import {contacts} from './constants/const';
+import {contacts, richSnippetJsonSchema} from './constants/const';
+import {DomSanitizer, SafeHtml} from '@angular/platform-browser';
 
 @Component({
   selector: 'app-root',
@@ -38,13 +40,17 @@ import {contacts} from './constants/const';
     })
   ],
 })
-export class AppComponent implements OnInit{
+export class AppComponent implements OnInit {
 
   readonly #layoutService = inject(LayoutService);
+  readonly #sanitizer = inject(DomSanitizer);
+
   scrollTop = computed(this.#layoutService.scrollY);
   isMobile = computed(this.#layoutService.isMobile);
   phoneNumber = computed(this.#layoutService.phoneNumber);
   email = computed(this.#layoutService.email);
+  snippetScript: SafeHtml = '';
+
 
   @HostListener('window:scroll', ['$event']) windowScroll() {
     this.#layoutService.scrollY.set(window.scrollY);
@@ -57,6 +63,7 @@ export class AppComponent implements OnInit{
   }
 
   ngOnInit(): void {
+    this.snippetScript = this.#sanitizer.bypassSecurityTrustHtml(`<script type="application/ld+json">${JSON.stringify(richSnippetJsonSchema)}</script>`);
     // this.#layoutService.scrollTo();
     if (this.#layoutService.isBrowser) {
       document.getElementsByTagName('header')[0].scrollIntoView({
