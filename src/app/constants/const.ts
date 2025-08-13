@@ -215,9 +215,28 @@ export function typeGuardHeadingContentTypeSkillsInterface(data: any): data is S
   return data satisfies SkillsInterface;
 }
 
-const test = new HeadingContent();
-
-if (test.isArrayOfExperience()) {
-  test.data[0].companyName
-}
+export const richSnippetJsonSchema = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Ali Roshanzamir Golafzani",
+  "gender": "Male",
+  "email": "contact@aliroshanzamir.info",
+  "url": "https://aliroshanzamir.info",
+  "image": "https://aliroshanzamir.info/assets/profile-light.jpg",
+  "jobTitle": "Front End Engineer",
+  "worksFor": {
+    "@type": "Organization",
+    "name": "TabinTech",
+    "sameAs": [
+      "https://tabintech.com/"
+    ]
+  },
+  "sameAs": [
+    "https://www.linkedin.com/in/ali-roshan"
+  ],
+  "skills": [
+    "TypeScript", "JavaScript (ES6+)", "HTML5", "CSS3", "Bash", "PHP", "Laravel", "TSX", "JSX", "JSON", "XML", "YAML", "JSP", "JSF", "Angular (v2–v20)", "Next", "Vue", "RxJS", "Ionic", "Tailwind CSS", "Bootstrap", "DevExtreme", "Git", "Docker", "Nginx", "Webpack", "Gulp", "Vite", "npm", "Caddy", "Nexus Repository Manager", "SSR (Server-Side Rendering)", "SSG (Static Site Generation)", "Lazy Loading", "PWA", "Responsive Design", "Internationalization (i18n)", "SEO Optimization", "Performance Tuning",
+  ],
+  "description": "Senior Frontend Architect with 7+ years spearheading performance-critical web solutions for finance (Agatizer), logistics (Toosheh Bar), and e-commerce (Missha). Delivered 10+ enterprise applications boosting engagement by 30% and slashing latency by 20% through optimized React/Angular architectures. Pioneered reusable component systems accelerating development velocity by 30% and reducing bundle sizes by 40%. Established CI/CD pipelines (Docker, Nexus) and SSR/PWA strategies increasing returning users by 20%. Mentored 8+ engineers in scalable app design and i18n."
+};
 
