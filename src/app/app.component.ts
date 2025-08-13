@@ -1,4 +1,4 @@
-import {Component, computed, DOCUMENT, HostListener, inject, OnInit} from '@angular/core';
+import {Component, computed, HostListener, inject, OnInit} from '@angular/core';
 import {RouterOutlet} from '@angular/router';
 import {HeaderComponent} from '@components/header/header.component';
 import {NgIcon, provideIcons} from '@ng-icons/core';
@@ -44,7 +44,6 @@ export class AppComponent implements OnInit {
 
   readonly #layoutService = inject(LayoutService);
   readonly #sanitizer = inject(DomSanitizer);
-  readonly #document = inject(DOCUMENT);
 
   scrollTop = computed(this.#layoutService.scrollY);
   isMobile = computed(this.#layoutService.isMobile);
