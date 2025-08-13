@@ -221,7 +221,7 @@ export const richSnippetJsonSchema = {
   "name": "Ali Roshanzamir Golafzani",
   "email": "contact@aliroshanzamir.info",
   "url": "https://aliroshanzamir.info",
-  "image": "https://aliroshanzamir.info/assets/profile-light.jpg",
+  "image": "https://aliroshanzamir.info/assets/profile-light.png",
   "jobTitle": "Front End Engineer",
   "worksFor": {
     "@type": "Organization",
