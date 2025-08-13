@@ -1,4 +1,14 @@
-import {Component, computed, DOCUMENT, HostListener, inject, OnInit, Renderer2, signal} from '@angular/core';
+import {
+  AfterViewInit,
+  Component,
+  computed,
+  DOCUMENT,
+  HostListener,
+  inject,
+  OnInit,
+  Renderer2,
+  signal
+} from '@angular/core';
 import {RouterOutlet} from '@angular/router';
 import {HeaderComponent} from '@components/header/header.component';
 import {NgIcon, provideIcons} from '@ng-icons/core';
@@ -40,7 +50,7 @@ import {DomSanitizer, SafeHtml} from '@angular/platform-browser';
     })
   ],
 })
-export class AppComponent implements OnInit {
+export class AppComponent implements OnInit, AfterViewInit {
 
   readonly #layoutService = inject(LayoutService);
   readonly #sanitizer = inject(DomSanitizer);
@@ -65,20 +75,26 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    if (this.#layoutService.isServer) {
-      this.setOrUpdateSnippet(richSnippetJsonSchema);
-    } else {
-      this.#renderer?.setValue(
-        this.#document.querySelector('script[type="application/ld+json"]'),
-        JSON.stringify(richSnippetJsonSchema, null, 2).replace(/\//g, '\\/')
-      )
-    }
     // this.#layoutService.scrollTo();
     if (this.#layoutService.isBrowser) {
       document.getElementsByTagName('header')[0].scrollIntoView({
         behavior: 'instant',
         block: "start"
       })
+    }
+  }
+
+  ngAfterViewInit(): void {
+    if (this.#layoutService.isServer) {
+      this.setOrUpdateSnippet(richSnippetJsonSchema);
+    } else {
+      const element = this.#document.querySelector('script[type="application/ld+json"]');
+      if (element) {
+        this.#renderer.setValue(
+          this.#document.querySelector('script[type="application/ld+json"]'),
+          JSON.stringify(richSnippetJsonSchema, null, 2).replace(/\//g, '\\/')
+        )
+      }
     }
   }
 
