@@ -1,4 +1,4 @@
-import {Component, computed, HostListener, inject, OnInit} from '@angular/core';
+import {Component, computed, DOCUMENT, HostListener, inject, OnInit} from '@angular/core';
 import {RouterOutlet} from '@angular/router';
 import {HeaderComponent} from '@components/header/header.component';
 import {NgIcon, provideIcons} from '@ng-icons/core';
@@ -44,6 +44,7 @@ export class AppComponent implements OnInit {
 
   readonly #layoutService = inject(LayoutService);
   readonly #sanitizer = inject(DomSanitizer);
+  readonly #document = inject(DOCUMENT);
 
   scrollTop = computed(this.#layoutService.scrollY);
   isMobile = computed(this.#layoutService.isMobile);
@@ -63,7 +64,7 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.snippetScript = this.#sanitizer.bypassSecurityTrustHtml(`<script type="application/ld+json">${JSON.stringify(richSnippetJsonSchema)}</script>`);
+    this.setSnippet(richSnippetJsonSchema);
     // this.#layoutService.scrollTo();
     if (this.#layoutService.isBrowser) {
       document.getElementsByTagName('header')[0].scrollIntoView({
@@ -78,4 +79,12 @@ export class AppComponent implements OnInit {
       ...item,
       className: item.className.replace(' btn-soft', '')
     }));
+
+  setSnippet(data?: any) {
+    // if need .replace(/\//g, '\\/') to replace all / with \/
+    const value = data ? JSON.stringify(data, null, 2) : '';
+    const html = `<script type="application/ld+json">${value}</script>`;
+    this.snippetScript = this.#sanitizer.bypassSecurityTrustHtml(html);
+  }
+
 }
