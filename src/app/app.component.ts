@@ -1,4 +1,4 @@
-import {Component, computed, HostListener, inject, OnInit} from '@angular/core';
+import {Component, computed, HostListener, inject, OnInit, signal} from '@angular/core';
 import {RouterOutlet} from '@angular/router';
 import {HeaderComponent} from '@components/header/header.component';
 import {NgIcon, provideIcons} from '@ng-icons/core';
@@ -49,7 +49,7 @@ export class AppComponent implements OnInit {
   isMobile = computed(this.#layoutService.isMobile);
   phoneNumber = computed(this.#layoutService.phoneNumber);
   email = computed(this.#layoutService.email);
-  snippetScript: SafeHtml = '';
+  snippetScript = signal<SafeHtml>('');
 
 
   @HostListener('window:scroll', ['$event']) windowScroll() {
@@ -63,7 +63,9 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.setSnippet(richSnippetJsonSchema);
+    if (this.#layoutService.isServer) {
+      this.setSnippet(richSnippetJsonSchema);
+    }
     // this.#layoutService.scrollTo();
     if (this.#layoutService.isBrowser) {
       document.getElementsByTagName('header')[0].scrollIntoView({
@@ -83,7 +85,7 @@ export class AppComponent implements OnInit {
     // if need .replace(/\//g, '\\/') to replace all / with \/
     const value = data ? JSON.stringify(data, null, 2) : '';
     const html = `<script type="application/ld+json">${value}</script>`;
-    this.snippetScript = this.#sanitizer.bypassSecurityTrustHtml(html);
+    this.snippetScript.set(this.#sanitizer.bypassSecurityTrustHtml(html));
   }
 
 }
