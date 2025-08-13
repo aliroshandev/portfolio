@@ -68,7 +68,7 @@ export class AppComponent implements OnInit {
     if (this.#layoutService.isServer) {
       this.setOrUpdateSnippet(richSnippetJsonSchema);
     } else {
-      this.#renderer.setValue(
+      this.#renderer?.setValue(
         this.#document.querySelector('script[type="application/ld+json"]'),
         JSON.stringify(richSnippetJsonSchema, null, 2).replace(/\//g, '\\/')
       )
@@ -89,7 +89,6 @@ export class AppComponent implements OnInit {
     }));
 
   setOrUpdateSnippet(data?: any) {
-    let snippetScript = this.#document.querySelector('script[type="application/ld+json"]');
     // if need .replace(/\//g, '\\/') to replace all / with \/
     const value = data ? JSON.stringify(data, null, 2).replace(/\//g, '\\/') : '';
     const html = `<script type="application/ld+json">${value}</script>`;
