@@ -1,4 +1,4 @@
-import {Component, computed, HostListener, inject, OnInit, signal} from '@angular/core';
+import {Component, computed, DOCUMENT, HostListener, inject, OnInit, Renderer2, signal} from '@angular/core';
 import {RouterOutlet} from '@angular/router';
 import {HeaderComponent} from '@components/header/header.component';
 import {NgIcon, provideIcons} from '@ng-icons/core';
@@ -44,6 +44,8 @@ export class AppComponent implements OnInit {
 
   readonly #layoutService = inject(LayoutService);
   readonly #sanitizer = inject(DomSanitizer);
+  readonly #document = inject(DOCUMENT);
+  readonly #renderer = inject(Renderer2);
 
   scrollTop = computed(this.#layoutService.scrollY);
   isMobile = computed(this.#layoutService.isMobile);
@@ -64,7 +66,12 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {
     if (this.#layoutService.isServer) {
-      this.setSnippet(richSnippetJsonSchema);
+      this.setOrUpdateSnippet(richSnippetJsonSchema);
+    } else {
+      this.#renderer.setValue(
+        this.#document.querySelector('script[type="application/ld+json"]'),
+        JSON.stringify(richSnippetJsonSchema, null, 2).replace(/\//g, '\\/')
+      )
     }
     // this.#layoutService.scrollTo();
     if (this.#layoutService.isBrowser) {
@@ -81,9 +88,10 @@ export class AppComponent implements OnInit {
       className: item.className.replace(' btn-soft', '')
     }));
 
-  setSnippet(data?: any) {
+  setOrUpdateSnippet(data?: any) {
+    let snippetScript = this.#document.querySelector('script[type="application/ld+json"]');
     // if need .replace(/\//g, '\\/') to replace all / with \/
-    const value = data ? JSON.stringify(data, null, 2) : '';
+    const value = data ? JSON.stringify(data, null, 2).replace(/\//g, '\\/') : '';
     const html = `<script type="application/ld+json">${value}</script>`;
     this.snippetScript.set(this.#sanitizer.bypassSecurityTrustHtml(html));
   }
