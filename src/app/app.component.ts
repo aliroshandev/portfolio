@@ -89,11 +89,17 @@ export class AppComponent implements OnInit, AfterViewInit {
       this.setOrUpdateSnippet(richSnippetJsonSchema);
     } else {
       const element = this.#document.querySelector('script[type="application/ld+json"]');
-      if (element) {
+      const schemaJson =JSON.stringify(richSnippetJsonSchema, null, 2).replace(/\//g, '\\/')
+      if (element != null) {
         this.#renderer.setValue(
           this.#document.querySelector('script[type="application/ld+json"]'),
-          JSON.stringify(richSnippetJsonSchema, null, 2).replace(/\//g, '\\/')
+          schemaJson
         )
+      } else {
+        const scriptElement = this.#renderer.createElement('script');
+        scriptElement.type = `application/ld+json`;
+        scriptElement.text = schemaJson;
+        this.#renderer.appendChild(this.#document.body, scriptElement);
       }
     }
   }
