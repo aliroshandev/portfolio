@@ -1,14 +1,4 @@
-import {
-  AfterViewInit,
-  Component,
-  computed,
-  DOCUMENT,
-  HostListener,
-  inject,
-  OnInit,
-  Renderer2,
-  signal
-} from '@angular/core';
+import {Component, computed, DOCUMENT, HostListener, inject, OnInit, Renderer2, signal} from '@angular/core';
 import {RouterOutlet} from '@angular/router';
 import {HeaderComponent} from '@components/header/header.component';
 import {NgIcon, provideIcons} from '@ng-icons/core';
@@ -50,7 +40,7 @@ import {DomSanitizer, SafeHtml} from '@angular/platform-browser';
     })
   ],
 })
-export class AppComponent implements OnInit, AfterViewInit {
+export class AppComponent implements OnInit {
 
   readonly #layoutService = inject(LayoutService);
   readonly #sanitizer = inject(DomSanitizer);
@@ -75,7 +65,7 @@ export class AppComponent implements OnInit, AfterViewInit {
   }
 
   ngOnInit(): void {
-    // this.#layoutService.scrollTo();
+    this.setOrUpdateSnippet();
     if (this.#layoutService.isBrowser) {
       document.getElementsByTagName('header')[0].scrollIntoView({
         behavior: 'instant',
@@ -84,9 +74,17 @@ export class AppComponent implements OnInit, AfterViewInit {
     }
   }
 
-  ngAfterViewInit(): void {
+  protected readonly contacts = contacts(this.phoneNumber(), this.email())
+    .map((item, index) => ({
+      ...item,
+      className: item.className.replace(' btn-soft', '')
+    }));
+
+  setOrUpdateSnippet() {
     if (this.#layoutService.isServer) {
-      this.setOrUpdateSnippet(richSnippetJsonSchema);
+      const value = JSON.stringify(richSnippetJsonSchema, null, 2).replace(/\//g, '\\/');
+      const html = `<script type="application/ld+json">${value}</script>`;
+      this.snippetScript.set(this.#sanitizer.bypassSecurityTrustHtml(html));
     } else {
       const element = this.#document.querySelector('script[type="application/ld+json"]');
       const schemaJson =JSON.stringify(richSnippetJsonSchema, null, 2).replace(/\//g, '\\/')
@@ -102,19 +100,6 @@ export class AppComponent implements OnInit, AfterViewInit {
         this.#renderer.appendChild(this.#document.body, scriptElement);
       }
     }
-  }
-
-  protected readonly contacts = contacts(this.phoneNumber(), this.email())
-    .map((item, index) => ({
-      ...item,
-      className: item.className.replace(' btn-soft', '')
-    }));
-
-  setOrUpdateSnippet(data?: any) {
-    // if need .replace(/\//g, '\\/') to replace all / with \/
-    const value = data ? JSON.stringify(data, null, 2).replace(/\//g, '\\/') : '';
-    const html = `<script type="application/ld+json">${value}</script>`;
-    this.snippetScript.set(this.#sanitizer.bypassSecurityTrustHtml(html));
   }
 
 }
