@@ -122,7 +122,7 @@ export const experiences: Array<ExperienceInterface> = [
         'Engineered frontend solutions for cross-industry software/app projects driving client growth.',
         'Core stack: React, WordPress, Headless CMS, JavaScript, jQuery, HTML5, CSS3 with focus on responsive design.',
       ]),
-      tags: ['React', 'WordPress', 'Headless CMS','JavaScript', 'jQuery', 'HTML5', 'CSS3', 'Responsive Design']
+      tags: ['React', 'WordPress', 'Headless CMS', 'JavaScript', 'jQuery', 'HTML5', 'CSS3', 'Responsive Design']
     }
   } as ExperienceInterface,
 ];
@@ -217,26 +217,172 @@ export function typeGuardHeadingContentTypeSkillsInterface(data: any): data is S
 
 export const richSnippetJsonSchema = {
   "@context": "https://schema.org",
-  "@type": "Person",
+  "@type": "ProfilePage",
   "name": "Ali Roshanzamir Golafzani",
   "gender": "Male",
   "email": "contact@aliroshanzamir.info",
   "url": "https://aliroshanzamir.info",
-  "image": "https://aliroshanzamir.info/assets/profile-light.png",
-  "jobTitle": "Front End Engineer",
-  "worksFor": {
-    "@type": "Organization",
-    "name": "TabinTech",
-    "sameAs": [
-      "https://tabintech.com/"
-    ]
+  "image": {
+    "@type": "ImageObject",
+    "contentUrl": "https://aliroshanzamir.info/assets/profile-light.png"
   },
-  "sameAs": [
-    "https://www.linkedin.com/in/ali-roshan"
-  ],
+  "jobTitle": "Front End Engineer",
+  "knowsLanguage": ["English", "Persian"],
+  "mainEntity": {
+    "@context": "http://schema.org",
+    "@type": "Person",
+    "address": {"@type": "PostalAddress", "addressCountry": "IR", "addressLocality": "Tehran, Tehran Province, Iran"},
+    "alumniOf": [{
+      "@type": "Organization",
+      "name": "eSafar",
+      "url": "https://esafar.com",
+      "location": "Tehran Province, Iran",
+      "member": {"@type": "OrganizationRole", "startDate": "2021-10", "endDate": "2022-01"}
+    }, {
+      "@type": "Organization",
+      "name": "Tushehbar Shipping Agency",
+      "url": "https://tushehbar.com",
+      "location": "Remote",
+      "member": {"@type": "OrganizationRole", "startDate": "2020-11", "endDate": "2021-10"}
+    }, {
+      "@type": "Organization",
+      "name": "MISSHA",
+      "url": "https://missha-ir.com",
+      "location": "Remote",
+      "member": {"@type": "OrganizationRole", "startDate": "2020-10", "endDate": "2021-02"}
+    }, {
+      "@type": "Organization",
+      "name": "eSafar",
+      "url": "https://esafar.com",
+      "location": "Tehran Province, Iran",
+      "member": {"@type": "OrganizationRole", "startDate": "2020-05", "endDate": "2020-08"}
+    }, {
+      "@type": "Organization",
+      "name": "Shenoto - Persian Podcast Platform",
+      "url": "https://shenoto.com",
+      "location": "Tehran Province, Iran",
+      "member": {"@type": "OrganizationRole", "startDate": "2018-09", "endDate": "2020-05"}
+    }, {
+      "@type": "Organization",
+      "name": "EMOZ",
+      "url": "https://emoz.biz",
+      "location": "Tehran Province, Iran",
+      "member": {"@type": "OrganizationRole", "startDate": "2019-01", "endDate": "2019-05"}
+    }, {
+      "@type": "EducationalOrganization",
+      "name": "Azad University South Tehran",
+      "member": {"@type": "OrganizationRole", "startDate": 2015, "endDate": 2021}
+    }],
+    "awards": [],
+    "disambiguatingDescription": "Ali Roshanzamir Golafzani | Frontend Engineer | Bachelor's degree in Computer Engineering",
+    "image": {
+      "@type": "ImageObject",
+      "contentUrl": "https://media.licdn.com/dms/image/v2/D4E03AQEckEcODginBw/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1680185467791?e=2147483647&v=beta&t=R4nP4WkBCTQgNCYBnNKxkpLhMVKz0lAGwOi242DBkqE"
+    },
+    "jobTitle": ["Frontend Chapter Lead", "Angular Specialist", "Frontend Engineer", "React Developer", "Next Developer"],
+    "knowsLanguage": [],
+    "memberOf": [],
+    "name": "Ali Roshanzamir Golafzani",
+    "sameAs": "https://ir.linkedin.com/in/ali-roshan",
+    "url": "https://aliroshanzamir.info",
+    "worksFor": [{
+      "@type": "Organization",
+      "name": "Tabin Tech | تابین تِک",
+      "url": "https://tabintech.com",
+      "location": "Tehran, Tehran Province, Iran",
+      "member": {"@type": "OrganizationRole", "startDate": "2024-12"}
+    }],
+    "description": "Senior Frontend Architect with 7+ years spearheading performance-critical web solutions for finance (Agatizer), logistics (Toosheh Bar), and e-commerce (Missha). Delivered 10+ enterprise applications boosting engagement by 30% and slashing latency by 20% through optimized React/Angular architectures. Pioneered reusable component systems accelerating development velocity by 30% and reducing bundle sizes by 40%. Established CI/CD pipelines (Docker, Nexus) and SSR/PWA strategies increasing returning users by 20%. Mentored 8+ engineers in scalable app design and i18n."
+  },
   "skills": [
-    "TypeScript", "JavaScript (ES6+)", "HTML5", "CSS3", "Bash", "PHP", "Laravel", "TSX", "JSX", "JSON", "XML", "YAML", "JSP", "JSF", "Angular (v2–v20)", "Next", "Vue", "RxJS", "Ionic", "Tailwind CSS", "Bootstrap", "DevExtreme", "Git", "Docker", "Nginx", "Webpack", "Gulp", "Vite", "npm", "Caddy", "Nexus Repository Manager", "SSR (Server-Side Rendering)", "SSG (Static Site Generation)", "Lazy Loading", "PWA", "Responsive Design", "Internationalization (i18n)", "SEO Optimization", "Performance Tuning",
-  ],
-  "description": "Senior Frontend Architect with 7+ years spearheading performance-critical web solutions for finance (Agatizer), logistics (Toosheh Bar), and e-commerce (Missha). Delivered 10+ enterprise applications boosting engagement by 30% and slashing latency by 20% through optimized React/Angular architectures. Pioneered reusable component systems accelerating development velocity by 30% and reducing bundle sizes by 40%. Established CI/CD pipelines (Docker, Nexus) and SSR/PWA strategies increasing returning users by 20%. Mentored 8+ engineers in scalable app design and i18n."
+    "TypeScript", "JavaScript (ES6+)", "HTML5", "CSS3", "Bash", "PHP", "Laravel", "TSX", "JSX", "JSON", "XML", "YAML", "JSP", "JSF", "Angular (v2–v20)", "Next", "Vue", "RxJS", "Ionic", "Tailwind CSS", "Bootstrap", "DevExtreme", "Git", "Docker", "Nginx", "Webpack", "Gulp", "Vite", "npm", "Caddy", "Nexus Repository Manager", "SSR (Server-Side Rendering)", "SSG (Static Site Generation)", "Lazy Loading", "PWA", "Responsive Design", "Internationalization (i18n)", "SEO Optimization", "Performance Tuning"
+  ]
 };
 
+const linkedInSchema = {
+  "@context": "http://schema.org",
+  "@graph": [{
+    "@type": "WebPage",
+    "reviewedBy": {"@type": "Person", "name": "Ali Roshanzamir Golafzani"},
+    "url": "https://ir.linkedin.com/in/ali-roshan"
+  }],
+  "@type": "ProfilePage",
+  "image": {
+    "@type": "ImageObject",
+    "contentUrl": "https://media.licdn.com/dms/image/v2/D4E03AQEckEcODginBw/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1680185467791?e=2147483647&v=beta&t=R4nP4WkBCTQgNCYBnNKxkpLhMVKz0lAGwOi242DBkqE"
+  },
+  "mainEntity": {
+    "@context": "http://schema.org",
+    "@type": "Person",
+    "address": {"@type": "PostalAddress", "addressCountry": "IR", "addressLocality": "Tehran, Tehran Province, Iran"},
+    "alumniOf": [{
+      "@type": "Organization",
+      "name": "eSafar.com",
+      "url": "https://ir.linkedin.com/company/esafar",
+      "member": {"@type": "OrganizationRole", "startDate": "2021-10", "endDate": "2022-01"}
+    }, {
+      "@type": "Organization",
+      "name": "Tushehbar Shipping Agency",
+      "url": "https://ir.linkedin.com/company/tushehbar-shipping-agency",
+      "member": {"@type": "OrganizationRole", "startDate": "2020-11", "endDate": "2021-10"}
+    }, {
+      "@type": "Organization",
+      "name": "MISSHA",
+      "url": "https://www.linkedin.com/company/missha-us-inc",
+      "member": {"@type": "OrganizationRole", "startDate": "2020-10", "endDate": "2021-02"}
+    }, {
+      "@type": "Organization",
+      "name": "eSafar.com",
+      "url": "https://ir.linkedin.com/company/esafar",
+      "location": "Iran",
+      "member": {"@type": "OrganizationRole", "startDate": "2020-05", "endDate": "2020-08"}
+    }, {
+      "@type": "Organization",
+      "name": "شنوتو - مرجع پادکست های صوتی",
+      "url": "https://ir.linkedin.com/company/%D8%B4%D9%86%D9%88%D8%AA%D9%88---%D9%85%D8%B1%D8%AC%D8%B9-%D9%BE%D8%A7%D8%AF%DA%A9%D8%B3%D8%AA-%D9%87%D8%A7%DB%8C-%D8%B5%D9%88%D8%AA%DB%8C",
+      "location": "Tehran Province, Iran",
+      "member": {"@type": "OrganizationRole", "startDate": "2018-09", "endDate": "2020-05"}
+    }, {
+      "@type": "Organization",
+      "name": "EMOZ",
+      "url": "https://www.linkedin.com/company/emoz",
+      "location": "Tehran Province, Iran",
+      "member": {"@type": "OrganizationRole", "startDate": "2019-01", "endDate": "2019-05"}
+    }, {
+      "@type": "EducationalOrganization",
+      "name": "Azad University South Tehran",
+      "member": {"@type": "OrganizationRole", "startDate": 2015, "endDate": 2021}
+    }],
+    "awards": [],
+    "disambiguatingDescription": "",
+    "image": {
+      "@type": "ImageObject",
+      "contentUrl": "https://media.licdn.com/dms/image/v2/D4E03AQEckEcODginBw/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1680185467791?e=2147483647&v=beta&t=R4nP4WkBCTQgNCYBnNKxkpLhMVKz0lAGwOi242DBkqE"
+    },
+    "jobTitle": ["Frontend Chapter Lead"],
+    "knowsLanguage": ["English", "Persian"],
+    "memberOf": [],
+    "name": "Ali Roshanzamir Golafzani",
+    "sameAs": "https://ir.linkedin.com/in/ali-roshan",
+    "url": "https://ir.linkedin.com/in/ali-roshan",
+    "worksFor": [{
+      "@type": "Organization",
+      "name": "Tabin Tech | تابین تِک",
+      "url": "https://ir.linkedin.com/company/tabintech",
+      "location": "Tehran, Tehran Province, Iran",
+      "member": {"@type": "OrganizationRole", "startDate": "2024-12"}
+    }],
+    "interactionStatistic": [{
+      "@type": "InteractionCounter",
+      "interactionType": "https://schema.org/FollowAction",
+      "name": "Follows",
+      "userInteractionCount": 594
+    }, {
+      "@type": "InteractionCounter",
+      "interactionType": {"@id": "https://schema.org/BefriendAction", "@type": "BefriendAction"},
+      "name": "Connections",
+      "userInteractionCount": 596
+    }],
+    "description": "At Vira Fanavaran Taabin, our collective efforts in frontend development have been geared towards pushing the envelope of web standards. With a Bachelor's degree in Computer Engineering from Azad University South Tehran, my role involves harnessing the power of the Ionic Framework to develop responsive interfaces that cater to users' evolving needs.\u003Cbr\u003E\u003Cbr\u003EIn a landscape where performance and security are paramount, we prioritize optimization and adherence to OWASP guidelines. It's my goal to leverage these competencies to create not just seamless, but also secure user experiences that embody our company's forward-thinking ethos."
+  }
+}
