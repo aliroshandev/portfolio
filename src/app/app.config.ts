@@ -33,10 +33,6 @@ export const appConfig: ApplicationConfig = {
         .pipe(
           shareReplay(1) // Cache the result
         );
-    }),
-    provideServiceWorker('ngsw-worker.js', {
-      enabled: !isDevMode(),
-      registrationStrategy: 'registerWhenStable:30000'
     })
   ]
 };
