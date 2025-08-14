@@ -45,7 +45,7 @@ export class AppComponent implements OnInit {
   readonly #layoutService = inject(LayoutService);
   readonly #sanitizer = inject(DomSanitizer);
   readonly #document = inject(DOCUMENT);
-  readonly #renderer = inject(Renderer2);
+  readonly renderer = inject(Renderer2);
 
   scrollTop = computed(this.#layoutService.scrollY);
   isMobile = computed(this.#layoutService.isMobile);
@@ -87,17 +87,18 @@ export class AppComponent implements OnInit {
       this.snippetScript.set(this.#sanitizer.bypassSecurityTrustHtml(html));
     } else {
       const element = this.#document.querySelector('script[type="application/ld+json"]');
-      const schemaJson = JSON.stringify(richSnippetJsonSchema, null, 2)
+      const schemaJson = JSON.stringify(richSnippetJsonSchema, null, 2);
+      this.snippetScript.set(schemaJson);
       if (element != null) {
-        this.#renderer.setValue(
+        this.renderer.setValue(
           this.#document.querySelector('script[type="application/ld+json"]'),
           schemaJson
         )
       } else {
-        const scriptElement = this.#renderer.createElement('script');
+        const scriptElement = this.renderer.createElement('script');
         scriptElement.type = `application/ld+json`;
         scriptElement.text = schemaJson;
-        this.#renderer.appendChild(this.#document.body, scriptElement);
+        this.renderer.appendChild(this.#document.body, this.#sanitizer.bypassSecurityTrustHtml(scriptElement));
       }
     }
   }
