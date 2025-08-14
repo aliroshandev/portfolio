@@ -81,14 +81,14 @@ export class AppComponent implements OnInit {
     }));
 
   setOrUpdateSnippet() {
+    const value = JSON.stringify(richSnippetJsonSchema, null, 2);
+    const html = this.#sanitizer.bypassSecurityTrustHtml(`<script type="application/ld+json">${value}</script>`);
     if (this.#layoutService.isServer) {
-      const value = JSON.stringify(richSnippetJsonSchema, null, 2);
-      const html = `<script type="application/ld+json">${value}</script>`;
-      this.snippetScript.set(this.#sanitizer.bypassSecurityTrustHtml(html));
+      this.snippetScript.set(html);
     } else {
       const element = this.#document.querySelector('script[type="application/ld+json"]');
       const schemaJson = JSON.stringify(richSnippetJsonSchema, null, 2);
-      this.snippetScript.set(schemaJson);
+      this.snippetScript.set(html);
       if (element != null) {
         this.renderer.setValue(
           this.#document.querySelector('script[type="application/ld+json"]'),
