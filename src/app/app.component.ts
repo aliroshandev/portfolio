@@ -65,7 +65,7 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    // this.setOrUpdateSnippet();
+    this.setOrUpdateSnippet();
     if (this.#layoutService.isBrowser) {
       document.getElementsByTagName('header')[0].scrollIntoView({
         behavior: 'instant',
