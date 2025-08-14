@@ -83,9 +83,12 @@ export class AppComponent implements OnInit {
   setOrUpdateSnippet() {
     if (this.#layoutService.isServer) {
       const value = JSON.stringify(richSnippetJsonSchema, null, 2);
-      const html = `<script type="application/ld+json">${value}</script>`;
-      this.snippetScript.set(this.#sanitizer.bypassSecurityTrustHtml(html));
-      this.#renderer.appendChild(this.#document.body, html);
+      // const html = `<script type="application/ld+json">${value}</script>`;
+      // this.snippetScript.set(this.#sanitizer.bypassSecurityTrustHtml(html));
+      this.#renderer.setValue(
+        this.#document.querySelector('script[type="application/ld+json"]'),
+        value
+      )
     } else {
       const element = this.#document.querySelector('script[type="application/ld+json"]');
       const schemaJson = JSON.stringify(richSnippetJsonSchema, null, 2)
