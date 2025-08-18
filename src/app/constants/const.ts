@@ -221,10 +221,12 @@ export const richSnippetJsonSchema = {
   "name": "Ali Roshanzamir Golafzani",
   "url": "https://aliroshanzamir.info",
   "image": {
+    "@id": "#profileImage",
     "@type": "ImageObject",
     "contentUrl": "https://aliroshanzamir.info/assets/profile-light.png"
   },
   "mainEntity": {
+    "@id": "#profile",
     "@context": "http://schema.org",
     "@type": "Person",
     "gender": "Male",
@@ -235,8 +237,7 @@ export const richSnippetJsonSchema = {
     "awards": [],
     "disambiguatingDescription": "Ali Roshanzamir Golafzani | Frontend Engineer | Bachelor's degree in Computer Engineering",
     "image": {
-      "@type": "ImageObject",
-      "contentUrl": "https://aliroshanzamir.info/assets/profile-light.png"
+      "@id": "#profileImage",
     },
     "memberOf": [],
     "name": "Ali Roshanzamir Golafzani",
@@ -255,41 +256,41 @@ export const richSnippetJsonSchema = {
       "name": "eSafar",
       "url": "https://esafar.com",
       "location": "Tehran Province, Iran",
-      "member": {"@type": "OrganizationRole", "startDate": "2021-10", "endDate": "2022-01"}
+      "member": {"@type": "OrganizationRole", "member": {"@id": "#profile"}, "startDate": "2021-10", "endDate": "2022-01"}
     }, {
       "@type": "Organization",
       "name": "Tushehbar Shipping Agency",
       "url": "https://tushehbar.com",
       "location": "Remote",
-      "member": {"@type": "OrganizationRole", "startDate": "2020-11", "endDate": "2021-10"}
+      "member": {"@type": "OrganizationRole", "member": {"@id": "#profile"}, "startDate": "2020-11", "endDate": "2021-10"}
     }, {
       "@type": "Organization",
       "name": "MISSHA",
       "url": "https://missha-ir.com",
       "location": "Remote",
-      "member": {"@type": "OrganizationRole", "startDate": "2020-10", "endDate": "2021-02"}
+      "member": {"@type": "OrganizationRole", "member": {"@id": "#profile"}, "startDate": "2020-10", "endDate": "2021-02"}
     }, {
       "@type": "Organization",
       "name": "eSafar",
       "url": "https://esafar.com",
       "location": "Tehran Province, Iran",
-      "member": {"@type": "OrganizationRole", "startDate": "2020-05", "endDate": "2020-08"}
+      "member": {"@type": "OrganizationRole", "member": {"@id": "#profile"}, "startDate": "2020-05", "endDate": "2020-08"}
     }, {
       "@type": "Organization",
       "name": "Shenoto - Persian Podcast Platform",
       "url": "https://shenoto.com",
       "location": "Tehran Province, Iran",
-      "member": {"@type": "OrganizationRole", "startDate": "2018-09", "endDate": "2020-05"}
+      "member": {"@type": "OrganizationRole", "member": {"@id": "#profile"}, "startDate": "2018-09", "endDate": "2020-05"}
     }, {
       "@type": "Organization",
       "name": "EMOZ",
       "url": "https://emoz.biz",
       "location": "Tehran Province, Iran",
-      "member": {"@type": "OrganizationRole", "startDate": "2019-01", "endDate": "2019-05"}
+      "member": {"@type": "OrganizationRole", "member": {"@id": "#profile"}, "startDate": "2019-01", "endDate": "2019-05"}
     }, {
       "@type": "EducationalOrganization",
       "name": "Azad University South Tehran",
-      "member": {"@type": "OrganizationRole", "startDate": 2015, "endDate": 2021}
+      "member": {"@type": "OrganizationRole", "member": {"@id": "#profile"}, "startDate": 2015, "endDate": 2021}
     }],
     "skills": [
       "TypeScript", "JavaScript (ES6+)", "HTML5", "CSS3", "Bash", "PHP", "Laravel", "TSX", "JSX", "JSON", "XML", "YAML", "JSP", "JSF", "Angular (v2–v20)", "Next", "Vue", "RxJS", "Ionic", "Tailwind CSS", "Bootstrap", "DevExtreme", "Git", "Docker", "Nginx", "Webpack", "Gulp", "Vite", "npm", "Caddy", "Nexus Repository Manager", "SSR (Server-Side Rendering)", "SSG (Static Site Generation)", "Lazy Loading", "PWA", "Responsive Design", "Internationalization (i18n)", "SEO Optimization", "Performance Tuning"
