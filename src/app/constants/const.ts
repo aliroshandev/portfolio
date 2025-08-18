@@ -219,19 +219,37 @@ export const richSnippetJsonSchema = {
   "@context": "https://schema.org",
   "@type": "ProfilePage",
   "name": "Ali Roshanzamir Golafzani",
-  "gender": "Male",
-  "email": "contact@aliroshanzamir.info",
   "url": "https://aliroshanzamir.info",
   "image": {
     "@type": "ImageObject",
     "contentUrl": "https://aliroshanzamir.info/assets/profile-light.png"
   },
-  "jobTitle": "Front End Engineer",
-  "knowsLanguage": ["English", "Persian"],
   "mainEntity": {
     "@context": "http://schema.org",
     "@type": "Person",
+    "gender": "Male",
+    "email": "contact@aliroshanzamir.info",
     "address": {"@type": "PostalAddress", "addressCountry": "IR", "addressLocality": "Tehran, Tehran Province, Iran"},
+    "jobTitle": ["Frontend Chapter Lead", "Angular Specialist", "Frontend Engineer", "React Developer", "Next Developer", "Frontend Developer"],
+    "knowsLanguage": ["English", "Persian"],
+    "awards": [],
+    "disambiguatingDescription": "Ali Roshanzamir Golafzani | Frontend Engineer | Bachelor's degree in Computer Engineering",
+    "image": {
+      "@type": "ImageObject",
+      "contentUrl": "https://aliroshanzamir.info/assets/profile-light.png"
+    },
+    "memberOf": [],
+    "name": "Ali Roshanzamir Golafzani",
+    "sameAs": "https://ir.linkedin.com/in/ali-roshan",
+    "url": "https://aliroshanzamir.info",
+    "worksFor": [{
+      "@type": "Organization",
+      "name": "Tabin Tech | تابین تِک",
+      "url": "https://tabintech.com",
+      "location": "Tehran, Tehran Province, Iran",
+      "member": {"@type": "OrganizationRole", "startDate": "2024-12"}
+    }],
+    "description": "Senior Frontend Architect with 7+ years spearheading performance-critical web solutions for finance (Agatizer), logistics (Toosheh Bar), and e-commerce (Missha). Delivered 10+ enterprise applications boosting engagement by 30% and slashing latency by 20% through optimized React/Angular architectures. Pioneered reusable component systems accelerating development velocity by 30% and reducing bundle sizes by 40%. Established CI/CD pipelines (Docker, Nexus) and SSR/PWA strategies increasing returning users by 20%. Mentored 8+ engineers in scalable app design and i18n.",
     "alumniOf": [{
       "@type": "Organization",
       "name": "eSafar",
@@ -273,30 +291,10 @@ export const richSnippetJsonSchema = {
       "name": "Azad University South Tehran",
       "member": {"@type": "OrganizationRole", "startDate": 2015, "endDate": 2021}
     }],
-    "awards": [],
-    "disambiguatingDescription": "Ali Roshanzamir Golafzani | Frontend Engineer | Bachelor's degree in Computer Engineering",
-    "image": {
-      "@type": "ImageObject",
-      "contentUrl": "https://media.licdn.com/dms/image/v2/D4E03AQEckEcODginBw/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1680185467791?e=2147483647&v=beta&t=R4nP4WkBCTQgNCYBnNKxkpLhMVKz0lAGwOi242DBkqE"
-    },
-    "jobTitle": ["Frontend Chapter Lead", "Angular Specialist", "Frontend Engineer", "React Developer", "Next Developer"],
-    "knowsLanguage": [],
-    "memberOf": [],
-    "name": "Ali Roshanzamir Golafzani",
-    "sameAs": "https://ir.linkedin.com/in/ali-roshan",
-    "url": "https://aliroshanzamir.info",
-    "worksFor": [{
-      "@type": "Organization",
-      "name": "Tabin Tech | تابین تِک",
-      "url": "https://tabintech.com",
-      "location": "Tehran, Tehran Province, Iran",
-      "member": {"@type": "OrganizationRole", "startDate": "2024-12"}
-    }],
-    "description": "Senior Frontend Architect with 7+ years spearheading performance-critical web solutions for finance (Agatizer), logistics (Toosheh Bar), and e-commerce (Missha). Delivered 10+ enterprise applications boosting engagement by 30% and slashing latency by 20% through optimized React/Angular architectures. Pioneered reusable component systems accelerating development velocity by 30% and reducing bundle sizes by 40%. Established CI/CD pipelines (Docker, Nexus) and SSR/PWA strategies increasing returning users by 20%. Mentored 8+ engineers in scalable app design and i18n."
-  },
-  "skills": [
-    "TypeScript", "JavaScript (ES6+)", "HTML5", "CSS3", "Bash", "PHP", "Laravel", "TSX", "JSX", "JSON", "XML", "YAML", "JSP", "JSF", "Angular (v2–v20)", "Next", "Vue", "RxJS", "Ionic", "Tailwind CSS", "Bootstrap", "DevExtreme", "Git", "Docker", "Nginx", "Webpack", "Gulp", "Vite", "npm", "Caddy", "Nexus Repository Manager", "SSR (Server-Side Rendering)", "SSG (Static Site Generation)", "Lazy Loading", "PWA", "Responsive Design", "Internationalization (i18n)", "SEO Optimization", "Performance Tuning"
-  ]
+    "skills": [
+      "TypeScript", "JavaScript (ES6+)", "HTML5", "CSS3", "Bash", "PHP", "Laravel", "TSX", "JSX", "JSON", "XML", "YAML", "JSP", "JSF", "Angular (v2–v20)", "Next", "Vue", "RxJS", "Ionic", "Tailwind CSS", "Bootstrap", "DevExtreme", "Git", "Docker", "Nginx", "Webpack", "Gulp", "Vite", "npm", "Caddy", "Nexus Repository Manager", "SSR (Server-Side Rendering)", "SSG (Static Site Generation)", "Lazy Loading", "PWA", "Responsive Design", "Internationalization (i18n)", "SEO Optimization", "Performance Tuning"
+    ]
+  }
 };
 
 const linkedInSchema = {
