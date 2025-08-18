@@ -248,7 +248,7 @@ export const richSnippetJsonSchema = {
       "name": "Tabin Tech | تابین تِک",
       "url": "https://tabintech.com",
       "location": "Tehran, Tehran Province, Iran",
-      "member": {"@type": "OrganizationRole", "startDate": "2024-12"}
+      "member": {"@type": "OrganizationRole", "member": {"@id": "#profile"}, "startDate": "2024-12"}
     }],
     "description": "Senior Frontend Architect with 7+ years spearheading performance-critical web solutions for finance (Agatizer), logistics (Toosheh Bar), and e-commerce (Missha). Delivered 10+ enterprise applications boosting engagement by 30% and slashing latency by 20% through optimized React/Angular architectures. Pioneered reusable component systems accelerating development velocity by 30% and reducing bundle sizes by 40%. Established CI/CD pipelines (Docker, Nexus) and SSR/PWA strategies increasing returning users by 20%. Mentored 8+ engineers in scalable app design and i18n.",
     "alumniOf": [{
@@ -290,7 +290,7 @@ export const richSnippetJsonSchema = {
     }, {
       "@type": "EducationalOrganization",
       "name": "Azad University South Tehran",
-      "member": {"@type": "OrganizationRole", "member": {"@id": "#profile"}, "startDate": 2015, "endDate": 2021}
+      "member": {"@type": "OrganizationRole", "member": {"@id": "#profile"}, "startDate": "2015", "endDate": "2021"}
     }],
     "skills": [
       "TypeScript", "JavaScript (ES6+)", "HTML5", "CSS3", "Bash", "PHP", "Laravel", "TSX", "JSX", "JSON", "XML", "YAML", "JSP", "JSF", "Angular (v2–v20)", "Next", "Vue", "RxJS", "Ionic", "Tailwind CSS", "Bootstrap", "DevExtreme", "Git", "Docker", "Nginx", "Webpack", "Gulp", "Vite", "npm", "Caddy", "Nexus Repository Manager", "SSR (Server-Side Rendering)", "SSG (Static Site Generation)", "Lazy Loading", "PWA", "Responsive Design", "Internationalization (i18n)", "SEO Optimization", "Performance Tuning"
