@@ -227,7 +227,6 @@ export const richSnippetJsonSchema = {
   },
   "mainEntity": {
     "@id": "#profile",
-    "@context": "http://schema.org",
     "@type": "Person",
     "email": "contact@aliroshanzamir.info",
     "address": {"@type": "PostalAddress", "addressCountry": "IR", "addressLocality": "Tehran, Tehran Province, Iran"},
@@ -236,7 +235,7 @@ export const richSnippetJsonSchema = {
     "awards": [],
     "disambiguatingDescription": "Ali Roshanzamir Golafzani | Frontend Engineer | Bachelor's degree in Computer Engineering",
     "image": {
-      "@id": "#profileImage",
+      "@id": "#profileImage"
     },
     "memberOf": [],
     "name": "Ali Roshanzamir Golafzani",
