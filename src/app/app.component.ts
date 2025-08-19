@@ -109,13 +109,8 @@ export class AppComponent implements OnInit {
   private insertNoScriptGATag() {
     // Google Tag Manager (noscript)
     const noScript = this.#document.createElement('noscript');
-    const iframe = this.#document.createElement('iframe');
-    iframe.src = "https://www.googletagmanager.com/ns.html?id=GTM-TJKJCP4D";
-    iframe.width = "0";
-    iframe.height = "0";
-    iframe.style = "display:none;visibility:hidden";
-    this.renderer.appendChild(noScript, iframe);
-    this.#document?.body?.prepend(noScript);
+    this.renderer.setValue(noScript, `<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TJKJCP4D" width="0" height="0" style="display:none;visibility:hidden"></iframe>`);
+    this.renderer.appendChild(this.#document.body, noScript);
     // End Google Tag Manager (noscript)
   }
 }
