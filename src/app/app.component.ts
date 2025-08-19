@@ -115,7 +115,7 @@ export class AppComponent implements OnInit {
     iframe.height = "0";
     iframe.style = "display:none;visibility:hidden";
     this.renderer.appendChild(noScript, iframe);
-    this.#document.body.prepend(noScript);
+    this.#document?.body?.prepend(noScript);
     // End Google Tag Manager (noscript)
   }
 }
