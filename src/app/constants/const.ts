@@ -218,8 +218,6 @@ export function typeGuardHeadingContentTypeSkillsInterface(data: any): data is S
 export const richSnippetJsonSchema = {
   "@context": "https://schema.org",
   "@type": "ProfilePage",
-  "name": "Ali Roshanzamir Golafzani",
-  "url": "https://aliroshanzamir.info",
   "image": {
     "@id": "#profileImage",
     "@type": "ImageObject",
@@ -240,7 +238,10 @@ export const richSnippetJsonSchema = {
     },
     "memberOf": [],
     "name": "Ali Roshanzamir Golafzani",
-    "sameAs": "https://ir.linkedin.com/in/ali-roshan",
+    "sameAs": [
+      "https://ir.linkedin.com/in/ali-roshan",
+      "https://github.com/aliroshandev"
+    ],
     "url": "https://aliroshanzamir.info",
     "worksFor": [{
       "@type": "Organization",
