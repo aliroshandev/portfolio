@@ -67,7 +67,6 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.insertNoScriptGATag();
     this.setOrUpdateSnippet();
     if (this.#layoutService.isBrowser) {
       document.getElementsByTagName('header')[0].scrollIntoView({
@@ -106,11 +105,4 @@ export class AppComponent implements OnInit {
     }
   }
 
-  private insertNoScriptGATag() {
-    // Google Tag Manager (noscript)
-    const noScript = this.#document.createElement('noscript');
-    this.renderer.setValue(noScript, `<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TJKJCP4D" width="0" height="0" style="display:none;visibility:hidden"></iframe>`);
-    this.renderer.appendChild(this.#document.body, noScript);
-    // End Google Tag Manager (noscript)
-  }
 }
