@@ -18,6 +18,7 @@ import {
 import {LayoutService} from './services/layout.service';
 import {contacts, richSnippetJsonSchema} from './constants/const';
 import {DomSanitizer, SafeHtml} from '@angular/platform-browser';
+import {ScriptLoaderService} from './services/script-loader.service';
 
 @Component({
   selector: 'app-root',
@@ -46,6 +47,7 @@ export class AppComponent implements OnInit {
   readonly #sanitizer = inject(DomSanitizer);
   readonly #document = inject(DOCUMENT);
   readonly renderer = inject(Renderer2);
+  readonly #scriptLoader = inject(ScriptLoaderService);
 
   scrollTop = computed(this.#layoutService.scrollY);
   isMobile = computed(this.#layoutService.isMobile);
@@ -65,6 +67,7 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.insertNoScriptGATag();
     this.setOrUpdateSnippet();
     if (this.#layoutService.isBrowser) {
       document.getElementsByTagName('header')[0].scrollIntoView({
@@ -103,4 +106,16 @@ export class AppComponent implements OnInit {
     }
   }
 
+  private insertNoScriptGATag() {
+    // Google Tag Manager (noscript)
+    const noScript = this.#document.createElement('noscript');
+    const iframe = this.#document.createElement('iframe');
+    iframe.src = "https://www.googletagmanager.com/ns.html?id=GTM-TJKJCP4D";
+    iframe.width = "0";
+    iframe.height = "0";
+    iframe.style = "display:none;visibility:hidden";
+    this.renderer.appendChild(noScript, iframe);
+    this.#document.body.prepend(noScript);
+    // End Google Tag Manager (noscript)
+  }
 }
