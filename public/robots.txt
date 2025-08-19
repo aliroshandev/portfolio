@@ -1,6 +1,5 @@
 User-agent: *
 Allow: /manifest.webmanifest
-Allow: /favicon.ico
-Allow: /sitemap.xml
+Disallow: /sitemap.xml
 Disallow: /cdn-cgi/
-Sitemap: https://aliroshanzamir.info/sitemap.xml
+Sitemap: https://aliroshanzamir.info/sitemap-config.xml
