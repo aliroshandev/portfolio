@@ -101,7 +101,7 @@ export class AppComponent implements OnInit {
         const scriptElement = this.renderer.createElement('script');
         scriptElement.type = `application/ld+json`;
         scriptElement.text = schemaJson;
-        this.renderer.appendChild(this.#document.body, this.#sanitizer.bypassSecurityTrustHtml(scriptElement));
+        this.#document.body.appendChild(scriptElement)
       }
     }
   }
