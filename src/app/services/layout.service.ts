@@ -24,7 +24,7 @@ export class LayoutService {
 
   title = signal('Ali Roshanzamir Golafzani | Portfolio');
   phoneNumber = signal('447351534063');
-  email = signal('contact@aliroshanzamir.info');
+  email = signal('a76roshanzamir@gmail.com.info');
   scrollY = signal<number>(0);
   headerHeight: Signal<number> = signal<number>(76).asReadonly();
   isDesktop: WritableSignal<boolean | undefined> = signal<boolean | undefined>(undefined);
