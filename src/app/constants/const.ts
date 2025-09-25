@@ -20,7 +20,7 @@ export const experiences: Array<ExperienceInterface> = [
     workFromToDate: ['06/2022', 'Present'],
     companyName: 'TabinTech (Technology Solutions Provider - Software Development Company)',
     experienceDetails: {
-      title: 'Frontend Chapter Lead',
+      title: 'Frontend Engineer',
       href: 'https://tabintech.com',
       content: new ExperienceContent([
         'Managed and delivered 6 outsourced projects, including platforms like pastil.ir, nam.ir, migline24.com, eanjoman.ir and Otanafoods.com, achieving a 25% increase in user engagement.',
@@ -36,7 +36,7 @@ export const experiences: Array<ExperienceInterface> = [
     workFromToDate: ['08/2020', '05/2022'],
     companyName: 'Agatizer (Financial Services - Social Trading Platform)',
     experienceDetails: {
-      title: 'Senior Frontend Developer',
+      title: 'Frontend Engineer',
       href: 'https://missha-ir.com',
       content: new ExperienceContent([
         'Designed and launched the Persian version of Missha.com’s main store, increasing local traffic by 40%.',
@@ -49,7 +49,7 @@ export const experiences: Array<ExperienceInterface> = [
     workFromToDate: ['08/2020', '05/2022'],
     companyName: 'Missha (Global E-Commerce Platform)',
     experienceDetails: {
-      title: 'Senior Frontend Developer',
+      title: 'Frontend Engineer',
       href: 'https://missha-ir.com',
       content: new ExperienceContent([
         'Designed and launched the Persian version of Missha.com’s main store, increasing local traffic by 40%.',
@@ -62,7 +62,7 @@ export const experiences: Array<ExperienceInterface> = [
     workFromToDate: ['09/2020', '01/2021'],
     companyName: 'Tushehbar (Shipping and Maritime Transportation Agency)',
     experienceDetails: {
-      title: 'Senior Frontend Developer',
+      title: 'Frontend Engineer',
       href: 'https://tushehbar.com',
       content: new ExperienceContent([
         'Spearheaded the development of a scalable Angular 9 front, enhancing internationalization and user satisfaction by 30%',
@@ -76,7 +76,7 @@ export const experiences: Array<ExperienceInterface> = [
     workFromToDate: ['09/2019', '01/2020'],
     companyName: 'eSafar (Online Travel Booking Platform)',
     experienceDetails: {
-      title: 'Senior Frontend Developer',
+      title: 'Frontend Developer',
       href: 'https://esafar.com',
       content: new ExperienceContent([
         'Spearheaded the development of a scalable Angular 8 front, enhancing internationalization and user satisfaction by 30%',
@@ -102,7 +102,7 @@ export const experiences: Array<ExperienceInterface> = [
     workFromToDate: ['09/2018', '03/2020'],
     companyName: 'Shenoto (Persian Podcast Platform)',
     experienceDetails: {
-      title: 'Junior Frontend Developer',
+      title: 'Frontend Developer',
       href: 'https://shenoto.com',
       content: new ExperienceContent([
         'Upgraded the website from Angular 3 to 7, improving load times by 15% and boosting SEO scores to 92%.',
@@ -116,7 +116,7 @@ export const experiences: Array<ExperienceInterface> = [
     workFromToDate: ['08/2017', '11/2017'],
     companyName: 'ITManHa (Software Engineer Platform)',
     experienceDetails: {
-      title: 'Junior Frontend Developer',
+      title: 'Frontend Developer',
       href: 'https://itmanha.com',
       content: new ExperienceContent([
         'Engineered frontend solutions for cross-industry software/app projects driving client growth.',
@@ -139,7 +139,7 @@ export const HeadingContents = new Map<string, HeadingContentInterface>([
     'about',
     {
       title: 'Frontend Engineer',
-      content: new HeadingContent('Senior Frontend Architect with 7+ years spearheading performance-critical web solutions for finance (Agatizer), logistics (Toosheh Bar), and e-commerce (Missha). Delivered 10+ enterprise applications boosting engagement by 30% and slashing latency by 20% through optimized React/Angular architectures. Pioneered reusable component systems accelerating development velocity by 30% and reducing bundle sizes by 40%. Established CI/CD pipelines (Docker, Nexus) and SSR/PWA strategies increasing returning users by 20%. Mentored 8+ engineers in scalable app design and i18n.')
+      content: new HeadingContent('Frontend Architect with 7+ years spearheading performance-critical web solutions for finance (Agatizer), logistics (Toosheh Bar), and e-commerce (Missha). Delivered 10+ enterprise applications boosting engagement by 30% and slashing latency by 20% through optimized React/Angular architectures. Pioneered reusable component systems accelerating development velocity by 30% and reducing bundle sizes by 40%. Established CI/CD pipelines (Docker, Nexus) and SSR/PWA strategies increasing returning users by 20%. Mentored 8+ engineers in scalable app design and i18n.')
     }
   ],
   [
@@ -227,9 +227,9 @@ export const richSnippetJsonSchema = {
     "@id": "#profile",
     "@type": "Person",
     "gender": "Male",
-    "email": "contact@aliroshanzamir.info",
+    "email": "a76roshanzamir@gmail.com.info",
     "address": {"@type": "PostalAddress", "addressCountry": "IR", "addressLocality": "Tehran, Tehran Province, Iran"},
-    "jobTitle": ["Frontend Chapter Lead", "Angular Specialist", "Frontend Engineer", "React Developer", "Next Developer", "Frontend Developer"],
+    "jobTitle": ["Frontend Engineer", "Angular Specialist", "React Developer", "Next Developer", "Frontend Developer"],
     "knowsLanguage": ["English", "Persian"],
     "awards": [],
     "disambiguatingDescription": "Ali Roshanzamir Golafzani | Frontend Engineer | Bachelor's degree in Computer Engineering",
@@ -250,7 +250,7 @@ export const richSnippetJsonSchema = {
       "location": "Tehran, Tehran Province, Iran",
       "member": {"@type": "OrganizationRole", "member": {"@id": "#profile"}, "startDate": "2024-12"}
     }],
-    "description": "Senior Frontend Architect with 7+ years spearheading performance-critical web solutions for finance (Agatizer), logistics (Toosheh Bar), and e-commerce (Missha). Delivered 10+ enterprise applications boosting engagement by 30% and slashing latency by 20% through optimized React/Angular architectures. Pioneered reusable component systems accelerating development velocity by 30% and reducing bundle sizes by 40%. Established CI/CD pipelines (Docker, Nexus) and SSR/PWA strategies increasing returning users by 20%. Mentored 8+ engineers in scalable app design and i18n.",
+    "description": "Frontend Architect with 7+ years spearheading performance-critical web solutions for finance (Agatizer), logistics (Toosheh Bar), and e-commerce (Missha). Delivered 10+ enterprise applications boosting engagement by 30% and slashing latency by 20% through optimized React/Angular architectures. Pioneered reusable component systems accelerating development velocity by 30% and reducing bundle sizes by 40%. Established CI/CD pipelines (Docker, Nexus) and SSR/PWA strategies increasing returning users by 20%. Mentored 8+ engineers in scalable app design and i18n.",
     "alumniOf": [{
       "@type": "Organization",
       "name": "eSafar",
