@@ -36,7 +36,7 @@ export const experiences: Array<ExperienceInterface> = [
     workFromToDate: ['08/2020', '05/2022'],
     companyName: 'Agatizer (Financial Services - Social Trading Platform)',
     experienceDetails: {
-      title: 'Frontend Engineer',
+      title: 'Remote Frontend Engineer',
       href: 'https://missha-ir.com',
       content: new ExperienceContent([
         'Designed and launched the Persian version of Missha.com’s main store, increasing local traffic by 40%.',
@@ -62,7 +62,7 @@ export const experiences: Array<ExperienceInterface> = [
     workFromToDate: ['09/2020', '01/2021'],
     companyName: 'Tushehbar (Shipping and Maritime Transportation Agency)',
     experienceDetails: {
-      title: 'Remote Frontend Engineer',
+      title: 'Frontend Engineer',
       href: 'https://tushehbar.com',
       content: new ExperienceContent([
         'Spearheaded the development of a scalable Angular 9 front, enhancing internationalization and user satisfaction by 30%',
