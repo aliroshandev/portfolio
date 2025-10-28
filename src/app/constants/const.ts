@@ -217,6 +217,42 @@ export function typeGuardHeadingContentTypeSkillsInterface(data: any): data is S
 
 export const richSnippetJsonSchema = {
   "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Ali Roshanzamir Golafzani",
+  "url": "https://aliroshanzamir.info",
+  "image": "https://aliroshanzamir.info/assets/profile-light.png",
+  "jobTitle": "Frontend Engineer",
+  "description": "Frontend Architect with 7+ years spearheading performance-critical web solutions for finance (Agatizer), logistics (Toosheh Bar), and e-commerce (Missha). Delivered 10+ enterprise applications boosting engagement by 30% and slashing latency by 20% through optimized React",
+  "email": "a76roshanzamir@gmail.com",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Tehran",
+    "addressCountry": "IR"
+  },
+  "sameAs": [
+    "https://ir.linkedin.com/in/ali-roshan",
+    "https://github.com/aliroshandev"
+  ],
+  "knowsAbout": [
+    "TypeScript", "JavaScript", "Angular", "React", "Next.js", "HTML5", "CSS3", "Bash", "Docker", "SEO Optimization",
+    "Performance Tuning", "Nginx", "Webpack", "npm", "Caddy", "Nexus Repository Manager", "Gulp", "Vite", "JSX", "JSON",
+    "XML", "YAML", "TSX", "JSP", "PHP", "Laravel", "JSF", "RxJS", "Ionic", "Tailwind CSS", "Bootstrap", "DevExtreme",
+    "Git", "SSR (Server-Side Rendering)", "SSG (Static Site Generation)", "Lazy Loading", "PWA", "Responsive Design",
+    "Internationalization (i18n)"
+  ],
+  "worksFor": {
+    "@type": "Organization",
+    "name": "Tabin Tech",
+    "url": "https://tabintech.com"
+  },
+  "alumniOf": {
+    "@type": "CollegeOrUniversity",
+    "name": "Azad University South Tehran"
+  }
+};
+
+export const profileRichSnippetJsonSchema = {
+  "@context": "https://schema.org",
   "@type": "ProfilePage",
   "image": {
     "@id": "#profileImage",
@@ -227,7 +263,7 @@ export const richSnippetJsonSchema = {
     "@id": "#profile",
     "@type": "Person",
     "gender": "Male",
-    "email": "a76roshanzamir@gmail.com.info",
+    "email": "a76roshanzamir@gmail.com",
     "address": {"@type": "PostalAddress", "addressCountry": "IR", "addressLocality": "Tehran, Tehran Province, Iran"},
     "jobTitle": ["Frontend Engineer", "Angular Specialist", "React Developer", "Next Developer", "Frontend Developer"],
     "knowsLanguage": ["English", "Persian"],
