@@ -20,7 +20,7 @@ export const experiences: Array<ExperienceInterface> = [
     workFromToDate: ['06/2022', 'Present'],
     companyName: 'TabinTech (Technology Solutions Provider - Software Development Company)',
     experienceDetails: {
-      title: 'Frontend Engineer',
+      title: 'Frontend Engineer - Remote',
       href: 'https://tabintech.com',
       content: new ExperienceContent([
         'Managed and delivered 6 outsourced projects, including platforms like pastil.ir, nam.ir, migline24.com, eanjoman.ir and Otanafoods.com, achieving a 25% increase in user engagement.',
@@ -36,7 +36,7 @@ export const experiences: Array<ExperienceInterface> = [
     workFromToDate: ['08/2020', '05/2022'],
     companyName: 'Agatizer (Financial Services - Social Trading Platform)',
     experienceDetails: {
-      title: 'Remote Frontend Engineer',
+      title: 'Frontend Engineer - Remote',
       href: 'https://missha-ir.com',
       content: new ExperienceContent([
         'Designed and launched the Persian version of Missha.com’s main store, increasing local traffic by 40%.',
@@ -49,7 +49,7 @@ export const experiences: Array<ExperienceInterface> = [
     workFromToDate: ['08/2020', '05/2022'],
     companyName: 'Missha (Global E-Commerce Platform)',
     experienceDetails: {
-      title: 'Remote Frontend Engineer',
+      title: 'Frontend Engineer - Remote',
       href: 'https://missha-ir.com',
       content: new ExperienceContent([
         'Designed and launched the Persian version of Missha.com’s main store, increasing local traffic by 40%.',
@@ -62,7 +62,7 @@ export const experiences: Array<ExperienceInterface> = [
     workFromToDate: ['09/2020', '01/2021'],
     companyName: 'Tushehbar (Shipping and Maritime Transportation Agency)',
     experienceDetails: {
-      title: 'Frontend Engineer',
+      title: 'Frontend Engineer - Remote',
       href: 'https://tushehbar.com',
       content: new ExperienceContent([
         'Spearheaded the development of a scalable Angular 9 front, enhancing internationalization and user satisfaction by 30%',
@@ -76,7 +76,7 @@ export const experiences: Array<ExperienceInterface> = [
     workFromToDate: ['09/2019', '01/2020'],
     companyName: 'eSafar (Online Travel Booking Platform)',
     experienceDetails: {
-      title: 'Frontend Developer',
+      title: 'Frontend Engineer - Remote',
       href: 'https://esafar.com',
       content: new ExperienceContent([
         'Spearheaded the development of a scalable Angular 8 front, enhancing internationalization and user satisfaction by 30%',
@@ -89,7 +89,7 @@ export const experiences: Array<ExperienceInterface> = [
     workFromToDate: ['09/2019', '01/2020'],
     companyName: 'Azki (First Insurance issuer application in Iran)',
     experienceDetails: {
-      title: 'Frontend Developer Consultant',
+      title: 'Frontend Developer Consultant - Remote',
       href: 'https://azki.com',
       content: new ExperienceContent([
         'Improved responsive design for Laravel Blade pages, optimized mobile usability and SEO rankings.',
@@ -102,7 +102,7 @@ export const experiences: Array<ExperienceInterface> = [
     workFromToDate: ['09/2018', '03/2020'],
     companyName: 'Shenoto (Persian Podcast Platform)',
     experienceDetails: {
-      title: 'Frontend Developer',
+      title: 'Frontend Engineer - Remote',
       href: 'https://shenoto.com',
       content: new ExperienceContent([
         'Upgraded the website from Angular 3 to 7, improving load times by 15% and boosting SEO scores to 92%.',
@@ -116,7 +116,7 @@ export const experiences: Array<ExperienceInterface> = [
     workFromToDate: ['08/2017', '11/2017'],
     companyName: 'ITManHa (Software Engineer Platform)',
     experienceDetails: {
-      title: 'Frontend Developer',
+      title: 'Frontend Engineer - Remote',
       href: 'https://itmanha.com',
       content: new ExperienceContent([
         'Engineered frontend solutions for cross-industry software/app projects driving client growth.',
