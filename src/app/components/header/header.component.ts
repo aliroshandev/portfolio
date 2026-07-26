@@ -1,80 +1,65 @@
-import {Component, computed, DestroyRef, ElementRef, inject, OnInit, signal, viewChild} from '@angular/core';
-import {NgIcon} from '@ng-icons/core';
-import {FormsModule} from '@angular/forms';
+import {Component, computed, inject, signal} from '@angular/core';
+import {NgIcon, provideIcons} from '@ng-icons/core';
 import {ThemeService} from '../../services/theme.service';
-import {contacts, Headings} from '../../constants/const';
 import {ActivatedRoute} from '@angular/router';
-import {HeadingInterface} from '../../constants/types';
 import {takeUntilDestroyed} from '@angular/core/rxjs-interop';
 import {LayoutService} from '../../services/layout.service';
-import {NgTemplateOutlet} from '@angular/common';
+import {fromEvent} from 'rxjs';
+import {map} from 'rxjs/operators';
+import {
+  bootstrapGithub, bootstrapLinkedin, bootstrapFilePdf, bootstrapSend,
+  bootstrapPhone, bootstrapMoon, bootstrapSun, bootstrapThreeDotsVertical, bootstrapX,
+} from '@ng-icons/bootstrap-icons';
 
 @Component({
   selector: 'header[app-header]',
-  imports: [
-    NgIcon,
-    FormsModule,
-    NgTemplateOutlet
-  ],
+  imports: [NgIcon],
+  host: {'[class.scrolled]': 'scrolled()'},
   templateUrl: './header.component.html',
-  styleUrl: './header.component.scss'
+  styleUrl: './header.component.scss',
+  viewProviders: [provideIcons({
+    bootstrapGithub, bootstrapLinkedin, bootstrapFilePdf, bootstrapSend,
+    bootstrapPhone, bootstrapMoon, bootstrapSun, bootstrapThreeDotsVertical, bootstrapX,
+  })]
 })
-export class HeaderComponent implements OnInit {
-
+export class HeaderComponent {
   readonly #themeService = inject(ThemeService);
   readonly #route = inject(ActivatedRoute);
-  readonly #destroyRef = inject(DestroyRef);
   readonly #layoutService = inject(LayoutService);
 
-  selectedBookmark = signal<HeadingInterface | undefined>(undefined);
-  phoneNumber = computed(this.#layoutService.phoneNumber);
-  email = computed(this.#layoutService.email);
   isLightTheme = computed(() => this.#themeService.activeTheme() === 'light');
   isDesktop = computed(this.#layoutService.isDesktop);
-  title = computed(this.#layoutService.title);
-  dropDownElement = viewChild<ElementRef>('dropDownElement');
+  isMobileMenuOpen = signal(false);
+  scrolled = signal(false);
 
-  toggleThemeDarkMode() {
+  protected readonly sections = [
+    {id: 'about', label: 'About'},
+    {id: 'experience', label: 'Experience'},
+    {id: 'skills', label: 'Skills'},
+  ];
+
+  constructor() {
+    if (typeof window !== 'undefined') {
+      fromEvent(window, 'scroll')
+        .pipe(
+          map(() => window.scrollY > 10),
+          takeUntilDestroyed()
+        )
+        .subscribe(v => this.scrolled.set(v));
+    }
+
+    this.#route.fragment.pipe(takeUntilDestroyed()).subscribe(fragment => {
+      if (fragment) {
+        document.getElementById(fragment)?.scrollIntoView({behavior: 'smooth'});
+      }
+    });
+  }
+
+  toggleTheme() {
     this.#themeService.toggle();
   }
 
-  protected readonly Headings = Headings;
-
-  ngOnInit(): void {
-    this.#route
-      .fragment
-      .pipe(takeUntilDestroyed(this.#destroyRef))
-      .subscribe({
-        next: response => {
-          if (response) {
-            if (this.#layoutService.isBrowser) {
-              this.#layoutService.scrollTo(document.getElementById(response));
-              this.selectedBookmark.set(Headings.find(heading => heading.id === response))
-              if (this.isDesktop()) {
-
-              }
-            }
-          }
-        }
-      })
-    // const url = new URL(this.#router.url);
-    // if (url) {
-    //   console.log(url);
-    //   console.log(this.#route.snapshot.fragment);
-    // }
-  }
-
-  protected readonly contacts = contacts(this.phoneNumber(), this.email())
-    .map((item, index) => ({
-      ...item,
-      className: (index > 0 && this.isDesktop()) ? `${item.className} ms-2` : item.className,
-    }));
-
-  closePopup() {
-    this.dropDownElement()?.nativeElement.classList.remove('dropdown-open');
-    if (typeof this.dropDownElement()?.nativeElement.hidePopover === 'function') {
-      this.dropDownElement()?.nativeElement.hidePopover();
-    }
-    // dropDownElement.classList.remove('dropdown-open');
+  closeMobileMenu() {
+    this.isMobileMenuOpen.set(false);
   }
 }

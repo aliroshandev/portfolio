@@ -1,108 +1,41 @@
-import {Component, computed, DOCUMENT, HostListener, inject, OnInit, Renderer2, signal} from '@angular/core';
+import {Component, computed, inject, OnInit} from '@angular/core';
 import {RouterOutlet} from '@angular/router';
 import {HeaderComponent} from '@components/header/header.component';
 import {NgIcon, provideIcons} from '@ng-icons/core';
 import {
-  bootstrapCalendar,
-  bootstrapChatText,
-  bootstrapFilePdf,
-  bootstrapGithub,
-  bootstrapLink45deg,
-  bootstrapLinkedin,
-  bootstrapMoon,
-  bootstrapPhone,
-  bootstrapSend,
-  bootstrapSun,
-  bootstrapThreeDotsVertical,
+  bootstrapGithub, bootstrapLinkedin, bootstrapFilePdf, bootstrapSend,
+  bootstrapPhone, bootstrapChatText,
 } from '@ng-icons/bootstrap-icons';
 import {LayoutService} from './services/layout.service';
-import {contacts, richSnippetJsonSchema} from './constants/const';
-import {DomSanitizer, SafeHtml} from '@angular/platform-browser';
-import {ScriptLoaderService} from './services/script-loader.service';
+import {SeoService} from './services/seo.service';
+import {richSnippetJsonSchema} from './constants/const';
 
 @Component({
   selector: 'app-root',
   imports: [RouterOutlet, HeaderComponent, NgIcon],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
-  viewProviders: [
-    provideIcons({
-      bootstrapLinkedin,
-      bootstrapPhone,
-      bootstrapCalendar,
-      bootstrapGithub,
-      bootstrapSun,
-      bootstrapMoon,
-      bootstrapFilePdf,
-      bootstrapSend,
-      bootstrapThreeDotsVertical,
-      bootstrapLink45deg,
-      bootstrapChatText,
-    })
-  ],
+  viewProviders: [provideIcons({
+    bootstrapGithub, bootstrapLinkedin, bootstrapFilePdf, bootstrapSend,
+    bootstrapPhone, bootstrapChatText,
+  })]
 })
 export class AppComponent implements OnInit {
-
   readonly #layoutService = inject(LayoutService);
-  readonly #sanitizer = inject(DomSanitizer);
-  readonly #document = inject(DOCUMENT);
-  readonly renderer = inject(Renderer2);
-  readonly #scriptLoader = inject(ScriptLoaderService);
+  readonly #seo = inject(SeoService);
 
-  scrollTop = computed(this.#layoutService.scrollY);
-  isMobile = computed(this.#layoutService.isMobile);
-  phoneNumber = computed(this.#layoutService.phoneNumber);
-  email = computed(this.#layoutService.email);
-  snippetScript = signal<SafeHtml>('');
-
-
-  @HostListener('window:scroll', ['$event']) windowScroll() {
-    this.#layoutService.scrollY.set(window.scrollY);
-    if (this.#layoutService.isBrowser) {
-      const headerElement = document.getElementsByTagName('header').item(0);
-      const conditionToToggleClass = this.scrollTop() > 100;
-      headerElement?.classList.toggle('position-sticky', conditionToToggleClass);
-      headerElement?.classList.toggle('top-0', conditionToToggleClass);
-    }
-  }
+  isMobile = computed(() => this.#layoutService.isDesktop() !== undefined && !this.#layoutService.isDesktop());
 
   ngOnInit(): void {
-    this.setOrUpdateSnippet();
-    if (this.#layoutService.isBrowser) {
-      document.getElementsByTagName('header')[0].scrollIntoView({
-        behavior: 'instant',
-        block: "start"
-      })
-    }
+    this.#seo.setJsonLd(richSnippetJsonSchema);
   }
 
-  protected readonly contacts = contacts(this.phoneNumber(), this.email())
-    .map((item, index) => ({
-      ...item,
-      className: item.className.replace(' btn-soft', '')
-    }));
-
-  setOrUpdateSnippet() {
-    const value = JSON.stringify(richSnippetJsonSchema, null, 2);
-    const html = this.#sanitizer.bypassSecurityTrustHtml(`<script type="application/ld+json">${value}</script>`);
-    if (this.#layoutService.isServer) {
-      this.snippetScript.set(html);
-    } else {
-      const element = this.#document.querySelector('script[type="application/ld+json"]');
-      const schemaJson = JSON.stringify(richSnippetJsonSchema, null, 2);
-      this.snippetScript.set(html);
-      if (element != null) {
-        this.renderer.setValue(
-          this.#document.querySelector('script[type="application/ld+json"]'),
-          schemaJson
-        )
-      } else {
-        const scriptElement = this.renderer.createElement('script');
-        scriptElement.type = `application/ld+json`;
-        scriptElement.text = schemaJson;
-        this.#document.head.appendChild(scriptElement)
-      }
-    }
-  }
-
+  protected readonly contacts = [
+    {href: 'tel:447351534063', icon: 'bootstrapPhone', label: 'Call'},
+    {href: 'sms:447351534063?body=Hi%20Ali,%20I%20saw%20your%20Portfolio', icon: 'bootstrapChatText', label: 'Text'},
+    {href: 'mailto:a76roshanzamir@gmail.com', icon: 'bootstrapSend', label: 'Email'},
+    {href: 'https://github.com/aliroshandev', icon: 'bootstrapGithub', label: 'GitHub'},
+    {href: 'https://linkedin.com/in/ali-roshan', icon: 'bootstrapLinkedin', label: 'LinkedIn'},
+    {href: '/assets/ALI_ROSHAN_CV.pdf', icon: 'bootstrapFilePdf', label: 'CV'},
+  ];
 }

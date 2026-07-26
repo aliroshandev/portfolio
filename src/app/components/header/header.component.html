@@ -1,81 +1,93 @@
-<ng-template #switchThemeMode>
-  <label class="toggle text-base-content"
-         for="theme-mode">
-    <input #toggleInput
-           class="visibility-hidden"
-           id="theme-mode"
-           name="theme-mode"
-           type="checkbox"
-           aria-labelledby="theme-mode"
-           [ngModel]="isLightTheme"
-           (ngModelChange)="toggleThemeDarkMode()"/>
-    @if (isLightTheme()) {
-      <span>
-        <ng-icon name="bootstrapSun" class="p-0" size="14"/>
-      </span>
-    } @else {
-      <span>
-        <ng-icon name="bootstrapMoon" class="p-0" size="14"/>
-      </span>
-    }
-  </label>
-</ng-template>
 @if (isDesktop()) {
-  <div class="flex items-center px-3 py-2 h-19">
-    <div class="flex-4">
-      <ng-container *ngTemplateOutlet="switchThemeMode"></ng-container>
-      @for (heading of Headings; track heading.id) {
-        <a class="btn btn-soft ms-2"
-           [class.btn-primary]="heading.id === selectedBookmark()?.id"
-           href="/#{{heading.id}}">{{heading.text}}</a>
-      }
-    </div>
-    <div class="flex-8 text-end">
-      @for(contact of contacts; track $index) {
-        <a [class]="contact.className"
-           [href]="contact.href"
-           [target]="contact.target">
-          <ng-icon [name]="contact.iconName" />
-          <span class="ms-1">{{contact.text}}</span>
+  <div class="mx-auto flex h-[76px] max-w-[1120px] items-center justify-between px-6 lg:px-8">
+    <a href="/" class="font-heading text-lg font-semibold tracking-tight transition-opacity duration-200 hover:opacity-70" style="font-family: var(--font-heading)">
+      Ali<span class="text-[var(--color-primary)]">.</span>
+    </a>
+
+    <nav class="flex items-center gap-1">
+      @for (section of sections; track section.id) {
+        <a [href]="'#' + section.id"
+           class="rounded-md px-3 py-2 text-sm font-medium text-[var(--color-fg-secondary)] transition-all duration-200 hover:bg-[var(--color-bg-alt)] hover:text-[var(--color-fg)]">
+          {{section.label}}
         </a>
       }
-    </div>
+
+      <button (click)="toggleTheme()"
+              class="ml-2 flex h-9 w-9 items-center justify-center rounded-md text-[var(--color-fg-secondary)] transition-all duration-200 hover:bg-[var(--color-bg-alt)] hover:text-[var(--color-fg)]"
+              [attr.aria-label]="isLightTheme() ? 'Switch to dark mode' : 'Switch to light mode'">
+        @if (isLightTheme()) {
+          <ng-icon name="bootstrapMoon" size="16" />
+        } @else {
+          <ng-icon name="bootstrapSun" size="16" />
+        }
+      </button>
+    </nav>
   </div>
 } @else {
-  <div class="flex items-center justify-between px-3 h-19">
-    <div>
-      <button class="btn btn-soft mr-1 md:me-0"
-              popovertarget="headerMenu"
-              title="header-links"
-              style="anchor-name:--anchor-1">
-        <ng-icon name="bootstrapThreeDotsVertical" class="p-0" size="16" />
-      </button>
-      <ng-container *ngTemplateOutlet="switchThemeMode"></ng-container>
-      <ul class="dropdown menu w-52 rounded-box bg-base-100 shadow-sm w-full"
-          #dropDownElement
-          popover id="headerMenu" style="position-anchor:--anchor-1">
-        @for (heading of Headings; track heading.id) {
-          <li [class.mt-2]="$index > 0">
-            <a [class.text-primary]="heading.id === selectedBookmark()?.id"
-               (click)="closePopup()"
-               href="/#{{heading.id}}">{{heading.text}}</a>
-          </li>
+  <div class="flex h-[64px] items-center justify-between px-4">
+    <a href="/" class="font-heading text-base font-semibold tracking-tight transition-opacity duration-200 hover:opacity-70" style="font-family: var(--font-heading)">
+      Ali<span class="text-[var(--color-primary)]">.</span>
+    </a>
+
+    <div class="flex items-center gap-1">
+      <button (click)="toggleTheme()"
+              class="flex h-10 w-10 items-center justify-center rounded-md text-[var(--color-fg-secondary)] transition-all duration-200 active:bg-[var(--color-bg-alt)]"
+              [attr.aria-label]="isLightTheme() ? 'Switch to dark mode' : 'Switch to light mode'">
+        @if (isLightTheme()) {
+          <ng-icon name="bootstrapMoon" size="18" />
+        } @else {
+          <ng-icon name="bootstrapSun" size="18" />
         }
-<!--        @for(contact of contacts; track $index) {-->
-<!--          <li class="mt-2">-->
-<!--            <a [class]="contact.className"-->
-<!--               [href]="contact.href"-->
-<!--               [target]="contact.target"-->
-<!--               (click)="closePopup()">-->
-<!--              <ng-icon [name]="contact.iconName" />-->
-<!--              <span class="ms-1">{{contact.text}}</span>-->
-<!--            </a>-->
-<!--          </li>-->
-<!--        }-->
-      </ul>
+      </button>
+
+      <button (click)="isMobileMenuOpen.set(!isMobileMenuOpen())"
+              class="flex h-10 w-10 items-center justify-center rounded-md text-[var(--color-fg-secondary)] transition-all duration-200 active:bg-[var(--color-bg-alt)]"
+              aria-label="Toggle menu">
+        <ng-icon name="bootstrapThreeDotsVertical" size="20" />
+      </button>
     </div>
-    <h1 class="fs-4 mb-0 ms-2">
-      {{title()}}
-    </h1>
   </div>
+
+  @if (isMobileMenuOpen()) {
+    <div class="fixed inset-0 z-50 flex flex-col bg-[var(--color-bg)] px-5 pt-5"
+         (click)="closeMobileMenu()">
+      <div class="flex justify-end">
+        <button (click)="closeMobileMenu()"
+                class="flex h-11 w-11 items-center justify-center rounded-md text-[var(--color-fg-secondary)] active:bg-[var(--color-bg-alt)]">
+          <ng-icon name="bootstrapX" size="22" />
+        </button>
+      </div>
+      <nav class="mt-6 flex flex-col gap-1" (click)="closeMobileMenu()">
+        @for (section of sections; track section.id) {
+          <a [href]="'#' + section.id"
+             class="rounded-lg px-4 py-3.5 text-base font-medium text-[var(--color-fg)] transition-all duration-200 active:bg-[var(--color-bg-alt)]">
+            {{section.label}}
+          </a>
+        }
+        <hr class="my-5 border-[var(--color-border)]">
+        <div class="flex flex-col gap-2 px-1">
+          <a href="tel:447351534063"
+             class="btn-primary w-full justify-center py-3">
+            <ng-icon name="bootstrapPhone" size="16" />Call
+          </a>
+          <a href="mailto:a76roshanzamir@gmail.com"
+             class="btn-primary w-full justify-center py-3">
+            <ng-icon name="bootstrapSend" size="16" />Email
+          </a>
+          <a href="https://github.com/aliroshandev" target="_blank" rel="noopener"
+             class="btn-soft w-full justify-center py-3">
+            <ng-icon name="bootstrapGithub" size="16" />GitHub
+          </a>
+          <a href="https://linkedin.com/in/ali-roshan" target="_blank" rel="noopener"
+             class="btn-soft w-full justify-center py-3">
+            <ng-icon name="bootstrapLinkedin" size="16" />LinkedIn
+          </a>
+          <a href="/assets/ALI_ROSHAN_CV.pdf" target="_blank"
+             class="btn-primary w-full justify-center py-3">
+            <ng-icon name="bootstrapFilePdf" size="16" />Download CV
+          </a>
+        </div>
+      </nav>
+    </div>
+  }
 }

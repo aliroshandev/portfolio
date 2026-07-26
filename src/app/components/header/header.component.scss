@@ -1,15 +1,15 @@
-.toggle:has(:checked) > :nth-child(2) {
-  opacity: 1;
+:host {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  background: var(--color-bg);
+  border-bottom: 1px solid transparent;
+  transition: all var(--transition-base);
 }
-
-.toggle {
-  > span {
-    display: flex;
-  }
-  &:before {
-    box-shadow: none;
-  }
-  & ng-icon {
-    mix-blend-mode: exclusion;
-  }
+:host.scrolled {
+  border-bottom-color: var(--color-border);
+  backdrop-filter: blur(12px);
+  background: color-mix(in srgb, var(--color-bg) 5%, transparent);
 }
