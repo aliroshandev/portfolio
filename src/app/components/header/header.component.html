@@ -13,7 +13,7 @@
       }
 
       <button (click)="toggleTheme()"
-              class="ml-2 flex h-9 w-9 items-center justify-center rounded-md text-[var(--color-fg-secondary)] transition-all duration-200 hover:bg-[var(--color-bg-alt)] hover:text-[var(--color-fg)]"
+              class="ml-2 flex h-9 w-9 cursor-pointer items-center justify-center rounded-md text-[var(--color-fg-secondary)] transition-all duration-200 hover:bg-[var(--color-bg-alt)] hover:text-[var(--color-fg)]"
               [attr.aria-label]="isLightTheme() ? 'Switch to dark mode' : 'Switch to light mode'">
         @if (isLightTheme()) {
           <ng-icon name="bootstrapMoon" size="16" />
@@ -31,7 +31,7 @@
 
     <div class="flex items-center gap-1">
       <button (click)="toggleTheme()"
-              class="flex h-10 w-10 items-center justify-center rounded-md text-[var(--color-fg-secondary)] transition-all duration-200 active:bg-[var(--color-bg-alt)]"
+              class="flex h-10 w-10 cursor-pointer items-center justify-center rounded-md text-[var(--color-fg-secondary)] transition-all duration-200 active:bg-[var(--color-bg-alt)]"
               [attr.aria-label]="isLightTheme() ? 'Switch to dark mode' : 'Switch to light mode'">
         @if (isLightTheme()) {
           <ng-icon name="bootstrapMoon" size="18" />
