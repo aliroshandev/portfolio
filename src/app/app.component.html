@@ -1,19 +1,22 @@
 <header app-header></header>
+
 <main>
   <router-outlet />
 </main>
+
 @if (isMobile()) {
-  <div class="mobile-menu">
-    <div class="contact-items flex items-center justify-between">
-      @for(contact of contacts; track $index) {
-        <a [class]="contact.className"
-           [href]="contact.href"
-           [target]="contact.target"
-           [id]="contact.href" [title]="contact.text">
-          <ng-icon [name]="contact.iconName" />
+  <div class="fixed bottom-0 left-0 right-0 z-40 border-t border-[var(--color-border)] bg-[var(--color-bg)]/95 pb-[env(safe-area-inset-bottom)] backdrop-blur-lg">
+    <div class="flex items-center justify-around px-1 py-1">
+      @for (item of contacts; track item.href) {
+        <a [href]="item.href"
+           target="_blank"
+           rel="noopener"
+           class="flex flex-col items-center gap-0.5 rounded-lg px-2 py-2 text-[10px] text-[var(--color-fg-secondary)] transition-all duration-200 active:text-[var(--color-fg)] active:bg-[var(--color-bg-alt)] min-w-[52px]"
+           [title]="item.label">
+          <ng-icon [name]="item.icon" size="20" />
+          <span class="leading-none">{{item.label}}</span>
         </a>
       }
     </div>
   </div>
 }
-<div [innerHTML]="snippetScript()"></div>

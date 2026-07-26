@@ -1,40 +1,29 @@
 import {inject, Injectable, PLATFORM_ID, signal, WritableSignal} from '@angular/core';
 import {isPlatformBrowser} from '@angular/common';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable({providedIn: 'root'})
 export class ThemeService {
-
-  activeTheme: WritableSignal<"dark" | "light"> = signal<"dark" | "light">("light");
-  #platformId: Object = inject(PLATFORM_ID);
+  activeTheme: WritableSignal<'dark' | 'light'> = signal('light');
+  readonly #platformId = inject(PLATFORM_ID);
 
   constructor() {
-    this.bindThemeInLogic();
-  }
-
-  toggle() {
-    this.activeTheme.update(oldTheme => oldTheme === 'dark' ? 'light' : 'dark');
-    this.bindThemeModeIntoDom();
-  }
-
-  bindThemeInLogic(): void {
     if (isPlatformBrowser(this.#platformId)) {
-      if (localStorage.getItem('theme') === "dark" ||
-        (!localStorage.getItem("theme") && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
-        this.activeTheme.set('dark');
-      } else {
-        this.activeTheme.set('light');
-      }
-      this.bindThemeModeIntoDom();
+      const stored = localStorage.getItem('theme');
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      this.activeTheme.set(stored === 'dark' || (!stored && prefersDark) ? 'dark' : 'light');
+      this.#apply();
     }
   }
 
-  bindThemeModeIntoDom(): void {
+  toggle() {
+    this.activeTheme.update(t => t === 'dark' ? 'light' : 'dark');
+    this.#apply();
+  }
+
+  #apply() {
     if (isPlatformBrowser(this.#platformId)) {
       localStorage.setItem('theme', this.activeTheme());
       document.documentElement.setAttribute('data-theme', this.activeTheme());
     }
   }
-
 }

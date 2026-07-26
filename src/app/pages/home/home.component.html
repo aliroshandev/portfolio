@@ -1,91 +1,223 @@
-<section class="banner" role="banner">
-  <div class="image-wrapper">
-    <img ngSrc="/assets/profile-{{themeMode()}}.png"
-         fill
-         alt="Ali Roshanzamir Golafzani"
-         priority>
+<!-- Hero -->
+<section aria-label="Introduction" class="section-container pt-20 md:pt-32 pb-12 md:pb-24">
+  <div class="flex flex-col items-center gap-6 md:flex-row md:gap-16">
+    <div class="relative shrink-0">
+      <div class="h-28 w-28 overflow-hidden rounded-full border-2 border-[var(--color-border)] shadow-[var(--shadow-md)] md:h-40 md:w-40">
+        <img [ngSrc]="'/assets/profile-' + themeMode() + '.png'"
+             width="160" height="160"
+             alt="Ali Roshanzamir Golafzani"
+             priority
+             class="h-full w-full object-cover">
+      </div>
+      <div aria-hidden="true" class="absolute -bottom-1 -right-1 flex h-7 w-7 items-center justify-center rounded-full bg-[var(--color-primary)] text-white text-[10px] font-bold shadow-[var(--shadow-md)] md:h-8 md:w-8 md:text-xs">
+        7+
+      </div>
+    </div>
+
+    <div class="text-center md:text-left">
+      <div class="mb-3 inline-flex items-center gap-2 rounded-full border border-[var(--color-border)] bg-[var(--color-bg-alt)] px-3 py-1 text-[11px] font-medium text-[var(--color-fg-secondary)] md:px-4 md:py-1.5 md:text-xs">
+        <span aria-hidden="true" class="h-1.5 w-1.5 rounded-full bg-green-500 md:h-2 md:w-2"></span>
+        Open to opportunities
+      </div>
+      <h1 class="font-heading text-3xl font-bold leading-tight tracking-tight md:text-5xl lg:text-6xl"
+          style="font-family: var(--font-heading)">
+        Ali Roshanzamir
+      </h1>
+      <p class="mt-1.5 text-base text-[var(--color-fg-secondary)] md:mt-2 md:text-xl">
+        Frontend Engineer &bull; Angular Specialist
+      </p>
+      <p class="mt-1 text-xs text-[var(--color-fg-secondary)] md:text-sm">
+        7+ years &middot; React &middot; TypeScript &middot; SSR/PWA
+      </p>
+      <div class="mt-5 flex flex-wrap items-center justify-center gap-2 md:mt-6 md:justify-start md:gap-3">
+        <a href="https://github.com/aliroshandev" target="_blank" rel="noopener"
+           class="btn-soft px-3 py-1.5 text-xs md:px-4 md:py-2 md:text-sm" aria-label="Visit GitHub profile">
+          <ng-icon name="bootstrapGithub" size="14" aria-hidden="true" />GitHub
+        </a>
+        <a href="https://linkedin.com/in/ali-roshan" target="_blank" rel="noopener"
+           class="btn-soft px-3 py-1.5 text-xs md:px-4 md:py-2 md:text-sm" aria-label="Visit LinkedIn profile">
+          <ng-icon name="bootstrapLinkedin" size="14" aria-hidden="true" />LinkedIn
+        </a>
+        <a href="/assets/ALI_ROSHAN_CV.pdf" target="_blank"
+           class="btn-primary px-3 py-1.5 text-xs md:px-4 md:py-2 md:text-sm" aria-label="Download CV PDF">
+          <ng-icon name="bootstrapFilePdf" size="14" aria-hidden="true" />Download CV
+        </a>
+      </div>
+    </div>
   </div>
 </section>
-<div class="content space-top md:animate md:me-(--banner-height)">
-  <div class="prose-md mt-5 px-3 md:px-9">
-    <h1>Ali Roshanzamir Golafzani</h1>
+
+<!-- About -->
+<section id="about" aria-label="About me" class="section-container pb-16 md:pb-28">
+  <div class="mx-auto max-w-3xl">
+    <div class="mb-6 flex items-center gap-3 md:mb-8">
+      <ng-icon name="bootstrapPerson" size="18" class="text-[var(--color-primary)] md:size-5" aria-hidden="true" />
+      <h2 class="font-heading text-xl font-semibold md:text-3xl" style="font-family: var(--font-heading)">
+        About
+      </h2>
+    </div>
+    <p class="text-sm leading-relaxed text-[var(--color-fg-secondary)] md:text-lg">
+      {{aboutText}}
+    </p>
+    <div class="mt-6 grid grid-cols-2 gap-4 md:mt-8 md:grid-cols-4 md:gap-5">
+      <div class="rounded-xl border border-[var(--color-border)] bg-[var(--color-surface)] px-3 py-4 text-center shadow-[var(--shadow-sm)] transition-shadow duration-300 hover:shadow-[var(--shadow-md)] md:px-4 md:py-5">
+        <p class="font-heading text-xl font-bold text-[var(--color-primary)] md:text-2xl">7+</p>
+        <p class="mt-1 text-[11px] text-[var(--color-fg-secondary)] md:mt-1.5 md:text-xs">Years Experience</p>
+      </div>
+      <div class="rounded-xl border border-[var(--color-border)] bg-[var(--color-surface)] px-3 py-4 text-center shadow-[var(--shadow-sm)] transition-shadow duration-300 hover:shadow-[var(--shadow-md)] md:px-4 md:py-5">
+        <p class="font-heading text-xl font-bold text-[var(--color-primary)] md:text-2xl">10+</p>
+        <p class="mt-1 text-[11px] text-[var(--color-fg-secondary)] md:mt-1.5 md:text-xs">Projects Delivered</p>
+      </div>
+      <div class="rounded-xl border border-[var(--color-border)] bg-[var(--color-surface)] px-3 py-4 text-center shadow-[var(--shadow-sm)] transition-shadow duration-300 hover:shadow-[var(--shadow-md)] md:px-4 md:py-5">
+        <p class="font-heading text-xl font-bold text-[var(--color-primary)] md:text-2xl">8+</p>
+        <p class="mt-1 text-[11px] text-[var(--color-fg-secondary)] md:mt-1.5 md:text-xs">Engineers Mentored</p>
+      </div>
+      <div class="rounded-xl border border-[var(--color-border)] bg-[var(--color-surface)] px-3 py-4 text-center shadow-[var(--shadow-sm)] transition-shadow duration-300 hover:shadow-[var(--shadow-md)] md:px-4 md:py-5">
+        <p class="font-heading text-xl font-bold text-[var(--color-primary)] md:text-2xl">30%</p>
+        <p class="mt-1 text-[11px] text-[var(--color-fg-secondary)] md:mt-1.5 md:text-xs">Avg. Engagement Boost</p>
+      </div>
+    </div>
   </div>
-  @for (heading of Headings; track heading.id) {
-    <!--  <section @fadeInOut>-->
-    <section [appPickRelatedHeadingOnScrollView]="headerHeight()" class="content-section md:pe-9">
-      <div class="section-content rounded-md p-1 md:p-3 prose-md">
-        <h2 [id]="heading.id" class="mt-0 mb-0">
-          <b>{{heading.text}}</b>
-        </h2>
-        <div class="mt-3">
-          @if(HeadingContents.get(heading.id)?.content?.isString()) {
-            <h3 class="mt-0 mb-0">{{HeadingContents.get(heading.id)?.title}}</h3>
-            <p>{{HeadingContents.get(heading.id)?.content?.data}}</p>
-          }
-          @else if (HeadingContents.get(heading.id)?.content?.isArrayOfExperience()) {
-            @if (HeadingContents.get(heading.id)?.content?.data.length) {
-              @for (experience of $any(HeadingContents.get(heading.id)?.content?.data); track $index) {
-                <div class="card card-dash border-accent mb-3">
-                  <div class="card-body">
-                    <div class="flex flex-wrap items-center justify-content-between">
-                      <h3 class="flex-grow-1 mt-0 mb-0 fs-2">
-                        <a [href]="experience.experienceDetails.href"
-                           target="_blank"
-                           rel="nofollow noopener"
-                           class="d-inline-block align-middle">
-                          <span class="me-2">{{experience.companyName}}</span>
-                          <ng-icon class="d-inline-block" name="bootstrapLink45deg" size="18" />
-                        </a>
-                      </h3>
-                      <div>
-                        <span class="me-2">{{experience.workFromToDate[0]}}</span>
-                        <span>{{experience.workFromToDate[1]}}</span>
-                      </div>
-                    </div>
-                    <h4 class="text-primary"><b>{{experience.experienceDetails.title}}</b></h4>
-                    @if (experience.experienceDetails.content.isString()) {
-                      {{experience.experienceDetails.content.data}}
-                    } @else if (experience.experienceDetails.content.isArrayOfBullets()) {
-                      <ul class="list-disc list-inside">
-                        @for (bullet of $any(experience.experienceDetails.content.data); track bullet) {
-                          <li>{{bullet}}</li>
-                        }
-                      </ul>
-                      @if (experience.experienceDetails.tags?.length) {
-                        <div class="flex flex-wrap mt-3">
-                          @for (tag of experience.experienceDetails.tags; track $index) {
-                            <span class="badge badge-primary mx-1 mt-1">{{tag}}</span>
-                          }
-                        </div>
-                      }
-                    } @else {
-                      Not Provided Experience HTML
-                    }
-                  </div>
-                </div>
-              }
-            }
-          }
-          @else if(HeadingContents.get(heading.id)?.content?.isSkills()) {
-            @if ($any(HeadingContents.get(heading.id)?.content?.data) != null) {
-              @for (skillTitleDescription of ($any(HeadingContents.get(heading.id)?.content?.data) | keyvalue); track $index) {
-                <h3 class="text-nowrap mt-0 mb-0 mr-3">
-                  <b>{{SkillsKeyTranslation.get($any(skillTitleDescription.key))}}</b>
+</section>
+
+<!-- Experience -->
+<section id="experience" aria-label="Work experience timeline" class="border-t border-[var(--color-border)] bg-[var(--color-bg-alt)] py-16 md:py-28">
+  <div class="section-container">
+    <div class="mb-8 flex items-center gap-3 md:mb-12">
+      <ng-icon name="bootstrapBuilding" size="18" class="text-[var(--color-primary)] md:size-5" aria-hidden="true" />
+      <h2 class="font-heading text-xl font-semibold md:text-3xl" style="font-family: var(--font-heading)">
+        Experience
+      </h2>
+    </div>
+
+    <div class="relative">
+      <div class="absolute bottom-0 left-[7px] top-0 w-px bg-[var(--color-border)] md:left-[15px]"></div>
+
+      @for (exp of experiences; track $index) {
+        <article class="relative mb-8 pl-8 md:mb-10 md:pl-12 last:mb-0">
+          <div class="timeline-dot absolute left-0 top-1.5 md:left-2"></div>
+
+          <div class="card p-4 md:p-6">
+            <div class="mb-2 flex flex-wrap items-start justify-between gap-2 md:mb-1">
+              <div>
+                <h3 class="font-heading text-sm font-semibold md:text-lg" style="font-family: var(--font-heading)">
+                  <a [href]="exp.experienceDetails.href"
+                     target="_blank" rel="noopener"
+                     class="link-underline text-[var(--color-fg)] hover:text-[var(--color-primary)]">
+                    {{exp.companyName}}
+                    <ng-icon name="bootstrapLink45deg" size="12" class="ml-0.5 inline md:size-[14px]" />
+                  </a>
                 </h3>
-                <p class="text-justify"
-                   [class.mb-2]="!$last"
-                   [class.mb-0]="$last">{{skillTitleDescription.value}}</p>
-                @if (!$last) {
-                  <hr class="border-accent mt-0 mb-2" style="border-style: dashed">
+                @if (exp.companyDescription) {
+                  <p class="mt-0.5 text-[11px] text-[var(--color-fg-secondary)] md:text-sm">{{exp.companyDescription}}</p>
                 }
-              }
+              </div>
+              <span class="tag shrink-0">{{exp.workFromToDate[0]}} — {{exp.workFromToDate[1]}}</span>
+            </div>
+
+            <p class="mb-2 text-[11px] font-medium text-[var(--color-primary)] md:mb-3 md:text-sm">{{exp.experienceDetails.title}}</p>
+
+            @if (exp.experienceDetails.content.isArrayOfBullets()) {
+              <ul class="mb-3 space-y-1 md:mb-4 md:space-y-1.5">
+                @for (bullet of exp.experienceDetails.content.data; track bullet) {
+                  <li class="flex gap-1.5 text-[12px] text-[var(--color-fg-secondary)] md:gap-2 md:text-sm">
+                    <span class="mt-[5px] h-1 w-1 shrink-0 rounded-full bg-[var(--color-primary)] md:mt-1.5 md:h-1.5 md:w-1.5"></span>
+                    {{bullet}}
+                  </li>
+                }
+              </ul>
             }
-          }
-          @else {
-            Not Valid Heading Content
+
+            @if (exp.experienceDetails.tags.length) {
+              <div class="flex flex-wrap gap-1 md:gap-1.5">
+                @for (tag of exp.experienceDetails.tags; track $index) {
+                  <span class="tag">{{tag}}</span>
+                }
+              </div>
+            }
+          </div>
+        </article>
+      }
+    </div>
+  </div>
+</section>
+
+<!-- Skills -->
+<section id="skills" aria-label="Technical skills" class="py-16 md:py-28">
+  <div class="section-container">
+    <div class="mb-8 flex items-center gap-3 md:mb-12">
+      <ng-icon name="bootstrapCodeSlash" size="18" class="text-[var(--color-primary)] md:size-5" aria-hidden="true" />
+      <h2 class="font-heading text-xl font-semibold md:text-3xl" style="font-family: var(--font-heading)">
+        Technical Skills
+      </h2>
+    </div>
+
+    <div class="grid gap-4 md:grid-cols-2 md:gap-6">
+      <div class="card p-4 shadow-[var(--shadow-sm)] md:p-6">
+        <h3 class="font-heading mb-3 text-[11px] font-semibold uppercase tracking-wider text-[var(--color-primary)] md:mb-3 md:text-sm" style="font-family: var(--font-heading)">
+          Languages
+        </h3>
+        <div class="flex flex-wrap gap-1.5 md:gap-2">
+          @for (s of technicalSkills.languages.split(', '); track s) {
+            <span class="tag">{{s}}</span>
           }
         </div>
       </div>
-    </section>
-  }
-</div>
+      <div class="card p-4 shadow-[var(--shadow-sm)] md:p-6">
+        <h3 class="font-heading mb-3 text-[11px] font-semibold uppercase tracking-wider text-[var(--color-primary)] md:mb-3 md:text-sm" style="font-family: var(--font-heading)">
+          Frameworks & Libraries
+        </h3>
+        <div class="flex flex-wrap gap-1.5 md:gap-2">
+          @for (s of technicalSkills.frameworks.split(', '); track s) {
+            <span class="tag">{{s}}</span>
+          }
+        </div>
+      </div>
+      <div class="card p-4 shadow-[var(--shadow-sm)] md:p-6">
+        <h3 class="font-heading mb-3 text-[11px] font-semibold uppercase tracking-wider text-[var(--color-primary)] md:mb-3 md:text-sm" style="font-family: var(--font-heading)">
+          Tools & Platforms
+        </h3>
+        <div class="flex flex-wrap gap-1.5 md:gap-2">
+          @for (s of technicalSkills.tools.split(', '); track s) {
+            <span class="tag">{{s}}</span>
+          }
+        </div>
+      </div>
+      <div class="card p-4 shadow-[var(--shadow-sm)] md:p-6">
+        <h3 class="font-heading mb-3 text-[11px] font-semibold uppercase tracking-wider text-[var(--color-primary)] md:mb-3 md:text-sm" style="font-family: var(--font-heading)">
+          Concepts & Techniques
+        </h3>
+        <div class="flex flex-wrap gap-1.5 md:gap-2">
+          @for (s of technicalSkills.concepts.split(', '); track s) {
+            <span class="tag">{{s}}</span>
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="border-t border-[var(--color-border)] py-6 md:py-8">
+  <div class="section-container">
+    <div class="flex flex-col items-center justify-between gap-3 md:flex-row md:gap-4">
+      <p class="text-[11px] text-[var(--color-fg-secondary)] md:text-sm">
+        &copy; 2026 Ali Roshanzamir. All rights reserved.
+      </p>
+      <div class="flex items-center gap-3 md:gap-4">
+        <a href="https://github.com/aliroshandev" target="_blank" rel="noopener"
+           class="text-[11px] text-[var(--color-fg-secondary)] transition-colors hover:text-[var(--color-fg)] md:text-sm">
+          GitHub
+        </a>
+        <a href="https://linkedin.com/in/ali-roshan" target="_blank" rel="noopener"
+           class="text-[11px] text-[var(--color-fg-secondary)] transition-colors hover:text-[var(--color-fg)] md:text-sm">
+          LinkedIn
+        </a>
+        <a href="/legal-notice"
+           class="text-[11px] text-[var(--color-fg-secondary)] transition-colors hover:text-[var(--color-fg)] md:text-sm">
+          Legal Notice
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
