@@ -1,9 +1,10 @@
 main {
-  padding-top: 76px;
+  padding-top: var(--header-height);
 }
 
 @media (max-width: 768px) {
   main {
-    padding-top: 64px;
+    padding-top: var(--header-height);
+    padding-bottom: var(--space-18);
   }
 }

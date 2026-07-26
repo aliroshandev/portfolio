@@ -11,6 +11,28 @@
     --font-body: 'Space Grotesk', sans-serif;
     --header-height: 76px;
     --section-gap: 100px;
+
+    --space-1: 4px;
+    --space-2: 8px;
+    --space-2-5: 10px;
+    --space-3: 12px;
+    --space-4: 16px;
+    --space-5: 20px;
+    --space-6: 24px;
+    --space-8: 32px;
+    --space-10: 40px;
+    --space-16: 64px;
+    --space-18: 72px;
+    --space-20: 80px;
+    --space-24: 96px;
+    --space-tag-y: 3px;
+    --space-tag-x: 9px;
+    --space-scroll-offset: 90px;
+    --space-btn-y: 8px;
+    --space-btn-x: 16px;
+    --space-btn-primary-y: 10px;
+    --space-btn-primary-x: 20px;
+    --content-max-width: 1120px;
     --color-primary: #2563EB;
     --color-primary-hover: #1D4ED8;
     --radius-sm: 6px;
@@ -23,7 +45,7 @@
 
   html {
     scroll-behavior: smooth;
-    scroll-padding-top: 90px;
+    scroll-padding-top: var(--space-scroll-offset);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
@@ -79,25 +101,25 @@ html[data-theme="dark"] {
 }
 
 .section-container {
-  max-width: 1120px;
+  max-width: var(--content-max-width);
   margin: 0 auto;
-  padding-inline: 24px;
+  padding-inline: var(--space-6);
 }
 
 @media (max-width: 640px) {
   .section-container {
-    padding-inline: 16px;
+    padding-inline: var(--space-4);
   }
 }
 
 @media (min-width: 1024px) {
   .section-container {
-    padding-inline: 32px;
+    padding-inline: var(--space-8);
   }
 }
 
 .btn-ghost {
-  padding: 8px 16px;
+  padding: var(--space-2) var(--space-4);
   border-radius: var(--radius-sm);
   font-family: var(--font-body);
   font-weight: 500;
@@ -114,7 +136,7 @@ html[data-theme="dark"] {
 }
 
 .btn-primary {
-  padding: 10px 20px;
+  padding: var(--space-2-5) var(--space-5);
   border-radius: var(--radius-sm);
   font-family: var(--font-body);
   font-weight: 500;
@@ -126,7 +148,7 @@ html[data-theme="dark"] {
   cursor: pointer;
   display: inline-flex;
   align-items: center;
-  gap: 8px;
+  gap: var(--space-2);
 }
 .btn-primary:hover {
   background: var(--color-primary-hover);
@@ -135,7 +157,7 @@ html[data-theme="dark"] {
 }
 
 .btn-soft {
-  padding: 8px 16px;
+  padding: var(--space-2) var(--space-4);
   border-radius: var(--radius-sm);
   font-family: var(--font-body);
   font-weight: 500;
@@ -147,7 +169,7 @@ html[data-theme="dark"] {
   cursor: pointer;
   display: inline-flex;
   align-items: center;
-  gap: 8px;
+  gap: var(--space-2);
 }
 .btn-soft:hover {
   background: var(--color-border);
@@ -168,7 +190,7 @@ html[data-theme="dark"] {
 .tag {
   display: inline-flex;
   align-items: center;
-  padding: 3px 9px;
+  padding: var(--space-tag-y) var(--space-tag-x);
   border-radius: 9999px;
   font-family: var(--font-body);
   font-size: 0.7rem;
@@ -204,5 +226,8 @@ ng-icon {
   }
   html {
     scroll-padding-top: 78px;
+  }
+  :root {
+    --space-scroll-offset: 78px;
   }
 }

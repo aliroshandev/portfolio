@@ -3,7 +3,7 @@ import {RouterOutlet} from '@angular/router';
 import {HeaderComponent} from '@components/header/header.component';
 import {NgIcon, provideIcons} from '@ng-icons/core';
 import {
-  bootstrapGithub, bootstrapLinkedin, bootstrapFilePdf, bootstrapSend,
+  bootstrapGithub, bootstrapLinkedin, bootstrapFilePdf, bootstrapEnvelope,
   bootstrapPhone, bootstrapChatText,
 } from '@ng-icons/bootstrap-icons';
 import {LayoutService} from './services/layout.service';
@@ -16,7 +16,7 @@ import {richSnippetJsonSchema} from './constants/const';
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
   viewProviders: [provideIcons({
-    bootstrapGithub, bootstrapLinkedin, bootstrapFilePdf, bootstrapSend,
+    bootstrapGithub, bootstrapLinkedin, bootstrapFilePdf, bootstrapEnvelope,
     bootstrapPhone, bootstrapChatText,
   })]
 })
@@ -33,7 +33,7 @@ export class AppComponent implements OnInit {
   protected readonly contacts = [
     {href: 'tel:447351534063', icon: 'bootstrapPhone', label: 'Call'},
     {href: 'sms:447351534063?body=Hi%20Ali,%20I%20saw%20your%20Portfolio', icon: 'bootstrapChatText', label: 'Text'},
-    {href: 'mailto:a76roshanzamir@gmail.com', icon: 'bootstrapSend', label: 'Email'},
+    {href: 'mailto:a76roshanzamir@gmail.com', icon: 'bootstrapEnvelope', label: 'Email'},
     {href: 'https://github.com/aliroshandev', icon: 'bootstrapGithub', label: 'GitHub'},
     {href: 'https://linkedin.com/in/ali-roshan', icon: 'bootstrapLinkedin', label: 'LinkedIn'},
     {href: '/assets/ALI_ROSHAN_CV.pdf', icon: 'bootstrapFilePdf', label: 'CV'},
