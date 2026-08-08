@@ -22,29 +22,31 @@ export const experiences: Array<ExperienceInterface> = [
   {
     workFromToDate: ['08/2020', '05/2022'],
     companyName: 'Agatizer',
-    companyDescription: 'Financial Services - Social Trading',
+    companyDescription: 'Crypto Exchange - Copy Trading',
     experienceDetails: {
       title: 'Frontend Engineer - Remote',
-      href: 'https://missha-ir.com',
+      href: 'https://agatizer.com',
       content: new ExperienceContent([
-        'Designed and launched the Persian version of Missha.com\'s main store, increasing local traffic by 40%.',
-        'Delivered multiple event-based single-pages for seasonal campaign success.',
+        'Built the Persian trading platform UI enabling users to trade crypto assets with real-time market data.',
+        'Implemented copy-trading dashboard where users can follow and mirror the positions of top traders.',
+        'Developed responsive order-entry and portfolio views, optimizing performance for live price feeds.',
       ]),
-      tags: ['React', 'Angular', 'Tailwind', 'TypeScript', 'Docker', 'PWA', 'SEO']
+      tags: ['React', 'Angular', 'Tailwind', 'TypeScript', 'WebSocket', 'Docker', 'PWA']
     }
   } as ExperienceInterface,
   {
     workFromToDate: ['08/2020', '05/2022'],
     companyName: 'Missha',
-    companyDescription: 'Global E-Commerce Platform',
+    companyDescription: 'Cosmetics & Health Products E-Commerce',
     experienceDetails: {
       title: 'Frontend Engineer - Remote',
       href: 'https://missha-ir.com',
       content: new ExperienceContent([
         'Designed and launched the Persian version of Missha.com\'s main store, increasing local traffic by 40%.',
+        'Built product catalog and category pages for cosmetics and health products with optimized search.',
         'Delivered multiple event-based single-pages driving seasonal campaign success.',
       ]),
-      tags: ['Angular', 'Angular Material', 'TypeScript', 'Jest', 'Docker', 'PWA']
+      tags: ['Angular', 'Angular Material', 'TypeScript', 'Jest', 'Docker', 'PWA', 'SEO']
     }
   } as ExperienceInterface,
   {
