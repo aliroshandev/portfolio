@@ -156,6 +156,19 @@ export const richSnippetJsonSchema = {
     "description": aboutText,
     "email": "a76roshanzamir@gmail.com",
     "telephone": "+989031751739",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "TabinTech",
+      "url": "https://tabintech.com"
+    },
+    "alumniOf": {
+      "@type": "EducationalOrganization",
+      "name": "Azad University, South Tehran Branch"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "Iran"
+    },
     "sameAs": [
       "https://ir.linkedin.com/in/ali-roshan",
       "https://github.com/aliroshandev"
