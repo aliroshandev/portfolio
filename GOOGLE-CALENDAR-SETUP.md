@@ -96,3 +96,16 @@ The token stays **in-memory only** (never persisted, never serialized) and dies 
    `GOOGLE_CLIENT_ID`. Add `a76roshanzamir@gmail.com` as a **Test user** on the consent screen.
 
 Your real busy events will then show up automatically on the booking calendar.
+
+## Vercel deploy checklist
+
+1. **Project → Settings → Environment Variables** — add `GOOGLE_CLIENT_ID`, `GOOGLE_API_KEY`,
+   `GOOGLE_CALENDAR_ID` for the **Production** environment (and **Preview** if you want the same behavior
+   on branch deploys).
+2. **Keep the default build command** — Vercel runs `npm run build`; the `prebuild` hook (`npm run setenv`)
+   runs first and injects those vars into the gitignored `src/environments/environment.production.ts`,
+   which `angular.json` swaps in via `fileReplacements`. No build override needed.
+3. **Google Cloud** — add `https://aliroshanzamir.info` to the OAuth client's **Authorized JavaScript
+   origins** and add `a76roshanzamir@gmail.com` as a **Test user** on the consent screen.
+4. After deploy, open `/book` in a private window — the booking calendar should show busy times synced from
+   the real Google Calendar.
