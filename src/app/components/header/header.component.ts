@@ -1,4 +1,5 @@
 import {Component, computed, inject, signal} from '@angular/core';
+import {RouterLink} from '@angular/router';
 import {NgIcon, provideIcons} from '@ng-icons/core';
 import {ThemeService} from '../../services/theme.service';
 import {ActivatedRoute} from '@angular/router';
@@ -9,17 +10,19 @@ import {map} from 'rxjs/operators';
 import {
   bootstrapGithub, bootstrapLinkedin, bootstrapFilePdf, bootstrapSend,
   bootstrapPhone, bootstrapMoon, bootstrapSun, bootstrapThreeDotsVertical, bootstrapX,
+  bootstrapCalendarMonth,
 } from '@ng-icons/bootstrap-icons';
 
 @Component({
   selector: 'header[app-header]',
-  imports: [NgIcon],
+  imports: [NgIcon, RouterLink],
   host: {'[class.scrolled]': 'scrolled()'},
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss',
   viewProviders: [provideIcons({
     bootstrapGithub, bootstrapLinkedin, bootstrapFilePdf, bootstrapSend,
     bootstrapPhone, bootstrapMoon, bootstrapSun, bootstrapThreeDotsVertical, bootstrapX,
+    bootstrapCalendarMonth,
   })]
 })
 export class HeaderComponent {

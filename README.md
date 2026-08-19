@@ -2,6 +2,14 @@
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.0.6.
 
+## Features
+
+- **Booking / Scheduling** (`/book`) — visitors pick a call length (15 min to 2 hours, 15-min steps),
+  choose an open slot from a Google-Appointments-style availability calendar, and book a Google Meet
+  meeting. Options for live busy-time sync from the real Google Calendar are built in — setup steps in
+  [GOOGLE-CALENDAR-SETUP.md](GOOGLE-CALENDAR-SETUP.md) and configuration in
+  [BOOKING.md](BOOKING.md).
+
 ## Development server
 
 To start a local development server, run:
