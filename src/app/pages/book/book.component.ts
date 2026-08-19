@@ -60,7 +60,7 @@ export class BookComponent implements OnInit {
 
   durationOptions = computed(() => this.#booking.durationOptions);
 
-  liveSynced = computed<boolean>(() => this.#booking.liveBusy().length > 0);
+  liveSynced = computed<boolean>(() => this.#booking.liveBusyLoaded());
 
   monthLabel = computed(() =>
     this.viewDate().toLocaleDateString('en-US', {month: 'long', year: 'numeric'}));

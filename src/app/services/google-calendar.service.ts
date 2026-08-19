@@ -204,6 +204,7 @@ export class GoogleCalendarService {
       }
       const blocks = this.#toBusyBlocks(data.items ?? []);
       this.#booking.liveBusy.set(blocks);
+      this.#booking.liveBusyLoaded.set(true);
       this.busySource.set('public');
       console.log(`[GoogleCalendar] synced ${blocks.length} busy blocks (public calendar)`);
     } catch (err) {
@@ -227,6 +228,7 @@ export class GoogleCalendarService {
       }
       const blocks = this.#toBusyBlocks(data.items ?? []);
       this.#booking.liveBusy.set(blocks);
+      this.#booking.liveBusyLoaded.set(true);
       this.busySource.set('owner');
       console.log(`[GoogleCalendar] synced ${blocks.length} busy blocks (owner calendar)`);
     } catch (err) {

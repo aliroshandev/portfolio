@@ -17,6 +17,10 @@ export class BookingService {
   /** Real busy blocks fetched from Google Calendar (when configured). */
   liveBusy = signal<BusyBlock[]>([]);
 
+  /** True once a real Google Calendar sync has completed (even when the result is empty).
+   *  Once set, live data is authoritative and the static `busySlots` fallback is never used. */
+  liveBusyLoaded = signal(false);
+
   get isBrowser(): boolean {
     return isPlatformBrowser(this.#platformId);
   }
@@ -47,9 +51,9 @@ export class BookingService {
     return opts;
   }
 
-  /** Busy blocks in effect: live Google data when present, otherwise the static config. */
+  /** Busy blocks in effect: live Google data when a real sync completed, otherwise static config. */
   activeBusy(): BusyBlock[] {
-    return this.liveBusy().length ? this.liveBusy() : this.config.busySlots;
+    return this.liveBusyLoaded() ? this.liveBusy() : this.config.busySlots;
   }
 
   /** Current wall-clock date string in the owner's timezone, e.g. "2026-08-19" */

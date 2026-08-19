@@ -31,22 +31,10 @@ export const bookingConfig: BookingConfig = {
     6: [9, 14],
   } as Record<number, [number, number] | null>,
 
-  // STATIC busy blocks (fallback). When googleApiKey + googleCalendarId are provided below,
-  // this list is REPLACED by live data fetched from the Google Calendar API.
-  busySlots: [
-    {
-      date: '2026-08-21',
-      fromHour: 12,
-      toHour: 14,
-      label: 'Team stand-up & review',
-    },
-    {
-      date: '2026-08-25',
-      fromHour: 10,
-      toHour: 11,
-      label: 'Interview',
-    },
-  ],
+  // STATIC busy blocks (fallback ONLY when no Google credentials are configured).
+  // When googleApiKey + googleCalendarId (or the OAuth client id) are provided, this list is
+  // IGNORED entirely — live data from the real Google Calendar is authoritative, even if empty.
+  busySlots: [],
 
   // Real Google Calendar sync. Credentials are INJECTED at build time from Vercel env vars
   // (GOOGLE_CLIENT_ID / GOOGLE_API_KEY / GOOGLE_CALENDAR_ID) via scripts/set-env.mjs — see .env.example.

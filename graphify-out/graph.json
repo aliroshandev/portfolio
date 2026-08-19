@@ -140,7 +140,7 @@
       "source_location": "L16",
       "_origin": "ast",
       "id": "angular_portfolio_architect",
-      "community": 6,
+      "community": 7,
       "norm_label": "architect"
     },
     {
@@ -150,7 +150,7 @@
       "source_location": "L17",
       "_origin": "ast",
       "id": "angular_architect_build",
-      "community": 6,
+      "community": 7,
       "norm_label": "build"
     },
     {
@@ -160,7 +160,7 @@
       "source_location": "L18",
       "_origin": "ast",
       "id": "angular_build_builder",
-      "community": 6,
+      "community": 7,
       "norm_label": "builder"
     },
     {
@@ -170,7 +170,7 @@
       "source_location": "L19",
       "_origin": "ast",
       "id": "angular_build_options",
-      "community": 8,
+      "community": 9,
       "norm_label": "options"
     },
     {
@@ -180,7 +180,7 @@
       "source_location": "L20",
       "_origin": "ast",
       "id": "angular_options_outputpath",
-      "community": 8,
+      "community": 9,
       "norm_label": "outputpath"
     },
     {
@@ -190,7 +190,7 @@
       "source_location": "L21",
       "_origin": "ast",
       "id": "angular_options_index",
-      "community": 8,
+      "community": 9,
       "norm_label": "index"
     },
     {
@@ -200,7 +200,7 @@
       "source_location": "L22",
       "_origin": "ast",
       "id": "angular_options_browser",
-      "community": 8,
+      "community": 9,
       "norm_label": "browser"
     },
     {
@@ -210,7 +210,7 @@
       "source_location": "L23",
       "_origin": "ast",
       "id": "angular_options_polyfills",
-      "community": 8,
+      "community": 9,
       "norm_label": "polyfills"
     },
     {
@@ -220,7 +220,7 @@
       "source_location": "L26",
       "_origin": "ast",
       "id": "angular_options_tsconfig",
-      "community": 8,
+      "community": 9,
       "norm_label": "tsconfig"
     },
     {
@@ -230,7 +230,7 @@
       "source_location": "L27",
       "_origin": "ast",
       "id": "angular_options_inlinestylelanguage",
-      "community": 8,
+      "community": 9,
       "norm_label": "inlinestylelanguage"
     },
     {
@@ -240,7 +240,7 @@
       "source_location": "L28",
       "_origin": "ast",
       "id": "angular_options_assets",
-      "community": 8,
+      "community": 9,
       "norm_label": "assets"
     },
     {
@@ -250,7 +250,7 @@
       "source_location": "L34",
       "_origin": "ast",
       "id": "angular_options_styles",
-      "community": 8,
+      "community": 9,
       "norm_label": "styles"
     },
     {
@@ -260,7 +260,7 @@
       "source_location": "L37",
       "_origin": "ast",
       "id": "angular_options_scripts",
-      "community": 8,
+      "community": 9,
       "norm_label": "scripts"
     },
     {
@@ -270,7 +270,7 @@
       "source_location": "L38",
       "_origin": "ast",
       "id": "angular_options_server",
-      "community": 8,
+      "community": 9,
       "norm_label": "server"
     },
     {
@@ -280,7 +280,7 @@
       "source_location": "L39",
       "_origin": "ast",
       "id": "angular_options_outputmode",
-      "community": 8,
+      "community": 9,
       "norm_label": "outputmode"
     },
     {
@@ -290,7 +290,7 @@
       "source_location": "L40",
       "_origin": "ast",
       "id": "angular_options_ssr",
-      "community": 8,
+      "community": 9,
       "norm_label": "ssr"
     },
     {
@@ -300,7 +300,7 @@
       "source_location": "L41",
       "_origin": "ast",
       "id": "angular_ssr_entry",
-      "community": 8,
+      "community": 9,
       "norm_label": "entry"
     },
     {
@@ -310,7 +310,7 @@
       "source_location": "L44",
       "_origin": "ast",
       "id": "angular_build_configurations",
-      "community": 6,
+      "community": 7,
       "norm_label": "configurations"
     },
     {
@@ -320,7 +320,7 @@
       "source_location": "L45",
       "_origin": "ast",
       "id": "angular_configurations_production",
-      "community": 6,
+      "community": 7,
       "norm_label": "production"
     },
     {
@@ -330,7 +330,7 @@
       "source_location": "L46",
       "_origin": "ast",
       "id": "angular_production_budgets",
-      "community": 6,
+      "community": 7,
       "norm_label": "budgets"
     },
     {
@@ -340,7 +340,7 @@
       "source_location": "L58",
       "_origin": "ast",
       "id": "angular_production_filereplacements",
-      "community": 6,
+      "community": 7,
       "norm_label": "filereplacements"
     },
     {
@@ -350,7 +350,7 @@
       "source_location": "L64",
       "_origin": "ast",
       "id": "angular_production_outputhashing",
-      "community": 6,
+      "community": 7,
       "norm_label": "outputhashing"
     },
     {
@@ -360,7 +360,7 @@
       "source_location": "L65",
       "_origin": "ast",
       "id": "angular_production_serviceworker",
-      "community": 6,
+      "community": 7,
       "norm_label": "serviceworker"
     },
     {
@@ -370,7 +370,7 @@
       "source_location": "L67",
       "_origin": "ast",
       "id": "angular_configurations_development",
-      "community": 6,
+      "community": 7,
       "norm_label": "development"
     },
     {
@@ -380,7 +380,7 @@
       "source_location": "L68",
       "_origin": "ast",
       "id": "angular_development_optimization",
-      "community": 6,
+      "community": 7,
       "norm_label": "optimization"
     },
     {
@@ -390,7 +390,7 @@
       "source_location": "L69",
       "_origin": "ast",
       "id": "angular_development_extractlicenses",
-      "community": 6,
+      "community": 7,
       "norm_label": "extractlicenses"
     },
     {
@@ -400,7 +400,7 @@
       "source_location": "L70",
       "_origin": "ast",
       "id": "angular_development_sourcemap",
-      "community": 6,
+      "community": 7,
       "norm_label": "sourcemap"
     },
     {
@@ -410,7 +410,7 @@
       "source_location": "L73",
       "_origin": "ast",
       "id": "angular_build_defaultconfiguration",
-      "community": 6,
+      "community": 7,
       "norm_label": "defaultconfiguration"
     },
     {
@@ -420,7 +420,7 @@
       "source_location": "L75",
       "_origin": "ast",
       "id": "angular_architect_serve",
-      "community": 6,
+      "community": 7,
       "norm_label": "serve"
     },
     {
@@ -430,7 +430,7 @@
       "source_location": "L76",
       "_origin": "ast",
       "id": "angular_serve_builder",
-      "community": 6,
+      "community": 7,
       "norm_label": "builder"
     },
     {
@@ -440,7 +440,7 @@
       "source_location": "L77",
       "_origin": "ast",
       "id": "angular_serve_configurations",
-      "community": 6,
+      "community": 7,
       "norm_label": "configurations"
     },
     {
@@ -450,7 +450,7 @@
       "source_location": "L79",
       "_origin": "ast",
       "id": "angular_production_buildtarget",
-      "community": 6,
+      "community": 7,
       "norm_label": "buildtarget"
     },
     {
@@ -460,7 +460,7 @@
       "source_location": "L82",
       "_origin": "ast",
       "id": "angular_development_buildtarget",
-      "community": 6,
+      "community": 7,
       "norm_label": "buildtarget"
     },
     {
@@ -470,7 +470,7 @@
       "source_location": "L85",
       "_origin": "ast",
       "id": "angular_serve_defaultconfiguration",
-      "community": 6,
+      "community": 7,
       "norm_label": "defaultconfiguration"
     },
     {
@@ -480,7 +480,7 @@
       "source_location": "L87",
       "_origin": "ast",
       "id": "angular_architect_extract_i18n",
-      "community": 6,
+      "community": 7,
       "norm_label": "extract-i18n"
     },
     {
@@ -490,7 +490,7 @@
       "source_location": "L88",
       "_origin": "ast",
       "id": "angular_extract_i18n_builder",
-      "community": 6,
+      "community": 7,
       "norm_label": "builder"
     },
     {
@@ -500,7 +500,7 @@
       "source_location": "L90",
       "_origin": "ast",
       "id": "angular_architect_test",
-      "community": 8,
+      "community": 9,
       "norm_label": "test"
     },
     {
@@ -510,7 +510,7 @@
       "source_location": "L91",
       "_origin": "ast",
       "id": "angular_test_builder",
-      "community": 8,
+      "community": 9,
       "norm_label": "builder"
     },
     {
@@ -520,7 +520,7 @@
       "source_location": "L92",
       "_origin": "ast",
       "id": "angular_test_options",
-      "community": 8,
+      "community": 9,
       "norm_label": "options"
     },
     {
@@ -690,7 +690,7 @@
       "source_location": "L140",
       "_origin": "ast",
       "id": "angular_cli",
-      "community": 9,
+      "community": 2,
       "norm_label": "cli"
     },
     {
@@ -700,7 +700,7 @@
       "source_location": "L141",
       "_origin": "ast",
       "id": "angular_cli_analytics",
-      "community": 9,
+      "community": 2,
       "norm_label": "analytics"
     },
     {
@@ -710,7 +710,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "ngsw_config",
-      "community": 15,
+      "community": 14,
       "norm_label": "ngsw-config.json"
     },
     {
@@ -720,7 +720,7 @@
       "source_location": "L2",
       "_origin": "ast",
       "id": "ngsw_config_schema",
-      "community": 15,
+      "community": 14,
       "norm_label": "$schema"
     },
     {
@@ -730,7 +730,7 @@
       "source_location": "L3",
       "_origin": "ast",
       "id": "ngsw_config_index",
-      "community": 15,
+      "community": 14,
       "norm_label": "index"
     },
     {
@@ -740,7 +740,7 @@
       "source_location": "L4",
       "_origin": "ast",
       "id": "ngsw_config_assetgroups",
-      "community": 15,
+      "community": 14,
       "norm_label": "assetgroups"
     },
     {
@@ -750,7 +750,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "package",
-      "community": 11,
+      "community": 2,
       "norm_label": "package.json"
     },
     {
@@ -760,7 +760,7 @@
       "source_location": "L2",
       "_origin": "ast",
       "id": "package_name",
-      "community": 11,
+      "community": 2,
       "norm_label": "name"
     },
     {
@@ -770,7 +770,7 @@
       "source_location": "L3",
       "_origin": "ast",
       "id": "package_version",
-      "community": 11,
+      "community": 2,
       "norm_label": "version"
     },
     {
@@ -780,7 +780,7 @@
       "source_location": "L4",
       "_origin": "ast",
       "id": "package_scripts",
-      "community": 11,
+      "community": 2,
       "norm_label": "scripts"
     },
     {
@@ -790,7 +790,7 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "package_scripts_setenv",
-      "community": 11,
+      "community": 2,
       "norm_label": "setenv"
     },
     {
@@ -800,7 +800,7 @@
       "source_location": "L6",
       "_origin": "ast",
       "id": "package_scripts_prestart",
-      "community": 11,
+      "community": 2,
       "norm_label": "prestart"
     },
     {
@@ -810,457 +810,447 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "package_scripts_start",
-      "community": 11,
+      "community": 2,
       "norm_label": "start"
-    },
-    {
-      "label": "prebuild",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L8",
-      "_origin": "ast",
-      "id": "package_scripts_prebuild",
-      "community": 11,
-      "norm_label": "prebuild"
     },
     {
       "label": "build",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L9",
+      "source_location": "L8",
       "_origin": "ast",
       "id": "package_scripts_build",
-      "community": 11,
+      "community": 2,
       "norm_label": "build"
     },
     {
       "label": "watch",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L10",
+      "source_location": "L9",
       "_origin": "ast",
       "id": "package_scripts_watch",
-      "community": 11,
+      "community": 2,
       "norm_label": "watch"
     },
     {
       "label": "test",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L11",
+      "source_location": "L10",
       "_origin": "ast",
       "id": "package_scripts_test",
-      "community": 11,
+      "community": 2,
       "norm_label": "test"
     },
     {
       "label": "serve:ssr:portfolio",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L12",
+      "source_location": "L11",
       "_origin": "ast",
       "id": "package_scripts_serve_ssr_portfolio",
-      "community": 11,
+      "community": 2,
       "norm_label": "serve:ssr:portfolio"
     },
     {
       "label": "private",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L14",
+      "source_location": "L13",
       "_origin": "ast",
       "id": "package_private",
-      "community": 11,
+      "community": 2,
       "norm_label": "private"
     },
     {
       "label": "dependencies",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L15",
+      "source_location": "L14",
       "_origin": "ast",
       "id": "package_dependencies",
-      "community": 4,
+      "community": 5,
       "norm_label": "dependencies"
     },
     {
       "label": "@angular/animations",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L16",
+      "source_location": "L15",
       "_origin": "ast",
       "id": "package_dependencies_angular_animations",
-      "community": 4,
+      "community": 5,
       "norm_label": "@angular/animations"
     },
     {
       "label": "@angular/cdk",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L17",
+      "source_location": "L16",
       "_origin": "ast",
       "id": "package_dependencies_angular_cdk",
-      "community": 4,
+      "community": 5,
       "norm_label": "@angular/cdk"
     },
     {
       "label": "@angular/common",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L18",
+      "source_location": "L17",
       "_origin": "ast",
       "id": "package_dependencies_angular_common",
-      "community": 4,
+      "community": 5,
       "norm_label": "@angular/common"
     },
     {
       "label": "@angular/compiler",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L19",
+      "source_location": "L18",
       "_origin": "ast",
       "id": "package_dependencies_angular_compiler",
-      "community": 4,
+      "community": 5,
       "norm_label": "@angular/compiler"
     },
     {
       "label": "@angular/core",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L20",
+      "source_location": "L19",
       "_origin": "ast",
       "id": "package_dependencies_angular_core",
-      "community": 4,
+      "community": 5,
       "norm_label": "@angular/core"
     },
     {
       "label": "@angular/forms",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L21",
+      "source_location": "L20",
       "_origin": "ast",
       "id": "package_dependencies_angular_forms",
-      "community": 4,
+      "community": 5,
       "norm_label": "@angular/forms"
     },
     {
       "label": "@angular/platform-browser",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L22",
+      "source_location": "L21",
       "_origin": "ast",
       "id": "package_dependencies_angular_platform_browser",
-      "community": 4,
+      "community": 5,
       "norm_label": "@angular/platform-browser"
     },
     {
       "label": "@angular/platform-browser-dynamic",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L23",
+      "source_location": "L22",
       "_origin": "ast",
       "id": "package_dependencies_angular_platform_browser_dynamic",
-      "community": 4,
+      "community": 5,
       "norm_label": "@angular/platform-browser-dynamic"
     },
     {
       "label": "@angular/platform-server",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L24",
+      "source_location": "L23",
       "_origin": "ast",
       "id": "package_dependencies_angular_platform_server",
-      "community": 4,
+      "community": 5,
       "norm_label": "@angular/platform-server"
     },
     {
       "label": "@angular/router",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L25",
+      "source_location": "L24",
       "_origin": "ast",
       "id": "package_dependencies_angular_router",
-      "community": 4,
+      "community": 5,
       "norm_label": "@angular/router"
     },
     {
       "label": "@angular/service-worker",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L26",
+      "source_location": "L25",
       "_origin": "ast",
       "id": "package_dependencies_angular_service_worker",
-      "community": 4,
+      "community": 5,
       "norm_label": "@angular/service-worker"
     },
     {
       "label": "@angular/ssr",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L27",
+      "source_location": "L26",
       "_origin": "ast",
       "id": "package_dependencies_angular_ssr",
-      "community": 4,
+      "community": 5,
       "norm_label": "@angular/ssr"
     },
     {
       "label": "@ng-icons/bootstrap-icons",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L28",
+      "source_location": "L27",
       "_origin": "ast",
       "id": "package_dependencies_ng_icons_bootstrap_icons",
-      "community": 4,
+      "community": 5,
       "norm_label": "@ng-icons/bootstrap-icons"
     },
     {
       "label": "@ng-icons/core",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L29",
+      "source_location": "L28",
       "_origin": "ast",
       "id": "package_dependencies_ng_icons_core",
-      "community": 4,
+      "community": 5,
       "norm_label": "@ng-icons/core"
     },
     {
       "label": "@tailwindcss/postcss",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L30",
+      "source_location": "L29",
       "_origin": "ast",
       "id": "package_dependencies_tailwindcss_postcss",
-      "community": 4,
+      "community": 5,
       "norm_label": "@tailwindcss/postcss"
     },
     {
       "label": "@vercel/analytics",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L31",
+      "source_location": "L30",
       "_origin": "ast",
       "id": "package_dependencies_vercel_analytics",
-      "community": 4,
+      "community": 5,
       "norm_label": "@vercel/analytics"
     },
     {
       "label": "daisyui",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L32",
+      "source_location": "L31",
       "_origin": "ast",
       "id": "package_dependencies_daisyui",
-      "community": 4,
+      "community": 5,
       "norm_label": "daisyui"
     },
     {
       "label": "express",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L33",
+      "source_location": "L32",
       "_origin": "ast",
       "id": "package_dependencies_express",
-      "community": 4,
+      "community": 5,
       "norm_label": "express"
     },
     {
       "label": "postcss",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L34",
+      "source_location": "L33",
       "_origin": "ast",
       "id": "package_dependencies_postcss",
-      "community": 4,
+      "community": 5,
       "norm_label": "postcss"
     },
     {
       "label": "rxjs",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L35",
+      "source_location": "L34",
       "_origin": "ast",
       "id": "package_dependencies_rxjs",
-      "community": 4,
+      "community": 5,
       "norm_label": "rxjs"
     },
     {
       "label": "tailwindcss",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L36",
+      "source_location": "L35",
       "_origin": "ast",
       "id": "package_dependencies_tailwindcss",
-      "community": 4,
+      "community": 5,
       "norm_label": "tailwindcss"
     },
     {
       "label": "tslib",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L37",
+      "source_location": "L36",
       "_origin": "ast",
       "id": "package_dependencies_tslib",
-      "community": 4,
+      "community": 5,
       "norm_label": "tslib"
     },
     {
       "label": "zone.js",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L38",
+      "source_location": "L37",
       "_origin": "ast",
       "id": "package_dependencies_zone_js",
-      "community": 4,
+      "community": 5,
       "norm_label": "zone.js"
     },
     {
       "label": "devDependencies",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L40",
+      "source_location": "L39",
       "_origin": "ast",
       "id": "package_devdependencies",
-      "community": 9,
+      "community": 2,
       "norm_label": "devdependencies"
     },
     {
       "label": "@angular/build",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L41",
+      "source_location": "L40",
       "_origin": "ast",
       "id": "package_devdependencies_angular_build",
-      "community": 9,
+      "community": 2,
       "norm_label": "@angular/build"
     },
     {
       "label": "@angular/cli",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L42",
+      "source_location": "L41",
       "_origin": "ast",
       "id": "package_devdependencies_angular_cli",
-      "community": 9,
+      "community": 2,
       "norm_label": "@angular/cli"
     },
     {
       "label": "@angular/compiler-cli",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L43",
+      "source_location": "L42",
       "_origin": "ast",
       "id": "package_devdependencies_angular_compiler_cli",
-      "community": 9,
+      "community": 2,
       "norm_label": "@angular/compiler-cli"
     },
     {
       "label": "@tailwindcss/typography",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L44",
+      "source_location": "L43",
       "_origin": "ast",
       "id": "package_devdependencies_tailwindcss_typography",
-      "community": 9,
+      "community": 2,
       "norm_label": "@tailwindcss/typography"
     },
     {
       "label": "@types/express",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L45",
+      "source_location": "L44",
       "_origin": "ast",
       "id": "package_devdependencies_types_express",
-      "community": 9,
+      "community": 2,
       "norm_label": "@types/express"
     },
     {
       "label": "@types/jasmine",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L46",
+      "source_location": "L45",
       "_origin": "ast",
       "id": "package_devdependencies_types_jasmine",
-      "community": 9,
+      "community": 2,
       "norm_label": "@types/jasmine"
     },
     {
       "label": "@types/node",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L47",
+      "source_location": "L46",
       "_origin": "ast",
       "id": "package_devdependencies_types_node",
-      "community": 9,
+      "community": 2,
       "norm_label": "@types/node"
     },
     {
       "label": "jasmine-core",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L48",
+      "source_location": "L47",
       "_origin": "ast",
       "id": "package_devdependencies_jasmine_core",
-      "community": 9,
+      "community": 2,
       "norm_label": "jasmine-core"
     },
     {
       "label": "karma",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L49",
+      "source_location": "L48",
       "_origin": "ast",
       "id": "package_devdependencies_karma",
-      "community": 9,
+      "community": 2,
       "norm_label": "karma"
     },
     {
       "label": "karma-chrome-launcher",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L50",
+      "source_location": "L49",
       "_origin": "ast",
       "id": "package_devdependencies_karma_chrome_launcher",
-      "community": 9,
+      "community": 2,
       "norm_label": "karma-chrome-launcher"
     },
     {
       "label": "karma-coverage",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L51",
+      "source_location": "L50",
       "_origin": "ast",
       "id": "package_devdependencies_karma_coverage",
-      "community": 9,
+      "community": 2,
       "norm_label": "karma-coverage"
     },
     {
       "label": "karma-jasmine",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L52",
+      "source_location": "L51",
       "_origin": "ast",
       "id": "package_devdependencies_karma_jasmine",
-      "community": 9,
+      "community": 2,
       "norm_label": "karma-jasmine"
     },
     {
       "label": "karma-jasmine-html-reporter",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L53",
+      "source_location": "L52",
       "_origin": "ast",
       "id": "package_devdependencies_karma_jasmine_html_reporter",
-      "community": 9,
+      "community": 2,
       "norm_label": "karma-jasmine-html-reporter"
     },
     {
       "label": "typescript",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L54",
+      "source_location": "L53",
       "_origin": "ast",
       "id": "package_devdependencies_typescript",
-      "community": 9,
+      "community": 2,
       "norm_label": "typescript"
     },
     {
@@ -1270,7 +1260,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "scripts_set_env",
-      "community": 13,
+      "community": 12,
       "norm_label": "set-env.mjs"
     },
     {
@@ -1280,7 +1270,7 @@
       "source_location": "L19",
       "_origin": "ast",
       "id": "scripts_set_env_root",
-      "community": 13,
+      "community": 12,
       "norm_label": "root"
     },
     {
@@ -1290,7 +1280,7 @@
       "source_location": "L20",
       "_origin": "ast",
       "id": "scripts_set_env_envpath",
-      "community": 13,
+      "community": 12,
       "norm_label": "envpath"
     },
     {
@@ -1300,7 +1290,7 @@
       "source_location": "L21",
       "_origin": "ast",
       "id": "scripts_set_env_devout",
-      "community": 13,
+      "community": 12,
       "norm_label": "devout"
     },
     {
@@ -1310,7 +1300,7 @@
       "source_location": "L22",
       "_origin": "ast",
       "id": "scripts_set_env_prodout",
-      "community": 13,
+      "community": 12,
       "norm_label": "prodout"
     },
     {
@@ -1320,7 +1310,7 @@
       "source_location": "L24",
       "_origin": "ast",
       "id": "scripts_set_env_loaddotenv",
-      "community": 13,
+      "community": 12,
       "norm_label": "loaddotenv()"
     },
     {
@@ -1330,7 +1320,7 @@
       "source_location": "L34",
       "_origin": "ast",
       "id": "scripts_set_env_resolve",
-      "community": 13,
+      "community": 12,
       "norm_label": "resolve()"
     },
     {
@@ -1340,7 +1330,7 @@
       "source_location": "L42",
       "_origin": "ast",
       "id": "scripts_set_env_render",
-      "community": 13,
+      "community": 12,
       "norm_label": "render()"
     },
     {
@@ -1350,7 +1340,7 @@
       "source_location": "L57",
       "_origin": "ast",
       "id": "scripts_set_env_envvars",
-      "community": 13,
+      "community": 12,
       "norm_label": "envvars"
     },
     {
@@ -1360,7 +1350,7 @@
       "source_location": "L58",
       "_origin": "ast",
       "id": "scripts_set_env_google",
-      "community": 13,
+      "community": 12,
       "norm_label": "google"
     },
     {
@@ -1370,7 +1360,7 @@
       "source_location": "L59",
       "_origin": "ast",
       "id": "scripts_set_env_haslocalenv",
-      "community": 13,
+      "community": 12,
       "norm_label": "haslocalenv"
     },
     {
@@ -1580,7 +1570,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_app_constants_booking_config",
-      "community": 2,
+      "community": 3,
       "norm_label": "booking-config.ts"
     },
     {
@@ -1590,7 +1580,7 @@
       "source_location": "L3",
       "_origin": "ast",
       "id": "src_app_constants_booking_config_bookingconfig",
-      "community": 2,
+      "community": 3,
       "norm_label": "bookingconfig"
     },
     {
@@ -1600,7 +1590,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_app_constants_const",
-      "community": 5,
+      "community": 6,
       "norm_label": "const.ts"
     },
     {
@@ -1610,7 +1600,7 @@
       "source_location": "L4",
       "_origin": "ast",
       "id": "src_app_constants_const_experiences",
-      "community": 5,
+      "community": 6,
       "norm_label": "experiences"
     },
     {
@@ -1620,7 +1610,7 @@
       "source_location": "L125",
       "_origin": "ast",
       "id": "src_app_constants_const_technicalskills",
-      "community": 5,
+      "community": 6,
       "norm_label": "technicalskills"
     },
     {
@@ -1640,7 +1630,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_app_constants_environment",
-      "community": 2,
+      "community": 3,
       "norm_label": "environment.ts"
     },
     {
@@ -1650,7 +1640,7 @@
       "source_location": "L9",
       "_origin": "ast",
       "id": "src_app_constants_environment_googlecredentials",
-      "community": 2,
+      "community": 3,
       "norm_label": "googlecredentials"
     },
     {
@@ -1660,7 +1650,7 @@
       "source_location": "L18",
       "_origin": "ast",
       "id": "src_app_constants_environment_environmentinterface",
-      "community": 2,
+      "community": 3,
       "norm_label": "environmentinterface"
     },
     {
@@ -1670,7 +1660,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_app_constants_types_d",
-      "community": 5,
+      "community": 6,
       "norm_label": "types.d.ts"
     },
     {
@@ -1680,7 +1670,7 @@
       "source_location": "L3",
       "_origin": "ast",
       "id": "src_app_constants_types_d_experienceinterface",
-      "community": 5,
+      "community": 6,
       "norm_label": "experienceinterface"
     },
     {
@@ -1690,7 +1680,7 @@
       "source_location": "L10",
       "_origin": "ast",
       "id": "src_app_constants_types_d_experiencecontentinterface",
-      "community": 5,
+      "community": 6,
       "norm_label": "experiencecontentinterface"
     },
     {
@@ -1700,7 +1690,7 @@
       "source_location": "L17",
       "_origin": "ast",
       "id": "src_app_constants_types_d_skillsinterface",
-      "community": 5,
+      "community": 6,
       "norm_label": "skillsinterface"
     },
     {
@@ -1710,7 +1700,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_app_models_booking",
-      "community": 2,
+      "community": 3,
       "norm_label": "booking.ts"
     },
     {
@@ -1720,7 +1710,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_app_models_booking_busyblock",
-      "community": 2,
+      "community": 3,
       "norm_label": "busyblock"
     },
     {
@@ -1730,7 +1720,7 @@
       "source_location": "L9",
       "_origin": "ast",
       "id": "src_app_models_booking_durationoption",
-      "community": 2,
+      "community": 3,
       "norm_label": "durationoption"
     },
     {
@@ -1740,7 +1730,7 @@
       "source_location": "L14",
       "_origin": "ast",
       "id": "src_app_models_booking_bookingconfig",
-      "community": 2,
+      "community": 3,
       "norm_label": "bookingconfig"
     },
     {
@@ -1750,7 +1740,7 @@
       "source_location": "L42",
       "_origin": "ast",
       "id": "src_app_models_booking_bookingdetails",
-      "community": 2,
+      "community": 3,
       "norm_label": "bookingdetails"
     },
     {
@@ -1760,7 +1750,7 @@
       "source_location": "L50",
       "_origin": "ast",
       "id": "src_app_models_booking_timeslot",
-      "community": 2,
+      "community": 3,
       "norm_label": "timeslot"
     },
     {
@@ -1770,7 +1760,7 @@
       "source_location": "L63",
       "_origin": "ast",
       "id": "src_app_models_booking_dayavailability",
-      "community": 7,
+      "community": 3,
       "norm_label": "dayavailability"
     },
     {
@@ -1780,7 +1770,7 @@
       "source_location": "L76",
       "_origin": "ast",
       "id": "src_app_models_booking_storedbooking",
-      "community": 2,
+      "community": 3,
       "norm_label": "storedbooking"
     },
     {
@@ -1790,7 +1780,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_app_models_experience_content_spec",
-      "community": 5,
+      "community": 6,
       "norm_label": "experience-content.spec.ts"
     },
     {
@@ -1800,7 +1790,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_app_models_experience_content",
-      "community": 5,
+      "community": 6,
       "norm_label": "experience-content.ts"
     },
     {
@@ -1810,7 +1800,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_app_models_experience_content_experiencecontent",
-      "community": 5,
+      "community": 6,
       "norm_label": "experiencecontent"
     },
     {
@@ -1820,7 +1810,7 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "src_app_models_experience_content_experiencecontent_constructor",
-      "community": 5,
+      "community": 6,
       "norm_label": ".constructor()"
     },
     {
@@ -1830,7 +1820,7 @@
       "source_location": "L9",
       "_origin": "ast",
       "id": "src_app_models_experience_content_experiencecontent_data",
-      "community": 5,
+      "community": 6,
       "norm_label": ".data()"
     },
     {
@@ -1840,7 +1830,7 @@
       "source_location": "L23",
       "_origin": "ast",
       "id": "src_app_models_experience_content_experiencecontent_isstring",
-      "community": 5,
+      "community": 6,
       "norm_label": ".isstring()"
     },
     {
@@ -1850,7 +1840,7 @@
       "source_location": "L27",
       "_origin": "ast",
       "id": "src_app_models_experience_content_experiencecontent_isarrayofbullets",
-      "community": 5,
+      "community": 6,
       "norm_label": ".isarrayofbullets()"
     },
     {
@@ -1860,7 +1850,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_app_pages_book_book_component",
-      "community": 2,
+      "community": 3,
       "norm_label": "book.component.ts"
     },
     {
@@ -1870,7 +1860,7 @@
       "source_location": "L20",
       "_origin": "ast",
       "id": "src_app_pages_book_book_component_bookingform",
-      "community": 2,
+      "community": 3,
       "norm_label": "bookingform"
     },
     {
@@ -1880,7 +1870,7 @@
       "source_location": "L40",
       "_origin": "ast",
       "id": "src_app_pages_book_book_component_bookcomponent",
-      "community": 7,
+      "community": 8,
       "norm_label": "bookcomponent"
     },
     {
@@ -1890,7 +1880,7 @@
       "source_location": "L77",
       "_origin": "ast",
       "id": "src_app_pages_book_book_component_bookcomponent_constructor",
-      "community": 7,
+      "community": 8,
       "norm_label": ".constructor()"
     },
     {
@@ -1900,7 +1890,7 @@
       "source_location": "L83",
       "_origin": "ast",
       "id": "src_app_pages_book_book_component_bookcomponent_ngoninit",
-      "community": 7,
+      "community": 8,
       "norm_label": ".ngoninit()"
     },
     {
@@ -1910,7 +1900,7 @@
       "source_location": "L94",
       "_origin": "ast",
       "id": "src_app_pages_book_book_component_bookcomponent_init",
-      "community": 7,
+      "community": 8,
       "norm_label": ".#init()"
     },
     {
@@ -1920,7 +1910,7 @@
       "source_location": "L110",
       "_origin": "ast",
       "id": "src_app_pages_book_book_component_bookcomponent_rebuildmonth",
-      "community": 7,
+      "community": 8,
       "norm_label": ".#rebuildmonth()"
     },
     {
@@ -1930,7 +1920,7 @@
       "source_location": "L120",
       "_origin": "ast",
       "id": "src_app_pages_book_book_component_bookcomponent_prevmonth",
-      "community": 7,
+      "community": 8,
       "norm_label": ".prevmonth()"
     },
     {
@@ -1940,7 +1930,7 @@
       "source_location": "L126",
       "_origin": "ast",
       "id": "src_app_pages_book_book_component_bookcomponent_nextmonth",
-      "community": 7,
+      "community": 8,
       "norm_label": ".nextmonth()"
     },
     {
@@ -1950,7 +1940,7 @@
       "source_location": "L132",
       "_origin": "ast",
       "id": "src_app_pages_book_book_component_bookcomponent_selectday",
-      "community": 7,
+      "community": 8,
       "norm_label": ".selectday()"
     },
     {
@@ -1960,7 +1950,7 @@
       "source_location": "L138",
       "_origin": "ast",
       "id": "src_app_pages_book_book_component_bookcomponent_setduration",
-      "community": 7,
+      "community": 8,
       "norm_label": ".setduration()"
     },
     {
@@ -1970,7 +1960,7 @@
       "source_location": "L144",
       "_origin": "ast",
       "id": "src_app_pages_book_book_component_bookcomponent_refreshslots",
-      "community": 7,
+      "community": 8,
       "norm_label": ".refreshslots()"
     },
     {
@@ -1980,7 +1970,7 @@
       "source_location": "L150",
       "_origin": "ast",
       "id": "src_app_pages_book_book_component_bookcomponent_selectslot",
-      "community": 7,
+      "community": 8,
       "norm_label": ".selectslot()"
     },
     {
@@ -1990,7 +1980,7 @@
       "source_location": "L154",
       "_origin": "ast",
       "id": "src_app_pages_book_book_component_bookcomponent_details",
-      "community": 7,
+      "community": 8,
       "norm_label": ".details()"
     },
     {
@@ -2000,7 +1990,7 @@
       "source_location": "L164",
       "_origin": "ast",
       "id": "src_app_pages_book_book_component_bookcomponent_cansubmit",
-      "community": 7,
+      "community": 8,
       "norm_label": ".cansubmit()"
     },
     {
@@ -2010,7 +2000,7 @@
       "source_location": "L173",
       "_origin": "ast",
       "id": "src_app_pages_book_book_component_bookcomponent_connectgoogle",
-      "community": 7,
+      "community": 8,
       "norm_label": ".connectgoogle()"
     },
     {
@@ -2020,7 +2010,7 @@
       "source_location": "L182",
       "_origin": "ast",
       "id": "src_app_pages_book_book_component_bookcomponent_confirmbooking",
-      "community": 7,
+      "community": 8,
       "norm_label": ".confirmbooking()"
     },
     {
@@ -2030,7 +2020,7 @@
       "source_location": "L202",
       "_origin": "ast",
       "id": "src_app_pages_book_book_component_bookcomponent_downloadics",
-      "community": 7,
+      "community": 8,
       "norm_label": ".downloadics()"
     },
     {
@@ -2040,7 +2030,7 @@
       "source_location": "L216",
       "_origin": "ast",
       "id": "src_app_pages_book_book_component_bookcomponent_buildics",
-      "community": 2,
+      "community": 3,
       "norm_label": ".#buildics()"
     },
     {
@@ -2050,7 +2040,7 @@
       "source_location": "L245",
       "_origin": "ast",
       "id": "src_app_pages_book_book_component_bookcomponent_daystatelabel",
-      "community": 7,
+      "community": 8,
       "norm_label": ".daystatelabel()"
     },
     {
@@ -2060,7 +2050,7 @@
       "source_location": "L253",
       "_origin": "ast",
       "id": "src_app_pages_book_book_component_bookcomponent_blocklabel",
-      "community": 7,
+      "community": 8,
       "norm_label": ".blocklabel()"
     },
     {
@@ -2070,7 +2060,7 @@
       "source_location": "L259",
       "_origin": "ast",
       "id": "src_app_pages_book_book_component_bookcomponent_hhmm",
-      "community": 7,
+      "community": 8,
       "norm_label": ".#hhmm()"
     },
     {
@@ -2080,7 +2070,7 @@
       "source_location": "L265",
       "_origin": "ast",
       "id": "src_app_pages_book_book_component_bookcomponent_reset",
-      "community": 7,
+      "community": 8,
       "norm_label": ".reset()"
     },
     {
@@ -2090,7 +2080,7 @@
       "source_location": "L272",
       "_origin": "ast",
       "id": "src_app_pages_book_book_component_bookcomponent_seodata",
-      "community": 7,
+      "community": 8,
       "norm_label": ".#seodata()"
     },
     {
@@ -2100,7 +2090,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_app_pages_home_home_component_spec",
-      "community": 5,
+      "community": 6,
       "norm_label": "home.component.spec.ts"
     },
     {
@@ -2110,7 +2100,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_app_pages_home_home_component",
-      "community": 5,
+      "community": 6,
       "norm_label": "home.component.ts"
     },
     {
@@ -2120,7 +2110,7 @@
       "source_location": "L24",
       "_origin": "ast",
       "id": "src_app_pages_home_home_component_homecomponent",
-      "community": 5,
+      "community": 6,
       "norm_label": "homecomponent"
     },
     {
@@ -2130,7 +2120,7 @@
       "source_location": "L36",
       "_origin": "ast",
       "id": "src_app_pages_home_home_component_homecomponent_ngoninit",
-      "community": 5,
+      "community": 6,
       "norm_label": ".ngoninit()"
     },
     {
@@ -2140,7 +2130,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_app_pages_legal_notice_legal_notice_component_spec",
-      "community": 12,
+      "community": 11,
       "norm_label": "legal-notice.component.spec.ts"
     },
     {
@@ -2150,7 +2140,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_app_pages_legal_notice_legal_notice_component",
-      "community": 12,
+      "community": 11,
       "norm_label": "legal-notice.component.ts"
     },
     {
@@ -2160,7 +2150,7 @@
       "source_location": "L11",
       "_origin": "ast",
       "id": "src_app_pages_legal_notice_legal_notice_component_legalnoticecomponent",
-      "community": 12,
+      "community": 11,
       "norm_label": "legalnoticecomponent"
     },
     {
@@ -2170,7 +2160,7 @@
       "source_location": "L14",
       "_origin": "ast",
       "id": "src_app_pages_legal_notice_legal_notice_component_legalnoticecomponent_ngoninit",
-      "community": 12,
+      "community": 11,
       "norm_label": ".ngoninit()"
     },
     {
@@ -2180,7 +2170,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_app_services_booking_service",
-      "community": 2,
+      "community": 3,
       "norm_label": "booking.service.ts"
     },
     {
@@ -2190,247 +2180,247 @@
       "source_location": "L13",
       "_origin": "ast",
       "id": "src_app_services_booking_service_bookingservice",
-      "community": 3,
+      "community": 4,
       "norm_label": "bookingservice"
     },
     {
       "label": ".isBrowser()",
       "file_type": "code",
       "source_file": "src/app/services/booking.service.ts",
-      "source_location": "L20",
+      "source_location": "L24",
       "_origin": "ast",
       "id": "src_app_services_booking_service_bookingservice_isbrowser",
-      "community": 3,
+      "community": 4,
       "norm_label": ".isbrowser()"
     },
     {
       "label": ".googleApiKey()",
       "file_type": "code",
       "source_file": "src/app/services/booking.service.ts",
-      "source_location": "L25",
+      "source_location": "L29",
       "_origin": "ast",
       "id": "src_app_services_booking_service_bookingservice_googleapikey",
-      "community": 3,
+      "community": 4,
       "norm_label": ".googleapikey()"
     },
     {
       "label": ".googleCalendarId()",
       "file_type": "code",
       "source_file": "src/app/services/booking.service.ts",
-      "source_location": "L29",
+      "source_location": "L33",
       "_origin": "ast",
       "id": "src_app_services_booking_service_bookingservice_googlecalendarid",
-      "community": 3,
+      "community": 4,
       "norm_label": ".googlecalendarid()"
     },
     {
       "label": ".googleClientId()",
       "file_type": "code",
       "source_file": "src/app/services/booking.service.ts",
-      "source_location": "L33",
+      "source_location": "L37",
       "_origin": "ast",
       "id": "src_app_services_booking_service_bookingservice_googleclientid",
-      "community": 3,
+      "community": 4,
       "norm_label": ".googleclientid()"
     },
     {
       "label": ".hasPublicReadAccess()",
       "file_type": "code",
       "source_file": "src/app/services/booking.service.ts",
-      "source_location": "L37",
+      "source_location": "L41",
       "_origin": "ast",
       "id": "src_app_services_booking_service_bookingservice_haspublicreadaccess",
-      "community": 3,
+      "community": 4,
       "norm_label": ".haspublicreadaccess()"
     },
     {
       "label": ".durationOptions()",
       "file_type": "code",
       "source_file": "src/app/services/booking.service.ts",
-      "source_location": "L42",
+      "source_location": "L46",
       "_origin": "ast",
       "id": "src_app_services_booking_service_bookingservice_durationoptions",
-      "community": 3,
+      "community": 4,
       "norm_label": ".durationoptions()"
     },
     {
       "label": ".activeBusy()",
       "file_type": "code",
       "source_file": "src/app/services/booking.service.ts",
-      "source_location": "L51",
+      "source_location": "L55",
       "_origin": "ast",
       "id": "src_app_services_booking_service_bookingservice_activebusy",
-      "community": 3,
+      "community": 4,
       "norm_label": ".activebusy()"
     },
     {
       "label": ".currentLocalDateString()",
       "file_type": "code",
       "source_file": "src/app/services/booking.service.ts",
-      "source_location": "L56",
+      "source_location": "L60",
       "_origin": "ast",
       "id": "src_app_services_booking_service_bookingservice_currentlocaldatestring",
-      "community": 3,
+      "community": 4,
       "norm_label": ".currentlocaldatestring()"
     },
     {
       "label": ".buildMonth()",
       "file_type": "code",
       "source_file": "src/app/services/booking.service.ts",
-      "source_location": "L61",
+      "source_location": "L65",
       "_origin": "ast",
       "id": "src_app_services_booking_service_bookingservice_buildmonth",
-      "community": 3,
+      "community": 4,
       "norm_label": ".buildmonth()"
     },
     {
       "label": ".freeSlotsOn()",
       "file_type": "code",
       "source_file": "src/app/services/booking.service.ts",
-      "source_location": "L112",
+      "source_location": "L116",
       "_origin": "ast",
       "id": "src_app_services_booking_service_bookingservice_freeslotson",
-      "community": 3,
+      "community": 4,
       "norm_label": ".freeslotson()"
     },
     {
       "label": ".busyBlocksOn()",
       "file_type": "code",
       "source_file": "src/app/services/booking.service.ts",
-      "source_location": "L118",
+      "source_location": "L122",
       "_origin": "ast",
       "id": "src_app_services_booking_service_bookingservice_busyblockson",
-      "community": 3,
+      "community": 4,
       "norm_label": ".busyblockson()"
     },
     {
       "label": ".#busyRangesMinutesOn()",
       "file_type": "code",
       "source_file": "src/app/services/booking.service.ts",
-      "source_location": "L178",
+      "source_location": "L182",
       "_origin": "ast",
       "id": "src_app_services_booking_service_bookingservice_busyrangesminuteson",
-      "community": 3,
+      "community": 4,
       "norm_label": ".#busyrangesminuteson()"
     },
     {
       "label": ".#overlaps()",
       "file_type": "code",
       "source_file": "src/app/services/booking.service.ts",
-      "source_location": "L184",
+      "source_location": "L188",
       "_origin": "ast",
       "id": "src_app_services_booking_service_bookingservice_overlaps",
-      "community": 3,
+      "community": 4,
       "norm_label": ".#overlaps()"
     },
     {
       "label": ".buildGoogleCalendarUrl()",
       "file_type": "code",
       "source_file": "src/app/services/booking.service.ts",
-      "source_location": "L189",
+      "source_location": "L193",
       "_origin": "ast",
       "id": "src_app_services_booking_service_bookingservice_buildgooglecalendarurl",
-      "community": 3,
+      "community": 4,
       "norm_label": ".buildgooglecalendarurl()"
     },
     {
       "label": ".readBookings()",
       "file_type": "code",
       "source_file": "src/app/services/booking.service.ts",
-      "source_location": "L210",
+      "source_location": "L214",
       "_origin": "ast",
       "id": "src_app_services_booking_service_bookingservice_readbookings",
-      "community": 3,
+      "community": 4,
       "norm_label": ".readbookings()"
     },
     {
       "label": ".saveBooking()",
       "file_type": "code",
       "source_file": "src/app/services/booking.service.ts",
-      "source_location": "L219",
+      "source_location": "L223",
       "_origin": "ast",
       "id": "src_app_services_booking_service_bookingservice_savebooking",
-      "community": 3,
+      "community": 4,
       "norm_label": ".savebooking()"
     },
     {
       "label": ".#durationLabel()",
       "file_type": "code",
       "source_file": "src/app/services/booking.service.ts",
-      "source_location": "L228",
+      "source_location": "L232",
       "_origin": "ast",
       "id": "src_app_services_booking_service_bookingservice_durationlabel",
-      "community": 3,
+      "community": 4,
       "norm_label": ".#durationlabel()"
     },
     {
       "label": ".#localToEpoch()",
       "file_type": "code",
       "source_file": "src/app/services/booking.service.ts",
-      "source_location": "L235",
+      "source_location": "L239",
       "_origin": "ast",
       "id": "src_app_services_booking_service_bookingservice_localtoepoch",
-      "community": 3,
+      "community": 4,
       "norm_label": ".#localtoepoch()"
     },
     {
       "label": ".#offsetMin()",
       "file_type": "code",
       "source_file": "src/app/services/booking.service.ts",
-      "source_location": "L246",
+      "source_location": "L250",
       "_origin": "ast",
       "id": "src_app_services_booking_service_bookingservice_offsetmin",
-      "community": 3,
+      "community": 4,
       "norm_label": ".#offsetmin()"
     },
     {
       "label": ".#localFields()",
       "file_type": "code",
       "source_file": "src/app/services/booking.service.ts",
-      "source_location": "L264",
+      "source_location": "L268",
       "_origin": "ast",
       "id": "src_app_services_booking_service_bookingservice_localfields",
-      "community": 3,
+      "community": 4,
       "norm_label": ".#localfields()"
     },
     {
       "label": ".#fmtMin()",
       "file_type": "code",
       "source_file": "src/app/services/booking.service.ts",
-      "source_location": "L282",
+      "source_location": "L286",
       "_origin": "ast",
       "id": "src_app_services_booking_service_bookingservice_fmtmin",
-      "community": 3,
+      "community": 4,
       "norm_label": ".#fmtmin()"
     },
     {
       "label": ".#formatEpoch()",
       "file_type": "code",
       "source_file": "src/app/services/booking.service.ts",
-      "source_location": "L288",
+      "source_location": "L292",
       "_origin": "ast",
       "id": "src_app_services_booking_service_bookingservice_formatepoch",
-      "community": 3,
+      "community": 4,
       "norm_label": ".#formatepoch()"
     },
     {
       "label": ".formatClock()",
       "file_type": "code",
       "source_file": "src/app/services/booking.service.ts",
-      "source_location": "L295",
+      "source_location": "L299",
       "_origin": "ast",
       "id": "src_app_services_booking_service_bookingservice_formatclock",
-      "community": 3,
+      "community": 4,
       "norm_label": ".formatclock()"
     },
     {
       "label": ".formatDateLabel()",
       "file_type": "code",
       "source_file": "src/app/services/booking.service.ts",
-      "source_location": "L302",
+      "source_location": "L306",
       "_origin": "ast",
       "id": "src_app_services_booking_service_bookingservice_formatdatelabel",
-      "community": 3,
+      "community": 4,
       "norm_label": ".formatdatelabel()"
     },
     {
@@ -2440,7 +2430,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_app_services_google_calendar_service",
-      "community": 2,
+      "community": 3,
       "norm_label": "google-calendar.service.ts"
     },
     {
@@ -2450,7 +2440,7 @@
       "source_location": "L6",
       "_origin": "ast",
       "id": "src_app_services_google_calendar_service_busysource",
-      "community": 2,
+      "community": 3,
       "norm_label": "busysource"
     },
     {
@@ -2460,7 +2450,7 @@
       "source_location": "L8",
       "_origin": "ast",
       "id": "src_app_services_google_calendar_service_calendarevent",
-      "community": 2,
+      "community": 3,
       "norm_label": "calendarevent"
     },
     {
@@ -2470,7 +2460,7 @@
       "source_location": "L14",
       "_origin": "ast",
       "id": "src_app_services_google_calendar_service_calendarresponse",
-      "community": 2,
+      "community": 3,
       "norm_label": "calendarresponse"
     },
     {
@@ -2480,7 +2470,7 @@
       "source_location": "L19",
       "_origin": "ast",
       "id": "src_app_services_google_calendar_service_gistokenresponse",
-      "community": 2,
+      "community": 3,
       "norm_label": "gistokenresponse"
     },
     {
@@ -2490,7 +2480,7 @@
       "source_location": "L26",
       "_origin": "ast",
       "id": "src_app_services_google_calendar_service_giswindow",
-      "community": 2,
+      "community": 3,
       "norm_label": "giswindow"
     },
     {
@@ -2597,7 +2587,7 @@
       "label": ".#loadOwnerEvents()",
       "file_type": "code",
       "source_file": "src/app/services/google-calendar.service.ts",
-      "source_location": "L214",
+      "source_location": "L215",
       "_origin": "ast",
       "id": "src_app_services_google_calendar_service_googlecalendarservice_loadownerevents",
       "community": 10,
@@ -2607,17 +2597,17 @@
       "label": ".createEvent()",
       "file_type": "code",
       "source_file": "src/app/services/google-calendar.service.ts",
-      "source_location": "L238",
+      "source_location": "L240",
       "_origin": "ast",
       "id": "src_app_services_google_calendar_service_googlecalendarservice_createevent",
-      "community": 2,
+      "community": 3,
       "norm_label": ".createevent()"
     },
     {
       "label": ".#baseUrl()",
       "file_type": "code",
       "source_file": "src/app/services/google-calendar.service.ts",
-      "source_location": "L279",
+      "source_location": "L281",
       "_origin": "ast",
       "id": "src_app_services_google_calendar_service_googlecalendarservice_baseurl",
       "community": 10,
@@ -2627,7 +2617,7 @@
       "label": ".#toBusyBlocks()",
       "file_type": "code",
       "source_file": "src/app/services/google-calendar.service.ts",
-      "source_location": "L292",
+      "source_location": "L294",
       "_origin": "ast",
       "id": "src_app_services_google_calendar_service_googlecalendarservice_tobusyblocks",
       "community": 10,
@@ -2637,7 +2627,7 @@
       "label": ".#hourOf()",
       "file_type": "code",
       "source_file": "src/app/services/google-calendar.service.ts",
-      "source_location": "L308",
+      "source_location": "L310",
       "_origin": "ast",
       "id": "src_app_services_google_calendar_service_googlecalendarservice_hourof",
       "community": 10,
@@ -2720,7 +2710,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_app_services_seo_service_spec",
-      "community": 12,
+      "community": 11,
       "norm_label": "seo.service.spec.ts"
     },
     {
@@ -2730,7 +2720,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_app_services_seo_service",
-      "community": 12,
+      "community": 11,
       "norm_label": "seo.service.ts"
     },
     {
@@ -2740,7 +2730,7 @@
       "source_location": "L6",
       "_origin": "ast",
       "id": "src_app_services_seo_service_seoservice",
-      "community": 12,
+      "community": 11,
       "norm_label": "seoservice"
     },
     {
@@ -2750,7 +2740,7 @@
       "source_location": "L11",
       "_origin": "ast",
       "id": "src_app_services_seo_service_seoservice_settitle",
-      "community": 12,
+      "community": 11,
       "norm_label": ".settitle()"
     },
     {
@@ -2760,7 +2750,7 @@
       "source_location": "L15",
       "_origin": "ast",
       "id": "src_app_services_seo_service_seoservice_setmetadescription",
-      "community": 12,
+      "community": 11,
       "norm_label": ".setmetadescription()"
     },
     {
@@ -2770,7 +2760,7 @@
       "source_location": "L25",
       "_origin": "ast",
       "id": "src_app_services_seo_service_seoservice_updatecanonical",
-      "community": 12,
+      "community": 11,
       "norm_label": ".updatecanonical()"
     },
     {
@@ -2780,7 +2770,7 @@
       "source_location": "L35",
       "_origin": "ast",
       "id": "src_app_services_seo_service_seoservice_setogtags",
-      "community": 12,
+      "community": 11,
       "norm_label": ".setogtags()"
     },
     {
@@ -2790,7 +2780,7 @@
       "source_location": "L52",
       "_origin": "ast",
       "id": "src_app_services_seo_service_seoservice_setjsonld",
-      "community": 12,
+      "community": 11,
       "norm_label": ".setjsonld()"
     },
     {
@@ -2800,7 +2790,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_app_services_theme_service_spec",
-      "community": 5,
+      "community": 6,
       "norm_label": "theme.service.spec.ts"
     },
     {
@@ -2810,7 +2800,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_app_services_theme_service",
-      "community": 5,
+      "community": 6,
       "norm_label": "theme.service.ts"
     },
     {
@@ -2820,7 +2810,7 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "src_app_services_theme_service_themeservice",
-      "community": 5,
+      "community": 6,
       "norm_label": "themeservice"
     },
     {
@@ -2830,7 +2820,7 @@
       "source_location": "L9",
       "_origin": "ast",
       "id": "src_app_services_theme_service_themeservice_constructor",
-      "community": 5,
+      "community": 6,
       "norm_label": ".constructor()"
     },
     {
@@ -2840,7 +2830,7 @@
       "source_location": "L18",
       "_origin": "ast",
       "id": "src_app_services_theme_service_themeservice_toggle",
-      "community": 5,
+      "community": 6,
       "norm_label": ".toggle()"
     },
     {
@@ -2850,7 +2840,7 @@
       "source_location": "L23",
       "_origin": "ast",
       "id": "src_app_services_theme_service_themeservice_apply",
-      "community": 5,
+      "community": 6,
       "norm_label": ".#apply()"
     },
     {
@@ -2860,7 +2850,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_environments_environment",
-      "community": 2,
+      "community": 3,
       "norm_label": "environment.ts"
     },
     {
@@ -2870,7 +2860,7 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "src_environments_environment_environment",
-      "community": 2,
+      "community": 3,
       "norm_label": "environment"
     },
     {
@@ -2910,7 +2900,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_server",
-      "community": 14,
+      "community": 13,
       "norm_label": "server.ts"
     },
     {
@@ -2920,7 +2910,7 @@
       "source_location": "L11",
       "_origin": "ast",
       "id": "src_server_serverdistfolder",
-      "community": 14,
+      "community": 13,
       "norm_label": "serverdistfolder"
     },
     {
@@ -2930,7 +2920,7 @@
       "source_location": "L12",
       "_origin": "ast",
       "id": "src_server_browserdistfolder",
-      "community": 14,
+      "community": 13,
       "norm_label": "browserdistfolder"
     },
     {
@@ -2940,7 +2930,7 @@
       "source_location": "L14",
       "_origin": "ast",
       "id": "src_server_app",
-      "community": 14,
+      "community": 13,
       "norm_label": "app"
     },
     {
@@ -2950,7 +2940,7 @@
       "source_location": "L15",
       "_origin": "ast",
       "id": "src_server_angularapp",
-      "community": 14,
+      "community": 13,
       "norm_label": "angularapp"
     },
     {
@@ -2960,7 +2950,7 @@
       "source_location": "L67",
       "_origin": "ast",
       "id": "src_server_reqhandler",
-      "community": 14,
+      "community": 13,
       "norm_label": "reqhandler"
     }
   ],
@@ -3749,7 +3739,7 @@
       "relation": "imports",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L42",
+      "source_location": "L41",
       "weight": 1.0,
       "context": "import",
       "source": "package_devdependencies_angular_cli",
@@ -3790,7 +3780,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L15",
+      "source_location": "L14",
       "weight": 1.0,
       "source": "package",
       "target": "package_dependencies",
@@ -3800,7 +3790,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L40",
+      "source_location": "L39",
       "weight": 1.0,
       "source": "package",
       "target": "package_devdependencies",
@@ -3820,7 +3810,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L14",
+      "source_location": "L13",
       "weight": 1.0,
       "source": "package",
       "target": "package_private",
@@ -3850,20 +3840,10 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L9",
-      "weight": 1.0,
-      "source": "package_scripts",
-      "target": "package_scripts_build",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "package.json",
       "source_location": "L8",
       "weight": 1.0,
       "source": "package_scripts",
-      "target": "package_scripts_prebuild",
+      "target": "package_scripts_build",
       "confidence_score": 1.0
     },
     {
@@ -3880,7 +3860,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L12",
+      "source_location": "L11",
       "weight": 1.0,
       "source": "package_scripts",
       "target": "package_scripts_serve_ssr_portfolio",
@@ -3910,7 +3890,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L11",
+      "source_location": "L10",
       "weight": 1.0,
       "source": "package_scripts",
       "target": "package_scripts_test",
@@ -3920,7 +3900,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L10",
+      "source_location": "L9",
       "weight": 1.0,
       "source": "package_scripts",
       "target": "package_scripts_watch",
@@ -3930,7 +3910,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L16",
+      "source_location": "L15",
       "weight": 1.0,
       "source": "package_dependencies",
       "target": "package_dependencies_angular_animations",
@@ -3940,7 +3920,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L17",
+      "source_location": "L16",
       "weight": 1.0,
       "source": "package_dependencies",
       "target": "package_dependencies_angular_cdk",
@@ -3950,7 +3930,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L18",
+      "source_location": "L17",
       "weight": 1.0,
       "source": "package_dependencies",
       "target": "package_dependencies_angular_common",
@@ -3960,7 +3940,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L19",
+      "source_location": "L18",
       "weight": 1.0,
       "source": "package_dependencies",
       "target": "package_dependencies_angular_compiler",
@@ -3970,7 +3950,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L20",
+      "source_location": "L19",
       "weight": 1.0,
       "source": "package_dependencies",
       "target": "package_dependencies_angular_core",
@@ -3980,7 +3960,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L21",
+      "source_location": "L20",
       "weight": 1.0,
       "source": "package_dependencies",
       "target": "package_dependencies_angular_forms",
@@ -3990,7 +3970,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L22",
+      "source_location": "L21",
       "weight": 1.0,
       "source": "package_dependencies",
       "target": "package_dependencies_angular_platform_browser",
@@ -4000,7 +3980,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L23",
+      "source_location": "L22",
       "weight": 1.0,
       "source": "package_dependencies",
       "target": "package_dependencies_angular_platform_browser_dynamic",
@@ -4010,7 +3990,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L24",
+      "source_location": "L23",
       "weight": 1.0,
       "source": "package_dependencies",
       "target": "package_dependencies_angular_platform_server",
@@ -4020,7 +4000,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L25",
+      "source_location": "L24",
       "weight": 1.0,
       "source": "package_dependencies",
       "target": "package_dependencies_angular_router",
@@ -4030,7 +4010,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L26",
+      "source_location": "L25",
       "weight": 1.0,
       "source": "package_dependencies",
       "target": "package_dependencies_angular_service_worker",
@@ -4040,7 +4020,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L27",
+      "source_location": "L26",
       "weight": 1.0,
       "source": "package_dependencies",
       "target": "package_dependencies_angular_ssr",
@@ -4050,7 +4030,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L32",
+      "source_location": "L31",
       "weight": 1.0,
       "source": "package_dependencies",
       "target": "package_dependencies_daisyui",
@@ -4060,7 +4040,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L33",
+      "source_location": "L32",
       "weight": 1.0,
       "source": "package_dependencies",
       "target": "package_dependencies_express",
@@ -4070,7 +4050,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L28",
+      "source_location": "L27",
       "weight": 1.0,
       "source": "package_dependencies",
       "target": "package_dependencies_ng_icons_bootstrap_icons",
@@ -4080,7 +4060,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L29",
+      "source_location": "L28",
       "weight": 1.0,
       "source": "package_dependencies",
       "target": "package_dependencies_ng_icons_core",
@@ -4090,7 +4070,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L34",
+      "source_location": "L33",
       "weight": 1.0,
       "source": "package_dependencies",
       "target": "package_dependencies_postcss",
@@ -4100,7 +4080,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L35",
+      "source_location": "L34",
       "weight": 1.0,
       "source": "package_dependencies",
       "target": "package_dependencies_rxjs",
@@ -4110,7 +4090,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L36",
+      "source_location": "L35",
       "weight": 1.0,
       "source": "package_dependencies",
       "target": "package_dependencies_tailwindcss",
@@ -4120,7 +4100,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L30",
+      "source_location": "L29",
       "weight": 1.0,
       "source": "package_dependencies",
       "target": "package_dependencies_tailwindcss_postcss",
@@ -4130,7 +4110,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L37",
+      "source_location": "L36",
       "weight": 1.0,
       "source": "package_dependencies",
       "target": "package_dependencies_tslib",
@@ -4140,7 +4120,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L31",
+      "source_location": "L30",
       "weight": 1.0,
       "source": "package_dependencies",
       "target": "package_dependencies_vercel_analytics",
@@ -4150,7 +4130,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L38",
+      "source_location": "L37",
       "weight": 1.0,
       "source": "package_dependencies",
       "target": "package_dependencies_zone_js",
@@ -4160,7 +4140,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L41",
+      "source_location": "L40",
       "weight": 1.0,
       "source": "package_devdependencies",
       "target": "package_devdependencies_angular_build",
@@ -4170,7 +4150,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L42",
+      "source_location": "L41",
       "weight": 1.0,
       "source": "package_devdependencies",
       "target": "package_devdependencies_angular_cli",
@@ -4180,7 +4160,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L43",
+      "source_location": "L42",
       "weight": 1.0,
       "source": "package_devdependencies",
       "target": "package_devdependencies_angular_compiler_cli",
@@ -4190,7 +4170,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L48",
+      "source_location": "L47",
       "weight": 1.0,
       "source": "package_devdependencies",
       "target": "package_devdependencies_jasmine_core",
@@ -4200,7 +4180,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L49",
+      "source_location": "L48",
       "weight": 1.0,
       "source": "package_devdependencies",
       "target": "package_devdependencies_karma",
@@ -4210,7 +4190,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L50",
+      "source_location": "L49",
       "weight": 1.0,
       "source": "package_devdependencies",
       "target": "package_devdependencies_karma_chrome_launcher",
@@ -4220,7 +4200,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L51",
+      "source_location": "L50",
       "weight": 1.0,
       "source": "package_devdependencies",
       "target": "package_devdependencies_karma_coverage",
@@ -4230,7 +4210,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L52",
+      "source_location": "L51",
       "weight": 1.0,
       "source": "package_devdependencies",
       "target": "package_devdependencies_karma_jasmine",
@@ -4240,7 +4220,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L53",
+      "source_location": "L52",
       "weight": 1.0,
       "source": "package_devdependencies",
       "target": "package_devdependencies_karma_jasmine_html_reporter",
@@ -4250,7 +4230,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L44",
+      "source_location": "L43",
       "weight": 1.0,
       "source": "package_devdependencies",
       "target": "package_devdependencies_tailwindcss_typography",
@@ -4260,7 +4240,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L45",
+      "source_location": "L44",
       "weight": 1.0,
       "source": "package_devdependencies",
       "target": "package_devdependencies_types_express",
@@ -4270,7 +4250,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L46",
+      "source_location": "L45",
       "weight": 1.0,
       "source": "package_devdependencies",
       "target": "package_devdependencies_types_jasmine",
@@ -4280,7 +4260,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L47",
+      "source_location": "L46",
       "weight": 1.0,
       "source": "package_devdependencies",
       "target": "package_devdependencies_types_node",
@@ -4290,7 +4270,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L54",
+      "source_location": "L53",
       "weight": 1.0,
       "source": "package_devdependencies",
       "target": "package_devdependencies_typescript",
@@ -5253,7 +5233,7 @@
       "context": "return_type",
       "confidence": "EXTRACTED",
       "source_file": "src/app/services/booking.service.ts",
-      "source_location": "L51",
+      "source_location": "L55",
       "weight": 1.0,
       "source": "src_app_services_booking_service_bookingservice_activebusy",
       "target": "src_app_models_booking_busyblock",
@@ -5264,7 +5244,7 @@
       "context": "return_type",
       "confidence": "EXTRACTED",
       "source_file": "src/app/services/booking.service.ts",
-      "source_location": "L118",
+      "source_location": "L122",
       "weight": 1.0,
       "source": "src_app_services_booking_service_bookingservice_busyblockson",
       "target": "src_app_models_booking_busyblock",
@@ -5286,7 +5266,7 @@
       "context": "return_type",
       "confidence": "EXTRACTED",
       "source_file": "src/app/services/google-calendar.service.ts",
-      "source_location": "L292",
+      "source_location": "L294",
       "weight": 1.0,
       "source": "src_app_services_google_calendar_service_googlecalendarservice_tobusyblocks",
       "target": "src_app_models_booking_busyblock",
@@ -5308,7 +5288,7 @@
       "context": "return_type",
       "confidence": "EXTRACTED",
       "source_file": "src/app/services/booking.service.ts",
-      "source_location": "L42",
+      "source_location": "L46",
       "weight": 1.0,
       "source": "src_app_services_booking_service_bookingservice_durationoptions",
       "target": "src_app_models_booking_durationoption",
@@ -5385,7 +5365,7 @@
       "context": "parameter_type",
       "confidence": "EXTRACTED",
       "source_file": "src/app/services/booking.service.ts",
-      "source_location": "L189",
+      "source_location": "L193",
       "weight": 1.0,
       "source": "src_app_services_booking_service_bookingservice_buildgooglecalendarurl",
       "target": "src_app_models_booking_bookingdetails",
@@ -5407,7 +5387,7 @@
       "context": "parameter_type",
       "confidence": "EXTRACTED",
       "source_file": "src/app/services/google-calendar.service.ts",
-      "source_location": "L238",
+      "source_location": "L240",
       "weight": 1.0,
       "source": "src_app_services_google_calendar_service_googlecalendarservice_createevent",
       "target": "src_app_models_booking_bookingdetails",
@@ -5462,7 +5442,7 @@
       "context": "parameter_type",
       "confidence": "EXTRACTED",
       "source_file": "src/app/services/booking.service.ts",
-      "source_location": "L189",
+      "source_location": "L193",
       "weight": 1.0,
       "source": "src_app_services_booking_service_bookingservice_buildgooglecalendarurl",
       "target": "src_app_models_booking_timeslot",
@@ -5473,7 +5453,7 @@
       "context": "return_type",
       "confidence": "EXTRACTED",
       "source_file": "src/app/services/booking.service.ts",
-      "source_location": "L112",
+      "source_location": "L116",
       "weight": 1.0,
       "source": "src_app_services_booking_service_bookingservice_freeslotson",
       "target": "src_app_models_booking_timeslot",
@@ -5495,7 +5475,7 @@
       "context": "parameter_type",
       "confidence": "EXTRACTED",
       "source_file": "src/app/services/google-calendar.service.ts",
-      "source_location": "L238",
+      "source_location": "L240",
       "weight": 1.0,
       "source": "src_app_services_google_calendar_service_googlecalendarservice_createevent",
       "target": "src_app_models_booking_timeslot",
@@ -5561,7 +5541,7 @@
       "context": "return_type",
       "confidence": "EXTRACTED",
       "source_file": "src/app/services/booking.service.ts",
-      "source_location": "L61",
+      "source_location": "L65",
       "weight": 1.0,
       "source": "src_app_services_booking_service_bookingservice_buildmonth",
       "target": "src_app_models_booking_dayavailability",
@@ -5583,7 +5563,7 @@
       "context": "return_type",
       "confidence": "EXTRACTED",
       "source_file": "src/app/services/booking.service.ts",
-      "source_location": "L210",
+      "source_location": "L214",
       "weight": 1.0,
       "source": "src_app_services_booking_service_bookingservice_readbookings",
       "target": "src_app_models_booking_storedbooking",
@@ -6319,7 +6299,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "src/app/services/booking.service.ts",
-      "source_location": "L51",
+      "source_location": "L55",
       "weight": 1.0,
       "source": "src_app_services_booking_service_bookingservice",
       "target": "src_app_services_booking_service_bookingservice_activebusy",
@@ -6329,7 +6309,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "src/app/services/booking.service.ts",
-      "source_location": "L189",
+      "source_location": "L193",
       "weight": 1.0,
       "source": "src_app_services_booking_service_bookingservice",
       "target": "src_app_services_booking_service_bookingservice_buildgooglecalendarurl",
@@ -6339,7 +6319,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "src/app/services/booking.service.ts",
-      "source_location": "L61",
+      "source_location": "L65",
       "weight": 1.0,
       "source": "src_app_services_booking_service_bookingservice",
       "target": "src_app_services_booking_service_bookingservice_buildmonth",
@@ -6349,7 +6329,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "src/app/services/booking.service.ts",
-      "source_location": "L174",
+      "source_location": "L178",
       "weight": 1.0,
       "source": "src_app_services_booking_service_bookingservice",
       "target": "src_app_services_booking_service_bookingservice_busyblockson",
@@ -6359,7 +6339,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "src/app/services/booking.service.ts",
-      "source_location": "L178",
+      "source_location": "L182",
       "weight": 1.0,
       "source": "src_app_services_booking_service_bookingservice",
       "target": "src_app_services_booking_service_bookingservice_busyrangesminuteson",
@@ -6369,7 +6349,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "src/app/services/booking.service.ts",
-      "source_location": "L56",
+      "source_location": "L60",
       "weight": 1.0,
       "source": "src_app_services_booking_service_bookingservice",
       "target": "src_app_services_booking_service_bookingservice_currentlocaldatestring",
@@ -6379,7 +6359,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "src/app/services/booking.service.ts",
-      "source_location": "L228",
+      "source_location": "L232",
       "weight": 1.0,
       "source": "src_app_services_booking_service_bookingservice",
       "target": "src_app_services_booking_service_bookingservice_durationlabel",
@@ -6389,7 +6369,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "src/app/services/booking.service.ts",
-      "source_location": "L42",
+      "source_location": "L46",
       "weight": 1.0,
       "source": "src_app_services_booking_service_bookingservice",
       "target": "src_app_services_booking_service_bookingservice_durationoptions",
@@ -6399,7 +6379,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "src/app/services/booking.service.ts",
-      "source_location": "L282",
+      "source_location": "L286",
       "weight": 1.0,
       "source": "src_app_services_booking_service_bookingservice",
       "target": "src_app_services_booking_service_bookingservice_fmtmin",
@@ -6409,7 +6389,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "src/app/services/booking.service.ts",
-      "source_location": "L295",
+      "source_location": "L299",
       "weight": 1.0,
       "source": "src_app_services_booking_service_bookingservice",
       "target": "src_app_services_booking_service_bookingservice_formatclock",
@@ -6419,7 +6399,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "src/app/services/booking.service.ts",
-      "source_location": "L302",
+      "source_location": "L306",
       "weight": 1.0,
       "source": "src_app_services_booking_service_bookingservice",
       "target": "src_app_services_booking_service_bookingservice_formatdatelabel",
@@ -6429,7 +6409,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "src/app/services/booking.service.ts",
-      "source_location": "L288",
+      "source_location": "L292",
       "weight": 1.0,
       "source": "src_app_services_booking_service_bookingservice",
       "target": "src_app_services_booking_service_bookingservice_formatepoch",
@@ -6439,7 +6419,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "src/app/services/booking.service.ts",
-      "source_location": "L134",
+      "source_location": "L138",
       "weight": 1.0,
       "source": "src_app_services_booking_service_bookingservice",
       "target": "src_app_services_booking_service_bookingservice_freeslotson",
@@ -6449,7 +6429,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "src/app/services/booking.service.ts",
-      "source_location": "L25",
+      "source_location": "L29",
       "weight": 1.0,
       "source": "src_app_services_booking_service_bookingservice",
       "target": "src_app_services_booking_service_bookingservice_googleapikey",
@@ -6459,7 +6439,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "src/app/services/booking.service.ts",
-      "source_location": "L29",
+      "source_location": "L33",
       "weight": 1.0,
       "source": "src_app_services_booking_service_bookingservice",
       "target": "src_app_services_booking_service_bookingservice_googlecalendarid",
@@ -6469,7 +6449,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "src/app/services/booking.service.ts",
-      "source_location": "L33",
+      "source_location": "L37",
       "weight": 1.0,
       "source": "src_app_services_booking_service_bookingservice",
       "target": "src_app_services_booking_service_bookingservice_googleclientid",
@@ -6479,7 +6459,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "src/app/services/booking.service.ts",
-      "source_location": "L37",
+      "source_location": "L41",
       "weight": 1.0,
       "source": "src_app_services_booking_service_bookingservice",
       "target": "src_app_services_booking_service_bookingservice_haspublicreadaccess",
@@ -6489,7 +6469,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "src/app/services/booking.service.ts",
-      "source_location": "L20",
+      "source_location": "L24",
       "weight": 1.0,
       "source": "src_app_services_booking_service_bookingservice",
       "target": "src_app_services_booking_service_bookingservice_isbrowser",
@@ -6499,7 +6479,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "src/app/services/booking.service.ts",
-      "source_location": "L264",
+      "source_location": "L268",
       "weight": 1.0,
       "source": "src_app_services_booking_service_bookingservice",
       "target": "src_app_services_booking_service_bookingservice_localfields",
@@ -6509,7 +6489,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "src/app/services/booking.service.ts",
-      "source_location": "L235",
+      "source_location": "L239",
       "weight": 1.0,
       "source": "src_app_services_booking_service_bookingservice",
       "target": "src_app_services_booking_service_bookingservice_localtoepoch",
@@ -6519,7 +6499,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "src/app/services/booking.service.ts",
-      "source_location": "L246",
+      "source_location": "L250",
       "weight": 1.0,
       "source": "src_app_services_booking_service_bookingservice",
       "target": "src_app_services_booking_service_bookingservice_offsetmin",
@@ -6529,7 +6509,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "src/app/services/booking.service.ts",
-      "source_location": "L184",
+      "source_location": "L188",
       "weight": 1.0,
       "source": "src_app_services_booking_service_bookingservice",
       "target": "src_app_services_booking_service_bookingservice_overlaps",
@@ -6539,7 +6519,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "src/app/services/booking.service.ts",
-      "source_location": "L210",
+      "source_location": "L214",
       "weight": 1.0,
       "source": "src_app_services_booking_service_bookingservice",
       "target": "src_app_services_booking_service_bookingservice_readbookings",
@@ -6549,7 +6529,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "src/app/services/booking.service.ts",
-      "source_location": "L219",
+      "source_location": "L223",
       "weight": 1.0,
       "source": "src_app_services_booking_service_bookingservice",
       "target": "src_app_services_booking_service_bookingservice_savebooking",
@@ -6571,7 +6551,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "src/app/services/booking.service.ts",
-      "source_location": "L45",
+      "source_location": "L49",
       "weight": 1.0,
       "source": "src_app_services_booking_service_bookingservice_durationoptions",
       "target": "src_app_services_booking_service_bookingservice_durationlabel",
@@ -6582,7 +6562,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "src/app/services/booking.service.ts",
-      "source_location": "L175",
+      "source_location": "L179",
       "weight": 1.0,
       "source": "src_app_services_booking_service_bookingservice_busyblockson",
       "target": "src_app_services_booking_service_bookingservice_activebusy",
@@ -6593,7 +6573,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "src/app/services/booking.service.ts",
-      "source_location": "L179",
+      "source_location": "L183",
       "weight": 1.0,
       "source": "src_app_services_booking_service_bookingservice_busyrangesminuteson",
       "target": "src_app_services_booking_service_bookingservice_activebusy",
@@ -6604,7 +6584,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "src/app/services/booking.service.ts",
-      "source_location": "L66",
+      "source_location": "L70",
       "weight": 1.0,
       "source": "src_app_services_booking_service_bookingservice_buildmonth",
       "target": "src_app_services_booking_service_bookingservice_currentlocaldatestring",
@@ -6615,7 +6595,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "src/app/services/booking.service.ts",
-      "source_location": "L57",
+      "source_location": "L61",
       "weight": 1.0,
       "source": "src_app_services_booking_service_bookingservice_currentlocaldatestring",
       "target": "src_app_services_booking_service_bookingservice_localfields",
@@ -6626,7 +6606,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "src/app/services/booking.service.ts",
-      "source_location": "L113",
+      "source_location": "L117",
       "weight": 1.0,
       "source": "src_app_services_booking_service_bookingservice_freeslotson",
       "target": "src_app_services_booking_service_bookingservice_currentlocaldatestring",
@@ -6637,7 +6617,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "src/app/services/booking.service.ts",
-      "source_location": "L74",
+      "source_location": "L78",
       "weight": 1.0,
       "source": "src_app_services_booking_service_bookingservice_buildmonth",
       "target": "src_app_services_booking_service_bookingservice_localfields",
@@ -6648,7 +6628,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "src/app/services/booking.service.ts",
-      "source_location": "L142",
+      "source_location": "L146",
       "weight": 1.0,
       "source": "src_app_services_booking_service_bookingservice_freeslotson",
       "target": "src_app_services_booking_service_bookingservice_busyrangesminuteson",
@@ -6659,7 +6639,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "src/app/services/booking.service.ts",
-      "source_location": "L165",
+      "source_location": "L169",
       "weight": 1.0,
       "source": "src_app_services_booking_service_bookingservice_freeslotson",
       "target": "src_app_services_booking_service_bookingservice_fmtmin",
@@ -6670,7 +6650,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "src/app/services/booking.service.ts",
-      "source_location": "L159",
+      "source_location": "L163",
       "weight": 1.0,
       "source": "src_app_services_booking_service_bookingservice_freeslotson",
       "target": "src_app_services_booking_service_bookingservice_localtoepoch",
@@ -6681,7 +6661,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "src/app/services/booking.service.ts",
-      "source_location": "L155",
+      "source_location": "L159",
       "weight": 1.0,
       "source": "src_app_services_booking_service_bookingservice_freeslotson",
       "target": "src_app_services_booking_service_bookingservice_overlaps",
@@ -6692,7 +6672,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "src/app/services/booking.service.ts",
-      "source_location": "L143",
+      "source_location": "L147",
       "weight": 1.0,
       "source": "src_app_services_booking_service_bookingservice_freeslotson",
       "target": "src_app_services_booking_service_bookingservice_readbookings",
@@ -6703,7 +6683,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "src/app/services/booking.service.ts",
-      "source_location": "L120",
+      "source_location": "L124",
       "weight": 1.0,
       "source": "src_app_services_booking_service_bookingservice_busyblockson",
       "target": "src_app_services_booking_service_bookingservice_readbookings",
@@ -6714,7 +6694,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "src/app/services/booking.service.ts",
-      "source_location": "L191",
+      "source_location": "L195",
       "weight": 1.0,
       "source": "src_app_services_booking_service_bookingservice_buildgooglecalendarurl",
       "target": "src_app_services_booking_service_bookingservice_durationlabel",
@@ -6725,7 +6705,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "src/app/services/booking.service.ts",
-      "source_location": "L192",
+      "source_location": "L196",
       "weight": 1.0,
       "source": "src_app_services_booking_service_bookingservice_buildgooglecalendarurl",
       "target": "src_app_services_booking_service_bookingservice_formatepoch",
@@ -6736,7 +6716,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "src/app/services/booking.service.ts",
-      "source_location": "L221",
+      "source_location": "L225",
       "weight": 1.0,
       "source": "src_app_services_booking_service_bookingservice_savebooking",
       "target": "src_app_services_booking_service_bookingservice_readbookings",
@@ -6747,7 +6727,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "src/app/services/booking.service.ts",
-      "source_location": "L239",
+      "source_location": "L243",
       "weight": 1.0,
       "source": "src_app_services_booking_service_bookingservice_localtoepoch",
       "target": "src_app_services_booking_service_bookingservice_offsetmin",
@@ -6817,7 +6797,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "src/app/services/google-calendar.service.ts",
-      "source_location": "L279",
+      "source_location": "L281",
       "weight": 1.0,
       "source": "src_app_services_google_calendar_service_googlecalendarservice",
       "target": "src_app_services_google_calendar_service_googlecalendarservice_baseurl",
@@ -6837,7 +6817,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "src/app/services/google-calendar.service.ts",
-      "source_location": "L238",
+      "source_location": "L240",
       "weight": 1.0,
       "source": "src_app_services_google_calendar_service_googlecalendarservice",
       "target": "src_app_services_google_calendar_service_googlecalendarservice_createevent",
@@ -6887,7 +6867,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "src/app/services/google-calendar.service.ts",
-      "source_location": "L308",
+      "source_location": "L310",
       "weight": 1.0,
       "source": "src_app_services_google_calendar_service_googlecalendarservice",
       "target": "src_app_services_google_calendar_service_googlecalendarservice_hourof",
@@ -6907,7 +6887,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "src/app/services/google-calendar.service.ts",
-      "source_location": "L214",
+      "source_location": "L215",
       "weight": 1.0,
       "source": "src_app_services_google_calendar_service_googlecalendarservice",
       "target": "src_app_services_google_calendar_service_googlecalendarservice_loadownerevents",
@@ -6937,7 +6917,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "src/app/services/google-calendar.service.ts",
-      "source_location": "L292",
+      "source_location": "L294",
       "weight": 1.0,
       "source": "src_app_services_google_calendar_service_googlecalendarservice",
       "target": "src_app_services_google_calendar_service_googlecalendarservice_tobusyblocks",
@@ -7057,7 +7037,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "src/app/services/google-calendar.service.ts",
-      "source_location": "L216",
+      "source_location": "L217",
       "weight": 1.0,
       "source": "src_app_services_google_calendar_service_googlecalendarservice_loadownerevents",
       "target": "src_app_services_google_calendar_service_googlecalendarservice_baseurl",
@@ -7068,7 +7048,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "src/app/services/google-calendar.service.ts",
-      "source_location": "L228",
+      "source_location": "L229",
       "weight": 1.0,
       "source": "src_app_services_google_calendar_service_googlecalendarservice_loadownerevents",
       "target": "src_app_services_google_calendar_service_googlecalendarservice_tobusyblocks",
@@ -7079,7 +7059,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "src/app/services/google-calendar.service.ts",
-      "source_location": "L300",
+      "source_location": "L302",
       "weight": 1.0,
       "source": "src_app_services_google_calendar_service_googlecalendarservice_tobusyblocks",
       "target": "src_app_services_google_calendar_service_googlecalendarservice_hourof",
@@ -7428,5 +7408,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "6a150477cb985e5ae5aaf8ccdfcbad5f410006c8"
+  "built_at_commit": "f2d58c162659f3a4338727b457b5ef2ec66df965"
 }
