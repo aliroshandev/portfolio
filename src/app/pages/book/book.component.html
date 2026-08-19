@@ -1,0 +1,285 @@
+<section aria-label="Book a meeting" class="section-container py-12 md:py-20">
+  <div class="mx-auto max-w-5xl">
+    <div class="mb-10 md:mb-14">
+      <span class="tag mb-4">Free &middot; 15 min to 2 hours &middot; Google Meet</span>
+      <h1 class="font-heading text-3xl font-bold leading-tight tracking-tight md:text-5xl"
+          style="font-family: var(--font-heading)">
+        Schedule a meeting with <span class="text-[var(--color-primary)]">{{config.ownerName}}</span>
+      </h1>
+      <p class="mt-3 max-w-2xl text-base text-[var(--color-fg-secondary)] md:text-lg">
+        Pick a duration from 15 minutes up to 2 hours, choose an open slot from the live calendar below and
+        we&rsquo;ll meet over Google Meet. The meeting is created on Google Calendar and sent to
+        <span class="font-medium text-[var(--color-fg)]">{{config.ownerEmail}}</span>.
+      </p>
+      <div class="mt-5 flex flex-wrap gap-2" aria-label="Meeting details">
+        <span class="tag"><ng-icon name="bootstrapClock" size="13" class="text-[var(--color-primary)]" aria-hidden="true" />15 min – 2 hours</span>
+        <span class="tag"><ng-icon name="bootstrapCalendarRange" size="13" class="text-[var(--color-primary)]" aria-hidden="true" />{{config.timezoneLabel}}</span>
+        <span class="tag"><ng-icon name="bootstrapCameraVideo" size="13" class="text-[var(--color-primary)]" aria-hidden="true" />Google Meet</span>
+      </div>
+    </div>
+
+    @if (needsOwnerConsent()) {
+      <div class="card mb-6 flex flex-col items-start gap-3 border border-[var(--color-primary)]/30 bg-[var(--color-primary)]/5 p-4 sm:flex-row sm:items-center sm:justify-between" role="status">
+        <p class="text-sm text-[var(--color-fg-secondary)]">
+          <ng-icon name="bootstrapInfoCircle" size="15" class="mr-1 inline text-[var(--color-primary)]" aria-hidden="true" />
+          Private calendar unlinked &mdash; live busy times are using the public fallback. Sign in to connect your Google Calendar.
+        </p>
+        <button type="button" (click)="connectGoogle()" [disabled]="connectingGoogle()"
+                class="btn-soft shrink-0 text-sm disabled:cursor-not-allowed disabled:opacity-50">
+          {{ connectingGoogle() ? 'Connecting&hellip;' : 'Connect Google Calendar' }}
+        </button>
+      </div>
+    }
+
+    @if (ready() && ownerConnected() && calendarSource() === 'owner') {
+      <p class="mt-6 mb-6 flex items-center justify-center gap-1.5 text-xs text-[var(--color-fg-secondary)]">
+        <ng-icon name="bootstrapCloudCheck" size="14" class="text-green-500" aria-hidden="true" />
+        Busy times synced live from your connected Google Calendar.
+      </p>
+    }
+
+    @if (!ready() && loadingLive()) {
+      <div class="card mb-6 p-4" aria-hidden="true">
+        <div class="h-5 w-40 rounded bg-[var(--color-bg-alt)]"></div>
+      </div>
+    }
+
+    <div class="grid gap-6 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] lg:gap-8">
+      @if (ready()) {
+        <div class="card p-4 md:p-6" aria-label="Availability calendar">
+          <div class="mb-4 flex items-center justify-between">
+            <button type="button" (click)="prevMonth()" class="icon-btn" aria-label="Previous month">
+              <ng-icon name="bootstrapChevronLeft" size="18" aria-hidden="true" />
+            </button>
+            <h2 class="font-heading text-base font-semibold md:text-lg" style="font-family: var(--font-heading)">
+              {{monthLabel()}}
+            </h2>
+            <button type="button" (click)="nextMonth()" class="icon-btn" aria-label="Next month">
+              <ng-icon name="bootstrapChevronRight" size="18" aria-hidden="true" />
+            </button>
+          </div>
+
+          <div class="grid grid-cols-7 gap-1 text-center">
+            @for (label of weekdayLabels; track label) {
+              <span class="pb-1 text-[10px] font-semibold uppercase tracking-wider text-[var(--color-fg-secondary)] md:text-xs">
+                {{label}}
+              </span>
+            }
+            @for (day of days(); track day.date) {
+              <button type="button"
+                      class="day-btn"
+                      [class.muted]="!day.isCurrentMonth || day.isClosed"
+                      [class.selected]="selectedDay()?.date === day.date"
+                      [attr.aria-label]="dayStateLabel(day)"
+                      [attr.aria-disabled]="day.isClosed"
+                      (click)="selectDay(day)">
+                {{day.day}}
+                @if (day.isCurrentMonth && !day.isClosed && selectedDay()?.date !== day.date) {
+                  @switch (day.state) {
+                    @case ('available') { <span class="day-dot dot-available" aria-hidden="true"></span> }
+                    @case ('partial') { <span class="day-dot dot-partial" aria-hidden="true"></span> }
+                    @case ('busy') { <span class="day-dot dot-busy" aria-hidden="true"></span> }
+                  }
+                }
+              </button>
+            }
+          </div>
+
+          <div class="mt-5 flex flex-wrap items-center gap-x-4 gap-y-2 border-t border-[var(--color-border)] pt-4 text-[11px] text-[var(--color-fg-secondary)] md:text-xs">
+            <span class="flex items-center gap-1.5"><span class="h-2 w-2 rounded-full bg-green-500"></span>Available</span>
+            <span class="flex items-center gap-1.5"><span class="h-2 w-2 rounded-full bg-amber-500"></span>Partially booked</span>
+            <span class="flex items-center gap-1.5"><span class="h-2 w-2 rounded-full bg-red-500"></span>Busy</span>
+            <span class="flex items-center gap-1.5"><span class="h-2 w-2 rounded-full bg-[var(--color-border)]"></span>Closed</span>
+          </div>
+        </div>
+      } @else {
+        <div class="card p-4 md:p-6" aria-hidden="true">
+          <div class="mb-4 flex items-center justify-between">
+            <div class="h-10 w-10 rounded-md bg-[var(--color-bg-alt)]"></div>
+            <div class="h-5 w-32 rounded bg-[var(--color-bg-alt)]"></div>
+            <div class="h-10 w-10 rounded-md bg-[var(--color-bg-alt)]"></div>
+          </div>
+          <div class="grid grid-cols-7 gap-1">
+            @for (i of [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28]; track i) {
+              <div class="aspect-square rounded-md bg-[var(--color-bg-alt)]"></div>
+            }
+          </div>
+        </div>
+      }
+
+      <div class="card p-4 md:p-6">
+        @if (confirmed()) {
+          <div class="flex flex-col items-center text-center">
+            <div class="mb-3 flex h-14 w-14 items-center justify-center rounded-full bg-green-500/15 text-green-500">
+              <ng-icon name="bootstrapCheckLg" size="26" aria-hidden="true" />
+            </div>
+            <h2 class="font-heading text-xl font-semibold" style="font-family: var(--font-heading)">Meeting request confirmed</h2>
+            <p class="mt-2 max-w-sm text-sm text-[var(--color-fg-secondary)]">
+              Your meeting was opened on Google Calendar and <strong>{{config.ownerEmail}}</strong> was added as
+              an attendee so it shows up on Ali&rsquo;s calendar too.
+            </p>
+
+            @if (selectedSlot(); as slot) {
+              <div class="mt-5 w-full rounded-lg border border-[var(--color-border)] bg-[var(--color-bg-alt)] p-4 text-sm">
+                <p class="font-semibold text-[var(--color-fg)]">{{booking.formatDateLabel(slot.date)}}</p>
+                <p class="mt-1 text-[var(--color-fg-secondary)]">{{booking.formatClock(slot.localStart)}} &ndash; {{booking.formatClock(slot.localEnd)}} ({{config.timezoneLabel}})</p>
+                <p class="mt-1 text-[var(--color-fg-secondary)]">{{form.value.name}} &middot; {{form.value.email}}</p>
+              </div>
+            }
+
+            @if (createdUrl()) {
+              <div class="mt-6 flex w-full flex-col gap-2 sm:flex-row sm:justify-center">
+                <a [href]="createdUrl()" target="_blank" rel="noopener" class="btn-primary justify-center">
+                  <ng-icon name="bootstrapCalendarMonth" size="16" aria-hidden="true" />Open in Google Calendar
+                </a>
+                <button type="button" (click)="downloadIcs()" class="btn-soft justify-center">
+                  <ng-icon name="bootstrapArrowRight" size="16" aria-hidden="true" />Download .ics
+                </button>
+              </div>
+            } @else {
+              <p class="mt-5 max-w-sm text-sm text-[var(--color-fg-secondary)]">
+                A Google Calendar invitation with the Meet link has been sent to
+                <strong>{{form.value.email}}</strong> and to {{config.ownerEmail}}.
+              </p>
+            }
+            <button type="button" (click)="reset()"
+                    class="mt-4 text-xs text-[var(--color-fg-secondary)] underline-offset-2 hover:text-[var(--color-fg)] hover:underline">
+              Choose another time
+            </button>
+          </div>
+        }
+        @if (!confirmed() && selectedSlot(); as slot) {
+          <form [formGroup]="form" (ngSubmit)="confirmBooking()" novalidate class="flex flex-col gap-4">
+            <div class="mb-1">
+              <h2 class="font-heading text-lg font-semibold" style="font-family: var(--font-heading)">Enter your details</h2>
+              <p class="mt-1 text-sm text-[var(--color-fg-secondary)]">{{booking.formatDateLabel(slot.date)}}</p>
+              <p class="text-sm text-[var(--color-primary)]">{{booking.formatClock(slot.localStart)}} &ndash; {{booking.formatClock(slot.localEnd)}} ({{config.timezoneLabel}})</p>
+            </div>
+
+            <div>
+              <label for="name" class="mb-1.5 block text-sm font-medium text-[var(--color-fg)]">Full name</label>
+              <input id="name" formControlName="name" type="text" autocomplete="name" required
+                     placeholder="Jane Doe" class="input-field" />
+              @if (form.controls.name.touched && form.controls.name.invalid) {
+                <p class="form-error" role="alert">Please enter your name.</p>
+              }
+            </div>
+
+            <div>
+              <label for="email" class="mb-1.5 block text-sm font-medium text-[var(--color-fg)]">Email</label>
+              <input id="email" formControlName="email" type="email" autocomplete="email" required
+                     placeholder="jane@example.com" class="input-field" />
+              @if (form.controls.email.touched && form.controls.email.invalid) {
+                <p class="form-error" role="alert">Please enter a valid email.</p>
+              }
+            </div>
+
+            <div>
+              <label for="organization" class="mb-1.5 block text-sm font-medium text-[var(--color-fg)]">
+                Organization <span class="text-[var(--color-fg-secondary)]">(optional)</span>
+              </label>
+              <input id="organization" formControlName="organization" type="text" autocomplete="organization"
+                     placeholder="Acme Inc." class="input-field" />
+            </div>
+
+            <div>
+              <label for="notes" class="mb-1.5 block text-sm font-medium text-[var(--color-fg)]">
+                Notes <span class="text-[var(--color-fg-secondary)]">(optional)</span>
+              </label>
+              <textarea id="notes" formControlName="notes" rows="3"
+                        placeholder="What would you like to discuss?" class="input-field resize-none"></textarea>
+            </div>
+
+            <button type="submit" [disabled]="!canSubmit()" class="btn-primary mt-1 w-full justify-center disabled:cursor-not-allowed disabled:opacity-50">
+              <ng-icon name="bootstrapCheckLg" size="16" aria-hidden="true" />Confirm Google Meet meeting
+            </button>
+            <p class="flex items-start gap-1.5 text-[11px] text-[var(--color-fg-secondary)]">
+              <ng-icon name="bootstrapInfoCircle" size="12" class="mt-0.5 shrink-0" aria-hidden="true" />
+              @if (ownerConnected()) {
+                The meeting is created directly on {{config.ownerEmail}}&rsquo;s calendar and emailed to you.
+              } @else {
+                You&rsquo;ll open Google Calendar to confirm. Ali is added automatically to the event on
+                a76roshanzamir&#64;gmail.com.
+              }
+            </p>
+          </form>
+        }
+        @if (!confirmed() && !selectedSlot() && selectedDay(); as day) {
+          <div>
+            <h2 class="font-heading text-lg font-semibold" style="font-family: var(--font-heading)">
+              {{booking.formatDateLabel(day.date)}}
+            </h2>
+            <p class="mt-1 text-sm text-[var(--color-fg-secondary)]">
+              {{slots().length}} open {{slots().length === 1 ? 'slot' : 'slots'}} &middot; {{selectedDuration()}} minutes each
+            </p>
+
+            <div class="mt-5">
+              <span class="mb-2 block text-sm font-medium text-[var(--color-fg)]">Meeting length</span>
+              <div class="flex flex-wrap gap-1.5">
+                @for (opt of durationOptions(); track opt.minutes) {
+                  <button type="button" class="duration-chip"
+                          [class.selected]="selectedDuration() === opt.minutes"
+                          (click)="setDuration(opt.minutes)">
+                    {{opt.label}}
+                  </button>
+                }
+              </div>
+            </div>
+
+            <div class="mt-5 grid grid-cols-2 gap-2 sm:grid-cols-3">
+              @for (slot of slots(); track slot.startEpoch) {
+                <button type="button" class="slot-chip"
+                        [class.selected]="selectedSlot()?.startEpoch === slot.startEpoch"
+                        (click)="selectSlot(slot)">
+                  {{booking.formatClock(slot.localStart)}}
+                </button>
+              } @empty {
+                <p class="col-span-full text-sm text-[var(--color-fg-secondary)]">No open times on this day for this duration.</p>
+              }
+            </div>
+
+            @if (busyBlocks().length > 0) {
+              <div class="mt-6 border-t border-[var(--color-border)] pt-4">
+                <h3 class="mb-2 flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider text-[var(--color-fg-secondary)]">
+                  <ng-icon name="bootstrapCalendarX" size="14" class="text-red-500" aria-hidden="true" /> Busy times on this day
+                </h3>
+                <ul class="flex flex-col gap-1.5 text-sm">
+                  @for (block of busyBlocks(); track block.fromHour) {
+                    <li class="flex items-center justify-between rounded-md bg-[var(--color-bg-alt)] px-3 py-2 text-[var(--color-fg-secondary)]">
+                      <span>{{blockLabel(block)}}</span>
+                      <span class="text-xs">{{block.label ?? 'Unavailable'}}</span>
+                    </li>
+                  }
+                </ul>
+              </div>
+            }
+          </div>
+        }
+        @if (!confirmed() && !selectedSlot() && !selectedDay()) {
+          <div class="flex h-full min-h-[220px] flex-col items-center justify-center text-center">
+            <div class="mb-3 flex h-12 w-12 items-center justify-center rounded-full bg-[var(--color-bg-alt)] text-[var(--color-fg-secondary)]">
+              <ng-icon name="bootstrapCalendarMonth" size="22" aria-hidden="true" />
+            </div>
+            @if (loadingLive()) {
+              <p class="text-sm text-[var(--color-fg-secondary)]">
+                <ng-icon name="bootstrapArrowRight" size="13" class="animate-pulse text-[var(--color-primary)]" aria-hidden="true" />
+                Syncing live calendar busy times&hellip;
+              </p>
+            } @else {
+              <p class="text-sm text-[var(--color-fg-secondary)]">
+                Select an available date to see open time slots.
+              </p>
+            }
+          </div>
+        }
+      </div>
+    </div>
+
+    @if (ready() && liveSynced()) {
+      <p class="mt-6 flex items-center justify-center gap-1.5 text-xs text-[var(--color-fg-secondary)]">
+        <ng-icon name="bootstrapCloudCheck" size="14" class="text-green-500" aria-hidden="true" />
+        Busy times synced live from the real Google Calendar.
+      </p>
+    }
+  </div>
+</section>

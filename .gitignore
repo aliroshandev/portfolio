@@ -1,5 +1,16 @@
 # See https://docs.github.com/get-started/getting-started-with-git/ignoring-files for more about ignoring files.
 
+# ============================================
+# Secrets & generated environment (NEVER commit)
+# ============================================
+.env
+.env.*
+!.env.example
+/src/environments/environment.production.ts
+
+# Generated knowledge-graph artifacts
+/graphify-out
+
 # Compiled output
 /dist
 /tmp

@@ -1,10 +1,11 @@
 import {Component, computed, inject, OnInit} from '@angular/core';
+import {RouterLink} from '@angular/router';
 import {NgOptimizedImage} from '@angular/common';
 import {ThemeService} from '../../services/theme.service';
 import {LayoutService} from '../../services/layout.service';
 import {NgIcon, provideIcons} from '@ng-icons/core';
 import {
-  bootstrapCalendar, bootstrapBuilding, bootstrapLink45deg,
+  bootstrapCalendarMonth, bootstrapBuilding, bootstrapLink45deg,
   bootstrapCodeSlash, bootstrapAward, bootstrapPerson,
 } from '@ng-icons/bootstrap-icons';
 import {SeoService} from '../../services/seo.service';
@@ -12,11 +13,11 @@ import {experiences, technicalSkills, aboutText} from '../../constants/const';
 
 @Component({
   selector: 'app-home',
-  imports: [NgOptimizedImage, NgIcon],
+  imports: [NgOptimizedImage, NgIcon, RouterLink],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
   viewProviders: [provideIcons({
-    bootstrapCalendar, bootstrapBuilding, bootstrapLink45deg,
+    bootstrapCalendarMonth, bootstrapBuilding, bootstrapLink45deg,
     bootstrapCodeSlash, bootstrapAward, bootstrapPerson,
   })]
 })
