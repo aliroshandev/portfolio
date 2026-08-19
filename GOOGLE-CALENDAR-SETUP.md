@@ -97,6 +97,28 @@ The token stays **in-memory only** (never persisted, never serialized) and dies 
 
 Your real busy events will then show up automatically on the booking calendar.
 
+## Troubleshooting
+
+### "Invitation from an unknown sender" emails
+
+When a guest books and receives the Calendar invite, the email announces **"invitation from an unknown
+sender"** even though it is sent from `a76roshanzamir@gmail.com`. This is **not an app bug** — it is Gmail's
+anti-spam behavior: Google marks a sender as "unknown" when the recipient has **no prior contact** with that
+email (not in contacts, not in the same organization, no previous email exchange). The API cannot change
+this; the invitation is already sent from the owner's account with the owner's display name.
+
+To stop the warning on any Gmail that should accept your bookings:
+
+1. Open **calendar.google.com** → **Settings (gear) → Settings**.
+2. **Event settings → "Add invitations to my calendar"** → choose **"From everyone"** (accepts invitations
+   from everyone automatically), or
+3. Add `a76roshanzamir@gmail.com` to the recipient's Contacts — invites will then show as
+   **"Ali Roshanzamir"** instead of the bare email.
+
+Note: because invitations are sent from the calendar owner's account (the connected Google account), the
+sender shown to guests is always `a76roshanzamir@gmail.com` — make sure the OAuth connection is made with
+that account, not a different Gmail.
+
 ## Vercel deploy checklist
 
 1. **Project → Settings → Environment Variables** — add `GOOGLE_CLIENT_ID`, `GOOGLE_API_KEY`,

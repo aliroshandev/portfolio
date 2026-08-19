@@ -19,8 +19,10 @@ lives in this Angular app (no backend required) and is SSR/prerender-safe, so SE
 ## Real Google Calendar data
 
 When configured, busy times are **fetched live from the Google Calendar API** and replace the static
-`busySlots` list. See [GOOGLE-CALENDAR-SETUP.md](GOOGLE-CALENDAR-SETUP.md) for the exact steps and the
-requirements you need to provide.
+`busySlots` list — and once a real sync completes it is **authoritative even when empty** (no more fake
+busy days from the fallback list bleed into a real free calendar). See
+[GOOGLE-CALENDAR-SETUP.md](GOOGLE-CALENDAR-SETUP.md) for the exact steps and the requirements you need
+to provide.
 
 ## Configuration
 
@@ -39,7 +41,7 @@ Edit `src/app/constants/booking-config.ts`:
 | `minLeadMinutes` | Minimum notice before a meeting can be booked (default `180`) |
 | `aheadDays` | How far ahead slots are offered (default `45`) |
 | `openingHours` | Per weekday `[startHour, endHour]` availability window (`null` = closed) |
-| `busySlots` | **Fallback** busy blocks when real data is not configured |
+| `busySlots` | **Fallback only** busy blocks when no live credentials are configured; real synced data always wins (even when the calendar is empty) |
 | `googleApiKey` / `googleCalendarId` / `googleClientId` | Optional per-deploy overrides; primary source is the injected environment (see below) |
 
 ## Google credentials (environment injection)
