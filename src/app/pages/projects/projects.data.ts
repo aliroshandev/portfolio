@@ -20,7 +20,7 @@ export const PROJECTS: Project[] = [
     company: 'Tabin Tech',
     period: '01/2022 – Present',
     tagline: 'Angular applications and shared libraries for Tabin Tech clients',
-    description: 'Frontend engineer on client applications including pastil.ir, nam.ir and migline24.com, currently on Angular 22 with TypeScript, RxJS and GraphQL. Built shared Angular libraries (vft-core, vft-auth, vft-table, vft-ui-util) published to a private Nexus registry.',
+    description: 'Frontend engineer on client applications including pastil.ir and nam.ir, currently on Angular 22 with TypeScript, RxJS and GraphQL. Built shared Angular libraries (vft-core, vft-auth, vft-table, vft-ui-util) published to a private Nexus registry.',
     techStack: ['Angular 22', 'Angular Signals', 'RxJS', 'GraphQL', 'TypeScript', 'Tailwind CSS', 'Nx', 'Webpack', 'Docker', 'Nexus', 'PWA', 'SSR'],
     architecture: `graph TD\n    A[Angular Client Apps] --> B[vft-core: Shared Services and Models]\n    A --> C[vft-auth: Authentication and Guards]\n    A --> D[vft-table: Data Tables]\n    A --> E[vft-ui-util: UI Utilities]\n    B --> F[Private Nexus Registry]\n    C --> F\n    D --> F\n    E --> F\n    A --> G[GraphQL API]`,
     challenges: [
@@ -37,8 +37,7 @@ export const PROJECTS: Project[] = [
     ],
     links: [
       {label: 'Live: pastil.ir', url: 'https://pastil.ir'},
-      {label: 'Live: nam.ir', url: 'https://nam.ir'},
-      {label: 'Live: migline24.com', url: 'https://migline24.com'}
+      {label: 'Live: nam.ir', url: 'https://nam.ir'}
     ]
   },
   {
@@ -60,13 +59,11 @@ export const PROJECTS: Project[] = [
       'RxJS buffering and debouncing for backpressure',
       'Reconnection with backoff and a heartbeat'
     ],
-    links: [
-      {label: 'Website', url: 'https://agatizer.com'}
-    ]
+    links: []
   },
   {
     id: 'missha-pwa',
-    title: 'Missha Iran E-Commerce PWA',
+    title: 'Missha E-Commerce PWA',
     company: 'Missha',
     period: '10/2020 – 02/2021',
     tagline: 'Localized Persian e-commerce PWA with offline support',

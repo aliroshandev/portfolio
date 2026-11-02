@@ -6,7 +6,7 @@ export const bookingConfig: BookingConfig = {
   ownerTitle: 'Software Engineer, Angular and Go',
   ownerLocation: 'Google Meet',
   timezone: 'Asia/Tehran',
-  timezoneLabel: 'Iran Standard Time (GMT+3:30)',
+  timezoneLabel: 'GMT+3:30',
 
   // Meeting duration: 15-minute steps from 15 minutes up to 2 hours (default 1 hour)
   durationStepMinutes: 15,

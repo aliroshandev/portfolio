@@ -5,12 +5,12 @@ export const experiences: Array<ExperienceInterface> = [
   {
     workFromToDate: ['01/2022', 'Present'],
     companyName: 'Tabin Tech',
-    companyDescription: 'Technology Solutions Provider',
+    companyDescription: 'Software Services for Online Businesses',
     experienceDetails: {
       title: 'Frontend Engineer - Onsite',
       href: 'https://tabintech.com',
       content: new ExperienceContent([
-        'Build and maintain Angular applications for clients including pastil.ir, nam.ir and migline24.com, currently on Angular 22 with TypeScript, RxJS and GraphQL.',
+        'Build and maintain Angular applications for clients including pastil.ir and nam.ir, currently on Angular 22 with TypeScript, RxJS and GraphQL.',
         'Built shared Angular libraries (vft-core, vft-auth, vft-table, vft-ui-util) published to a private Nexus registry.',
         'Improved CI build times with caching and custom Webpack configuration.',
         'Mentored engineers through code review.',
@@ -37,7 +37,7 @@ export const experiences: Array<ExperienceInterface> = [
     companyDescription: 'Copy-Trading Platform',
     experienceDetails: {
       title: 'Frontend Engineer - Remote, Contract',
-      href: 'https://agatizer.com',
+      href: '',
       content: new ExperienceContent([
         'Built a trading dashboard that rendered real-time WebSocket data with D3.js.',
         'Kept the interface responsive with virtual scrolling and RxJS streams.',
@@ -61,7 +61,7 @@ export const experiences: Array<ExperienceInterface> = [
   {
     workFromToDate: ['10/2020', '02/2021'],
     companyName: 'Missha',
-    companyDescription: 'Cosmetics & Health Products E-Commerce',
+    companyDescription: 'Cosmetics E-Commerce',
     experienceDetails: {
       title: 'Frontend Engineer - Part-time',
       href: 'https://missha-ir.com',
@@ -70,19 +70,6 @@ export const experiences: Array<ExperienceInterface> = [
         'Added offline support with Service Workers.',
       ]),
       tags: ['Angular', 'Angular Material', 'TypeScript', 'Jest', 'Docker', 'PWA', 'SEO', 'Service Workers', 'Lighthouse']
-    }
-  } as ExperienceInterface,
-  {
-    workFromToDate: ['09/2020', '10/2020'],
-    companyName: 'Azki',
-    companyDescription: 'Insurance Issuer Application',
-    experienceDetails: {
-      title: 'Frontend Developer Consultant - Onsite',
-      href: 'https://azki.com',
-      content: new ExperienceContent([
-        'Improved mobile usability and SEO for a Laravel Blade insurance platform.',
-      ]),
-      tags: ['Laravel', 'Blade', 'JavaScript', 'jQuery', 'SEO', 'Responsive Design']
     }
   } as ExperienceInterface,
   {
@@ -99,9 +86,22 @@ export const experiences: Array<ExperienceInterface> = [
     }
   } as ExperienceInterface,
   {
+    workFromToDate: ['09/2019', '11/2019'],
+    companyName: 'Azki',
+    companyDescription: 'Online Insurance Comparison Platform',
+    experienceDetails: {
+      title: 'Frontend Consultant - Part-time',
+      href: 'https://azki.com',
+      content: new ExperienceContent([
+        'Updated Laravel Blade pages as a part-time frontend consultant.',
+      ]),
+      tags: ['Laravel', 'Blade', 'JavaScript', 'Responsive Design']
+    }
+  } as ExperienceInterface,
+  {
     workFromToDate: ['09/2018', '05/2020'],
     companyName: 'Shenoto',
-    companyDescription: 'Persian Podcast Platform',
+    companyDescription: 'Podcast, Music and Audiobook Platform',
     experienceDetails: {
       title: 'Frontend Developer - Full-time',
       href: 'https://shenoto.com',
@@ -138,7 +138,7 @@ export const openSourceProjects = [
 export const education = [
   {
     degree: "Bachelor's Degree in Computer Engineering",
-    institution: 'Islamic Azad University, South Tehran Branch',
+    institution: 'Islamic Azad University',
     period: '2015–2021',
     description: 'Focused on software engineering, web technologies, and database systems.'
   }
@@ -178,11 +178,7 @@ export const personSchema = {
   },
   alumniOf: {
     '@type': 'CollegeOrUniversity',
-    name: 'Islamic Azad University, South Tehran Branch',
-  },
-  address: {
-    '@type': 'PostalAddress',
-    addressCountry: 'IR',
+    name: 'Islamic Azad University',
   },
   sameAs: [
     'https://www.linkedin.com/in/ali-roshan',

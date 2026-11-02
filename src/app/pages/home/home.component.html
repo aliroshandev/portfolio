@@ -95,12 +95,16 @@
             <div class="mb-2 flex flex-wrap items-start justify-between gap-2 md:mb-1">
               <div>
                 <h3 class="font-heading text-sm font-semibold md:text-lg" style="font-family: var(--font-heading)">
-                  <a [href]="exp.experienceDetails.href"
-                     target="_blank" rel="noopener"
-                     class="link-underline text-[var(--color-fg)] hover:text-[var(--color-primary)]">
+                  @if (exp.experienceDetails.href) {
+                    <a [href]="exp.experienceDetails.href"
+                       target="_blank" rel="noopener"
+                       class="link-underline text-[var(--color-fg)] hover:text-[var(--color-primary)]">
+                      {{exp.companyName}}
+                      <ng-icon name="bootstrapLink45deg" size="12" class="ml-0.5 inline md:size-[14px]" />
+                    </a>
+                  } @else {
                     {{exp.companyName}}
-                    <ng-icon name="bootstrapLink45deg" size="12" class="ml-0.5 inline md:size-[14px]" />
-                  </a>
+                  }
                 </h3>
                 @if (exp.companyDescription) {
                   <p class="mt-0.5 text-[11px] text-[var(--color-fg-secondary)] md:text-sm">{{exp.companyDescription}}</p>
