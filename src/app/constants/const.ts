@@ -137,7 +137,7 @@ export const openSourceProjects = [
 
 export const education = [
   {
-    degree: "Bachelor's Degree in Computer Engineering",
+    degree: 'Bachelor of Information Technology',
     institution: 'Islamic Azad University',
     period: '2015–2021',
     description: 'Focused on software engineering, web technologies, and database systems.'
