@@ -115,8 +115,8 @@ export const PROJECTS: Project[] = [
     company: 'Open Source',
     period: '2025 – Present',
     tagline: 'Visual guide to the Angular lifecycle and dependency injection',
-    description: 'A free reference site that explains the Angular application lifecycle and dependency injection through Mermaid flowcharts and cheat sheets, for developers who already know Angular.',
-    techStack: ['Angular', 'TypeScript', 'Mermaid.js', 'Vercel'],
+    description: 'A free reference site that explains the Angular application lifecycle, lifecycle hooks and dependency injection through Mermaid flowcharts and code examples, for developers who already know Angular. Checked against Angular 22.',
+    techStack: ['HTML', 'CSS', 'Mermaid.js', 'Vercel'],
     challenges: [
       'Explaining Angular internals simply',
       'Keeping up with Angular releases'
