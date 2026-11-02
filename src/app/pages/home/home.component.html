@@ -10,7 +10,7 @@
              class="h-full w-full object-cover">
       </div>
       <div aria-hidden="true" class="absolute -bottom-1 -right-1 flex h-7 w-7 items-center justify-center rounded-full bg-[var(--color-primary)] text-white text-[10px] font-bold shadow-[var(--shadow-md)] md:h-8 md:w-8 md:text-xs">
-        7+
+        8
       </div>
     </div>
 
@@ -24,10 +24,10 @@
         Ali Roshanzamir
       </h1>
       <p class="mt-1.5 text-base text-[var(--color-fg-secondary)] md:mt-2 md:text-xl">
-        Frontend Engineer &bull; Angular Specialist
+        Software Engineer &bull; Angular and Go
       </p>
       <p class="mt-1 text-xs text-[var(--color-fg-secondary)] md:text-sm">
-        7+ years &middot; React &middot; TypeScript &middot; SSR/PWA
+        8 years &middot; Angular &middot; TypeScript &middot; Go
       </p>
       <div class="mt-5 flex flex-wrap items-center justify-center gap-2 md:mt-6 md:justify-start md:gap-3">
         <a [routerLink]="'/book'"
@@ -63,23 +63,13 @@
     <p class="text-sm leading-relaxed text-[var(--color-fg-secondary)] md:text-lg">
       {{aboutText}}
     </p>
-    <div class="mt-6 grid grid-cols-2 gap-4 md:mt-8 md:grid-cols-4 md:gap-5">
-      <div class="rounded-xl border border-[var(--color-border)] bg-[var(--color-surface)] px-3 py-4 text-center shadow-[var(--shadow-sm)] transition-shadow duration-300 hover:shadow-[var(--shadow-md)] md:px-4 md:py-5">
-        <p class="font-heading text-xl font-bold text-[var(--color-primary)] md:text-2xl">7+</p>
-        <p class="mt-1 text-[11px] text-[var(--color-fg-secondary)] md:mt-1.5 md:text-xs">Years Experience</p>
-      </div>
-      <div class="rounded-xl border border-[var(--color-border)] bg-[var(--color-surface)] px-3 py-4 text-center shadow-[var(--shadow-sm)] transition-shadow duration-300 hover:shadow-[var(--shadow-md)] md:px-4 md:py-5">
-        <p class="font-heading text-xl font-bold text-[var(--color-primary)] md:text-2xl">10+</p>
-        <p class="mt-1 text-[11px] text-[var(--color-fg-secondary)] md:mt-1.5 md:text-xs">Projects Delivered</p>
-      </div>
-      <div class="rounded-xl border border-[var(--color-border)] bg-[var(--color-surface)] px-3 py-4 text-center shadow-[var(--shadow-sm)] transition-shadow duration-300 hover:shadow-[var(--shadow-md)] md:px-4 md:py-5">
-        <p class="font-heading text-xl font-bold text-[var(--color-primary)] md:text-2xl">8+</p>
-        <p class="mt-1 text-[11px] text-[var(--color-fg-secondary)] md:mt-1.5 md:text-xs">Engineers Mentored</p>
-      </div>
-      <div class="rounded-xl border border-[var(--color-border)] bg-[var(--color-surface)] px-3 py-4 text-center shadow-[var(--shadow-sm)] transition-shadow duration-300 hover:shadow-[var(--shadow-md)] md:px-4 md:py-5">
-        <p class="font-heading text-xl font-bold text-[var(--color-primary)] md:text-2xl">30%</p>
-        <p class="mt-1 text-[11px] text-[var(--color-fg-secondary)] md:mt-1.5 md:text-xs">Avg. Engagement Boost</p>
-      </div>
+    <div class="mt-6 grid grid-cols-2 gap-4 md:mt-8 md:grid-cols-3 md:gap-5">
+      @for (stat of aboutStats; track stat.label) {
+        <div class="rounded-xl border border-[var(--color-border)] bg-[var(--color-surface)] px-3 py-4 text-center shadow-[var(--shadow-sm)] transition-shadow duration-300 hover:shadow-[var(--shadow-md)] md:px-4 md:py-5">
+          <p class="font-heading text-xl font-bold text-[var(--color-primary)] md:text-2xl">{{stat.value}}</p>
+          <p class="mt-1 text-[11px] text-[var(--color-fg-secondary)] md:mt-1.5 md:text-xs">{{stat.label}}</p>
+        </div>
+      }
     </div>
   </div>
 </section>
@@ -197,6 +187,150 @@
           }
         </div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- Skill Proficiency Graph -->
+<section id="skill-graph" aria-label="Skill proficiency overview" class="py-16 md:py-28 bg-[var(--color-bg-alt)]">
+  <div class="section-container">
+    <app-skill-graph />
+  </div>
+</section>
+
+<!-- Technical Leadership -->
+<section id="leadership" aria-label="Technical leadership & impact" class="py-16 md:py-28">
+  <div class="section-container">
+    <div class="mb-12 md:mb-16 text-center">
+      <span class="tag mb-4 inline-block">Leadership & Impact</span>
+      <h2 class="font-heading text-3xl font-bold leading-tight tracking-tight md:text-4xl"
+          style="font-family: var(--font-heading)">
+        Technical <span class="text-[var(--color-primary)]">Leadership</span>
+      </h2>
+      <p class="mt-4 max-w-2xl mx-auto text-base text-[var(--color-fg-secondary)] md:text-lg">
+        Beyond code—building teams, systems, and processes that multiply engineering output.
+      </p>
+    </div>
+
+    <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      <article class="card p-6">
+        <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-[var(--color-primary)]/10">
+          <ng-icon name="bootstrapPeople" size="22" class="text-[var(--color-primary)]" aria-hidden="true" />
+        </div>
+        <h3 class="font-heading text-lg font-semibold mb-2" style="font-family: var(--font-heading)">Mentoring & Team Building</h3>
+        <p class="text-sm text-[var(--color-fg-secondary)]">
+          Mentored engineers through code review and helped new team members get started.
+        </p>
+      </article>
+
+      <article class="card p-6">
+        <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-[var(--color-primary)]/10">
+          <ng-icon name="bootstrapGraphUp" size="22" class="text-[var(--color-primary)]" aria-hidden="true" />
+        </div>
+        <h3 class="font-heading text-lg font-semibold mb-2" style="font-family: var(--font-heading)">Architectural Impact</h3>
+        <p class="text-sm text-[var(--color-fg-secondary)]">
+          Built the vft-core, vft-auth and vft-table shared libraries, published to a private Nexus registry and used across client applications.
+        </p>
+      </article>
+
+      <article class="card p-6">
+        <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-[var(--color-primary)]/10">
+          <ng-icon name="bootstrapTrophy" size="22" class="text-[var(--color-primary)]" aria-hidden="true" />
+        </div>
+        <h3 class="font-heading text-lg font-semibold mb-2" style="font-family: var(--font-heading)">Open Source Contribution</h3>
+        <p class="text-sm text-[var(--color-fg-secondary)]">
+          One merged docs fix in the Angular repository (PR #62361). Author of the
+          angular-lazy-load-directive npm package.
+        </p>
+      </article>
+
+      <article class="card p-6">
+        <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-[var(--color-primary)]/10">
+          <ng-icon name="bootstrapCodeSlash" size="22" class="text-[var(--color-primary)]" aria-hidden="true" />
+        </div>
+        <h3 class="font-heading text-lg font-semibold mb-2" style="font-family: var(--font-heading)">DX & Automation</h3>
+        <p class="text-sm text-[var(--color-fg-secondary)]">
+          Built vft-form-generator for schema-driven CRUD scaffolding and form generation.
+        </p>
+      </article>
+
+      <article class="card p-6">
+        <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-[var(--color-primary)]/10">
+          <ng-icon name="bootstrapSpeedometer2" size="22" class="text-[var(--color-primary)]" aria-hidden="true" />
+        </div>
+        <h3 class="font-heading text-lg font-semibold mb-2" style="font-family: var(--font-heading)">Performance Culture</h3>
+        <p class="text-sm text-[var(--color-fg-secondary)]">
+          Worked on Core Web Vitals, bundle size and Lighthouse results, and sped up CI builds with caching and Webpack configuration.
+        </p>
+      </article>
+
+      <article class="card p-6">
+        <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-[var(--color-primary)]/10">
+          <ng-icon name="bootstrapDiagram3" size="22" class="text-[var(--color-primary)]" aria-hidden="true" />
+        </div>
+        <h3 class="font-heading text-lg font-semibold mb-2" style="font-family: var(--font-heading)">Documentation & Knowledge</h3>
+        <p class="text-sm text-[var(--color-fg-secondary)]">
+          Created the Angular Lifecycles Guide, a visual reference built with Mermaid flowcharts.
+        </p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- Open Source & Projects -->
+<section id="opensource" aria-label="Open source contributions and projects" class="py-16 md:py-28">
+  <div class="section-container">
+    <div class="mb-8 flex items-center gap-3 md:mb-12">
+      <ng-icon name="bootstrapAward" size="18" class="text-[var(--color-primary)] md:size-5" aria-hidden="true" />
+      <h2 class="font-heading text-xl font-semibold md:text-3xl" style="font-family: var(--font-heading)">
+        Open Source & Projects
+      </h2>
+    </div>
+
+    <div class="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+      @for (project of openSourceProjects; track project.name) {
+        <article class="card p-4 md:p-6 shadow-[var(--shadow-sm)] hover:shadow-[var(--shadow-md)] transition-shadow duration-300">
+          <h3 class="font-heading text-sm font-semibold md:text-base" style="font-family: var(--font-heading)">
+            <a [href]="project.url" target="_blank" rel="noopener" class="link-underline text-[var(--color-fg)] hover:text-[var(--color-primary)]">
+              {{project.name}}
+              <ng-icon name="bootstrapLink45deg" size="12" class="ml-1 inline" aria-hidden="true" />
+            </a>
+          </h3>
+          <p class="mt-2 text-sm text-[var(--color-fg-secondary)]">{{project.description}}</p>
+          <div class="mt-3 flex flex-wrap gap-1">
+            @for (tag of project.tags; track tag) {
+              <span class="tag">{{tag}}</span>
+            }
+          </div>
+        </article>
+      }
+    </div>
+  </div>
+</section>
+
+<!-- Education -->
+<section id="education" aria-label="Education" class="border-t border-[var(--color-border)] bg-[var(--color-bg-alt)] py-16 md:py-28">
+  <div class="section-container">
+    <div class="mb-8 flex items-center gap-3 md:mb-12">
+      <ng-icon name="bootstrapBuilding" size="18" class="text-[var(--color-primary)] md:size-5" aria-hidden="true" />
+      <h2 class="font-heading text-xl font-semibold md:text-3xl" style="font-family: var(--font-heading)">
+        Education
+      </h2>
+    </div>
+
+    <div class="space-y-4">
+      @for (edu of education; track edu.institution) {
+        <article class="card p-4 md:p-6 shadow-[var(--shadow-sm)]">
+          <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-2">
+            <div>
+              <h3 class="font-heading text-sm font-semibold md:text-base" style="font-family: var(--font-heading)">{{edu.degree}}</h3>
+              <p class="mt-0.5 text-sm text-[var(--color-primary)]">{{edu.institution}}</p>
+              <p class="mt-0.5 text-sm text-[var(--color-fg-secondary)]">{{edu.period}}</p>
+            </div>
+          </div>
+          <p class="mt-3 text-sm text-[var(--color-fg-secondary)]">{{edu.description}}</p>
+        </article>
+      }
     </div>
   </div>
 </section>

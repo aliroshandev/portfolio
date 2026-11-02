@@ -39,6 +39,13 @@
             "outputMode": "server",
             "ssr": {
               "entry": "src/server.ts"
+            },
+            "security": {
+              "allowedHosts": [
+                "aliroshanzamir.info",
+                "www.aliroshanzamir.info",
+                "localhost"
+              ]
             }
           },
           "configurations": {

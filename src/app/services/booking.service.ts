@@ -193,7 +193,7 @@ export class BookingService {
   buildGoogleCalendarUrl(slot: TimeSlot, details: BookingDetails): string {
     const minutes = (slot.endEpoch - slot.startEpoch) / 60000;
     const text = encodeURIComponent(`1:1 call with ${this.config.ownerName} (${this.#durationLabel(minutes)})`);
-    const dates = `${this.#formatEpoch(slot.startEpoch)}/${this.#formatEpoch(slot.endEpoch)}`;
+    const dates = `${this.#formatEpochForGCal(slot.startEpoch)}/${this.#formatEpochForGCal(slot.endEpoch)}`;
     const detailsLines = [
       `${details.name}${details.organization ? ` (${details.organization})` : ''}`,
       `Email: ${details.email}`,
@@ -294,6 +294,14 @@ export class BookingService {
     const p = (n: number) => String(n).padStart(2, '0');
     return `${d.getUTCFullYear()}${p(d.getUTCMonth() + 1)}${p(d.getUTCDate())}` +
       `T${p(d.getUTCHours())}${p(d.getUTCMinutes())}${p(d.getUTCSeconds())}Z`;
+  }
+
+  /** Format epoch for Google Calendar "add to calendar" URL (without seconds). */
+  #formatEpochForGCal(epochMs: number): string {
+    const d = new Date(epochMs);
+    const p = (n: number) => String(n).padStart(2, '0');
+    return `${d.getUTCFullYear()}${p(d.getUTCMonth() + 1)}${p(d.getUTCDate())}` +
+      `T${p(d.getUTCHours())}${p(d.getUTCMinutes())}00Z`;
   }
 
   formatClock(hhmm: string): string {

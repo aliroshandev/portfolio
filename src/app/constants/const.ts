@@ -3,184 +3,225 @@ import {ExperienceContent} from '../models/experience-content';
 
 export const experiences: Array<ExperienceInterface> = [
   {
-    workFromToDate: ['06/2022', 'Present'],
-    companyName: 'TabinTech',
+    workFromToDate: ['01/2022', 'Present'],
+    companyName: 'Tabin Tech',
     companyDescription: 'Technology Solutions Provider',
     experienceDetails: {
-      title: 'Frontend Engineer - Remote',
+      title: 'Frontend Engineer - Onsite',
       href: 'https://tabintech.com',
       content: new ExperienceContent([
-        'Managed and delivered 6 outsourced projects, including pastil.ir, nam.ir, migline24.com, eanjoman.ir and Otanafoods.com, achieving a 25% increase in user engagement.',
-        'Developed high-converting landing pages for Khanoumi.com and divar.ir, reducing page load times by 20%.',
-        'Created in-house Angular libraries (vft-core, vft-auth, vft-animation) deployed on Nexus, reducing bundle sizes.',
-        'Accelerated project build time by 50% by creating schemas and base classes.',
-        'Mentored front-end developers and implemented best practices for architecture.'
+        'Build and maintain Angular applications for clients including pastil.ir, nam.ir and migline24.com, currently on Angular 22 with TypeScript, RxJS and GraphQL.',
+        'Built shared Angular libraries (vft-core, vft-auth, vft-table, vft-ui-util) published to a private Nexus registry.',
+        'Improved CI build times with caching and custom Webpack configuration.',
+        'Mentored engineers through code review.',
       ]),
-      tags: ['Angular', 'TypeScript', 'RxJS', 'Tailwind CSS', 'Docker', 'Nexus', 'PWA', 'SSR']
+      tags: ['Angular', 'TypeScript', 'RxJS', 'GraphQL', 'Tailwind CSS', 'Docker', 'Webpack', 'Nx', 'PWA', 'SSR', 'Angular Signals']
     }
   } as ExperienceInterface,
   {
-    workFromToDate: ['08/2020', '05/2022'],
-    companyName: 'Agatizer',
-    companyDescription: 'Crypto Exchange - Copy Trading',
-    experienceDetails: {
-      title: 'Frontend Engineer - Remote',
-      href: 'https://agatizer.com',
-      content: new ExperienceContent([
-        'Built the Persian trading platform UI enabling users to trade crypto assets with real-time market data.',
-        'Implemented copy-trading dashboard where users can follow and mirror the positions of top traders.',
-        'Developed responsive order-entry and portfolio views, optimizing performance for live price feeds.',
-      ]),
-      tags: ['React', 'Angular', 'Tailwind', 'TypeScript', 'WebSocket', 'Docker', 'PWA']
-    }
-  } as ExperienceInterface,
-  {
-    workFromToDate: ['08/2020', '05/2022'],
-    companyName: 'Missha',
-    companyDescription: 'Cosmetics & Health Products E-Commerce',
-    experienceDetails: {
-      title: 'Frontend Engineer - Remote',
-      href: 'https://missha-ir.com',
-      content: new ExperienceContent([
-        'Designed and launched the Persian version of Missha.com\'s main store, increasing local traffic by 40%.',
-        'Built product catalog and category pages for cosmetics and health products with optimized search.',
-        'Delivered multiple event-based single-pages driving seasonal campaign success.',
-      ]),
-      tags: ['Angular', 'Angular Material', 'TypeScript', 'Jest', 'Docker', 'PWA', 'SEO']
-    }
-  } as ExperienceInterface,
-  {
-    workFromToDate: ['09/2020', '01/2021'],
-    companyName: 'Tushehbar',
-    companyDescription: 'Shipping & Maritime Transportation',
-    experienceDetails: {
-      title: 'Frontend Engineer - Remote',
-      href: 'https://tushehbar.com',
-      content: new ExperienceContent([
-        'Spearheaded scalable Angular 9 front-end, enhancing i18n and user satisfaction by 30%.',
-        'Built integrated management system automating shipping documentation, reducing manual processing by 40%.',
-      ]),
-      tags: ['Angular', 'DevExtreme', 'Bootstrap', 'TypeScript', 'Docker']
-    }
-  } as ExperienceInterface,
-  {
-    workFromToDate: ['09/2019', '01/2020'],
+    workFromToDate: ['10/2021', '01/2022'],
     companyName: 'eSafar',
     companyDescription: 'Online Travel Booking Platform',
     experienceDetails: {
-      title: 'Frontend Engineer - Remote',
+      title: 'Frontend Engineer - Part-time',
       href: 'https://esafar.com',
       content: new ExperienceContent([
-        'Spearheaded Angular 8 front-end with i18n, improving user satisfaction by 30%.',
-        'Implemented PWA optimizations resulting in 35% growth in returning users.',
+        'Continued frontend work on the travel-booking platform.',
       ]),
-      tags: ['Angular', 'Angular Material', 'TypeScript', 'PWA', 'Nginx', 'Docker']
+      tags: ['Angular', 'TypeScript', 'PWA', 'i18n']
     }
   } as ExperienceInterface,
   {
-    workFromToDate: ['09/2019', '01/2020'],
+    workFromToDate: ['08/2021', '12/2021'],
+    companyName: 'Agatizer',
+    companyDescription: 'Copy-Trading Platform',
+    experienceDetails: {
+      title: 'Frontend Engineer - Remote, Contract',
+      href: 'https://agatizer.com',
+      content: new ExperienceContent([
+        'Built a trading dashboard that rendered real-time WebSocket data with D3.js.',
+        'Kept the interface responsive with virtual scrolling and RxJS streams.',
+      ]),
+      tags: ['React', 'Angular', 'Tailwind', 'TypeScript', 'WebSocket', 'D3.js', 'Docker', 'PWA', 'RxJS', 'Virtual Scrolling']
+    }
+  } as ExperienceInterface,
+  {
+    workFromToDate: ['11/2020', '10/2021'],
+    companyName: 'Tushehbar Shipping Agency',
+    companyDescription: 'Shipping & Maritime Transportation',
+    experienceDetails: {
+      title: 'Frontend Engineer - Part-time',
+      href: 'https://tushehbar.com',
+      content: new ExperienceContent([
+        'Automated logistics workflows and reduced manual data entry with a custom Angular and DevExtreme dashboard.',
+      ]),
+      tags: ['Angular', 'DevExtreme', 'Bootstrap', 'TypeScript', 'Docker', 'i18n']
+    }
+  } as ExperienceInterface,
+  {
+    workFromToDate: ['10/2020', '02/2021'],
+    companyName: 'Missha',
+    companyDescription: 'Cosmetics & Health Products E-Commerce',
+    experienceDetails: {
+      title: 'Frontend Engineer - Part-time',
+      href: 'https://missha-ir.com',
+      content: new ExperienceContent([
+        'Built a localized e-commerce PWA for the Persian market, with SEO and performance work.',
+        'Added offline support with Service Workers.',
+      ]),
+      tags: ['Angular', 'Angular Material', 'TypeScript', 'Jest', 'Docker', 'PWA', 'SEO', 'Service Workers', 'Lighthouse']
+    }
+  } as ExperienceInterface,
+  {
+    workFromToDate: ['09/2020', '10/2020'],
     companyName: 'Azki',
     companyDescription: 'Insurance Issuer Application',
     experienceDetails: {
-      title: 'Frontend Developer Consultant - Remote',
+      title: 'Frontend Developer Consultant - Onsite',
       href: 'https://azki.com',
       content: new ExperienceContent([
-        'Improved responsive design for Laravel Blade pages, optimizing mobile usability and SEO.',
-        'Mentored junior front-end team members on best practices.',
+        'Improved mobile usability and SEO for a Laravel Blade insurance platform.',
       ]),
-      tags: ['Laravel', 'Blade', 'JavaScript', 'jQuery', 'SEO']
+      tags: ['Laravel', 'Blade', 'JavaScript', 'jQuery', 'SEO', 'Responsive Design']
     }
   } as ExperienceInterface,
   {
-    workFromToDate: ['09/2018', '03/2020'],
+    workFromToDate: ['05/2020', '08/2020'],
+    companyName: 'eSafar',
+    companyDescription: 'Online Travel Booking Platform',
+    experienceDetails: {
+      title: 'Frontend Developer - Full-time',
+      href: 'https://esafar.com',
+      content: new ExperienceContent([
+        'Built an Angular travel-booking frontend with i18n and PWA support.',
+      ]),
+      tags: ['Angular', 'Angular Material', 'TypeScript', 'PWA', 'Nginx', 'Docker', 'i18n']
+    }
+  } as ExperienceInterface,
+  {
+    workFromToDate: ['09/2018', '05/2020'],
     companyName: 'Shenoto',
     companyDescription: 'Persian Podcast Platform',
     experienceDetails: {
-      title: 'Frontend Engineer - Remote',
+      title: 'Frontend Developer - Full-time',
       href: 'https://shenoto.com',
       content: new ExperienceContent([
-        'Upgraded from Angular 3 to 7, improving load times by 15% and SEO scores to 92%.',
-        'Implemented PWA optimizations resulting in 20% returning user growth.',
-        'Built wavesurfer.js podcast player.',
+        'Led the migration to Angular 7, with performance and SEO improvements.',
+        'Built a podcast player with wavesurfer.js.',
       ]),
-      tags: ['Angular', 'TypeScript', 'PWA', 'Podcast', 'Docker']
-    }
-  } as ExperienceInterface,
-  {
-    workFromToDate: ['08/2017', '11/2017'],
-    companyName: 'ITManHa',
-    companyDescription: 'Software Engineer Platform',
-    experienceDetails: {
-      title: 'Frontend Engineer - Remote',
-      href: 'https://itmanha.com',
-      content: new ExperienceContent([
-        'Engineered frontend solutions for cross-industry software projects.',
-        'Core stack: React, WordPress, Headless CMS, jQuery.',
-      ]),
-      tags: ['React', 'WordPress', 'JavaScript', 'jQuery', 'Responsive Design']
+      tags: ['Angular', 'TypeScript', 'PWA', 'Podcast', 'Docker', 'wavesurfer.js', 'SEO']
     }
   } as ExperienceInterface,
 ];
 
+export const openSourceProjects = [
+  {
+    name: 'Angular Docs Fix',
+    description: 'Merged PR #62361, a one-line fix for a syntax error in an Angular tutorial.',
+    url: 'https://github.com/angular/angular/pull/62361',
+    tags: ['Angular', 'Docs', 'Open Source']
+  },
+  {
+    name: 'angular-lazy-load-directive',
+    description: 'An npm package using Signals and IntersectionObserver for viewport-based image lazy loading.',
+    url: 'https://www.npmjs.com/package/angular-lazy-load-directive',
+    tags: ['Angular', 'Signals', 'IntersectionObserver', 'Performance', 'npm']
+  },
+  {
+    name: 'Angular Lifecycles Guide',
+    description: 'A free visual reference to the Angular lifecycle and dependency injection, built with Mermaid flowcharts.',
+    url: 'https://angular-lifecycles.vercel.app',
+    tags: ['Angular', 'Mermaid', 'Education']
+  }
+];
+
+export const education = [
+  {
+    degree: "Bachelor's Degree in Computer Engineering",
+    institution: 'Islamic Azad University, South Tehran Branch',
+    period: '2015–2021',
+    description: 'Focused on software engineering, web technologies, and database systems.'
+  }
+];
+
 export const technicalSkills: SkillsInterface = {
-  languages: 'TypeScript, JavaScript (ES6+), HTML5, CSS3, Bash, PHP, TSX, JSX',
-  frameworks: 'Angular (v2–v20), Next.js, Vue, RxJS, Ionic, Tailwind CSS, Bootstrap',
-  tools: 'Git, Docker, Nginx, Webpack, Vite, npm, Caddy, Nexus Repository',
-  concepts: 'SSR, SSG, PWA, Lazy Loading, i18n, SEO Optimization, Performance Tuning, CI/CD'
+  languages: 'TypeScript, JavaScript (ES6+), Go, HTML5, CSS3, SCSS, PHP, MQL5, Bash',
+  frameworks: 'Angular (v5–v22), Angular Signals, RxJS, NgRx, Angular Material, Angular CDK, React, Next.js, Tailwind CSS, Bootstrap, WordPress',
+  tools: 'Git, Docker, PostgreSQL, Nginx, Webpack, Vite, npm, Nx, Jest, Cypress, Playwright, GitHub Actions, GitLab CI, Nexus Repository, Caddy',
+  concepts: 'SSR, SSG, PWA, Lazy Loading, i18n, SEO Optimization, Performance Tuning, Core Web Vitals, Lighthouse, Bundle Optimization, Virtual Scrolling, D3.js, GraphQL, WebSockets, REST APIs, Service Workers, CI/CD, Agile/Scrum, Design Systems, Component Architecture, Reusable Libraries'
 };
 
 export const aboutText =
-  'Frontend Architect with 7+ years building performance-critical web solutions for finance, logistics, and e-commerce. ' +
-  'Delivered 10+ enterprise applications boosting engagement by 30% and reducing latency by 20% through optimized React/Angular architectures. ' +
-  'Pioneered reusable component systems accelerating development by 30% and cutting bundle sizes by 40%. ' +
-  'Established CI/CD pipelines (Docker, Nexus) and SSR/PWA strategies increasing returning users by 20%. Mentored 8+ engineers.';
+  'Frontend engineer with 8 years of paid experience building Angular applications for e-commerce, logistics, travel and trading products, now also building Go backends. Author of the angular-lazy-load-directive npm package, with one merged docs fix in the Angular repository.';
 
-export const richSnippetJsonSchema = {
-  "@context": "https://schema.org",
-  "@type": "ProfilePage",
-  "image": {
-    "@id": "#profileImage",
-    "@type": "ImageObject",
-    "contentUrl": "https://aliroshanzamir.info/assets/profile-light.png"
+const SITE_URL = 'https://aliroshanzamir.info';
+
+export const personSchema = {
+  '@type': 'Person',
+  '@id': `${SITE_URL}/#person`,
+  name: 'Ali Roshanzamir Golafzani',
+  alternateName: 'Ali Roshanzamir',
+  givenName: 'Ali',
+  familyName: 'Roshanzamir Golafzani',
+  image: {
+    '@type': 'ImageObject',
+    contentUrl: `${SITE_URL}/assets/profile-light.png`,
   },
-  "mainEntity": {
-    "@id": "#profile",
-    "@type": "Person",
-    "name": "Ali Roshanzamir Golafzani",
-    "alternateName": "Ali Roshanzamir",
-    "givenName": "Ali",
-    "familyName": "Roshanzamir Golafzani",
-    "image": "https://aliroshanzamir.info/assets/profile-light.png",
-    "url": "https://aliroshanzamir.info/",
-    "jobTitle": "Frontend Engineer",
-    "description": aboutText,
-    "email": "a76roshanzamir@gmail.com",
-    "telephone": "+989031751739",
-    "worksFor": {
-      "@type": "Organization",
-      "name": "TabinTech",
-      "url": "https://tabintech.com"
+  url: `${SITE_URL}/`,
+  jobTitle: 'Software Engineer',
+  description: aboutText,
+  email: 'a76roshanzamir@gmail.com',
+  worksFor: {
+    '@type': 'Organization',
+    name: 'Tabin Tech',
+    url: 'https://tabintech.com',
+  },
+  alumniOf: {
+    '@type': 'CollegeOrUniversity',
+    name: 'Islamic Azad University, South Tehran Branch',
+  },
+  address: {
+    '@type': 'PostalAddress',
+    addressCountry: 'IR',
+  },
+  sameAs: [
+    'https://www.linkedin.com/in/ali-roshan',
+    'https://github.com/aliroshandev',
+  ],
+  knowsAbout: [
+    'Angular', 'TypeScript', 'JavaScript', 'RxJS', 'Angular Signals', 'React', 'Next.js',
+    'Go', 'PostgreSQL', 'MQL5', 'Docker', 'SSR', 'PWA', 'GraphQL', 'WebSockets', 'WordPress',
+  ],
+  knowsLanguage: [
+    {'@type': 'Language', name: 'English', alternateName: 'en'},
+    {'@type': 'Language', name: 'Persian', alternateName: 'fa'},
+  ],
+};
+
+/** On every page: identifies the site and its owner. */
+export const siteSchema = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'WebSite',
+      '@id': `${SITE_URL}/#website`,
+      url: `${SITE_URL}/`,
+      name: 'Ali Roshanzamir',
+      inLanguage: 'en',
+      publisher: {'@id': `${SITE_URL}/#person`},
     },
-    "alumniOf": {
-      "@type": "EducationalOrganization",
-      "name": "Azad University, South Tehran Branch"
-    },
-    "address": {
-      "@type": "PostalAddress",
-      "addressCountry": "Iran"
-    },
-    "sameAs": [
-      "https://ir.linkedin.com/in/ali-roshan",
-      "https://github.com/aliroshandev"
-    ],
-    "knowsAbout": [
-      "TypeScript", "JavaScript", "Angular", "React", "Next.js", "HTML5", "CSS3",
-      "Docker", "SEO Optimization", "Performance Tuning", "RxJS", "Tailwind CSS",
-      "SSR", "SSG", "PWA", "Lazy Loading", "i18n"
-    ],
-    "knowsLanguage": [
-      {"@type": "Language", "name": "English"},
-      {"@type": "Language", "name": "Persian"}
-    ]
-  }
+    personSchema,
+  ],
+};
+
+/** Home page only. Google reads the Person from mainEntity, so it is included in full. */
+export const profilePageSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ProfilePage',
+  '@id': `${SITE_URL}/#profilepage`,
+  url: `${SITE_URL}/`,
+  inLanguage: 'en',
+  isPartOf: {'@id': `${SITE_URL}/#website`},
+  dateModified: '2026-11-02',
+  mainEntity: personSchema,
 };

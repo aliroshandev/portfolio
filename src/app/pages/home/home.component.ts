@@ -1,24 +1,39 @@
-import {Component, computed, inject, OnInit} from '@angular/core';
+import {Component, computed, inject, OnInit, ChangeDetectionStrategy} from '@angular/core';
 import {RouterLink} from '@angular/router';
 import {NgOptimizedImage} from '@angular/common';
 import {ThemeService} from '../../services/theme.service';
 import {LayoutService} from '../../services/layout.service';
 import {NgIcon, provideIcons} from '@ng-icons/core';
 import {
-  bootstrapCalendarMonth, bootstrapBuilding, bootstrapLink45deg,
-  bootstrapCodeSlash, bootstrapAward, bootstrapPerson,
+  bootstrapArrowRight,
+  bootstrapAward,
+  bootstrapBuilding,
+  bootstrapCalendarMonth,
+  bootstrapChevronRight,
+  bootstrapCodeSlash,
+  bootstrapGraphUp,
+  bootstrapLink45deg,
+  bootstrapPeople,
+  bootstrapPerson,
+  bootstrapTrophy,
+  bootstrapSpeedometer2,
+  bootstrapDiagram3
 } from '@ng-icons/bootstrap-icons';
 import {SeoService} from '../../services/seo.service';
-import {experiences, technicalSkills, aboutText} from '../../constants/const';
+import {aboutText, education, experiences, openSourceProjects, technicalSkills, profilePageSchema} from '../../constants/const';
+import {SkillGraphComponent} from '@components/skill-graph/skill-graph.component';
 
 @Component({
   selector: 'app-home',
-  imports: [NgOptimizedImage, NgIcon, RouterLink],
+  imports: [NgOptimizedImage, NgIcon, RouterLink, SkillGraphComponent],
   templateUrl: './home.component.html',
-  styleUrl: './home.component.scss',
+  styleUrls: ['./home.component.scss'],
+  changeDetection: ChangeDetectionStrategy.Eager,
   viewProviders: [provideIcons({
     bootstrapCalendarMonth, bootstrapBuilding, bootstrapLink45deg,
     bootstrapCodeSlash, bootstrapAward, bootstrapPerson,
+    bootstrapPeople, bootstrapGraphUp, bootstrapTrophy, bootstrapChevronRight,
+    bootstrapArrowRight, bootstrapSpeedometer2, bootstrapDiagram3
   })]
 })
 export class HomeComponent implements OnInit {
@@ -32,14 +47,22 @@ export class HomeComponent implements OnInit {
   protected readonly aboutText = aboutText;
   protected readonly experiences = experiences;
   protected readonly technicalSkills = technicalSkills;
+  protected readonly openSourceProjects = openSourceProjects;
+  protected readonly education = education;
+
+  protected readonly aboutStats = [
+    {value: '8', label: 'Years Experience'},
+    {value: 'Angular', label: 'Main Framework'},
+    {value: 'Go', label: 'Backend Work'}
+  ];
 
   ngOnInit() {
-    const title = 'Ali Roshanzamir Golafzani | Frontend Engineer & Angular Specialist';
-    const desc = 'Frontend Architect with 7+ years experience building enterprise web solutions. Angular specialist, React developer, SSR/PWA expert. View my portfolio, experience, and technical skills.';
-
-    this.#seoService.setTitle(title);
-    this.#seoService.setMetaDescription(desc);
-    this.#seoService.setOgTags(title, desc, 'https://aliroshanzamir.info/assets/profile-light.png');
-    this.#seoService.updateCanonical('https://aliroshanzamir.info');
+    this.#seoService.setPage({
+      title: 'Ali Roshanzamir Golafzani | Software Engineer, Angular and Go',
+      description: 'Software engineer with 8 years of paid frontend experience in Angular, now also building Go backends. See projects, work history and open source work.',
+      path: '/',
+      type: 'profile',
+      jsonLd: profilePageSchema,
+    });
   }
 }

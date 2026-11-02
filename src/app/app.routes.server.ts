@@ -1,6 +1,24 @@
 import { RenderMode, ServerRoute } from '@angular/ssr';
 
+// Keep in sync with PROJECTS in project-detail.component.ts and with public/sitemap-config.xml.
+const PROJECT_IDS = [
+  'tabintech-platform',
+  'agatizer-trading',
+  'missha-pwa',
+  'angular-lazy-load',
+  'angular-lifecycles',
+];
+
 export const serverRoutes: ServerRoute[] = [
+  {
+    path: '',
+    renderMode: RenderMode.Prerender
+  },
+  {
+    path: 'projects/:id',
+    renderMode: RenderMode.Prerender,
+    getPrerenderParams: async () => PROJECT_IDS.map(id => ({id}))
+  },
   {
     path: '**',
     renderMode: RenderMode.Prerender

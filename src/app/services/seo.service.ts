@@ -1,28 +1,80 @@
 import {DOCUMENT, inject, Injectable} from '@angular/core';
 import {Title} from '@angular/platform-browser';
-import {LayoutService} from './layout.service';
+
+export const SITE_URL = 'https://aliroshanzamir.info';
+export const PERSON_ID = `${SITE_URL}/#person`;
+
+const SHARE_IMAGE = `${SITE_URL}/assets/og-image.png`;
+const SHARE_IMAGE_ALT = 'Ali Roshanzamir Golafzani, Software Engineer, Angular and Go';
+const PERSON_FIRST_NAME = 'Ali';
+const PERSON_LAST_NAME = 'Roshanzamir Golafzani';
+
+export interface PageSeo {
+  title: string;
+  description: string;
+  /** Path from the site root, such as `/projects`. The home page is `/`. */
+  path: string;
+  type?: 'website' | 'profile' | 'article';
+  /** Page-level JSON-LD. Any block left by the previous page is removed when this is omitted. */
+  jsonLd?: Record<string, unknown>;
+}
 
 @Injectable({providedIn: 'root'})
 export class SeoService {
   readonly #document = inject(DOCUMENT);
   readonly #title = inject(Title);
-  readonly #layoutService = inject(LayoutService);
 
-  setTitle(title: string) {
+  /** Sets every per-page tag together, so no tag can be left over from the previous route. */
+  setPage({title, description, path, type = 'website', jsonLd}: PageSeo) {
+    const url = `${SITE_URL}${path}`;
+
     this.#title.setTitle(title);
-  }
+    this.#setMeta('name', 'description', description);
+    this.#setCanonical(url);
 
-  setMetaDescription(description: string) {
-    let tag = this.#document.querySelector('meta[name="description"]');
-    if (!tag) {
-      tag = this.#document.createElement('meta');
-      tag.setAttribute('name', 'description');
-      this.#document.head.appendChild(tag);
+    this.#setMeta('property', 'og:type', type);
+    this.#setMeta('property', 'og:url', url);
+    this.#setMeta('property', 'og:title', title);
+    this.#setMeta('property', 'og:description', description);
+    this.#setMeta('property', 'og:image', SHARE_IMAGE);
+    this.#setMeta('property', 'og:image:alt', SHARE_IMAGE_ALT);
+
+    this.#setMeta('name', 'twitter:title', title);
+    this.#setMeta('name', 'twitter:description', description);
+    this.#setMeta('name', 'twitter:image', SHARE_IMAGE);
+    this.#setMeta('name', 'twitter:image:alt', SHARE_IMAGE_ALT);
+
+    // profile:* belongs only on pages whose og:type is profile.
+    if (type === 'profile') {
+      this.#setMeta('property', 'profile:first_name', PERSON_FIRST_NAME);
+      this.#setMeta('property', 'profile:last_name', PERSON_LAST_NAME);
+    } else {
+      this.#removeMeta('property', 'profile:first_name');
+      this.#removeMeta('property', 'profile:last_name');
     }
-    tag.setAttribute('content', description);
+
+    if (jsonLd) {
+      this.setJsonLd(jsonLd, 'page');
+    } else {
+      this.#jsonLdScript('page')?.remove();
+    }
   }
 
-  updateCanonical(url: string) {
+  /** Each key holds one JSON-LD block: `site` for the whole site, `page` for the current route. */
+  setJsonLd(data: Record<string, unknown>, key: 'site' | 'page' = 'site') {
+    this.#jsonLdScript(key)?.remove();
+    const script = this.#document.createElement('script');
+    script.setAttribute('type', 'application/ld+json');
+    script.setAttribute('data-seo', key);
+    script.textContent = JSON.stringify(data);
+    this.#document.head.appendChild(script);
+  }
+
+  #jsonLdScript(key: string) {
+    return this.#document.querySelector(`script[type="application/ld+json"][data-seo="${key}"]`);
+  }
+
+  #setCanonical(url: string) {
     let link = this.#document.querySelector<HTMLLinkElement>('link[rel="canonical"]');
     if (!link) {
       link = this.#document.createElement('link');
@@ -32,29 +84,17 @@ export class SeoService {
     link.setAttribute('href', url);
   }
 
-  setOgTags(title: string, description: string, image?: string) {
-    const setMeta = (property: string, content: string) => {
-      const selector = `meta[property="${property}"]`;
-      let tag = this.#document.querySelector<HTMLMetaElement>(selector);
-      if (!tag) {
-        tag = this.#document.createElement('meta');
-        tag.setAttribute('property', property);
-        this.#document.head.appendChild(tag);
-      }
-      tag.setAttribute('content', content);
-    };
-    setMeta('og:title', title);
-    setMeta('og:description', description);
-    setMeta('og:url', 'https://aliroshanzamir.info');
-    if (image) setMeta('og:image', image);
+  #setMeta(attribute: 'name' | 'property', key: string, content: string) {
+    let tag = this.#document.querySelector<HTMLMetaElement>(`meta[${attribute}="${key}"]`);
+    if (!tag) {
+      tag = this.#document.createElement('meta');
+      tag.setAttribute(attribute, key);
+      this.#document.head.appendChild(tag);
+    }
+    tag.setAttribute('content', content);
   }
 
-  setJsonLd(data: Record<string, unknown>) {
-    const existing = this.#document.querySelector('script[type="application/ld+json"]');
-    if (existing) existing.remove();
-    const script = this.#document.createElement('script');
-    script.setAttribute('type', 'application/ld+json');
-    script.textContent = JSON.stringify(data);
-    this.#document.head.appendChild(script);
+  #removeMeta(attribute: 'name' | 'property', key: string) {
+    this.#document.querySelector(`meta[${attribute}="${key}"]`)?.remove();
   }
 }

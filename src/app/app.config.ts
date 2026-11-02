@@ -1,7 +1,7 @@
 import {ApplicationConfig, inject, provideZoneChangeDetection} from '@angular/core';
 import {provideRouter, withInMemoryScrolling, withRouterConfig} from '@angular/router';
 import {routes} from './app.routes';
-import {provideClientHydration, withHttpTransferCacheOptions} from '@angular/platform-browser';
+import {provideClientHydration, withHttpTransferCacheOptions, withNoIncrementalHydration} from '@angular/platform-browser';
 import {provideNgIconLoader} from '@ng-icons/core';
 import {HttpClient, provideHttpClient, withFetch} from '@angular/common/http';
 import {provideAnimations} from '@angular/platform-browser/animations';
@@ -17,7 +17,7 @@ export const appConfig: ApplicationConfig = {
     ),
     provideAnimations(),
     provideClientHydration(
-      withHttpTransferCacheOptions({includePostRequests: true})
+      withHttpTransferCacheOptions({includePostRequests: true}), withNoIncrementalHydration()
     ),
     provideHttpClient(withFetch()),
     provideNgIconLoader((name) => {

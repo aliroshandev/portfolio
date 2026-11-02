@@ -8,6 +8,18 @@ export const routes: Routes = [
       .then(m => m.BookComponent)
   },
   {
+    path: 'projects',
+    title: 'Projects & Case Studies | Ali Roshanzamir',
+    loadComponent: () => import('@pages/projects/projects.component')
+      .then(m => m.ProjectsComponent)
+  },
+  {
+    path: 'projects/:id',
+    title: 'Project Detail | Ali Roshanzamir',
+    loadComponent: () => import('@pages/projects/project-detail/project-detail.component')
+      .then(m => m.ProjectDetailComponent)
+  },
+  {
     path: 'legal-notice',
     title: 'Ali Roshanzamir Golafzani | Legal Notice',
     loadComponent: () => import('@pages/legal-notice/legal-notice.component')
@@ -15,7 +27,7 @@ export const routes: Routes = [
   },
   {
     path: '',
-    title: 'Ali Roshanzamir Golafzani | Portfolio',
+    title: 'Ali Roshanzamir Golafzani | Software Engineer, Angular and Go',
     loadComponent: () => import('@pages/home/home.component')
       .then(m => m.HomeComponent)
   }

@@ -1,0 +1,146 @@
+<section aria-label="Skill Proficiency" class="py-16 md:py-28">
+  <div class="section-container">
+    <div class="mb-12 md:mb-16 text-center">
+      <span class="tag mb-4 inline-block">Interactive Proficiency</span>
+      <h2 class="font-heading text-3xl font-bold leading-tight tracking-tight md:text-4xl"
+          style="font-family: var(--font-heading)">
+        Technical <span class="text-[var(--color-primary)]">Skills</span>
+      </h2>
+      <p class="mt-4 max-w-2xl mx-auto text-base text-[var(--color-fg-secondary)] md:text-lg">
+        Click any category to filter. Hover a skill for project evidence and details.
+        Proficiency reflects production experience, not just familiarity.
+      </p>
+    </div>
+
+    <!-- Category Filters -->
+    <div class="mb-8 flex flex-wrap justify-center gap-2">
+      <button (click)="selectCategory(null)"
+              [class.bg-[var(--color-primary)]]="!selectedCategory()"
+              [class.text-white]="!selectedCategory()"
+              class="tag px-4 py-2 transition-all duration-200 hover:scale-105">
+        All Skills
+      </button>
+      @for (category of categories(); track category.name) {
+        <button (click)="selectCategory(category.name)"
+                [class.bg-[category.color]]="selectedCategory() === category.name"
+                [class.text-white]="selectedCategory() === category.name"
+                class="tag px-4 py-2 transition-all duration-200 hover:scale-105 flex items-center gap-1.5">
+          <ng-icon [name]="category.icon" size="14" aria-hidden="true" />
+          {{category.name}}
+        </button>
+      }
+    </div>
+
+    <!-- Top Skills Summary -->
+    <div class="mb-10 grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-6">
+      @for (skill of topSkills(); track skill.name) {
+        <div class="card p-4 text-center hover:shadow-[var(--shadow-md)] transition-shadow"
+             (mouseenter)="hoveredSkill.set(skill)"
+             (mouseleave)="hoveredSkill.set(null)">
+          <div class="relative h-20 mb-3">
+            <svg class="w-full h-full transform -rotate-90">
+              <circle class="text-[var(--color-border)]"
+                      cx="50%" cy="50%" r="35"
+                      stroke-width="6" fill="none" stroke="currentColor"></circle>
+              <circle [attr.stroke]="getProficiencyColor(skill.proficiency)"
+                      class="transition-all duration-500"
+                      cx="50%" cy="50%" r="35"
+                      stroke-width="6" fill="none" stroke-linecap="round"
+                      [attr.stroke-dasharray]="2 * 3.14159 * 35"
+                      [attr.stroke-dashoffset]="2 * 3.14159 * 35 * (1 - skill.proficiency / 100)"></circle>
+            </svg>
+            <div class="absolute inset-0 flex items-center justify-center">
+              <span class="font-heading text-xl font-bold" [style.color]="getProficiencyColor(skill.proficiency)">{{skill.proficiency}}%</span>
+            </div>
+          </div>
+          <p class="text-xs font-medium text-[var(--color-fg)] truncate" [title]="skill.name">{{skill.name}}</p>
+          <p class="text-[10px] text-[var(--color-fg-secondary)]">{{skill.yearsExperience}}yr</p>
+        </div>
+      }
+    </div>
+
+    <!-- Detailed Skills Grid -->
+    <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      @for (category of categories(); track category.name) {
+        @if (!selectedCategory() || selectedCategory() === category.name) {
+          <div class="card p-6" [style.border-left]="'4px solid ' + category.color">
+            <div class="mb-4 flex items-center gap-2">
+              <ng-icon [name]="category.icon" size="20" [style.color]="category.color" aria-hidden="true" />
+              <h3 class="font-heading text-lg font-semibold" style="font-family: var(--font-heading)">{{category.name}}</h3>
+            </div>
+
+            <div class="space-y-4">
+              @for (skill of category.skills; track skill.name) {
+                <div class="skill-item group relative"
+                     (mouseenter)="hoveredSkill.set(skill)"
+                     (mouseleave)="hoveredSkill.set(null)">
+                  <div class="flex items-start justify-between gap-2 mb-1.5">
+                    <div class="flex-1 min-w-0">
+                      <p class="font-medium text-sm text-[var(--color-fg)] truncate">{{skill.name}}</p>
+                      <p class="text-[11px] text-[var(--color-fg-secondary)]">{{skill.yearsExperience}} years · {{skill.projects.length}} projects</p>
+                    </div>
+                    <span class="shrink-0 font-mono text-sm font-bold" [style.color]="getProficiencyColor(skill.proficiency)">{{skill.proficiency}}%</span>
+                  </div>
+
+                  <div class="h-2 bg-[var(--color-bg-alt)] rounded-full overflow-hidden">
+                    <div class="h-full rounded-full transition-all duration-500 ease-out"
+                         [style.width]="getBarWidth(skill.proficiency)"
+                         [style.background]="getProficiencyColor(skill.proficiency)"></div>
+                  </div>
+
+                  <!-- Tooltip/Detail Panel -->
+                  @if (hoveredSkill() === skill) {
+                    <div class="skill-detail absolute z-10 mt-2 w-72 md:w-80 p-4 rounded-lg shadow-[var(--shadow-lg)] bg-[var(--color-surface)] border border-[var(--color-border)] animate-fade-in"
+                         [style.top]="'100%'"
+                         [style.left]="'0'">
+                      <p class="text-sm text-[var(--color-fg-secondary)] mb-3">{{skill.description}}</p>
+
+                      <div class="mb-3">
+                        <p class="text-[11px] font-semibold text-[var(--color-fg-secondary)] uppercase tracking-wider mb-1">Key Projects</p>
+                        <div class="flex flex-wrap gap-1">
+                          @for (proj of skill.projects; track proj) {
+                            <span class="tag text-[10px]">{{proj}}</span>
+                          }
+                        </div>
+                      </div>
+
+                      @if (skill.evidence) {
+                        <a [href]="skill.evidence.url" target="_blank" rel="noopener"
+                           class="inline-flex items-center gap-1.5 text-xs text-[var(--color-primary)] hover:underline">
+                          <ng-icon name="bootstrapLink45deg" size="12" aria-hidden="true" />
+                          {{skill.evidence.label}}
+                        </a>
+                      }
+                    </div>
+                  }
+                </div>
+              }
+            </div>
+          </div>
+        }
+      }
+    </div>
+
+    <!-- Legend -->
+    <div class="mt-12 pt-8 border-t border-[var(--color-border)]">
+      <div class="flex flex-wrap items-center justify-center gap-6 text-sm text-[var(--color-fg-secondary)]">
+        <div class="flex items-center gap-2">
+          <div class="h-3 w-3 rounded-full bg-green-500"></div>
+          <span>Expert (90%+)</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <div class="h-3 w-3 rounded-full bg-blue-500"></div>
+          <span>Advanced (80-89%)</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <div class="h-3 w-3 rounded-full bg-amber-500"></div>
+          <span>Proficient (70-79%)</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <div class="h-3 w-3 rounded-full bg-red-500"></div>
+          <span>Working Knowledge (<70%)</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

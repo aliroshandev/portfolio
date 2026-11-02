@@ -1,4 +1,4 @@
-import {Component, computed, inject, signal} from '@angular/core';
+import {Component, computed, inject, signal, ChangeDetectionStrategy} from '@angular/core';
 import {RouterLink} from '@angular/router';
 import {NgIcon, provideIcons} from '@ng-icons/core';
 import {ThemeService} from '../../services/theme.service';
@@ -19,6 +19,7 @@ import {
   host: {'[class.scrolled]': 'scrolled()'},
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss',
+  changeDetection: ChangeDetectionStrategy.Eager,
   viewProviders: [provideIcons({
     bootstrapGithub, bootstrapLinkedin, bootstrapFilePdf, bootstrapSend,
     bootstrapPhone, bootstrapMoon, bootstrapSun, bootstrapThreeDotsVertical, bootstrapX,
@@ -39,6 +40,12 @@ export class HeaderComponent {
     {id: 'about', label: 'About'},
     {id: 'experience', label: 'Experience'},
     {id: 'skills', label: 'Skills'},
+    {id: 'opensource', label: 'Open Source'},
+    {id: 'education', label: 'Education'},
+  ];
+
+  protected readonly routeLinks = [
+    {routerLink: '/projects', label: 'Projects'},
   ];
 
   constructor() {

@@ -11,6 +11,12 @@
           {{section.label}}
         </a>
       }
+      @for (link of routeLinks; track link.routerLink) {
+        <a [routerLink]="link.routerLink"
+           class="rounded-md px-3 py-2 text-sm font-medium text-[var(--color-fg-secondary)] transition-all duration-200 hover:bg-[var(--color-bg-alt)] hover:text-[var(--color-fg)]">
+          {{link.label}}
+        </a>
+      }
 
       <a routerLink="/book"
          class="btn-primary ml-1 px-4 py-2 text-sm">
@@ -69,13 +75,19 @@
             {{section.label}}
           </a>
         }
+        @for (link of routeLinks; track link.routerLink) {
+          <a [routerLink]="link.routerLink"
+             class="rounded-lg px-4 py-3.5 text-base font-medium text-[var(--color-fg)] transition-all duration-200 active:bg-[var(--color-bg-alt)]">
+            {{link.label}}
+          </a>
+        }
         <hr class="my-5 border-[var(--color-border)]">
         <div class="flex flex-col gap-2 px-1">
           <a routerLink="/book"
              class="btn-primary w-full justify-center py-3">
             <ng-icon name="bootstrapCalendarMonth" size="16" />Book a Meeting
           </a>
-          <a href="tel:447351534063"
+          <a href="tel:+989031751739"
              class="btn-primary w-full justify-center py-3">
             <ng-icon name="bootstrapPhone" size="16" />Call
           </a>

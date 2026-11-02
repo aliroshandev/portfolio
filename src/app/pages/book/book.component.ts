@@ -1,5 +1,6 @@
 import {
   afterNextRender, Component, computed, inject, OnInit, signal,
+  ChangeDetectionStrategy
 } from '@angular/core';
 import {FormControl, FormGroup, ReactiveFormsModule, Validators} from '@angular/forms';
 import {NgIcon, provideIcons} from '@ng-icons/core';
@@ -10,7 +11,7 @@ import {
   bootstrapEnvelope, bootstrapBuilding, bootstrapChatDots, bootstrapCheckLg,
   bootstrapArrowRight, bootstrapInfoCircle, bootstrapCloudCheck, bootstrapCheck,
 } from '@ng-icons/bootstrap-icons';
-import {SeoService} from '../../services/seo.service';
+import {PERSON_ID, SeoService} from '../../services/seo.service';
 import {BookingService} from '../../services/booking.service';
 import {GoogleCalendarService} from '../../services/google-calendar.service';
 import {
@@ -29,6 +30,7 @@ interface BookingForm {
   imports: [NgIcon, ReactiveFormsModule],
   templateUrl: './book.component.html',
   styleUrl: './book.component.scss',
+  changeDetection: ChangeDetectionStrategy.Eager,
   viewProviders: [provideIcons({
     bootstrapCalendarMonth, bootstrapCalendarCheck, bootstrapCalendarX,
     bootstrapCalendarRange, bootstrapChevronLeft, bootstrapChevronRight,
@@ -82,13 +84,9 @@ export class BookComponent implements OnInit {
 
   ngOnInit(): void {
     const title = 'Book a 1:1 Meeting | Ali Roshanzamir';
-    const desc = `Schedule a free Google Meet call with Ali Roshanzamir, Frontend Engineer & Angular Specialist — 15 min to 2 hours, booked directly on his Google Calendar in ${this.config.timezoneLabel}.`;
+    const desc = `Book a free Google Meet call with Ali Roshanzamir, from 15 minutes to 2 hours. Times are shown in ${this.config.timezoneLabel}.`;
 
-    this.#seo.setTitle(title);
-    this.#seo.setMetaDescription(desc);
-    this.#seo.setOgTags(title, desc);
-    this.#seo.updateCanonical('https://aliroshanzamir.info/book');
-    this.#seo.setJsonLd(this.#seoData());
+    this.#seo.setPage({title, description: desc, path: '/book', jsonLd: this.#seoData()});
   }
 
   async #init(): Promise<void> {
@@ -279,18 +277,13 @@ export class BookComponent implements OnInit {
         '@type': 'Person',
         name: this.config.ownerName,
         email: this.config.ownerEmail,
-        url: 'https://aliroshanzamir.info',
+        url: 'https://aliroshanzamir.info/',
+        '@id': PERSON_ID,
       },
       areaServed: 'Worldwide',
       availableChannel: {
         '@type': 'ServiceChannel',
         serviceLocation: { '@type': 'Place', name: 'Online (Google Meet)' },
-      },
-      hoursAvailable: {
-        '@type': 'OpeningHoursSpecification',
-        dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
-        opens: '09:00',
-        closes: '18:00',
       },
     };
   }
