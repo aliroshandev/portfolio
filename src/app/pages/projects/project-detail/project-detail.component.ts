@@ -59,7 +59,14 @@ export class ProjectDetailComponent implements OnInit {
       this.project.set(found ?? null);
       this.loading.set(false);
 
-      if (found) {
+      if (!found) {
+        this.#seo.setPage({
+          title: 'Project Not Found | Ali Roshanzamir',
+          description: 'This project does not exist.',
+          path: '/projects',
+          noindex: true,
+        });
+      } else {
         const url = `${SITE_URL}/projects/${found.id}`;
         const title = `${found.title} | Ali Roshanzamir`;
         this.#seo.setPage({

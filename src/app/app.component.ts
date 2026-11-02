@@ -36,7 +36,7 @@ export class AppComponent implements OnInit {
     {href: 'sms:+989031751739?body=Hi%20Ali,%20I%20saw%20your%20Portfolio', icon: 'bootstrapChatText', label: 'Text'},
     {href: 'mailto:a76roshanzamir@gmail.com', icon: 'bootstrapEnvelope', label: 'Email'},
     {href: 'https://github.com/aliroshandev', icon: 'bootstrapGithub', label: 'GitHub'},
-    {href: 'https://linkedin.com/in/ali-roshan', icon: 'bootstrapLinkedin', label: 'LinkedIn'},
+    {href: 'https://www.linkedin.com/in/ali-roshan', icon: 'bootstrapLinkedin', label: 'LinkedIn'},
     {href: '/assets/ALI_ROSHAN_CV.pdf', icon: 'bootstrapFilePdf', label: 'CV'},
   ];
 }

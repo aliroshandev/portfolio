@@ -15,6 +15,31 @@ export interface Project {
 // Ids must match PROJECT_IDS in app.routes.server.ts and public/sitemap-config.xml.
 export const PROJECTS: Project[] = [
   {
+    id: 'gamify-platform',
+    title: 'Gamify Campaign Platform',
+    company: 'Tabin Tech',
+    period: '2026 – Present',
+    tagline: 'Angular panels for a platform that runs game-based marketing campaigns',
+    description: 'Frontend engineer on Gamify, where businesses run campaigns with games such as roulette, jackpot and mystery boxes. I built the company panel, which covers the campaign creation wizard, campaign settings, dashboard, tickets and SMS panel, and I work on admin panels for individual games. Much of the recent panel work was built with AI coding agents, which I directed and reviewed.',
+    techStack: ['Angular 22', 'TypeScript', 'Bootstrap', 'vft-core', 'vft-auth', 'vft-table'],
+    architecture: `graph TD\n    A[Company Panel] --> B[Campaign Wizard and Settings]\n    A --> C[Dashboard]\n    A --> D[Tickets and SMS]\n    E[Game Admin Panels] --> F[Shared vft Libraries]\n    A --> F\n    F --> G[Backend APIs]`,
+    challenges: [
+      'Guiding businesses through a long campaign setup',
+      'Keeping several game admin panels consistent',
+      'Avoiding uploads for campaigns that are never saved',
+      'Making dense management screens work at all sizes'
+    ],
+    solutions: [
+      'A step-by-step campaign creation wizard',
+      'Shared vft libraries for auth, tables and UI',
+      'Deferred uploads that run when the user saves',
+      'Responsive layouts for the panel screens'
+    ],
+    links: [
+      {label: 'Live: gmfy.ir', url: 'https://gmfy.ir'}
+    ]
+  },
+  {
     id: 'tabintech-platform',
     title: 'Tabin Tech Client Applications',
     company: 'Tabin Tech',

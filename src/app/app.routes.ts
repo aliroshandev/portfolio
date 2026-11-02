@@ -30,5 +30,11 @@ export const routes: Routes = [
     title: 'Ali Roshanzamir Golafzani | Software Engineer',
     loadComponent: () => import('@pages/home/home.component')
       .then(m => m.HomeComponent)
+  },
+  {
+    path: '**',
+    title: 'Page Not Found | Ali Roshanzamir',
+    loadComponent: () => import('@pages/not-found/not-found.component')
+      .then(m => m.NotFoundComponent)
   }
 ];

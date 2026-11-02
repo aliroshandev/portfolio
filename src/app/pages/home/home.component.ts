@@ -17,15 +17,15 @@ import {
   bootstrapPerson,
   bootstrapTrophy,
   bootstrapSpeedometer2,
-  bootstrapDiagram3
+  bootstrapDiagram3,
+  bootstrapEnvelope
 } from '@ng-icons/bootstrap-icons';
 import {SeoService} from '../../services/seo.service';
 import {aboutText, education, experiences, openSourceProjects, technicalSkills, profilePageSchema} from '../../constants/const';
-import {SkillGraphComponent} from '@components/skill-graph/skill-graph.component';
 
 @Component({
   selector: 'app-home',
-  imports: [NgOptimizedImage, NgIcon, RouterLink, SkillGraphComponent],
+  imports: [NgOptimizedImage, NgIcon, RouterLink],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
   changeDetection: ChangeDetectionStrategy.Eager,
@@ -33,7 +33,8 @@ import {SkillGraphComponent} from '@components/skill-graph/skill-graph.component
     bootstrapCalendarMonth, bootstrapBuilding, bootstrapLink45deg,
     bootstrapCodeSlash, bootstrapAward, bootstrapPerson,
     bootstrapPeople, bootstrapGraphUp, bootstrapTrophy, bootstrapChevronRight,
-    bootstrapArrowRight, bootstrapSpeedometer2, bootstrapDiagram3
+    bootstrapArrowRight, bootstrapSpeedometer2, bootstrapDiagram3,
+    bootstrapEnvelope
   })]
 })
 export class HomeComponent implements OnInit {
@@ -50,11 +51,6 @@ export class HomeComponent implements OnInit {
   protected readonly openSourceProjects = openSourceProjects;
   protected readonly education = education;
 
-  protected readonly aboutStats = [
-    {value: '8', label: 'Years Experience'},
-    {value: 'Angular', label: 'Main Framework'},
-    {value: 'TypeScript', label: 'Main Language'}
-  ];
 
   ngOnInit() {
     this.#seoService.setPage({

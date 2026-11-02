@@ -10,6 +10,7 @@ export const experiences: Array<ExperienceInterface> = [
       title: 'Frontend Engineer - Onsite',
       href: 'https://tabintech.com',
       content: new ExperienceContent([
+        'Build Angular panels for Gamify (gmfy.ir), a gamification campaign platform, including the company panel with its campaign wizard and dashboard, using AI coding agents for much of the recent panel work.',
         'Build and maintain Angular applications for clients including pastil.ir and nam.ir, currently on Angular 22 with TypeScript, RxJS and GraphQL.',
         'Built shared Angular libraries (vft-core, vft-auth, vft-table, vft-ui-util) published to a private Nexus registry.',
         'Improved CI build times with caching and custom Webpack configuration.',
@@ -116,12 +117,6 @@ export const experiences: Array<ExperienceInterface> = [
 
 export const openSourceProjects = [
   {
-    name: 'Angular Docs Fix',
-    description: 'Merged PR #62361, a one-line fix for a syntax error in an Angular tutorial.',
-    url: 'https://github.com/angular/angular/pull/62361',
-    tags: ['Angular', 'Docs', 'Open Source']
-  },
-  {
     name: 'angular-lazy-load-directive',
     description: 'An npm package using Signals and IntersectionObserver for viewport-based image lazy loading.',
     url: 'https://www.npmjs.com/package/angular-lazy-load-directive',
@@ -132,6 +127,12 @@ export const openSourceProjects = [
     description: 'A free visual reference to the Angular lifecycle and dependency injection, built with Mermaid flowcharts.',
     url: 'https://angular-lifecycles.vercel.app',
     tags: ['Angular', 'Mermaid', 'Education']
+  },
+  {
+    name: 'Angular Docs Fix',
+    description: 'Merged PR #62361, a one-line fix for a syntax error in an Angular tutorial.',
+    url: 'https://github.com/angular/angular/pull/62361',
+    tags: ['Angular', 'Docs', 'Open Source']
   }
 ];
 
@@ -139,8 +140,7 @@ export const education = [
   {
     degree: 'Bachelor of Information Technology',
     institution: 'Islamic Azad University',
-    period: '2015–2021',
-    description: 'Focused on software engineering, web technologies, and database systems.'
+    period: '2015–2021'
   }
 ];
 

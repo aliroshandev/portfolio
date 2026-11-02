@@ -1,0 +1,15 @@
+# Ali Roshanzamir Golafzani
+
+> Software engineer with 8 years of paid experience building web applications, mainly in Angular and TypeScript, who also builds backend services in Go and PostgreSQL.
+
+## Pages
+
+- [Home](https://aliroshanzamir.info/): Work history, skills, open source work and education
+- [Projects](https://aliroshanzamir.info/projects): Project case studies
+- [Book a meeting](https://aliroshanzamir.info/book): Schedule a call
+- [CV](https://aliroshanzamir.info/assets/ALI_ROSHAN_CV.pdf): CV in PDF format
+
+## Elsewhere
+
+- [GitHub](https://github.com/aliroshandev)
+- [LinkedIn](https://www.linkedin.com/in/ali-roshan)

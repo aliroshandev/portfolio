@@ -17,6 +17,8 @@ export interface PageSeo {
   type?: 'website' | 'profile' | 'article';
   /** Page-level JSON-LD. Any block left by the previous page is removed when this is omitted. */
   jsonLd?: Record<string, unknown>;
+  /** Keeps pages such as the 404 page out of search results. */
+  noindex?: boolean;
 }
 
 @Injectable({providedIn: 'root'})
@@ -25,11 +27,12 @@ export class SeoService {
   readonly #title = inject(Title);
 
   /** Sets every per-page tag together, so no tag can be left over from the previous route. */
-  setPage({title, description, path, type = 'website', jsonLd}: PageSeo) {
+  setPage({title, description, path, type = 'website', jsonLd, noindex = false}: PageSeo) {
     const url = `${SITE_URL}${path}`;
 
     this.#title.setTitle(title);
     this.#setMeta('name', 'description', description);
+    this.#setMeta('name', 'robots', noindex ? 'noindex' : 'index, follow, max-image-preview:large');
     this.#setCanonical(url);
 
     this.#setMeta('property', 'og:type', type);
