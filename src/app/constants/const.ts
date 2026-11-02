@@ -10,7 +10,7 @@ export const experiences: Array<ExperienceInterface> = [
       title: 'Frontend Engineer - Onsite',
       href: 'https://tabintech.com',
       content: new ExperienceContent([
-        'Build Angular panels for Gamify (gmfy.ir), a gamification campaign platform, including the company panel with its campaign wizard and dashboard, using AI coding agents for much of the recent panel work.',
+        'Migrated the frontend of Gamify (gmfy.ir), a gamification campaign platform, from per-customer game admin panels into a SaaS customer panel and company admin panel, in about 3 days of development with Claude as a coding agent, my own packages and generators, and my code review.',
         'Build and maintain Angular applications for clients including pastil.ir and nam.ir, currently on Angular 22 with TypeScript, RxJS and GraphQL.',
         'Built shared Angular libraries (vft-core, vft-auth, vft-table, vft-ui-util) published to a private Nexus registry.',
         'Improved CI build times with caching and custom Webpack configuration.',

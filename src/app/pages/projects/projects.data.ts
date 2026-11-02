@@ -19,24 +19,72 @@ export const PROJECTS: Project[] = [
     title: 'Gamify Campaign Platform',
     company: 'Tabin Tech',
     period: '2026 – Present',
-    tagline: 'Angular panels for a platform that runs game-based marketing campaigns',
-    description: 'Frontend engineer on Gamify, where businesses run campaigns with games such as roulette, jackpot and mystery boxes. I built the company panel, which covers the campaign creation wizard, campaign settings, dashboard, tickets and SMS panel, and I work on admin panels for individual games. Much of the recent panel work was built with AI coding agents, which I directed and reviewed.',
-    techStack: ['Angular 22', 'TypeScript', 'Bootstrap', 'vft-core', 'vft-auth', 'vft-table'],
-    architecture: `graph TD\n    A[Company Panel] --> B[Campaign Wizard and Settings]\n    A --> C[Dashboard]\n    A --> D[Tickets and SMS]\n    E[Game Admin Panels] --> F[Shared vft Libraries]\n    A --> F\n    F --> G[Backend APIs]`,
+    tagline: 'Migrated per-customer game admin panels into one SaaS platform',
+    description: 'Gamify lets businesses run marketing campaigns with games such as roulette, jackpot and mystery boxes. Each customer used to get its own game admin panel, published on outside servers. I migrated that frontend into a SaaS platform with two panels: a customer panel for those customers and an admin panel for Tabin Tech. Development took about 3 days, using Claude as a coding agent, my own Angular packages and code generators, and my review of the code.',
+    techStack: ['Angular 22', 'TypeScript', 'Bootstrap', 'Custom Angular packages', 'Code generators', 'Claude Code'],
+    architecture: `graph TD\n    A[Customer Panel] --> C[Custom Angular Packages]\n    B[Tabin Tech Admin Panel] --> C\n    A --> D[Campaign Wizard and Settings]\n    A --> E[Prizes, Events and Chance Logic]\n    A --> F[SMS, Tickets and Dashboard]\n    C --> G[Gamify SaaS API]`,
     challenges: [
-      'Guiding businesses through a long campaign setup',
-      'Keeping several game admin panels consistent',
-      'Avoiding uploads for campaigns that are never saved',
-      'Making dense management screens work at all sizes'
+      'A separate admin panel published per customer on outside servers',
+      'Many features to carry over, from prizes and chance logic to SMS and themes',
+      'A long campaign setup for business users',
+      'Moving quickly with an AI coding agent without losing control of the code'
     ],
     solutions: [
+      'One customer panel for all customers and one admin panel for the company',
+      'Game features organised into separate modules',
       'A step-by-step campaign creation wizard',
-      'Shared vft libraries for auth, tables and UI',
-      'Deferred uploads that run when the user saves',
-      'Responsive layouts for the panel screens'
+      'My own packages and generators for repeated code, and my review of the changes'
     ],
     links: [
       {label: 'Live: gmfy.ir', url: 'https://gmfy.ir'}
+    ]
+  },
+  {
+    id: 'kheir-iran',
+    title: 'Kheir Iran Charity Platform',
+    company: 'Charity sector',
+    period: '12/2024 – Present',
+    tagline: 'Angular admin panel for an enterprise charity platform',
+    description: 'Kheir Iran is a platform where charities register and people can search them by province, activity, way of helping and licence status. I work on its Angular admin panel, which manages charity registration requests, benefactors, campaigns, financial support, volunteer opportunities, news, tickets and violation reports.',
+    techStack: ['Angular 20', 'TypeScript', 'Angular Signals', 'RxJS', 'Bootstrap', 'Leaflet', 'CKEditor', 'Karma', 'Jasmine'],
+    architecture: `graph TD\n    A[Admin Panel] --> B[Charity Registration and Accounts]\n    A --> C[Benefactors and Financial Support]\n    A --> D[Campaigns and Volunteer Opportunities]\n    A --> E[News, Tickets and Violation Reports]\n    B --> F[Platform API]\n    C --> F\n    D --> F\n    E --> F`,
+    challenges: [
+      'A large admin surface covering charities, benefactors and volunteers',
+      'Reviewing charity registration and account change requests',
+      'Bringing existing charity lists into the platform',
+      'Persian content, Jalali dates and location data'
+    ],
+    solutions: [
+      'Feature modules for each area, behind a lazy-loaded main shell',
+      'Dedicated screens for registration and account change requests',
+      'Excel import for charities',
+      'Right-to-left UI with Jalali date pickers and Leaflet maps'
+    ],
+    links: [
+      {label: 'Live: kheir.ir', url: 'https://kheir.ir'}
+    ]
+  },
+  {
+    id: 'filter-app',
+    title: 'Filter Quit-Smoking App',
+    company: 'Consumer app',
+    period: '12/2025 – Present',
+    tagline: 'Customer app and admin panel for a quit-smoking planner',
+    description: 'Filter helps people plan to quit smoking. I developed both its customer app and its admin panel. The customer app covers onboarding, a dashboard, health improvement tracking, audio books, subscriptions and gift cards, and runs as a PWA that is also packaged for Android.',
+    techStack: ['Angular 21', 'TypeScript', 'PWA', 'Trusted Web Activity', 'Bootstrap', 'Jalali dates'],
+    architecture: `graph TD\n    A[Customer App: PWA and Android] --> B[Onboarding and Dashboard]\n    A --> C[Health Tracking and Audio Books]\n    A --> D[Subscriptions and Gift Cards]\n    E[Admin Panel] --> F[Filter API]\n    A --> F`,
+    challenges: [
+      'Reaching users on the web and on Android from one codebase',
+      'Getting new users into a plan quickly',
+      'Offering premium content alongside free features'
+    ],
+    solutions: [
+      'An installable PWA, packaged for Android as a Trusted Web Activity',
+      'A guided onboarding flow',
+      'Subscription and gift card flows'
+    ],
+    links: [
+      {label: 'Live: filterapps.ir', url: 'https://filterapps.ir'}
     ]
   },
   {

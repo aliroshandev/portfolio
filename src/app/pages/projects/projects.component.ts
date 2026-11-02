@@ -19,7 +19,7 @@ export class ProjectsComponent implements OnInit {
   ngOnInit(): void {
     this.#seo.setPage({
       title: 'Projects & Case Studies | Ali Roshanzamir',
-      description: 'Case studies from Ali Roshanzamir: a gamification campaign platform, Angular client applications, a trading dashboard, an e-commerce PWA and open source tools.',
+      description: 'Case studies from Ali Roshanzamir: a gamification campaign platform, a charity platform, a quit-smoking app, Angular client applications, a trading dashboard, an e-commerce PWA and open source tools.',
       path: '/projects',
       jsonLd: {
         '@context': 'https://schema.org',

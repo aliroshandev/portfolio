@@ -3,6 +3,8 @@ import { RenderMode, ServerRoute } from '@angular/ssr';
 // Keep in sync with PROJECTS in project-detail.component.ts and with public/sitemap-config.xml.
 const PROJECT_IDS = [
   'gamify-platform',
+  'kheir-iran',
+  'filter-app',
   'tabintech-platform',
   'agatizer-trading',
   'missha-pwa',
