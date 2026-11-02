@@ -134,35 +134,16 @@ export const PROJECTS: Project[] = [
     ]
   },
   {
-    id: 'bvasett',
-    title: 'Bvasett Property Listings',
-    company: 'Freelance client',
-    period: '07/2025 – 09/2026',
-    tagline: 'Next.js frontend for a property listing site',
-    description: 'Frontend for bvasett, a Persian property listing site, built for a paid client. It covers ad creation and search filters, subscriptions and cart, OTP login, a user dashboard, articles and guided product tours.',
-    techStack: ['Next.js', 'React', 'TypeScript', 'PrimeReact', 'Chart.js', 'Axios'],
-    challenges: [
-      'Finding listings through many search filters',
-      'Helping new users understand the site',
-      'Selling access through subscription packages'
-    ],
-    solutions: [
-      'Filter and search result pages',
-      'Guided tours with React Joyride',
-      'Subscription and cart pages'
-    ]
-  },
-  {
     id: 'rou-dar-rou',
     title: 'Rou Dar Rou Marketplace',
     company: 'Freelance client',
-    period: '08/2026 – 10/2026',
-    tagline: 'Angular website and admin panel for a building and property marketplace',
-    description: 'Rou Dar Rou is a Persian marketplace for real estate, with building materials and services planned. For a paid client, I built the Angular website and an admin panel for accounts, roles, the catalog, geography, verification and audit. Most of the admin panel was built with Claude as a coding agent, with my review.',
-    techStack: ['Angular 22', 'Angular Signals', 'Angular Aria', 'Angular CDK', 'TypeScript', 'Vitest'],
-    architecture: `graph TD\n    A[Marketplace Website] --> C[Backend API]\n    B[Admin Panel] --> C\n    B --> D[Roles, Users and Audit]\n    B --> E[Catalog and Geography]\n    B --> F[Verification]`,
+    period: '07/2025 – 10/2026',
+    tagline: 'From a Next.js property site to an Angular marketplace and admin panel',
+    description: 'Rou Dar Rou is a Persian marketplace for real estate, with building materials and services planned. It began as Bvasett, a property listing site I built for a paid client in Next.js and PrimeReact, with ad creation, search filters, subscriptions and OTP login. When the product became Rou Dar Rou, I built its Angular website and an admin panel for accounts, roles, the catalog, geography, verification and audit. Most of the admin panel was built with Claude as a coding agent, with my review.',
+    techStack: ['Angular 22', 'Angular Signals', 'Angular Aria', 'Angular CDK', 'Vitest', 'Next.js', 'React', 'PrimeReact', 'TypeScript'],
+    architecture: `graph TD\n    A[Bvasett: Next.js Site] -->|became| B[Rou Dar Rou Website: Angular]\n    B --> D[Backend API]\n    C[Admin Panel: Angular] --> D\n    C --> E[Roles, Users and Audit]\n    C --> F[Catalog and Geography]\n    C --> G[Verification]`,
     challenges: [
-      'A marketplace meant to grow beyond real estate',
+      'Moving the product from a property site to a marketplace that can grow beyond real estate',
       'Keeping the admin panel in step with the backend API',
       'Accessible interactive widgets in a right-to-left UI'
     ],

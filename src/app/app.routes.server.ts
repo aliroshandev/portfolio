@@ -6,7 +6,6 @@ const PROJECT_IDS = [
   'kheir-iran',
   'filter-app',
   'rezervno',
-  'bvasett',
   'rou-dar-rou',
   'tabintech-platform',
   'agatizer-trading',
