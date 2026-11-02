@@ -44,7 +44,7 @@ export const PROJECTS: Project[] = [
     id: 'agatizer-trading',
     title: 'Agatizer Copy-Trading Dashboard',
     company: 'Agatizer',
-    period: '08/2021 – 12/2021',
+    period: '08/2021 – 10/2021',
     tagline: 'Real-time dashboard for a copy-trading platform, fed by WebSocket data',
     description: 'Built the dashboard for a platform where users mirror other traders\' positions. Rendered live WebSocket data with D3.js, and used virtual scrolling and RxJS streams to keep the interface responsive.',
     techStack: ['React', 'Angular', 'TypeScript', 'RxJS', 'WebSocket', 'D3.js', 'Tailwind CSS', 'Docker', 'PWA'],

@@ -32,7 +32,7 @@ export const experiences: Array<ExperienceInterface> = [
     }
   } as ExperienceInterface,
   {
-    workFromToDate: ['08/2021', '12/2021'],
+    workFromToDate: ['08/2021', '10/2021'],
     companyName: 'Agatizer',
     companyDescription: 'Copy-Trading Platform',
     experienceDetails: {
@@ -86,7 +86,7 @@ export const experiences: Array<ExperienceInterface> = [
     }
   } as ExperienceInterface,
   {
-    workFromToDate: ['09/2019', '11/2019'],
+    workFromToDate: ['09/2019', '12/2019'],
     companyName: 'Azki',
     companyDescription: 'Online Insurance Comparison Platform',
     experienceDetails: {
