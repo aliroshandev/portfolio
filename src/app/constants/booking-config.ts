@@ -3,7 +3,7 @@ import {BookingConfig} from '../models/booking';
 export const bookingConfig: BookingConfig = {
   ownerEmail: 'a76roshanzamir@gmail.com',
   ownerName: 'Ali Roshanzamir',
-  ownerTitle: 'Software Engineer, Angular and Go',
+  ownerTitle: 'Software Engineer',
   ownerLocation: 'Google Meet',
   timezone: 'Asia/Tehran',
   timezoneLabel: 'GMT+3:30',

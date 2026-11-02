@@ -5,7 +5,7 @@ export const SITE_URL = 'https://aliroshanzamir.info';
 export const PERSON_ID = `${SITE_URL}/#person`;
 
 const SHARE_IMAGE = `${SITE_URL}/assets/og-image.png`;
-const SHARE_IMAGE_ALT = 'Ali Roshanzamir Golafzani, Software Engineer, Angular and Go';
+const SHARE_IMAGE_ALT = 'Ali Roshanzamir Golafzani, Software Engineer';
 const PERSON_FIRST_NAME = 'Ali';
 const PERSON_LAST_NAME = 'Roshanzamir Golafzani';
 

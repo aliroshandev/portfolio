@@ -152,7 +152,7 @@ export const technicalSkills: SkillsInterface = {
 };
 
 export const aboutText =
-  'Frontend engineer with 8 years of paid experience building Angular applications for e-commerce, logistics, travel and trading products, now also building Go backends. Author of the angular-lazy-load-directive npm package, with one merged docs fix in the Angular repository.';
+  'Software engineer with 8 years of paid experience building web applications for e-commerce, logistics, travel and trading products, mainly in Angular and TypeScript. I also build backend services in Go and PostgreSQL. Author of the angular-lazy-load-directive npm package, with one merged docs fix in the Angular repository.';
 
 const SITE_URL = 'https://aliroshanzamir.info';
 

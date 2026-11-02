@@ -27,7 +27,7 @@ export const routes: Routes = [
   },
   {
     path: '',
-    title: 'Ali Roshanzamir Golafzani | Software Engineer, Angular and Go',
+    title: 'Ali Roshanzamir Golafzani | Software Engineer',
     loadComponent: () => import('@pages/home/home.component')
       .then(m => m.HomeComponent)
   }

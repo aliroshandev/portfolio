@@ -53,13 +53,13 @@ export class HomeComponent implements OnInit {
   protected readonly aboutStats = [
     {value: '8', label: 'Years Experience'},
     {value: 'Angular', label: 'Main Framework'},
-    {value: 'Go', label: 'Backend Work'}
+    {value: 'TypeScript', label: 'Main Language'}
   ];
 
   ngOnInit() {
     this.#seoService.setPage({
-      title: 'Ali Roshanzamir Golafzani | Software Engineer, Angular and Go',
-      description: 'Software engineer with 8 years of paid frontend experience in Angular, now also building Go backends. See projects, work history and open source work.',
+      title: 'Ali Roshanzamir Golafzani | Software Engineer',
+      description: 'Software engineer with 8 years of paid experience in Angular and TypeScript, plus backend work in Go and PostgreSQL. See projects and work history.',
       path: '/',
       type: 'profile',
       jsonLd: profilePageSchema,
