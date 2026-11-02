@@ -42,7 +42,7 @@ export const PROJECTS: Project[] = [
   {
     id: 'kheir-iran',
     title: 'Kheir Iran Charity Platform',
-    company: 'Charity sector',
+    company: 'Tabin Tech',
     period: '12/2024 – Present',
     tagline: 'Angular admin panel for an enterprise charity platform',
     description: 'Kheir Iran is a platform where charities register and people can search them by province, activity, way of helping and licence status. I work on its Angular admin panel, which manages charity registration requests, benefactors, campaigns, financial support, volunteer opportunities, news, tickets and violation reports.',
@@ -67,7 +67,7 @@ export const PROJECTS: Project[] = [
   {
     id: 'filter-app',
     title: 'Filter Quit-Smoking App',
-    company: 'Consumer app',
+    company: 'Tabin Tech',
     period: '12/2025 – Present',
     tagline: 'Customer app and admin panel for a quit-smoking planner',
     description: 'Filter helps people plan to quit smoking. I developed both its customer app and its admin panel. The customer app covers onboarding, a dashboard, health improvement tracking, audio books, subscriptions and gift cards, and runs as a PWA that is also packaged for Android.',
@@ -111,6 +111,65 @@ export const PROJECTS: Project[] = [
     links: [
       {label: 'Live: pastil.ir', url: 'https://pastil.ir'},
       {label: 'Live: nam.ir', url: 'https://nam.ir'}
+    ]
+  },
+  {
+    id: 'rezervno',
+    title: 'Rezervno Restaurant Booking',
+    company: 'Freelance client',
+    period: '08/2026',
+    tagline: 'Backend fixes, tests and MVP deployment for a restaurant booking SaaS',
+    description: 'Rezervno is a restaurant reservation SaaS with customer, restaurant and platform admin apps on one Next.js API. I was one of several contributors for a paid client. I worked on API routes, database migrations and tests, and on getting the MVP deployed with Docker Compose and Nginx.',
+    techStack: ['Next.js', 'TypeScript', 'Prisma', 'PostgreSQL', 'Redis', 'Docker', 'Nginx'],
+    architecture: `graph TD\n    A[Customer App] --> D[Next.js API]\n    B[Restaurant Panel] --> D\n    C[Platform Admin Panel] --> D\n    D --> E[PostgreSQL via Prisma]\n    D --> F[Redis]`,
+    challenges: [
+      'Database schema and migrations out of step with the code',
+      'Getting the application to start reliably in Docker',
+      'Preparing the MVP for its first deployment'
+    ],
+    solutions: [
+      'Migrations that bring the schema back in line',
+      'Fixes to the Docker image, Compose file and health checks',
+      'A Docker Compose and Nginx deployment setup'
+    ]
+  },
+  {
+    id: 'bvasett',
+    title: 'Bvasett Property Listings',
+    company: 'Freelance client',
+    period: '07/2025 – 09/2026',
+    tagline: 'Next.js frontend for a property listing site',
+    description: 'Frontend for bvasett, a Persian property listing site, built for a paid client. It covers ad creation and search filters, subscriptions and cart, OTP login, a user dashboard, articles and guided product tours.',
+    techStack: ['Next.js', 'React', 'TypeScript', 'PrimeReact', 'Chart.js', 'Axios'],
+    challenges: [
+      'Finding listings through many search filters',
+      'Helping new users understand the site',
+      'Selling access through subscription packages'
+    ],
+    solutions: [
+      'Filter and search result pages',
+      'Guided tours with React Joyride',
+      'Subscription and cart pages'
+    ]
+  },
+  {
+    id: 'rou-dar-rou',
+    title: 'Rou Dar Rou Marketplace',
+    company: 'Freelance client',
+    period: '08/2026 – 10/2026',
+    tagline: 'Angular website and admin panel for a building and property marketplace',
+    description: 'Rou Dar Rou is a Persian marketplace for real estate, with building materials and services planned. For a paid client, I built the Angular website and an admin panel for accounts, roles, the catalog, geography, verification and audit. Most of the admin panel was built with Claude as a coding agent, with my review.',
+    techStack: ['Angular 22', 'Angular Signals', 'Angular Aria', 'Angular CDK', 'TypeScript', 'Vitest'],
+    architecture: `graph TD\n    A[Marketplace Website] --> C[Backend API]\n    B[Admin Panel] --> C\n    B --> D[Roles, Users and Audit]\n    B --> E[Catalog and Geography]\n    B --> F[Verification]`,
+    challenges: [
+      'A marketplace meant to grow beyond real estate',
+      'Keeping the admin panel in step with the backend API',
+      'Accessible interactive widgets in a right-to-left UI'
+    ],
+    solutions: [
+      'Website features split by domain: real estate, materials and services',
+      'An API contract generated from the OpenAPI document',
+      'Angular Aria widgets and CDK overlays'
     ]
   },
   {

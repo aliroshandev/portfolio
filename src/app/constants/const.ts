@@ -11,6 +11,8 @@ export const experiences: Array<ExperienceInterface> = [
       href: 'https://tabintech.com',
       content: new ExperienceContent([
         'Migrated the frontend of Gamify (gmfy.ir), a gamification campaign platform, from per-customer game admin panels into a SaaS customer panel and company admin panel, in about 3 days of development with Claude as a coding agent, my own packages and generators, and my code review.',
+        'Work on the Angular admin panel of Kheir Iran (kheir.ir), a charity platform, covering charity registration, benefactors, campaigns, financial support and volunteer opportunities.',
+        'Developed the customer app and admin panel of Filter (filterapps.ir), a quit-smoking app: an Angular PWA packaged for Android, with onboarding, health tracking, audio books, subscriptions and gift cards.',
         'Build and maintain Angular applications for clients including pastil.ir and nam.ir, currently on Angular 22 with TypeScript, RxJS and GraphQL.',
         'Built shared Angular libraries (vft-core, vft-auth, vft-table, vft-ui-util) published to a private Nexus registry.',
         'Improved CI build times with caching and custom Webpack configuration.',
